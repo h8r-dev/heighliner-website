@@ -75,6 +75,8 @@ Pre-configured observation capabilities covering logs, metrics and distributed t
 Database and messaging middleware ensures applications can handle stateful and asynchronous tasks with ease.
 GitOps based on ArgoCD and helm makes application publishing simple and efficient.
 
+此处插入 GIF 动画
+
 Based on a stack like this, developers can spin a cloud-navite application up in minutes without the complexcity of configuration. Stack is open source and transparent, which ensures that developers have no barriers to understand all the process of code from editing to deployment.
 
 With this convention-over-configuration mindset, developers can enjoy the coding-testing-commiting inner development loop.
