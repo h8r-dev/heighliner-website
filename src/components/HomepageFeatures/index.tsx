@@ -10,32 +10,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Best Practices',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Heighliner helps developers build apps easily and quickly using state-of-the-art cloud-native stacks.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Easy to use',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Heighliner automatively setups up all the things you need to develop, build, and deploy your application.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Open source and extendable',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        With a multi-cloud, pluggable architecture, Heighliner can provide wide range of stacks and adapt your apps to all major clouds.
       </>
     ),
   },
