@@ -15,11 +15,16 @@ It makes sure cloud native applications are developed and deployed with best pra
 
 The complexity of application architecture multiplies as the business grows. Support you begin with building a simple personal blog hosted on cloud. What platform and tech stack would you choose? The answer might be Heroku, WordPress, Netlify, or even GitHub pages. They are simple, cheap, and reliable enough for simple applications such as personal blogs. In this case, no one cares about micro-service, containers, Kubernetes, Autoscaling, GitOps, so on and so forth.
 
+![archtecture](archtecture-100x.png)
+
 Nonetheless, modern enterprises, such as e-commerce and/or social platforms, have employed thousands of developers to build software in a monolithic application. As the number of developers grows, so does the complexity of building such an application. The micro-service architecture supports separating concerns of different teams and better cooperation. As a result, micro-service architecture gets more and more popular.
 
 To support such micro-service trends, cloud native technologies has been born to satisfy modern application architecture. Developers want their applications to be highly available and fault-tolerant. But the number of applications gets 100x bigger so they can't be managed and operated in the old way. Therefore, concepts such as elastic scaling, distributed monitoring, and deployment strategies have emerged to solve such problems.
 
+![cloud-native](cloud-native.png)
+
 Developers want their applications to be highly available and fault-tolerant. But micro-service pattern will increase the number of applications to 100x bigger. This will make it hard if not impossible to manage or operate. To support the micro-service trend, cloud native technologies has been born to satisfy modern requirements. Concepts such as service mesh, distributed tracing, continuous profling has emerged. Developers has been given the power to easily build CI/CD pipelines, elastic scaling solutions, observability stacks, canary deployment strategies, etc.
+
 
 With great power comes great responsibility. Now the developers realize they spend more time dealing with infrastructure than buisness code. Soon they realize this is wrong -- they need to focus on buisness logic that generates revenue! This is a new problem that developers face in the cloud native journey.
 
@@ -31,7 +36,7 @@ Here is the Cloud Native Landsacpe of CNCF (https://l.cncf.io/)
 
 ![simplicity](landscape-1024x702.jpeg)
 
-Turning this picture into a production toolchain requires thousands of lines of configuration. Terraform provides a good way to organize the infrastructure. Kubernetes provides a good way to organize the deployment architeture. But there is still no good way to organize the development process and delivery workflow.
+Turning this picture into a production toolchain requires thousands of lines of configuration. Terraform provides a good way to ochestrate the infrastructure. Kubernetes provides a good way to ochestrate the deployment architeture. But there is still no good way to ochestrate the development process and delivery workflow.
 
 Consider the following questions:
 
@@ -42,6 +47,9 @@ Consider the following questions:
 - What alert rules should be configured?
 - Should I use a self-built open source product or a commercial product?
 - How to remote debug container in Kubernetes cluster?
+
+![cloud-stack](cloud-stack.png)
+
 
 Everyone wants to know the industry standards to make their decisions. Thus we need well-defined cloud-native best practices as a collection of all proven and reliable methods.
 
@@ -75,7 +83,7 @@ Pre-configured observation capabilities covering logs, metrics and distributed t
 Database and messaging middleware ensures applications can handle stateful and asynchronous tasks with ease.
 GitOps based on ArgoCD and helm makes application publishing simple and efficient.
 
-此处插入 GIF 动画
+![gin-vue-stack](gin-vue-stack.jpg)
 
 Based on a stack like this, developers can spin a cloud-navite application up in minutes without the complexcity of configuration. Stack is open source and transparent, which ensures that developers have no barriers to understand all the process of code from editing to deployment.
 
