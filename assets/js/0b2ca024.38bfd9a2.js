@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkheighliner_home=self.webpackChunkheighliner_home||[]).push([[651],{7116:function(e){e.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/heighliner","name":"Heighliner","count":1,"permalink":"/blog/tags/heighliner"}')}}]);
