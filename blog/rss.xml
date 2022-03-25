@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Heighliner Blog</title>
-        <link>https://heighliner.dev/blog</link>
+        <link>https://heighliner.cloud/blog</link>
         <description>Heighliner Blog</description>
         <lastBuildDate>Tue, 08 Mar 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
             <title><![CDATA[What is Heighliner Stack]]></title>
-            <link>https://heighliner.dev/blog/what-is-heighliner-stack</link>
+            <link>https://heighliner.cloud/blog/what-is-heighliner-stack</link>
             <guid>what-is-heighliner-stack</guid>
             <pubDate>Tue, 08 Mar 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[The Heighliner Stack provides an easy way to build complex cloud-native applications.]]></description>
