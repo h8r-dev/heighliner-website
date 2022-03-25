@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://h8r.dev/blog</id>
+    <id>https://heighliner.cloud/blog</id>
     <title>Heighliner Blog</title>
     <updated>2022-03-08T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://h8r.dev/blog"/>
+    <link rel="alternate" href="https://heighliner.cloud/blog"/>
     <subtitle>Heighliner Blog</subtitle>
-    <icon>https://h8r.dev/img/favicon.ico</icon>
+    <icon>https://heighliner.cloud/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[What is Heighliner Stack]]></title>
         <id>what-is-heighliner-stack</id>
-        <link href="https://h8r.dev/blog/what-is-heighliner-stack"/>
+        <link href="https://heighliner.cloud/blog/what-is-heighliner-stack"/>
         <updated>2022-03-08T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The Heighliner Stack provides an easy way to build complex cloud-native applications.]]></summary>
         <content type="html"><![CDATA[<p>The Heighliner Stack provides an easy way to build complex cloud-native applications.
