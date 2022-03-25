@@ -46,27 +46,22 @@
 }
 
 :root {
-  --ifm-color-primary: #3257d8;
+  --ifm-color-primary: #61a4bc;
   --ifm-color-primary-dark: #203bb3;
   --ifm-color-primary-darker: #12258c;
   --ifm-color-primary-darkest: #081366;
   --ifm-color-primary-light: #5a7de6;
   --ifm-color-primary-lighter: #85a4f2;
   --ifm-color-primary-lightest: #b5ccff;
-  --ifm-code-font-size: 95%;
+  --ifm-font-color-primary: #081366;
   --ifm-font-family-monospace: "Ubuntu Mono";
   --ifm-font-family-base: "Maven Pro";
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  --ifm-color-primary: #3257d8;
-  --ifm-color-primary-dark: #203bb3;
-  --ifm-color-primary-darker: #12258c;
-  --ifm-color-primary-darkest: #081366;
-  --ifm-color-primary-light: #5a7de6;
-  --ifm-color-primary-lighter: #85a4f2;
-  --ifm-color-primary-lightest: #b5ccff;
+  --ifm-background-color: #1e2125;
+  --ifm-background-surface-color: #121212;
 }
 
 .docusaurus-highlight-code-line {
