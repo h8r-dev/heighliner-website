@@ -7,30 +7,42 @@
 /* You can override the default Infima variables here. */
 /* maven-pro-regular - latin */
 @font-face {
-  font-family: 'Maven Pro';
+  font-family: "Maven Pro";
   font-style: normal;
   font-weight: 400;
-  src: url('/static/fonts/maven-pro-v28-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('/static/fonts/maven-pro-v28-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/static/fonts/maven-pro-v28-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/static/fonts/maven-pro-v28-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('/static/fonts/maven-pro-v28-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('/static/fonts/maven-pro-v28-latin-regular.svg#MavenPro') format('svg'); /* Legacy iOS */
+  src: url("/static/fonts/maven-pro-v28-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("/static/fonts/maven-pro-v28-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/static/fonts/maven-pro-v28-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("/static/fonts/maven-pro-v28-latin-regular.woff") format("woff"),
+    /* Modern Browsers */ url("/static/fonts/maven-pro-v28-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("/static/fonts/maven-pro-v28-latin-regular.svg#MavenPro")
+      format("svg"); /* Legacy iOS */
 }
 
 /* ubuntu-mono-regular - latin */
 @font-face {
-  font-family: 'Ubuntu Mono';
+  font-family: "Ubuntu Mono";
   font-style: normal;
   font-weight: 400;
-  src: url('/static/fonts/ubuntu-mono-v14-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('/static/fonts/ubuntu-mono-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/static/fonts/ubuntu-mono-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/static/fonts/ubuntu-mono-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('/static/fonts/ubuntu-mono-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('/static/fonts/ubuntu-mono-v14-latin-regular.svg#UbuntuMono') format('svg'); /* Legacy iOS */
+  src: url("/static/fonts/ubuntu-mono-v14-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("/static/fonts/ubuntu-mono-v14-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/static/fonts/ubuntu-mono-v14-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("/static/fonts/ubuntu-mono-v14-latin-regular.woff") format("woff"),
+    /* Modern Browsers */ url("/static/fonts/ubuntu-mono-v14-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("/static/fonts/ubuntu-mono-v14-latin-regular.svg#UbuntuMono")
+      format("svg"); /* Legacy iOS */
 }
 
 :root {
@@ -43,11 +55,11 @@
   --ifm-color-primary-lightest: #b5ccff;
   --ifm-code-font-size: 95%;
   --ifm-font-family-monospace: "Ubuntu Mono";
-  --ifm-font-family-base: "Maven Pro"
+  --ifm-font-family-base: "Maven Pro";
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #3257d8;
   --ifm-color-primary-dark: #203bb3;
   --ifm-color-primary-darker: #12258c;
@@ -64,6 +76,11 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
-[data-theme='dark'] .docusaurus-highlight-code-line {
+[data-theme="dark"] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.button {
+  margin-left: 10px;
+  margin-right: 10px;
 }
