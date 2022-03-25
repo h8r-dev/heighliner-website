@@ -8,14 +8,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Heighliner',
   tagline: 'Speed up Cloud Native Application Development',
-  url: 'https://heighliner.dev',
+  url: 'https://heighliner.cloud',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'h8r-dev', // Usually your GitHub org/user name.
-  projectName: 'heighliner-home', // Usually your repo name.
-
+  projectName: 'heighliner-website', // Usually your repo name.
+  
   presets: [
     [
       'classic',
