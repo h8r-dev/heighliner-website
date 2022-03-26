@@ -1,4 +1,4 @@
 ---
-title: How to Develop Heighliner Platform
+title: How to Develop Heighliner Locally
 sidebar_position: 1
 ---
