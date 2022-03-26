@@ -1,0 +1,3 @@
+---
+title: Gitlab Pipeline Plugin
+---
