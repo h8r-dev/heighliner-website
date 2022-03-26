@@ -68,5 +68,17 @@ The code doesn't even need to exist on your local machine -- All you need is an 
 
 ## Development Status
 
-Heighliner is **Pre-Alpha** and being actively developed by the community.
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+    {children}
+  </span>
+);
+
+Heighliner is <Highlight color="#eb34ba">Pre-Alpha</Highlight> and being actively developed by the community.
 Our releases can be found [here](https://github.com/h8r-dev/heighliner/releases).
