@@ -13,7 +13,7 @@ It makes sure cloud native applications are developed and deployed with best pra
 
 ## Complexity of building cloud-native applications
 
-The complexity of application architecture multiplies as the business grows. Support you begin with building a simple personal blog hosted on cloud. What platform and tech stack would you choose? The answer might be Heroku, WordPress, Netlify, or even GitHub pages. They are simple, cheap, and reliable enough for simple applications such as personal blogs. In this case, no one cares about micro-service, containers, Kubernetes, Autoscaling, GitOps, so on and so forth.
+The complexity of application architecture multiplies as the business grows. Say you start building a simple personal blog hosted on the cloud, what platform and tech stack would you choose? The answer might be Heroku, WordPress, Netlify, or even GitHub pages. They are simple, cheap, and reliable enough for simple applications such as personal blogs. In this case, no one cares about micro-service, containers, Kubernetes, Autoscaling, GitOps, so on and so forth.
 
 ![archtecture](archtecture-100x.png)
 
@@ -23,10 +23,10 @@ To support such micro-service trends, cloud native technologies has been born to
 
 ![cloud-native](cloud-native.png)
 
-Developers want their applications to be highly available and fault-tolerant. But micro-service pattern will increase the number of applications to 100x bigger. This will make it hard if not impossible to manage or operate. To support the micro-service trend, cloud native technologies has been born to satisfy modern requirements. Concepts such as service mesh, distributed tracing, continuous profling has emerged. Developers has been given the power to easily build CI/CD pipelines, elastic scaling solutions, observability stacks, canary deployment strategies, etc.
+Developers also want their applications to be highly available and fault-tolerant. But micro-service pattern will increase the number of applications to 100x bigger. This will make it hard if not impossible to manage or operate. Concepts such as service mesh, distributed tracing, continuous profling has emerged. Developers has been given the power to easily build CI/CD pipelines, elastic scaling solutions, observability stacks, canary deployment strategies, etc.
 
 
-With great power comes great responsibility. Now the developers realize they spend more time dealing with infrastructure than buisness code. Soon they realize this is wrong -- they need to focus on buisness logic that generates revenue! This is a new problem that developers face in the cloud native journey.
+With great power comes great responsibility. Now the developers realize they spend more time dealing with archetecture than buisness code. Soon they realize this is wrong -- they need to focus on buisness logic that generates revenue! This is a new problem that developers face in the cloud native journey.
 
 ## Configuration! Configuration! Configuration!
 
@@ -36,7 +36,7 @@ Here is the Cloud Native Landsacpe of CNCF (https://l.cncf.io/)
 
 ![simplicity](landscape-1024x702.jpeg)
 
-Turning this picture into a production toolchain requires thousands of lines of configuration. Terraform provides a good way to ochestrate the infrastructure. Kubernetes provides a good way to ochestrate the deployment architeture. But there is still no good way to ochestrate the development process and delivery workflow.
+Turning this picture into a production toolchain requires tons of configuration. Terraform provides a good way to ochestrate the infrastructure. Kubernetes provides a good way to ochestrate the deployment. But there is still no good way to ochestrate the archetecture and DevOps workflow.
 
 Consider the following questions:
 
@@ -55,7 +55,7 @@ Everyone wants to know the industry standards to make their decisions. Thus we n
 
 ## Preconfigured Best Practices
 
-We build these best practices into a project called Heighliner. Starting from developer-centric mind, we provides many pre-configured stacks covering popular programming languages and frameworks. For example, go-gin-stack is a toolchain preconfigured with the following tools and techniques:
+We build these best practices into a project called Heighliner. Starting from developer-centric mind, we provides many pre-configured stacks covering popular programming languages and frameworks. For example, gin-vue is a toolchain preconfigured with the following tools and techniques:
 
 - Golang
 - Git Repository(Currently provided by GitHub)
@@ -68,13 +68,11 @@ We build these best practices into a project called Heighliner. Starting from de
 - ArgoCD
 - Mariadb
 - Redis
-- NATS
 - Helm
 - Kubernetes
 - Nocalhost
 - Prometheus
 - Grafana
-- Istio
 - Jaeger
 - Loki
 
@@ -93,3 +91,4 @@ With this convention-over-configuration mindset, developers can enjoy the coding
 
 A developer console can be built to display key states in delivery flow, such as build results, deployment versions, logs, traffic control rules, alerts etc.
 Developers can get any useful information in that console and can manipulate the application the way they want.
+Also, developers can customize by forking a copy on GitHub to meet their special needs.
