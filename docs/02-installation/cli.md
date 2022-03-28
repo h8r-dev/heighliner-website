@@ -1,5 +1,4 @@
 ---
-id: k8s
-title: Kubernetes
+title: CLI Tools
 sidebar_position: 1
 ---

@@ -1,5 +1,4 @@
 ---
-id: aws
-title: AWS Cloud
+title: Kubernetes
 sidebar_position: 2
 ---

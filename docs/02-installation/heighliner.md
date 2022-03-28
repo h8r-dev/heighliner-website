@@ -1,4 +1,4 @@
 ---
-title: Nocalhost Plugin
+title: Heighliner Platform
 sidebar_position: 3
 ---
