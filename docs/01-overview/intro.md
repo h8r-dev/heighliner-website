@@ -41,7 +41,7 @@ The code doesn't even need to exist on your local machine -- All you need is an 
 - Automated setup of CI/CD pipelines on Github Action and Gitlab Pipeline.
 - Automated setup of cloud native infra tools: Nginx, Nocalhost, Loki, Prometheus, Grafana, Alertmanager.
 - Automated setup of dashboard configuration for your app's logs, metrics, traces.
-- Automated setup of Nocalhost configuration for your app.
+- Automated setup of Nocalhost configuration for remotely developing your app.
 - Automated DNS names for your app, logging/monitoring dashboards, Nocalhost service.
 - Ability to deploy to multiple clusters to achieve high availability.
 - Health status analysis of your app.
