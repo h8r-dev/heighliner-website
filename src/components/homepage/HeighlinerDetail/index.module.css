@@ -1,0 +1,15 @@
+.title {
+  margin-bottom: 44px;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 186px;
+}
+.content {
+  width: 400px;
+  height: 400px;
+  border: 1px solid grey;
+}

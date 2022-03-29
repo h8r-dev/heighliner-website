@@ -1,0 +1,57 @@
+.wrap {
+  margin-top: 150px;
+  margin-left: 148px;
+  margin-bottom: 160px;
+}
+
+.sloganTextWrap {
+  margin-bottom: 113px;
+}
+
+.sloganTextWrap > h1 {
+  font-family: 'Maven Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 140%;
+  margin-bottom: 0;
+  /* color: #fff; */
+}
+
+.sloganTextWrap > h1 > em {
+  color: #A5FFDB;
+  font-style: normal;
+}
+
+.requestAccess {
+  width: 233px;
+  height: 60px;
+
+  background: rgba(195, 210, 243, 0.13);
+  border-radius: 25px;
+  color: #C6E7E8;
+
+  border: none;
+  outline: none;
+}
+
+.quickstart {
+  border-radius: 25px;
+  background-color: #A5FFDB !important;
+  color: #123B53 !important;
+  width: 233px;
+  height: 60px;
+  margin-left: 84px;
+  line-height: 2.25;
+  border: none;
+  outline: none;
+}
+
+.quickstart :hover {
+  border: none;
+  outline: none;
+}
+
+.actionsGroup {
+  display: flex;
+}

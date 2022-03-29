@@ -1,0 +1,45 @@
+.wrapper {
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 0;
+}
+
+.item {
+  background-color: #fff;
+  padding: 40px;
+  border: 1px solid grey;
+
+  width: 511px;
+  height: 476px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item:not(:last-child) {
+  margin-right: 126px;
+}
+
+.item > img {
+  margin-bottom: 33px;
+  width: 65%;
+}
+
+.item > h3 {
+  font-size: 27px;
+}
+
+.item > p {
+  color: #919191;
+}
+
+.row {
+  display: flex;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 37px;
+}

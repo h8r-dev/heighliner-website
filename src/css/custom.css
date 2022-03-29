@@ -79,3 +79,14 @@
   margin-left: 10px;
   margin-right: 10px;
 }
+
+.homepage-section-title {
+  font-family: 'Maven Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 61px;
+  line-height: 140%;
+  color: #080930;
+
+  text-align: center;
+}

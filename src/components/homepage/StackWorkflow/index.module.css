@@ -1,0 +1,15 @@
+.wrapper {
+
+}
+
+.title {
+
+}
+
+.workflow {
+  display: flex;
+}
+
+.workflow li {
+  list-style: none;
+}
