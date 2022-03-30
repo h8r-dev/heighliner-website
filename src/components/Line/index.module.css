@@ -1,0 +1,19 @@
+.line {
+  display: flex;
+  align-items: center;
+  margin-bottom: -8px;
+}
+
+.line img {
+  width: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.dot {
+  width: 0;
+  height: 0;
+  border: 2px solid #89A0E7;
+  position: relative;
+  z-index: 100;
+}

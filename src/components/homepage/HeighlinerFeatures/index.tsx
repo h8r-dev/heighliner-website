@@ -39,11 +39,12 @@ export function HeighlinerFeatures(): React.ReactElement {
   return (
     <div className={styles.wrapper}>
       {
-        allFeatures.map((features: any[]) => (
-          <div className={styles.row}>
+        allFeatures.map((features: any[], idx: number) => (
+          <div className={styles.row} key={idx}>
             {
-              features.map((feature: any) => (
+              features.map((feature: any, index: number) => (
                 <FeatureItem
+                  key={index}
                   title={feature.title}
                   imgSrc={feature.imgSrc}
                   description={feature.description}

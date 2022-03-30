@@ -1,15 +1,61 @@
 .wrapper {
-
+  padding-top: 126px;
 }
 
 .title {
+  margin-bottom: 60px;
+}
 
+.workflowImage img {
+  width: 405px;
 }
 
 .workflow {
   display: flex;
+  justify-content: center;
+}
+
+.separator {
+  margin-left: 58px;
+  margin-right: 124px;
+  padding-top: 41px;
 }
 
 .workflow li {
   list-style: none;
+}
+
+.workflowText {
+  width: 20%;
+}
+
+.workflowSteps {
+  padding: 0;
+  padding-top: 40px;
+}
+
+.step {
+  display: flex;
+}
+
+.stepIcon img {
+  width: 40px;
+}
+
+.stepTitle {
+  font-size: 27px;
+  font-weight: 800;
+  color: #2E59E0;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.stepText {
+  flex: 1;
+  margin-left: 3px;
+}
+
+.stepDesc {
+  color: #535353;
+  font-weight: 500;
 }
