@@ -6,6 +6,8 @@ import { HighlinerDetail } from "../components/homepage/HeighlinerDetail";
 import { HeighlinerFeatures } from "../components/homepage/HeighlinerFeatures";
 import { WhyHeighliner } from "../components/homepage/WhyHeighliner";
 import { StackWorkflow } from "../components/homepage/StackWorkflow";
+import { Innovation } from "../components/homepage/Innovation";
+import { JoinCommunity } from "../components/homepage/JoinCommunity";
 
 export default function Home(): JSX.Element {
   return (
@@ -19,7 +21,9 @@ export default function Home(): JSX.Element {
         <WhyHeighliner />
         <HeighlinerFeatures />
         <StackWorkflow />
+        <Innovation />
+        <JoinCommunity />
       </main>
     </Layout>
-  );
+  )
 }

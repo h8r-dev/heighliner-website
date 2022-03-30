@@ -1,5 +1,5 @@
 .wrapper {
-  padding-top: 126px;
+  padding: 126px 0;
 }
 
 .title {
@@ -13,6 +13,8 @@
 .workflow {
   display: flex;
   justify-content: center;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .separator {

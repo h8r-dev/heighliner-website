@@ -27,6 +27,7 @@ export function Line({
       className={styles.line}
       style={{
         flexDirection: direction,
+        [marginProperty]: -8,
       }}
     >
       <img src={require('@site/static/img/line-end.png').default} alt="line end" />

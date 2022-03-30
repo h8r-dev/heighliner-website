@@ -1,0 +1,50 @@
+.wrapper {
+  padding: 129px 0;
+  background-color: #E5E5E5;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+.descItem:not(:last-child) {
+  padding-bottom: 81px;
+}
+
+.descItemImg {
+  width: 20px;
+}
+
+.descItemTitle {
+  font-size: 27px;
+  font-weight: 800;
+  color: #2E59E0;
+  margin-left: 10px;
+}
+
+.descItemDesc {
+  font-size: 20px;
+  font-weight: 500;
+  color: #535353;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.architecture {
+  position: relative;
+  z-index: 10;
+  margin-left: -25px;
+}
+
+.architecture img {
+  width: 650px;
+}
+
+.desc {
+  padding-top: 76px;
+  position: relative;
+  z-index: 1;
+}

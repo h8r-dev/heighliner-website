@@ -45,14 +45,14 @@ export function StackWorkflow(): React.ReactElement {
         <SectionTitleIcon />
         How stack works?
       </h1>
-      <ul className={styles.workflow}>
+      <ul className={clsx('container', styles.workflow)}>
         <li className={styles.workflowImage}>
           <img src={require('@site/static/img/workflow.png').default} alt="workflow image" />
         </li>
         <li className={styles.separator}>
           {
             lines.map((dotsCount: number, index: number) => (
-              <Line index={index} dotsCount={dotsCount} direction={Direction.COLUMN} />
+              <Line key={index} index={index} dotsCount={dotsCount} direction={Direction.COLUMN} />
             ))
           }
         </li>
