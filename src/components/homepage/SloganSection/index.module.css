@@ -8,8 +8,6 @@
 }
 
 .sloganTextWrap > h1 {
-  font-family: 'Maven Pro';
-  font-style: normal;
   font-weight: 700;
   font-size: 60px;
   line-height: 140%;
@@ -19,7 +17,6 @@
 
 .sloganTextWrap > h1 > em {
   color: #A5FFDB;
-  font-style: normal;
 }
 
 .requestAccess {

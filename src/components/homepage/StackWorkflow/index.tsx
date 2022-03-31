@@ -14,19 +14,19 @@ const workflowSteps: any[] = [
     icon: require('@site/static/img/homepage/step-1.png').default,
     title: 'Get a Stack',
     desc: 'Pull a stack from StackHub or customize one like assemble blocks.',
-    bottom: 157,
+    bottom: 160,
   },
   {
     icon: require('@site/static/img/homepage/step-2.png').default,
     title: 'Create an app',
     desc: 'Simply specify several parameters to create a full stack application base on that Stack.',
-    bottom: 248,
+    bottom: 220,
   },
   {
     icon: require('@site/static/img/homepage/step-3.png').default,
     title: 'Spin up',
     desc: 'Heighliner spins up all the tools to support the whole DevOps process automatically.',
-    bottom: 188,
+    bottom: 220,
   },
   {
     icon: require('@site/static/img/homepage/step-4.png').default,
@@ -36,7 +36,7 @@ const workflowSteps: any[] = [
   },
 ]
 
-const lines: number[] = [45, 60, 50, 0]
+const lines: number[] = [70, 85, 85, 0]
 
 export function StackWorkflow(): React.ReactElement {
   return (
