@@ -29,7 +29,7 @@ The code doesn't even need to exist on your local machine -- All you need is an 
     You define the end goals and Heighliner will make it to the end.
     You can enjoy the simplicity of declarative APIs while Heighliner handles the low-level complex details.
 - **Multi-cloud and no vendor lock-in**:
-    Heighliner is open source, vendor neutral, platform agnostic.
+    Heighliner is open source, vendor neutral, cloud agnostic.
     With a multi-cloud, pluggable architecture, Heighliner can adapt your apps to all major clouds.
     Your code remains the same across cloud providers while Heighliner does the heavy lifting.
     You can truly build once and run anywhere.
@@ -51,7 +51,7 @@ The code doesn't even need to exist on your local machine -- All you need is an 
 - Dashboard UI which provides real-time view and interactive experience managing your stacks and apps.
 - Secure, integrated secret management.
 - Parallel, cacheable workflow execution.
-- Extensible core design to customize your own stack, plugin, etc.
+- Extensible core design to customize your own stacks and plugins.
 
 ## How Heighliner Works For
 

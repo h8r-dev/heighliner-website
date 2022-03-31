@@ -1,8 +1,18 @@
 ---
 title: Understand The Basics
-sidebar_position: 3
+sidebar_position: 2
 ---
 
-## Architectural Overview
+Before effectively using Heighliner, it is necessary to understand the underlying components of the platform.
+It is also necessary to understand the features being provided to you and how to use them.
+The section below provides some useful introduction and links to build up this understanding.  
 
-## Core Concepts
+## Heighliner Stack
+
+## Heighliner CLI
+
+## Heighliner Service
+
+## Dagger
+
+## Kubernetes
