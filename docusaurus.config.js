@@ -56,7 +56,7 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/h8r-dev/heighliner-home",
+            href: "https://github.com/h8r-dev/heighliner-website",
             label: "GitHub",
             position: "right",
           },
