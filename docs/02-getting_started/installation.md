@@ -25,7 +25,7 @@ brew install heighliner/tap/hln
 Alternatively, you can use this one liner:
 
 ```bash
-curl -L https://dl.heighliner.dev/hln-cli/install.sh | sh
+curl -L https://dl.h8r.io/hln-cli/install.sh | sh
 ```
 
 You can also download old versions from [Github Release](https://github.com/h8r-dev/heighliner/releases).
@@ -42,7 +42,7 @@ brew install heighliner/tap/hln
 Alternatively, you can use this one liner:
 
 ```bash
-curl -L https://dl.heighliner.dev/hln-cli/install.sh | sh
+curl -L https://dl.h8r.io/hln-cli/install.sh | sh
 ```
 
 You can also download old versions from [Github Release](https://github.com/h8r-dev/heighliner/releases).
@@ -59,7 +59,7 @@ brew install heighliner/tap/hln
 Alternatively, you can use this one liner:
 
 ```bash
-curl -L https://dl.heighliner.dev/hln-cli/install.sh | sh
+curl -L https://dl.h8r.io/hln-cli/install.sh | sh
 ```
 
 You can also download old versions from [Github Release](https://github.com/h8r-dev/heighliner/releases).
