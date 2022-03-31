@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkheighliner_home=self.webpackChunkheighliner_home||[]).push([[2535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"What is Heighliner Stack","permalink":"/blog/what-is-heighliner-stack"}]}')}}]);

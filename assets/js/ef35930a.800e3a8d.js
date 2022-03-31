@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkheighliner_website=self.webpackChunkheighliner_website||[]).push([[8823],{8198:function(e){e.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"Stack","count":1,"permalink":"/blog/tags/stack"}')}}]);

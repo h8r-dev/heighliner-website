@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkheighliner_website=self.webpackChunkheighliner_website||[]).push([[3943],{536:function(e){e.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"Cloud Native","count":1,"permalink":"/blog/tags/cloud-native"}')}}]);
