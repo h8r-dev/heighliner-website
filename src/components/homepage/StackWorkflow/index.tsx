@@ -59,8 +59,8 @@ export function StackWorkflow(): React.ReactElement {
         <li className={styles.workflowText}>
           <ul className={styles.workflowSteps}>
             {
-              workflowSteps.map((step: any) => (
-                <li style={{ marginBottom: step.bottom }}>
+              workflowSteps.map((step: any, index: number) => (
+                <li style={{ marginBottom: step.bottom }} key={index}>
                   <div className={styles.step}>
                     <div className={styles.stepIcon}>
                       <img src={step.icon} alt="step icon" />

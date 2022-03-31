@@ -1,3 +1,8 @@
+.wrapper {
+  width: 100%;
+  background-color: #f3f3f3;
+  padding-top: 43px;
+}
 .title {
   margin-bottom: 44px;
 }

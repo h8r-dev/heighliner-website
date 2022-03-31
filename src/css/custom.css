@@ -114,7 +114,7 @@
   text-align: center;
 }
 
-html {
+html, button {
   font-family: 'Maven Pro', sans-serif;
   font-style: normal;
 }

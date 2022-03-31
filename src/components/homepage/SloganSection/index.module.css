@@ -1,9 +1,20 @@
+.wrapper {
+  width: 100%;
+  background-color: #161c21;
+  position: relative;
+  height: 714px;
+}
+
 .wrap {
   padding: 150px 0;
   padding-left: 148px;
+  position: absolute;
+  top: 0;
+  z-index: 100;
 }
 
 .sloganTextWrap {
+  color: #fff;
   margin-bottom: 113px;
 }
 
@@ -12,27 +23,30 @@
   font-size: 60px;
   line-height: 140%;
   margin-bottom: 0;
-  /* color: #fff; */
 }
 
 .sloganTextWrap > h1 > em {
   color: #A5FFDB;
+  font-style: normal;
 }
 
 .requestAccess {
   width: 233px;
   height: 60px;
 
-  background: rgba(195, 210, 243, 0.13);
-  border-radius: 25px;
+  background-color: rgba(195, 210, 243, 0.13);
+  border-radius: 0;
   color: #C6E7E8;
+  font-weight: 800;
+  font-size: 18px;
 
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .quickstart {
-  border-radius: 25px;
+  border-radius: 0;
   background-color: #A5FFDB !important;
   color: #123B53 !important;
   width: 233px;
@@ -50,4 +64,31 @@
 
 .actionsGroup {
   display: flex;
+}
+
+.waveBottom {
+  min-height: 149px;
+  position: absolute;
+  z-index: 10;
+  bottom: -2px;
+  background-color: transparent;
+  width: 100%;
+  display: block;
+  left: 0;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.backgroundMask {
+}
+
+.backgroundMask > img {
+  width: 100%;
+  height: 714px;
 }

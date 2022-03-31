@@ -40,8 +40,8 @@ export function Innovation(): React.ReactElement {
       <div className={clsx('container', styles.content)}>
         <div className={styles.desc}>
           {
-            descItems.map((item: any) => (
-              <DescriptionItem {...item} />
+            descItems.map((item: any, index: number) => (
+              <DescriptionItem {...item} key={index} />
             ))
           }
         </div>
