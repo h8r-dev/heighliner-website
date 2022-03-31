@@ -29,7 +29,7 @@ export function DescriptionItem({
         <span className={styles.descItemTitle}>{title}</span>
       </div>
       <div className={styles.descItemDesc}>{desc}</div>
-      <Line index={index} dotsCount={110} direction={Direction.ROW} />
+      <Line index={index} dotsCount={130} direction={Direction.ROW} />
     </div>
   )
 }
