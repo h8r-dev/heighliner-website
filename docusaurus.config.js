@@ -16,6 +16,13 @@ const config = {
   organizationName: "h8r-dev", // Usually your GitHub org/user name.
   projectName: "heighliner-website", // Usually your repo name.
 
+  customFields: {
+    quickStartUrl: '/docs/quickstart',
+    docsUrl: '/docs/overview/intro',
+    blogUrl: '/blog',
+    githubUrl: 'https://github.com/h8r-dev/heighliner-website',
+  },
+
   presets: [
     [
       "classic",

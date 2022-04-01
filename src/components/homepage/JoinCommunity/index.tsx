@@ -5,6 +5,7 @@
 import clsx from "clsx";
 import React from "react";
 import Link from "@docusaurus/Link";
+import { customFields } from "@site/docusaurus.config";
 
 import styles from './index.module.css'
 
@@ -16,7 +17,7 @@ export function JoinCommunity() {
         <div className={styles.title}>Join the community</div>
         <Link
           className={clsx('button button--lg button--secondary', styles.btn)}
-          to="/docs/quickstart"
+          to={customFields.quickStartUrl as string}
         >
           Quick Start
         </Link>

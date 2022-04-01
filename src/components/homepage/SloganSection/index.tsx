@@ -5,10 +5,13 @@
 import React from "react";
 import Link from "@docusaurus/Link";
 import clsx from "clsx";
+import { customFields } from "@site/docusaurus.config";
 
 import styles from './index.module.css'
 import { BackgroundMask } from "./BackgroundMask";
 import { WaveBottom } from "./WaveBottom";
+import BlueLogoSvg from '@site/static/img/homepage/blue-logo.svg'
+import WhiteHeighlinerSvg from '@site/static/img/homepage/white-heighliner.svg'
 
 function handleRequestAccess() {
   console.log('request access from popover')
@@ -20,20 +23,25 @@ export function SloganSection(): React.ReactElement {
       <BackgroundMask />
       <div className={styles.mask}>
         <div className="slogan-section container">
-          {/* <header>
-            <nav>
-              <div className="left">
-                <img className="logo" src="img/logo.svg" alt="logo" />
+          <header>
+            <nav className={styles.navbar}>
+              <div className={styles.logoWrap}>
+                <BlueLogoSvg style={{ marginRight: 10 }} />
+                <WhiteHeighlinerSvg />
               </div>
-              <div className="right">
-                <ul>
-                  <li>Docs</li>
-                  <li>Blog</li>
-                  <li>GitHub</li>
-                </ul>
-              </div>
+              <ul className={styles.navItems}>
+                <li>
+                  <Link to={customFields.docsUrl as string}>Docs</Link>
+                </li>
+                <li>
+                  <Link to={customFields.blogUrl as string}>Blog</Link>
+                </li>
+                <li>
+                  <Link to={customFields.githubUrl as string}>Github</Link>
+                </li>
+              </ul>
             </nav>
-          </header> */}
+          </header>
           <main className={styles.wrap}>
             <div className={styles.sloganTextWrap}>
               <h1>Spin up your</h1>
@@ -47,7 +55,12 @@ export function SloganSection(): React.ReactElement {
               >
                 Request Early Access
               </button>
-              <Link className={clsx('button button--lg button--secondary', styles.quickstart)} to="/docs/quickstart">Quick Start</Link>
+              <Link
+                className={clsx('button button--lg button--secondary', styles.quickstart)}
+                to={customFields.quickStartUrl as string}
+              >
+                  Quick Start
+              </Link>
             </div>
           </main>
         </div>

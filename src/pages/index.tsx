@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "@theme/Layout";
+// import Layout from "@theme/Layout";
 
 import { SloganSection } from "../components/homepage/SloganSection";
 import { HighlinerDetail } from "../components/homepage/HeighlinerDetail";
@@ -11,19 +11,14 @@ import { JoinCommunity } from "../components/homepage/JoinCommunity";
 
 export default function Home(): JSX.Element {
   return (
-    <Layout
-      title={`Hello from heighliner`}
-      description="Description will go into a meta tag in <head />"
-    >
-      <main>
-        <SloganSection />
-        <HighlinerDetail />
-        <WhyHeighliner />
-        <HeighlinerFeatures />
-        <StackWorkflow />
-        <Innovation />
-        <JoinCommunity />
-      </main>
-    </Layout>
+    <main>
+      <SloganSection />
+      <HighlinerDetail />
+      <WhyHeighliner />
+      <HeighlinerFeatures />
+      <StackWorkflow />
+      <Innovation />
+      <JoinCommunity />
+    </main>
   )
 }

@@ -6,11 +6,40 @@
 }
 
 .wrap {
-  padding: 150px 0;
-  padding-left: 148px;
   position: absolute;
-  top: 0;
+  top: 193px;
   z-index: 100;
+}
+
+.navbar {
+  padding-top: 28px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+}
+
+.navItems {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navItems li {
+  list-style: none;
+}
+
+.navItems li:not(:last-child) {
+  margin-right: 38px;
+}
+
+.navItems li a {
+  color: #fff;
 }
 
 .sloganTextWrap {
@@ -83,9 +112,6 @@
   left: 0;
   bottom: 0;
   right: 0;
-}
-
-.backgroundMask {
 }
 
 .backgroundMask > img {
