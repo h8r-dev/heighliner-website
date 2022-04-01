@@ -34,4 +34,9 @@
   background-color: #061596;
   color: #fff !important;
   line-height: 40px;
+  border-radius: 0;
+}
+
+.bg {
+  width: 100%;
 }
