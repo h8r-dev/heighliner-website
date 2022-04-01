@@ -78,16 +78,33 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
                 label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                href: "https://discordapp.com/invite/heighliner",
               },
               {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                label: "GitHub",
+                href: "https://github.com/h8r-dev/heighliner",
+              },
+            ],
+          },
+          {
+            title: "Company",
+            items: [
+              {
+                label: "About us",
+                to: "/about-us",
+              },
+              {
+                label: "Join us",
+                href: "/join-us",
+              },
+              {
+                label: "Contact us",
+                href: "/contact-us",
+              },
+              {
+                label: "Resources",
+                href: "/resources",
               },
             ],
           },
@@ -97,10 +114,6 @@ const config = {
               {
                 label: "Blog",
                 to: "/blog",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/h8r-dev/heighliner",
               },
             ],
           },
