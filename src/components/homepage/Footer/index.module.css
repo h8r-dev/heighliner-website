@@ -3,6 +3,8 @@
   padding-top: 43px;
   background-color: #171F24;
   color: #f5f5f5;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
 }
 
 .wrapper {
@@ -11,9 +13,9 @@
 }
 
 .wrapper a {
-  color: #f5f5f5;
+  color: #c4c4c4;
   line-height: 52px;
-  font-size: 20px;
+  font-size: 18px;
   display: inline-block;
 }
 
@@ -41,7 +43,7 @@
 
 .title {
   display: inline-block;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   width: 240px;
   text-align: left;

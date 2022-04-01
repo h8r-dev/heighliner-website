@@ -12,14 +12,18 @@ export interface DescriptionItemProps {
   title: string,
   desc: string,
   index: number,
+  dotsCount: number,
 }
 export function DescriptionItem({
   index,
   logo,
   title,
   desc,
+  dotsCount,
 }: DescriptionItemProps) {
+
   const imgStyle = index === 1 ? { width: 30, marginLeft: -4 } : {}
+
   return (
     <div className={styles.descItem}>
       <div>
@@ -29,7 +33,7 @@ export function DescriptionItem({
         <span className={styles.descItemTitle}>{title}</span>
       </div>
       <div className={styles.descItemDesc}>{desc}</div>
-      <Line index={index} dotsCount={130} direction={Direction.ROW} />
+      <Line index={index} dotsCount={dotsCount} direction={Direction.ROW} />
     </div>
   )
 }

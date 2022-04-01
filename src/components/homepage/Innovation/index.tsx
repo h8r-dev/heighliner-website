@@ -2,7 +2,8 @@
  * Cloud innovation of homepage
  */
 
-import React from "react";
+import React, { useState, useEffect } from "react";
+import debounce from 'lodash.debounce'
 import clsx from "clsx";
 
 import { SectionTitleIcon } from "../SectionTitleIcon";
@@ -30,7 +31,26 @@ const descItems: any[] = [
   },
 ]
 
+const baseDotsCount = 130
+
 export function Innovation(): React.ReactElement {
+  const [dotsCount, setDotsCount] = useState(baseDotsCount)
+
+  function handleResize() {
+    const { innerWidth } = window
+    const base = 1440
+    if (innerWidth > base || innerWidth < 1200) return
+    const rest = base - innerWidth
+    setDotsCount(parseInt(baseDotsCount - rest / 4, 10))
+  }
+  const debouncedHandleResize = debounce(handleResize, 500)
+
+  useEffect(() => {
+    handleResize()
+    window.addEventListener('resize', debouncedHandleResize)
+    return () => window.removeEventListener('resize', debouncedHandleResize)
+  }, [])
+
   return (
     <div className={styles.wrapper}>
       <h1 className={clsx('homepage-section-title', styles.title)}>
@@ -41,7 +61,7 @@ export function Innovation(): React.ReactElement {
         <div className={styles.desc}>
           {
             descItems.map((item: any, index: number) => (
-              <DescriptionItem {...item} key={index} />
+              <DescriptionItem {...item} dotsCount={dotsCount} key={index} />
             ))
           }
         </div>
