@@ -45,7 +45,7 @@ export function SloganSection(): React.ReactElement {
           <main className={styles.wrap}>
             <div className={styles.sloganTextWrap}>
               <h1>Spin up your</h1>
-              <h1>cloud-navtive</h1>
+              <h1>cloud-native</h1>
               <h1>stack in <em>minutes</em></h1>
             </div>
             <div className={styles.actionsGroup}>
