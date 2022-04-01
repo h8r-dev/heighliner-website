@@ -19,50 +19,26 @@ import TabItem from '@theme/TabItem';
 Homebrew:
 
 ```bash
-brew install heighliner/tap/hln
+brew install h8r-dev/tap/hln
 ```
 
 Alternatively, you can use this one liner:
 
 ```bash
-curl -L https://dl.h8r.io/hln-cli/install.sh | sh
+curl -L https://dl.h8r.io/hln/install.sh | sh
 ```
 
-You can also download old versions from [Github Release](https://github.com/h8r-dev/heighliner/releases).
+You can download binaries of all releases from [Github Release](https://github.com/h8r-dev/heighliner/releases).
 
   </TabItem>
   <TabItem value="homebrew" label="Linux">
 
-Homebrew:
-
-```bash
-brew install heighliner/tap/hln
-```
-
-Alternatively, you can use this one liner:
-
-```bash
-curl -L https://dl.h8r.io/hln-cli/install.sh | sh
-```
-
-You can also download old versions from [Github Release](https://github.com/h8r-dev/heighliner/releases).
+You can download binaries of all releases from [Github Release](https://github.com/h8r-dev/heighliner/releases).
 
   </TabItem>
   <TabItem value="github_release" label="Windows">
 
-Homebrew:
-
-```bash
-brew install heighliner/tap/hln
-```
-
-Alternatively, you can use this one liner:
-
-```bash
-curl -L https://dl.h8r.io/hln-cli/install.sh | sh
-```
-
-You can also download old versions from [Github Release](https://github.com/h8r-dev/heighliner/releases).
+You can download binaries of all releases from [Github Release](https://github.com/h8r-dev/heighliner/releases).
 
   </TabItem>
 </Tabs>
