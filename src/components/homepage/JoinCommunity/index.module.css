@@ -2,6 +2,9 @@
   padding-top: 129px;
   position: relative;
   background-color: #f3f3f3;
+
+  display: flex;
+  justify-content: center;
 }
 
 .content {
@@ -22,6 +25,7 @@
   line-height: 33px;
 
   margin-bottom: 26px;
+  margin-top: 160px;
 }
 
 .btn {
