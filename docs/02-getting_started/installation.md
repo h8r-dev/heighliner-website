@@ -16,13 +16,13 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="script" label="MacOS" default>
 
-Homebrew:
+You can use Homebrew:
 
 ```bash
 brew install h8r-dev/tap/hln
 ```
 
-One liner:
+You can use this one liner:
 
 ```bash
 curl -L https://dl.h8r.io/hln/install.sh | sh
@@ -33,7 +33,7 @@ You can download binaries of all releases from [Github Release](https://github.c
   </TabItem>
   <TabItem value="homebrew" label="Linux">
 
-One liner:
+You can use this one liner:
 
 ```bash
 curl -L https://dl.h8r.io/hln/install.sh | sh
