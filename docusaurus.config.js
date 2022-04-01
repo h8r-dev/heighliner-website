@@ -2,7 +2,7 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+// const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -15,6 +15,13 @@ const config = {
   favicon: "img/favicon.ico",
   organizationName: "h8r-dev", // Usually your GitHub org/user name.
   projectName: "heighliner-website", // Usually your repo name.
+
+  customFields: {
+    quickStartUrl: '/docs/quickstart',
+    docsUrl: '/docs/overview/intro',
+    blogUrl: '/blog',
+    githubUrl: 'https://github.com/h8r-dev/heighliner-website',
+  },
 
   presets: [
     [
@@ -51,10 +58,10 @@ const config = {
           {
             type: "doc",
             docId: "overview/intro",
-            position: "left",
+            position: "right",
             label: "Docs",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          { to: "/blog", label: "Blog", position: "right" },
           {
             href: "https://github.com/h8r-dev/heighliner-website",
             label: "GitHub",
@@ -122,7 +129,7 @@ const config = {
       },
       prism: {
         theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        // darkTheme: darkCodeTheme,
       },
     }),
 };

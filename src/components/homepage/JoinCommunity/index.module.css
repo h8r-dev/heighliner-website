@@ -1,0 +1,33 @@
+.wrapper {
+  padding-top: 129px;
+  position: relative;
+  background-color: #f3f3f3;
+}
+
+.content {
+  position: absolute;
+  bottom: 223px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: #061596;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 33px;
+
+  margin-bottom: 26px;
+}
+
+.btn {
+  width: 233px;
+  height: 60px;
+  background-color: #061596;
+  color: #fff !important;
+  line-height: 40px;
+}

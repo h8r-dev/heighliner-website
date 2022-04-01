@@ -1,0 +1,30 @@
+.wrapper {
+  width: 100%;
+  background-color: #f3f3f3;
+  padding-bottom: 96px;
+}
+
+.title {
+  margin-bottom: 41px;
+}
+
+.caption {
+  font-size: 18px;
+  letter-spacing: -0.24px;
+  max-width: 1083px;
+  margin: 0 auto;
+  margin-bottom: 39px;
+  line-height: 37px;
+}
+
+.compare {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compare > div {
+  border: 1px solid grey;
+  width: 300px;
+  height: 300px;
+}
