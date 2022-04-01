@@ -17,7 +17,7 @@ const config = {
   projectName: "heighliner-website", // Usually your repo name.
 
   customFields: {
-    quickStartUrl: '/docs/quickstart',
+    quickStartUrl: '/docs/overview/intro',
     docsUrl: '/docs/overview/intro',
     blogUrl: '/blog',
     githubUrl: 'https://github.com/h8r-dev/heighliner-website',
