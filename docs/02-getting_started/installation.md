@@ -22,7 +22,7 @@ Homebrew:
 brew install h8r-dev/tap/hln
 ```
 
-Alternatively, you can use this one liner:
+One liner:
 
 ```bash
 curl -L https://dl.h8r.io/hln/install.sh | sh
@@ -32,6 +32,12 @@ You can download binaries of all releases from [Github Release](https://github.c
 
   </TabItem>
   <TabItem value="homebrew" label="Linux">
+
+One liner:
+
+```bash
+curl -L https://dl.h8r.io/hln/install.sh | sh
+```
 
 You can download binaries of all releases from [Github Release](https://github.com/h8r-dev/heighliner/releases).
 
