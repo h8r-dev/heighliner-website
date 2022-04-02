@@ -1,5 +1,5 @@
 ---
-title: Compared To Others
+title: Comparison
 sidebar_position: 4
 ---
 
