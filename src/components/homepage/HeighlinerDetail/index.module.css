@@ -3,6 +3,7 @@
   background-color: #f3f3f3;
   padding-top: 43px;
 }
+
 .title {
   margin-bottom: 44px;
 }
@@ -11,8 +12,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 186px;
+  padding-bottom: 121px;
 }
+
 .content {
   width: 400px;
   height: 400px;
