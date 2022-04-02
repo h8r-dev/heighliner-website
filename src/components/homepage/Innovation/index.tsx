@@ -2,7 +2,7 @@
  * Cloud innovation of homepage
  */
 
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import debounce from 'lodash.debounce'
 import clsx from "clsx";
 
@@ -35,16 +35,30 @@ const baseDotsCount = 130
 
 export function Innovation(): React.ReactElement {
   const [dotsCount, setDotsCount] = useState(baseDotsCount)
+  const dotsCountRef = useRef(baseDotsCount)
 
   // We will adjust line length based on the current width of viewport
   // and adjust when the window width resized.
   function handleResize() {
     const { innerWidth } = window
     const base = 1440
-    if (innerWidth > base || innerWidth < 1200) return
+    if (innerWidth < 1200) {
+      return
+    }
+    if (innerWidth >= base) { // wide screen
+      if (dotsCountRef.current < baseDotsCount) {
+        dotsCountRef.current = baseDotsCount
+        setDotsCount(baseDotsCount)
+      }
+      return
+    }
+
     const rest = base - innerWidth
-    setDotsCount(Math.trunc(baseDotsCount - rest / 4))
+    const newDotsCount = Math.trunc(baseDotsCount - rest / 4)
+    dotsCountRef.current = newDotsCount
+    setDotsCount(newDotsCount)
   }
+
   const debouncedHandleResize = debounce(handleResize, 200)
 
   useEffect(() => {

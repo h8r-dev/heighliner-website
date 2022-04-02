@@ -4,6 +4,8 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 // const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
+const mainGithubUrl = 'https://github.com/h8r-dev/heighliner'
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Heighliner",
@@ -20,7 +22,7 @@ const config = {
     quickStartUrl: "/docs/getting_started/installation",
     docsUrl: "/docs/overview/intro",
     blogUrl: "/blog",
-    githubUrl: "https://github.com/h8r-dev/heighliner-website",
+    githubUrl: mainGithubUrl,
   },
 
   presets: [
@@ -90,7 +92,7 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/h8r-dev/heighliner",
+                href: mainGithubUrl,
               },
             ],
           },
