@@ -12,6 +12,7 @@ import ExternalLinkIcon from '@site/static/img/external-link.svg'
 import styles from './index.module.css'
 
 export function Footer() {
+  const footer: any = themeConfig.footer
   return (
     <div className={styles.outerWrap}>
       <div className={clsx('container', styles.wrapper)}>
@@ -21,12 +22,12 @@ export function Footer() {
         <div className={styles.linksWrap}>
           <ul className={styles.links}>
             {
-              themeConfig.footer.links.map((linkItem: any, index: number) => (
+              footer.links.map((linkItem: any, index: number) => (
                 <li key={index}>
                   <span className={styles.title}>{linkItem.title}</span>
                   <ul>
                     {
-                      linkItem.items.map((link: string, idx: number) => {
+                      linkItem.items.map((link: any, idx: number) => {
                         const to: string = link.to || link.href
                         return (
                           <li key={idx}>
@@ -43,7 +44,7 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className={styles.copyright}>{themeConfig.footer.copyright}</div>
+      <div className={styles.copyright}>{footer.copyright}</div>
     </div>
   )
 }

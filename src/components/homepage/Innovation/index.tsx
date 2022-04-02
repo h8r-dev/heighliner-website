@@ -36,14 +36,16 @@ const baseDotsCount = 130
 export function Innovation(): React.ReactElement {
   const [dotsCount, setDotsCount] = useState(baseDotsCount)
 
+  // We will adjust line length based on the current width of viewport
+  // and adjust when the window width resized.
   function handleResize() {
     const { innerWidth } = window
     const base = 1440
     if (innerWidth > base || innerWidth < 1200) return
     const rest = base - innerWidth
-    setDotsCount(parseInt(baseDotsCount - rest / 4, 10))
+    setDotsCount(Math.trunc(baseDotsCount - rest / 4))
   }
-  const debouncedHandleResize = debounce(handleResize, 500)
+  const debouncedHandleResize = debounce(handleResize, 200)
 
   useEffect(() => {
     handleResize()
