@@ -36,13 +36,16 @@ The code doesn't even need to exist on your local machine -- All you need is an 
 
 ## Features
 
-- Support for popular programming languages and frameworks: Go-Gin, Spring, Laravel, Express, Django, Rails, React, Vue.
+- Popular languages and frameworks support: Go-Gin, Spring, Express, Django, Rails, React, Vue.
 - Automated setup of Github repositories and scaffolds for app, deploy, and infra code.
 - Automated setup of CI/CD pipelines on Github Action and Gitlab Pipeline.
-- Automated setup of cloud native infra tools: Nginx, Nocalhost, Loki, Prometheus, Grafana, Alertmanager.
-- Automated setup of dashboard configuration for your app's logs, metrics, traces.
-- Automated setup of Nocalhost configuration for remotely developing your app.
-- Automated DNS names for your app, logging/monitoring dashboards, Nocalhost service.
+- Automated setup of Helm chart for container builds and image scanning.
+- Automated setup of Kubernetes ingress, services, and workloads.
+- Automated setup of Kubernetes RBAC, roles, and security policies.
+- Automated setup of logs, metrics, monitoring dashboards with Prometheus + Grafana + Loki.
+- Automated setup of remote development environment with Nocalhost.
+- Automated setup of middleware services (MySQL, Redis, MongoDB, etc) and their corresponding secrets.
+- Public DNS names to access your app, logging/monitoring dashboards, Nocalhost services, etc.
 - Ability to deploy to multiple clusters to achieve high availability.
 - Health status analysis of your app.
 - SSO integration (OIDC, OAuth2, LDAP, GitHub, GitLab).

@@ -1,6 +1,6 @@
 ---
 title: Core Concepts
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 For users of Heighliner, there are certain concepts which are central to its design and functionality.

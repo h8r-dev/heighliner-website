@@ -14,40 +14,40 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-  <TabItem value="script" label="MacOS" default>
+  <TabItem value="macos" label="MacOS" default>
 
-You can use Homebrew:
+Homebrew:
 
 ```bash
 brew install h8r-dev/tap/heighliner
 hln version
 ```
 
-You can use this one liner:
+Or use the install script:
 
 ```bash
 curl -L https://dl.h8r.io/hln/install.sh | sh
 ./bin/hln version
 ```
 
-You can download binaries of all releases from [Github Release](https://github.com/h8r-dev/heighliner/releases).
+Or download binaries: [Github Release](https://github.com/h8r-dev/heighliner/releases)
 
   </TabItem>
-  <TabItem value="homebrew" label="Linux">
+  <TabItem value="linux" label="Linux">
 
-You can use this one liner:
+Use the install script:
 
 ```bash
 curl -L https://dl.h8r.io/hln/install.sh | sh
 ./bin/hln version
 ```
 
-You can download binaries of all releases from [Github Release](https://github.com/h8r-dev/heighliner/releases).
+Or download binaries: [Github Release](https://github.com/h8r-dev/heighliner/releases)
 
   </TabItem>
-  <TabItem value="github_release" label="Windows">
+  <TabItem value="windows" label="Windows">
 
-You can download binaries of all releases from [Github Release](https://github.com/h8r-dev/heighliner/releases).
+Download binaries: [Github Release](https://github.com/h8r-dev/heighliner/releases)
 
   </TabItem>
 </Tabs>
