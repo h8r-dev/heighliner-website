@@ -8,6 +8,7 @@ import Link from "@docusaurus/Link";
 import { themeConfig } from "@site/docusaurus.config";
 
 import ExternalLinkIcon from '@site/static/img/external-link.svg'
+import FooterBgSvg from '@site/static/img/homepage/footer-bg.svg'
 
 import styles from './index.module.css'
 
@@ -45,6 +46,7 @@ export function Footer() {
         </div>
       </div>
       <div className={styles.copyright}>{footer.copyright}</div>
+      <FooterBgSvg className={styles.footerBg} />
     </div>
   )
 }
