@@ -19,13 +19,15 @@ import TabItem from '@theme/TabItem';
 You can use Homebrew:
 
 ```bash
-brew install h8r-dev/tap/hln
+brew install h8r-dev/tap/heighliner
+hln version
 ```
 
 You can use this one liner:
 
 ```bash
 curl -L https://dl.h8r.io/hln/install.sh | sh
+./bin/hln version
 ```
 
 You can download binaries of all releases from [Github Release](https://github.com/h8r-dev/heighliner/releases).
@@ -37,6 +39,7 @@ You can use this one liner:
 
 ```bash
 curl -L https://dl.h8r.io/hln/install.sh | sh
+./bin/hln version
 ```
 
 You can download binaries of all releases from [Github Release](https://github.com/h8r-dev/heighliner/releases).
