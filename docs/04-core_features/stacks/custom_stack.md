@@ -1,4 +1,4 @@
 ---
-title: How to Write a Custom Stack
+title: Custom Stack
 sidebar_position: 3
 ---

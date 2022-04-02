@@ -8,8 +8,16 @@ Below is a list of the core concepts and their definitions.
 
 ## Project
 
+## Application
+
 ## Stack
 
 ## Input/Output
+
+## Health
+
+## Remote Development
+
+## Monitoring
 
 ## Plugin
