@@ -20,8 +20,8 @@ The code doesn't even need to exist on your local machine -- All you need is an 
     Without Heighliner, we have seen people install and use various tools (e.g. Argocd, Grafana, Nocalhost, API Gateway) on Kubernetes.
     It fragments their development time and makes them painful to connect the tools to the apps.
     With Heighliner, you can focus on your business code while enjoying the seamless workflow, integrated with open source cloud native tools.
-    You can see and manage the logs, metrics, CI/CD pipelines, image scannning results on a single platform.
-    All of these are provided automatically while you work on writing the app.
+    You can write code, build and test the code, manage CI/CD pipelines, see the logs and metrics on a single platform.
+    All you need is an IDE (e.g. VSCode) to write code and a browser to interact with.
 - **Declarative setup**:
     Traditional tools ask you how to achieve the operations.
     This doesn't work at scale. People get confused and lost with too many complex details.

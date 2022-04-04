@@ -31,19 +31,29 @@ For more info, please refer to the [StackHub](/docs/core_features/stacks/stackhu
 
 ## Heighliner CLI
 
-Heighliner CLI provides the best user experience in local.
-It walks users through the process of using Heighliner Stacks and Services to develop and deploy their apps.
+Heighliner CLI provides the best local experience to work with stacks.
+It walks users through the process of using Heighliner Stacks to setup environments for their apps.
 It can be used to search and download stacks, manages secrets, provide interactive input based on stack schema.
-It provides IaC style process to integrate with your GitOps workflow.
+
+With Heighliner CI, you can also do IaC style GitOps workflow.
 
 For more details and examples, please refer to the [hln CLI](/docs/cli/hln/overview) page.
 
-## Heighliner Service
+## Heighliner Server
 
-Heighliner Service is a service that is used to build and deploy applications.
-
-## Dagger
+Heighliner Server provides services to streamline development workflow.
+There are necessary services that cannot be achieved at the client side.
+For example, you will need a service to allocate sub-domains for your apps, distribute TLS certs, etc.
+In order to achieve this, Heighliner Server supports such features to simplify the development process.
 
 ## Kubernetes
 
+Kubernetes is the service infrastructure platform to orchestrate service deployments.
+
+## Dagger
+
+Dagger is the execution engine for infra stack orchestration.
+
 ## Terraform
+
+Terraform is the infrastructure provisiniong and managing infra resources.
