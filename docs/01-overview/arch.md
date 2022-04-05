@@ -48,12 +48,18 @@ In order to achieve this, Heighliner Server supports such features to simplify t
 
 ## Kubernetes
 
-Kubernetes is the service infrastructure platform to orchestrate service deployments.
+[Kubernetes](https://kubernetes.io/docs/home/) is an open source container orchestration engine for automating deployment, scaling, and management of containerized applications.
+We use it to orchestrate service deployments.
+This is our platform base where we deploy services and integrate with other cloud services.
 
 ## Dagger
 
-Dagger is the execution engine for infra stack orchestration.
+[Dagger](https://docs.dagger.io/) is a portable devkit for CICD.
+We use it as the execution engine for stack orchestration.
+While having contributed some of the libraries to Dagger upstream, We have extend it with our own CUE modules to compose cloud-native tooling and infrastructure.
 
 ## Terraform
 
-Terraform is the infrastructure provisiniong and managing infra resources.
+[Terraform](https://www.terraform.io/intro) is an infrastructure as code tool that lets you define both cloud and on-prem resources.
+We use it to provision and manage the infrastructure resources.
+In our use case, Terraform is one layer down from Dagger: After Terraform provisions a resource, Dagger will execute the CUE modules to interact with it, e.g. deploy a service, setup configuration, etc.
