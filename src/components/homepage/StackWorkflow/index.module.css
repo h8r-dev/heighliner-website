@@ -1,5 +1,6 @@
 .wrapper {
   padding: 126px 0;
+  background-color: #f3f3f3;
 }
 
 .title {
@@ -29,6 +30,12 @@
 
 .workflowText {
   width: 303px;
+}
+
+@media screen and (max-width: 996px) {
+  .separator, .workflowText {
+    display: none;
+  }
 }
 
 .workflowSteps {

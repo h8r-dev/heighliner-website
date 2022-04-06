@@ -56,3 +56,19 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 996px) {
+  .desc {
+    display: none;
+  }
+
+  .architecture {
+    display: flex;
+    justify-content: center;
+  }
+
+  .architecture img {
+    width: 70%;
+    height: auto;
+  }
+}

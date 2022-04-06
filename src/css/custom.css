@@ -120,6 +120,21 @@
   text-align: center;
 }
 
+.homepage-section-title > img {
+  width: 70px
+}
+
+@media screen and (max-width: 996px) {
+  .homepage-section-title {
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  .homepage-section-title > img {
+    width: 54px;
+  }
+}
+
 html, button {
   font-family: 'Maven Pro', sans-serif;
   font-style: normal;

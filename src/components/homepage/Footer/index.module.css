@@ -20,6 +20,7 @@
   line-height: 52px;
   font-size: 18px;
   display: inline-block;
+  white-space: nowrap;
 }
 
 .wrapper ul {
@@ -29,26 +30,35 @@
 
 .logo {
   padding-top: 18px;
+  min-width: 100px;
 }
 
 .logo > img {
   width: 54px;
 }
 
+.linksWrap {
+  flex: 1;
+  display: flex;
+  flex-flow: row-reverse;
+}
+
 .linksWrap li {
   list-style: none;
   color: #f5f5f5;
+  width: 240px;
 }
 
 .links {
   display: flex;
+  width: 100%;
+  min-width: 100%;
 }
 
 .title {
   display: inline-block;
   font-size: 20px;
   font-weight: 700;
-  width: 240px;
   text-align: left;
   line-height: 62.4px;
 }
@@ -63,4 +73,13 @@
   position: absolute;
   left: 0;
   bottom: 0;
+}
+
+@media screen and (max-width: 996px) {
+  .title {
+    width: 100%;
+  }
+  .linksWrap li {
+    width: 25%;
+  }
 }

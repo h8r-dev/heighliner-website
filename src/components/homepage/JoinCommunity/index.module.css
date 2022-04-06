@@ -40,3 +40,16 @@
 .bg {
   width: 100%;
 }
+
+@media screen and (max-width: 996px) {
+  .title {
+    font-size: 15px;
+  }
+
+  .btn {
+    width: 173px;
+    height: 45px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}

@@ -57,3 +57,29 @@
 .row:not(:last-child) {
   margin-bottom: 37px;
 }
+
+.featureText {
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .item {
+    width: 311px;
+    height: 376px;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .wrapper {
+    background-image: none;
+  }
+
+  .featureText {
+    text-align: center;
+  }
+
+  .item {
+    margin: 0 !important;
+  }
+}

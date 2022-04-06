@@ -9,9 +9,10 @@ import { customFields } from "@site/docusaurus.config";
 
 import styles from './index.module.css'
 import { BackgroundMask } from "./BackgroundMask";
-import { WaveBottom } from "./WaveBottom";
+
 import BlueLogoSvg from '@site/static/img/homepage/blue-logo.svg'
 import WhiteHeighlinerSvg from '@site/static/img/homepage/white-heighliner.svg'
+import SloganWaveBottomSvg from '@site/static/img/homepage/slogan-wave-bottom.svg'
 
 function handleRequestAccess() {
   console.log('request access from popover')
@@ -48,6 +49,10 @@ export function SloganSection(): React.ReactElement {
               <h1>cloud-native</h1>
               <h1>stack in <em>minutes</em></h1>
             </div>
+            <div className={styles.sloganTextWrapSmallScreen}>
+              <h1>Spin up your cloud-native stack</h1>
+              <h1>in <em>minutes</em></h1>
+            </div>
             <div className={styles.actionsGroup}>
               <button
                 onClick={handleRequestAccess}
@@ -64,7 +69,7 @@ export function SloganSection(): React.ReactElement {
             </div>
           </main>
         </div>
-        <WaveBottom />
+        <SloganWaveBottomSvg className={styles.waveBottom} />
       </div>
     </div>
   )

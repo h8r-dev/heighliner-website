@@ -18,8 +18,10 @@ export function FeatureItem({
   return (
     <div className={styles.item}>
       <img src={imgSrc} alt="feature" />
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <div className={styles.featureText}>
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </div>
     </div>
   )
 }
