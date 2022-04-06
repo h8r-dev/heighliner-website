@@ -1,7 +1,11 @@
+/**
+ * Homepage
+ */
+
 import React from "react";
 
 import { SloganSection } from "../components/homepage/SloganSection";
-import { HighlinerDetail } from "../components/homepage/HeighlinerDetail";
+import { HeighlinerDetail } from "../components/homepage/HeighlinerDetail";
 import { HeighlinerFeatures } from "../components/homepage/HeighlinerFeatures";
 import { WhyHeighliner } from "../components/homepage/WhyHeighliner";
 import { StackWorkflow } from "../components/homepage/StackWorkflow";
@@ -13,7 +17,7 @@ export default function Home(): JSX.Element {
   return (
     <main>
       <SloganSection />
-      <HighlinerDetail />
+      <HeighlinerDetail />
       <WhyHeighliner />
       <HeighlinerFeatures />
       <StackWorkflow />

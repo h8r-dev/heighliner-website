@@ -41,14 +41,15 @@
 
 .navItems li a {
   color: #fff;
+  font-size: 16px;
 }
 
-.sloganTextWrap, .sloganTextWrapSmallScreen {
+.sloganTextWrap {
   color: #fff;
   margin-bottom: 113px;
 }
 
-.sloganTextWrap > h1, .sloganTextWrapSmallScreen > h1 {
+.sloganTextWrap > h1 {
   font-weight: 700;
   font-size: 60px;
   line-height: 140%;
@@ -56,7 +57,7 @@
   white-space: nowrap;
 }
 
-.sloganTextWrap > h1 > em, .sloganTextWrapSmallScreen > h1 > em {
+.sloganTextWrap > h1 > em {
   color: #A5FFDB;
   font-style: normal;
 }
@@ -126,35 +127,25 @@
   height: 714px;
 }
 
-.sloganTextWrapSmallScreen {
-  display: none;
-}
-
-.sloganTextWrapSmallScreen > h1 {
-  font-size: 42px;
-  text-align: center;
-}
-
 @media screen and (max-width: 996px) {
-  .sloganTextWrap {
-    display: none;
-  }
-
-  .sloganTextWrapSmallScreen {
-    display: block;
-    margin-bottom: 44px;
-  }
-
   .wrap {
     left: 50%;
     transform: translateX(-50%);
-    top: 462px;
+    top: 262px;
   }
 
   .quickstart, .requestAccess {
     font-size: 15px;
     width: 173px;
     height: 45px;
+  }
+
+  .sloganTextWrap {
+    margin-bottom: 44px;
+  }
+
+  .sloganTextWrap > h1 {
+    font-size: 45px;
   }
 
   .quickstart {
@@ -166,4 +157,33 @@
     width: 100%;
     justify-content: center;
   }
+}
+
+@media screen and (max-width: 600px) {
+
+  .navItems li:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  .sloganTextWrap > h1 {
+    font-size: 40px;
+  }
+
+  .actionsGroup {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .quickstart {
+    margin-left: 0;
+  }
+
+  .requestAccess {
+    margin-bottom: 20px;
+  }
+
+  .requestAccess, .quickstart {
+    width: 100%;
+  }
+
 }

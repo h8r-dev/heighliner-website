@@ -8,7 +8,7 @@ import React from "react";
 import styles from './index.module.css'
 import { SectionTitleIcon } from "../SectionTitleIcon";
 
-export function HighlinerDetail(): React.ReactElement {
+export function HeighlinerDetail(): React.ReactElement {
   return (
     <div className={styles.wrapper}>
       <div className="heighliner-detail-section container">

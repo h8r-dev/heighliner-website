@@ -139,3 +139,7 @@ html, button {
   font-family: 'Maven Pro', sans-serif;
   font-style: normal;
 }
+
+#__docusaurus {
+  overflow: hidden;
+}

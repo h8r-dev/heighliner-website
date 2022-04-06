@@ -49,10 +49,6 @@ export function SloganSection(): React.ReactElement {
               <h1>cloud-native</h1>
               <h1>stack in <em>minutes</em></h1>
             </div>
-            <div className={styles.sloganTextWrapSmallScreen}>
-              <h1>Spin up your cloud-native stack</h1>
-              <h1>in <em>minutes</em></h1>
-            </div>
             <div className={styles.actionsGroup}>
               <button
                 onClick={handleRequestAccess}
