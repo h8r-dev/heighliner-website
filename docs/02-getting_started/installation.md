@@ -3,10 +3,6 @@ title: Installation
 sidebar_position: 1
 ---
 
-Requirements:
-
-- Installed [kubectl](https://kubernetes.io/docs/tasks/tools/) command-line tool.
-- Have a [kubeconfig](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/) file and set `KUBECONFIG` env (default location is `~/.kube/config`).
 
 ## 1. Install `hln` CLI
 
@@ -14,40 +10,129 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-  <TabItem value="script" label="MacOS" default>
+  <TabItem value="macos" label="MacOS" default>
 
-You can use Homebrew:
+Homebrew:
 
 ```bash
 brew install h8r-dev/tap/heighliner
 hln version
 ```
 
-You can use this one liner:
+Or use the install script:
 
 ```bash
 curl -L https://dl.h8r.io/hln/install.sh | sh
 ./bin/hln version
 ```
 
-You can download binaries of all releases from [Github Release](https://github.com/h8r-dev/heighliner/releases).
+Or download binaries: [Github Release](https://github.com/h8r-dev/heighliner/releases)
 
   </TabItem>
-  <TabItem value="homebrew" label="Linux">
+  <TabItem value="linux" label="Linux">
 
-You can use this one liner:
+Use the install script:
 
 ```bash
 curl -L https://dl.h8r.io/hln/install.sh | sh
 ./bin/hln version
 ```
 
-You can download binaries of all releases from [Github Release](https://github.com/h8r-dev/heighliner/releases).
+Or download binaries: [Github Release](https://github.com/h8r-dev/heighliner/releases)
 
   </TabItem>
-  <TabItem value="github_release" label="Windows">
+  <TabItem value="windows" label="Windows">
 
-You can download binaries of all releases from [Github Release](https://github.com/h8r-dev/heighliner/releases).
+Download binaries: [Github Release](https://github.com/h8r-dev/heighliner/releases)
 
   </TabItem>
 </Tabs>
+
+## 2. Install Kubernetes Cluster
+
+Install `kubectl` command-line tool first by following the [instructions](https://kubernetes.io/docs/tasks/tools/).
+
+Then choose one of the following methods to install a Kubernetes cluster:
+
+<Tabs
+className="unique-tabs"
+defaultValue="kind"
+values={[
+{label: 'Kind', value: 'kind'},
+{label: 'Minikube', value: 'minikube'},
+{label: 'AWS', value: 'aws'},
+{label: 'Azure', value: 'azure'},
+{label: 'Alibaba', value: 'aliyun'},
+{label: 'Tencent', value: 'tencent'},
+]}>
+
+<TabItem value="kind">
+
+Follow [kind installation guide](https://kind.sigs.k8s.io/docs/user/quick-start/#installation) to install `kind` command-line tool.
+
+Then spins up a kind cluster:
+
+```shell
+cat <<EOF | kind create cluster --image=kindest/node:v1.23.5 --config=-
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+- role: control-plane
+  kubeadmConfigPatches:
+  - |
+    kind: InitConfiguration
+    nodeRegistration:
+      kubeletExtraArgs:
+        node-labels: "ingress-ready=true"
+  extraPortMappings:
+  - containerPort: 80
+    hostPort: 80
+    protocol: TCP
+  - containerPort: 443
+    hostPort: 443
+    protocol: TCP
+EOF
+```
+
+Install ingress controller to enable ingress routing:
+
+```shell
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/kind/deploy.yaml
+```
+
+</TabItem>
+
+<TabItem value="minikube">
+
+Follow the minikube [installation guide](https://minikube.sigs.k8s.io/docs/start/).
+
+Then spins up a minikube cluster
+
+```shell
+minikube start
+```
+
+Install ingress controller to enable ingress routing:
+
+```shell
+minikube addons enable ingress
+```
+
+</TabItem>
+
+<TabItem value="aws">
+</TabItem>
+<TabItem value="azure">
+</TabItem>
+<TabItem value="aliyun">
+</TabItem>
+<TabItem value="tencent">
+</TabItem>
+
+</Tabs>
+
+Finally, set this environment variable:
+
+```shell
+export KUBECONFIG="$HOME/.kube/config"
+```

@@ -20,8 +20,8 @@ The code doesn't even need to exist on your local machine -- All you need is an 
     Without Heighliner, we have seen people install and use various tools (e.g. Argocd, Grafana, Nocalhost, API Gateway) on Kubernetes.
     It fragments their development time and makes them painful to connect the tools to the apps.
     With Heighliner, you can focus on your business code while enjoying the seamless workflow, integrated with open source cloud native tools.
-    You can see and manage the logs, metrics, CI/CD pipelines, image scannning results on a single platform.
-    All of these are provided automatically while you work on writing the app.
+    You can write code, build and test the code, manage CI/CD pipelines, see the logs and metrics on a single platform.
+    All you need is an IDE (e.g. VSCode) to write code and a browser to interact with.
 - **Declarative setup**:
     Traditional tools ask you how to achieve the operations.
     This doesn't work at scale. People get confused and lost with too many complex details.
@@ -36,13 +36,16 @@ The code doesn't even need to exist on your local machine -- All you need is an 
 
 ## Features
 
-- Support for popular programming languages and frameworks: Go-Gin, Spring, Laravel, Express, Django, Rails, React, Vue.
+- Popular languages and frameworks support: Go-Gin, Spring, Express, Django, Rails, React, Vue.
 - Automated setup of Github repositories and scaffolds for app, deploy, and infra code.
 - Automated setup of CI/CD pipelines on Github Action and Gitlab Pipeline.
-- Automated setup of cloud native infra tools: Nginx, Nocalhost, Loki, Prometheus, Grafana, Alertmanager.
-- Automated setup of dashboard configuration for your app's logs, metrics, traces.
-- Automated setup of Nocalhost configuration for remotely developing your app.
-- Automated DNS names for your app, logging/monitoring dashboards, Nocalhost service.
+- Automated setup of Helm chart for container builds and image scanning.
+- Automated setup of Kubernetes ingress, services, and workloads.
+- Automated setup of Kubernetes RBAC, roles, and security policies.
+- Automated setup of logs, metrics, monitoring dashboards with Prometheus + Grafana + Loki.
+- Automated setup of remote development environment with Nocalhost.
+- Automated setup of middleware services (MySQL, Redis, MongoDB, etc) and their corresponding secrets.
+- Public DNS names to access your app, logging/monitoring dashboards, Nocalhost services, etc.
 - Ability to deploy to multiple clusters to achieve high availability.
 - Health status analysis of your app.
 - SSO integration (OIDC, OAuth2, LDAP, GitHub, GitLab).
