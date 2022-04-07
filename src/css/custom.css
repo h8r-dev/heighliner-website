@@ -126,12 +126,19 @@
 
 @media screen and (max-width: 996px) {
   .homepage-section-title {
-    font-size: 30px;
-    line-height: 42px;
+    font-size: 42px;
+    line-height: 1.25;
   }
 
   .homepage-section-title > img {
     width: 54px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .homepage-section-title {
+    font-size: 30px;
+    line-height: 42px;
   }
 }
 

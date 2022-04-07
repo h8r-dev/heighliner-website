@@ -8,7 +8,6 @@ import clsx from "clsx";
 import { customFields } from "@site/docusaurus.config";
 
 import styles from './index.module.css'
-import { BackgroundMask } from "./BackgroundMask";
 
 import BlueLogoSvg from '@site/static/img/homepage/blue-logo.svg'
 import WhiteHeighlinerSvg from '@site/static/img/homepage/white-heighliner.svg'
@@ -20,8 +19,8 @@ function handleRequestAccess() {
 export function SloganSection(): React.ReactElement {
   return (
     <div className={styles.wrapper}>
-      <BackgroundMask />
-      <div className={styles.mask}>
+      <div className={styles.backgroundMask} />
+      <div className={styles.container}>
         <div className="slogan-section container">
           <header>
             <nav className={styles.navbar}>
@@ -59,7 +58,7 @@ export function SloganSection(): React.ReactElement {
                 className={clsx('button button--lg button--secondary', styles.quickstart)}
                 to={customFields.quickStartUrl as string}
               >
-                  Quick Start
+                Quick Start
               </Link>
             </div>
           </main>

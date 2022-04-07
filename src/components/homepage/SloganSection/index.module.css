@@ -2,7 +2,11 @@
   width: 100%;
   background-color: #161c21;
   position: relative;
-  /* height: 714px; */
+  height: 714px;
+
+  background-image: url('/static/img/homepage/slogan-bg.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .wrap {
@@ -110,7 +114,7 @@
   left: 0;
 }
 
-.mask {
+.container {
   position: absolute;
   top: 0;
   left: 0;
@@ -119,12 +123,14 @@
 }
 
 .backgroundMask {
-  padding-top: 100px;
-}
-
-.backgroundMask > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   height: 714px;
+  background-color: #000;
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 996px) {
