@@ -8,7 +8,6 @@ import Link from "@docusaurus/Link";
 import { customFields } from "@site/docusaurus.config";
 
 import JoinCommunityBgSvg from '@site/static/img/homepage/join-community-bg.svg'
-import JoinCommunityLogoSvg from '@site/static/img/homepage/join-community-logo-img.svg'
 import styles from './index.module.css'
 
 export function JoinCommunity() {
@@ -16,7 +15,7 @@ export function JoinCommunity() {
     <div className={styles.wrapper}>
       <JoinCommunityBgSvg className={styles.bg} />
       <div className={styles.content}>
-        <JoinCommunityLogoSvg />
+        <img src={require('@site/static/img/homepage/join-community-logo-img.png').default} alt="xxx" />
         <div className={styles.title}>Join the community</div>
         <Link
           className={clsx('button button--lg button--secondary', styles.btn)}

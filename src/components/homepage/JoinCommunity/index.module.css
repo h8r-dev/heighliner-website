@@ -18,6 +18,10 @@
   align-items: center;
 }
 
+.content > img {
+  width: 89px;
+}
+
 .title {
   color: #061596;
   font-size: 22px;
