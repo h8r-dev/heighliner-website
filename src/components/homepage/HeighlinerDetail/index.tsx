@@ -5,8 +5,8 @@
 import clsx from "clsx";
 import React from "react";
 
-import { Player, BigPlayButton, ControlBar, LoadingSpinner } from 'video-react'
-import "video-react/dist/video-react.css"; // import css
+// import { Player, BigPlayButton, ControlBar, LoadingSpinner } from 'video-react'
+// import "video-react/dist/video-react.css"; // import css
 
 import styles from './index.module.css'
 import { SectionTitleIcon } from "../SectionTitleIcon";
@@ -21,7 +21,7 @@ export function HeighlinerDetail(): React.ReactElement {
         </h1>
         <div className={styles.detail}>
           <div className={styles.content}>
-            <Player
+            {/* <Player
               playsInline
               poster='/img/homepage/video-poster.png'
               src='/videos/intro-video-demo.mp4'
@@ -32,7 +32,7 @@ export function HeighlinerDetail(): React.ReactElement {
                 className={styles.videoControlBar}
                 autoHide
               />
-            </Player>
+            </Player> */}
           </div>
         </div>
       </div>
