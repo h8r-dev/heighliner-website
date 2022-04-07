@@ -10,7 +10,7 @@ const mainGithubUrl = 'https://github.com/h8r-dev/heighliner'
 const config = {
   title: "Heighliner",
   tagline: "Speed up Cloud Native Application Development",
-  url: "https://heighliner.cloud",
+  url: "https://heighliner.dev",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",

@@ -1,12 +1,12 @@
 .wrapper {
   width: 100%;
-  background-color: #161c21;
+  background-color: #000;
   position: relative;
-  /* height: 714px; */
+  height: 791px;
 
-  /* background-image: url('/static/img/homepage/slogan-bg.jpeg');
+  background-image: url('/static/img/homepage/slogan-bg.svg');
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-position: center;
 }
 
 .wrap {
@@ -20,15 +20,6 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-}
-
-.backgroundMask {
-  padding-top: 100px;
-}
-
-.backgroundMask > img {
-  width: 100%;
-  height: 714px;
 }
 
 .logoWrap {
@@ -96,12 +87,16 @@
   color: #123B53 !important;
   width: 233px;
   height: 60px;
-  margin-left: 84px;
+  /* margin-left: 84px; */
   line-height: 2.4;
   border: none;
   outline: none;
   font-size: 18px;
   font-weight: 800;
+}
+
+.quickstart:hover {
+  background-color: #95E3CB !important;
 }
 
 .quickstart :hover {
@@ -131,16 +126,16 @@
   right: 0;
 }
 
-/* .backgroundMask {
+.backgroundMask {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
-  height: 714px;
+  height: 791px;
   background-color: #000;
   opacity: 0.5;
-} */
+}
 
 @media screen and (max-width: 996px) {
   .wrap {
@@ -165,7 +160,7 @@
 
   .quickstart {
     line-height: 1.9;
-    margin-left: 63px;
+    /* margin-left: 63px; */
   }
 
   .actionsGroup {
