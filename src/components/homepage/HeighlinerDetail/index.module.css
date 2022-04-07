@@ -16,7 +16,22 @@
 }
 
 .content {
-  width: 400px;
-  height: 400px;
-  border: 1px solid grey;
+  width: 813px;
+}
+
+.videoControlBar {
+  background-color: #080930 !important;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+@media screen and (max-width: 996px) {
+  .content {
+    width: 570px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    width: 100%;
+  }
 }
