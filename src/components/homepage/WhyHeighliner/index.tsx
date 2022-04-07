@@ -22,8 +22,14 @@ export function WhyHeighliner(): React.ReactElement {
           Based on convention over configuration, it significantly reduces the overhead of building cloud-native applications.
         </p>
         <main className={styles.compare}>
-          <div className="left">Without Heighliner Stack</div>
-          <div className="right">With Heighliner Stack</div>
+          <div className={styles.withoutH8r}>
+            <div className={styles.imgCaption}>Without Heighliner Stack</div>
+            <img src={require('@site/static/img/homepage/without-h8r.png').default} alt="without heighliner" />
+          </div>
+          <div className={styles.withH8r}>
+            <div className={styles.imgCaption}>With Heighliner Stack</div>
+            <img src={require('@site/static/img/homepage/with-h8r.png').default} alt="with heighliner" />
+          </div>
         </main>
       </div>
     </div>

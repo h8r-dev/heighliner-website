@@ -34,4 +34,8 @@
   .content {
     width: 100%;
   }
+
+  .detail {
+    padding-bottom: 51px;
+  }
 }

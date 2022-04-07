@@ -23,8 +23,38 @@
   justify-content: center;
 }
 
-.compare > div {
-  border: 1px solid grey;
-  width: 300px;
-  height: 300px;
+.withoutH8r > img, .withH8r > img {
+  width: 493px;
+}
+
+.withoutH8r, .withH8r {
+  padding: 0 35px;
+}
+
+.imgCaption {
+  color: #063ade;
+  font-size: 27px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 996px) {
+  .compare {
+    flex-direction: column;
+  }
+
+  .withoutH8r {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .imgCaption {
+    font-size: 18px;
+  }
+
+  .withoutH8r {
+    margin-bottom: 20px;
+  }
 }
