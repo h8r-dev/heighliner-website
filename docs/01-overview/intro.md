@@ -23,9 +23,10 @@ The code doesn't even need to exist on your local machine -- All you need is an 
     You can write code, build and test the code, manage CI/CD pipelines, see the logs and metrics on a single platform.
     All you need is an IDE (e.g. VSCode) to write code and a browser to interact with.
 - **Declarative setup**:
-    Traditional tools ask you how to achieve the operations.
+    Traditional tools ask you to write workflow step by step.
     This doesn't work at scale. People get confused and lost with too many complex details.
-    Heighliner as a modern tool asks you what to achieve.
+    We need a new solution to meet growing business requirements and its complexities.
+    Thus, we designed a declarative system to replace workflow process at control layer.
     You define the end goals and Heighliner will make it to the end.
     You can enjoy the simplicity of declarative APIs while Heighliner handles the low-level complex details.
 - **Multi-cloud and no vendor lock-in**:
