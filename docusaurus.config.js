@@ -14,7 +14,7 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "img/apple-touch-icon.png",
   organizationName: "h8r-dev", // Usually your GitHub org/user name.
   projectName: "heighliner-website", // Usually your repo name.
 

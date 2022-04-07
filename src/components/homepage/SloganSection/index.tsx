@@ -12,7 +12,6 @@ import { BackgroundMask } from "./BackgroundMask";
 
 import BlueLogoSvg from '@site/static/img/homepage/blue-logo.svg'
 import WhiteHeighlinerSvg from '@site/static/img/homepage/white-heighliner.svg'
-import SloganWaveBottomSvg from '@site/static/img/homepage/slogan-wave-bottom.svg'
 
 function handleRequestAccess() {
   console.log('request access from popover')
@@ -65,7 +64,6 @@ export function SloganSection(): React.ReactElement {
             </div>
           </main>
         </div>
-        <SloganWaveBottomSvg className={styles.waveBottom} />
       </div>
     </div>
   )

@@ -31,7 +31,7 @@ export function Footer() {
                       linkItem.items.map((link: any, idx: number) => {
                         const to: string = link.to || link.href
                         return (
-                          <li key={idx}>
+                          <li key={idx} className={styles.linkItem}>
                             <Link to={to}>{link.label}</Link>
                             { to.startsWith('http') && <ExternalLinkIcon style={{ marginLeft: 5 }} /> }
                           </li>

@@ -71,4 +71,8 @@
     width: 70%;
     height: auto;
   }
+
+  .wrapper {
+    padding: 0;
+  }
 }

@@ -52,7 +52,7 @@
   display: flex;
   width: 100%;
   min-width: 100%;
-  flex-direction: row-reverse;
+  justify-content: flex-end;
 }
 
 .title {
@@ -79,8 +79,11 @@
   .title {
     width: 100%;
   }
-  .linksWrap li {
+  .links > li {
     width: 25%;
+  }
+  .linkItem {
+    width: 100% !important;
   }
 }
 
