@@ -9,6 +9,8 @@ import styles from './index.module.css'
 import { SectionTitleIcon } from "../SectionTitleIcon";
 import { Line, Direction } from "@site/src/components/Line";
 
+import WorkflowSvg from '@site/static/img/homepage/workflow.svg'
+
 const workflowSteps: any[] = [
   {
     icon: require('@site/static/img/homepage/step-1.png').default,
@@ -47,7 +49,7 @@ export function StackWorkflow(): React.ReactElement {
       </h1>
       <ul className={clsx('container', styles.workflow)}>
         <li className={styles.workflowImage}>
-          <img src={require('@site/static/img/workflow.png').default} alt="workflow image" />
+          <WorkflowSvg />
         </li>
         <li className={styles.separator}>
           {

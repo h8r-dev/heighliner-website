@@ -11,7 +11,6 @@ import styles from './index.module.css'
 
 import BlueLogoSvg from '@site/static/img/homepage/blue-logo.svg'
 import WhiteHeighlinerSvg from '@site/static/img/homepage/white-heighliner.svg'
-import { BackgroundMask } from "./BackgroundMask";
 
 function handleRequestAccess() {
   console.log('request access from popover')
@@ -20,8 +19,7 @@ function handleRequestAccess() {
 export function SloganSection(): React.ReactElement {
   return (
     <div className={styles.wrapper}>
-      {/* <div className={styles.backgroundMask} /> */}
-      <BackgroundMask />
+      <div className={styles.backgroundMask} />
       <div className={styles.container}>
         <div className="slogan-section container">
           <header>
@@ -38,7 +36,7 @@ export function SloganSection(): React.ReactElement {
                   <Link to={customFields.blogUrl as string}>Blog</Link>
                 </li>
                 <li>
-                  <Link to={customFields.githubUrl as string}>Github</Link>
+                  <Link to={customFields.githubUrl as string}>GitHub</Link>
                 </li>
               </ul>
             </nav>
@@ -50,12 +48,12 @@ export function SloganSection(): React.ReactElement {
               <h1>stack in <em>minutes</em></h1>
             </div>
             <div className={styles.actionsGroup}>
-              <button
+              {/* <button
                 onClick={handleRequestAccess}
                 className={styles.requestAccess}
               >
                 Request Early Access
-              </button>
+              </button> */}
               <Link
                 className={clsx('button button--lg button--secondary', styles.quickstart)}
                 to={customFields.quickStartUrl as string}
