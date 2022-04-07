@@ -21,11 +21,11 @@ jobs:
       - name: Build website
         run: yarn build
 
-      # Popular action to deploy to GitHub Pages:
-      # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          # Build output to publish to the `gh-pages` branch:
-          publish_dir: ./build
+      - name: Install coscmd
+        run: pip install coscmd
+
+      - name: Upload Build Static Files to COS
+        run: |
+          coscmd config -a ${{ secrets.TENCENT_SECRET_ID }} -s ${{ secrets.TENCENT_SECRET_KEY }} -b h8r-stack-1309519128 -r ap-hongkong --retry 5
+          cd build
+          coscmd upload -r --delete -y . .
