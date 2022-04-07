@@ -3,18 +3,11 @@ title: Your First App
 sidebar_position: 2
 ---
 
+:::info
 
-> Requirements:
-> - Make sure you have [hln CLI](installation.md#1-install-hln-cli) installed on your local machine.
-> - Install a [Kubernetes Cluster](installation.md#2-install-kubernetes-cluster) and export the kubeconfig file.
-> - Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with the following scopes selected.
->   - `repo`
->   - `workflow`
->   - `write:packages`
->   - `delete:packages`
->   - `admin:org`
->   - `user`
->   - `delete_repo`
+Make sure you have followed the [Installation guide](installation.md) before you run this example.
+
+:::
 
 ## Choose a stack
 
