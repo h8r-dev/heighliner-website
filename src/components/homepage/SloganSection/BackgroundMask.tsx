@@ -9,7 +9,7 @@ import styles from './index.module.css'
 export function BackgroundMask() {
   return (
     <div className={styles.backgroundMask}>
-      <img src={`/img/homepage/slogan-bg.jpeg`} alt="background mask image" />
+      <img src={`/img/homepage/slogan-bg-mask.svg`} alt="background mask image" />
     </div>
   )
 }
