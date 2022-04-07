@@ -1,4 +1,4 @@
 ---
-title: Maturity Level
+title: Stack Format
 sidebar_position: 2
 ---
