@@ -9,7 +9,21 @@ It aims to help developers to build apps easily and quickly using state-of-the-a
 You can use Heighliner to spin up the development environment, and then can focus on writing the business code without worrying build and deploy.
 
 
-![alt](/img/docs/overview.png)
+import { Video } from '@site/src/components/Video';
+
+<div
+  style={{
+    maxWidth: 800,
+    height: 'auto',
+    marginBottom: 100,
+    marginTop: 100
+  }}
+>
+  <Video
+    poster="/img/homepage/video-poster.png"
+    src="https://dl.h8r.io/Heighliner-Introduction.mp4"
+  ></Video>
+</div>
 
 ## Why Heighliner
 

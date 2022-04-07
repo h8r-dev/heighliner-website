@@ -21,11 +21,6 @@
   border: 1px solid gray;
 }
 
-.videoControlBar {
-  background-color: #080930 !important;
-  font-family: 'Maven Pro', sans-serif;
-}
-
 @media screen and (max-width: 996px) {
   .content {
     width: 570px;
