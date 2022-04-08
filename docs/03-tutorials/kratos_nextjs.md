@@ -1,4 +1,4 @@
 ---
-title: Gin+React Stack
+title: Kratos+NextJS Stack
 sidebar_position: 2
 ---

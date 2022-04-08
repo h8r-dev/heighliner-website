@@ -4,7 +4,7 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 // const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
-const mainGithubUrl = "https://github.com/h8r-dev/heighliner";
+const mainGithubUrl = "https://github.com/h8r-dev/heighliner-website";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
