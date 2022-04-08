@@ -18,7 +18,9 @@ export function Footer() {
     <div className={styles.outerWrap}>
       <div className={clsx('container', styles.wrapper)}>
         <div className={styles.logo}>
-          <img src={require('@site/static/img/homepage/yellow-logo.png').default} alt="footer logo" />
+          <div className={styles.logoWrap}>
+            <img src={require('@site/static/img/homepage/yellow-logo.png').default} alt="footer logo" />
+          </div>
         </div>
         <div className={styles.linksWrap}>
           <ul className={styles.links}>
