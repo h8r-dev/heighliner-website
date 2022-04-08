@@ -82,7 +82,9 @@ export function Innovation(): React.ReactElement {
           }
         </div>
         <div className={styles.architecture}>
-          <img src={require('@site/static/img/homepage/innovation.png').default} alt="innovation" />
+          <div className={styles.imgWrap}>
+            <img src={require('@site/static/img/homepage/innovation.png').default} alt="innovation" />
+          </div>
         </div>
       </div>
     </div>

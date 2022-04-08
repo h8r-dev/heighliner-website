@@ -39,9 +39,12 @@
   margin-left: -25px;
 }
 
-.architecture img {
+.imgWrap {
   width: 650px;
-  height: 545px;
+}
+
+.architecture img {
+  width: 100%;
 }
 
 .desc {
@@ -55,6 +58,10 @@
   .desc {
     display: none;
   }
+
+  .architecture {
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 996px) {
@@ -65,11 +72,12 @@
   .architecture {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
-  .architecture img {
+  .imgWrap {
     width: 70%;
-    height: auto;
+    margin: 0 auto;
   }
 
   .wrapper {

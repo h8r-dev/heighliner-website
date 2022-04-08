@@ -33,8 +33,13 @@
   min-width: 100px;
 }
 
-.logo > img {
+.logoWrap {
   width: 54px;
+  margin: 0 auto;
+}
+
+.logo > img {
+  width: 100%;
 }
 
 .linksWrap {
@@ -65,8 +70,7 @@
 
 .copyright {
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding: 20px;
 }
 
 .footerBg {
