@@ -27,6 +27,3 @@ Compared to Heroku, Heighliner is more customizable and open:
 
 - You can easily extend Heighliner platform features using Dagger and Terraform.
 - Heighliner focus on using open-source, cloud-native projects. Heroku is a closed-source platform.
-
-## Ansible Playbook
-

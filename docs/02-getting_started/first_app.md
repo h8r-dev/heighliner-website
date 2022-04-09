@@ -24,8 +24,6 @@ NAME          VERSION  DESCRIPTION
 gin-vue       1.0.0    gin-vue helps you configure many cloud native components including prometheus, grafana, nocalhost, etc.
 ```
 
-At present `gin-vue` is the only available stack.
-
 ## Create a project
 
 Use the stack you have chosen previously to create a heighliner project.
