@@ -82,3 +82,9 @@ infra:
 ```
 
 Congrats! You have initialized your application with `hln` successfully. Click the github url to start developing your new application. All of the Cloud-Native infrastructure and CI/CD pipelines have been set up properly. Feel free to click these links and input the account and password of each component to see its dashboard.
+
+## Clean up
+
+```shell
+hln down
+```

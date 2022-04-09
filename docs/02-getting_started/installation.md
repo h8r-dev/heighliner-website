@@ -137,9 +137,13 @@ Finally, set this environment variable:
 export KUBECONFIG="$HOME/.kube/config"
 ```
 
-## 3. Create Github Token
+## 3. Install Dagger CLI
 
-Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with the following scopes selected.
+Follow [Dagger documentation](https://docs.dagger.io/1200/local-dev) to install `dagger` command-line tool.
+
+## 4. Create Github Token
+
+Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with the following scopes selected:
 
 - `repo`
 - `workflow`
@@ -148,3 +152,5 @@ Create a [GitHub personal access token](https://docs.github.com/en/authenticatio
 - `admin:org`
 - `user`
 - `delete_repo`
+
+![alt](github_token_perm.png)
