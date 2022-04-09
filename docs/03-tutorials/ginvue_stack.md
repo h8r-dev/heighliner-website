@@ -31,5 +31,5 @@ Create the Gin+VUE app:
 ```shell
 dagger project init
 dagger project update
-dagger do up -p ./plans
+dagger do up --log-format plain -p ./plans
 ```
