@@ -7,9 +7,9 @@ sidebar_position: 2
 
 ## Up
 
-## Test
-
 ## Status
+
+## Web
 
 ## Logs
 

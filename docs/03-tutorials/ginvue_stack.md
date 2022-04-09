@@ -37,7 +37,13 @@ dagger project update
 dagger do up --log-format plain -p ./plans
 ```
 
-## Test
+## Web
+
+```shell
+hln web
+```
+
+![alt](/img/docs/ginvue-app-web.png)
 
 ## Status
 

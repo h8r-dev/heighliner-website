@@ -153,4 +153,4 @@ Create a [GitHub personal access token](https://docs.github.com/en/authenticatio
 - `user`
 - `delete_repo`
 
-![alt](github_token_perm.png)
+![alt](/img/docs/github_token_perm.png)
