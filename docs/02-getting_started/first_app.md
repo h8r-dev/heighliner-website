@@ -9,7 +9,7 @@ Make sure you have followed the [Installation guide](installation.md) before you
 
 :::
 
-## Search stacks
+## Choose a stack
 
 List all heighliner stacks:
 
@@ -22,11 +22,13 @@ Output:
 ```shell
 NAME          VERSION  DESCRIPTION
 gin-vue       1.0.0    
+...
 ```
 
-At present `gin-vue` is the only available stack.
+You can choose the stack that fits your language and framework.
+In the following example, we will use `gin-vue`.
 
-## Create your application from a stack
+## Create your application
 
 Create your application interactively:
 
