@@ -9,14 +9,7 @@ Make sure you have followed the [Installation guide](installation.md) before you
 
 :::
 
-## Quickstart
-
-Build client binary:
-
-```shell
-make hln
-export PATH="$PWD/bin:$PATH"
-```
+## Search stacks
 
 List all heighliner stacks:
 
@@ -33,9 +26,9 @@ gin-vue       1.0.0
 
 At present `gin-vue` is the only available stack.
 
-### Spin up your application
+## Create your application from a stack
 
-Spin up your application interactively:
+Create your application interactively:
 
 ```shell
 hln -s gin-vue -i up
@@ -82,7 +75,7 @@ infra:
 
 Congrats! You have initialized your application with `hln` successfully. Click the github url to start developing your new application. All of the Cloud-Native infrastructure and CI/CD pipelines have been set up properly. Feel free to click these links and input the account and password of each component to see its dashboard.
 
-## Test stacks
+## Test a stack
 
 ```shell
 hln -s /path/to/your/stack -p ./relative/path/to/your/plan test
