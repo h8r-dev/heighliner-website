@@ -44,7 +44,7 @@ The output will look like the following:
 
 ```shell
 application:
-  domain: -production.dkvmnr.go-gin.h8r.app
+  domain: production.xxxxx.go-gin.h8r.app
   ingress: 101.32.16.242
 repository:
   backend: |
@@ -55,21 +55,21 @@ repository:
     https://github.com/h8r-dev/docs2.git
 infra:
   - type: prometheus
-    url: dkvmnr.prom.stack.h8r.io
+    url: xxxxx.prom.stack.h8r.io
   - type: grafana
-    url: dkvmnr.grafana.stack.h8r.io
+    url: xxxxx.grafana.stack.h8r.io
     username: admin
     password: |
       prom-operator
   - type: alertManager
-    url: dkvmnr.alert.stack.h8r.io
+    url: xxxxx.alert.stack.h8r.io
   - type: argoCD
-    url: dkvmnr.argocd.stack.h8r.io
+    url: xxxxx.argocd.stack.h8r.io
     username: admin
     password: |
       LTXbYLAVFkPQ-Z9o
   - type: nocalhost
-    url: dkvmnr.nocalhost.stack.h8r.io
+    url: xxxxx.nocalhost.stack.h8r.io
     username: admin@admin.com
     password: "123456"
 
