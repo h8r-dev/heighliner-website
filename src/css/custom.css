@@ -86,7 +86,7 @@
   --ifm-color-primary-lightest: #b5ccff;
   --ifm-font-color-primary: #081366;
   --ifm-font-family-monospace: "Ubuntu Mono";
-  --ifm-font-family-base: "Maven Pro";
+  --ifm-font-family-base: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -140,11 +140,6 @@
     font-size: 30px;
     line-height: 42px;
   }
-}
-
-html, button {
-  font-family: 'Maven Pro', sans-serif;
-  font-style: normal;
 }
 
 #__docusaurus {

@@ -32,7 +32,11 @@
   align-items: center;
   padding: 0;
   margin: 0;
-  font-family: 'Josefin Sans', sans-serif;
+}
+
+.navItems * {
+  font-family: 'Josefin Sans', sans-serif !important;
+  font-weight: 400;
 }
 
 .navItems li {
