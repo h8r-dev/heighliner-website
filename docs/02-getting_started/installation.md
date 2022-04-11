@@ -138,16 +138,13 @@ kubectl version
 ```
 
 Output:
+
 ```shell
 Client Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.4", GitCommit:"e6c093d87ea4cbb530a7b2ae91e54c0842d8308a", GitTreeState:"clean", BuildDate:"2022-02-16T12:30:48Z", GoVersion:"go1.17.6", Compiler:"gc", Platform:"darwin/amd64"}
 Server Version: version.Info{Major:"1", Minor:"22", GitVersion:"v1.22.6", GitCommit:"f59f5c2fda36e4036b49ec027e556a15456108f0", GitTreeState:"clean", BuildDate:"2022-01-19T17:26:47Z", GoVersion:"go1.16.12", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
-## 3. Install Dagger CLI
-
-Follow [Dagger documentation](https://docs.dagger.io/1200/local-dev) to install `dagger` command-line tool.
-
-## 4. Create Github Token
+## 3. Create Github Token
 
 Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with the following scopes selected:
 
