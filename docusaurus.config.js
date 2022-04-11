@@ -134,6 +134,11 @@ const config = {
         theme: lightCodeTheme,
         // darkTheme: darkCodeTheme,
       },
+      algolia: {
+        appId: 'U4KQYASQJZ',
+        apiKey: '232ec1aa85b14f42f196b5dea41fbac8',
+        indexName: 'heighliner-docs',
+      },
     }),
 };
 
