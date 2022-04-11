@@ -14,34 +14,26 @@ Make sure you have followed the [Installation guide](installation.md) before you
 List all heighliner stacks:
 
 ```shell
-hln list stack
+hln list stacks
 ```
 
 Output:
 
 ```shell
 NAME          VERSION  DESCRIPTION
-gin-vue       1.0.0    gin-vue helps you configure many cloud native components including prometheus, grafana, nocalhost, etc.
+gin-vue       1.0.0    
+...
 ```
 
-At present `gin-vue` is the only available stack.
+You can choose the stack that fits your language and framework.
+In the following example, we will use `gin-vue`.
 
-## Create a project
+## Create your application
 
-Use the stack you have chosen previously to create a heighliner project.
-
-```shell
-hln new -s=gin-vue
-```
-
-> If you have an existed project, then `hln` will prevent you from creating a new one. You can run `hln drop` to drop the old one.
-
-## Spin up your application
-
-Spin up your application interactively:
+Create your application interactively:
 
 ```shell
-hln up -i
+hln -s gin-vue -i up
 ```
 
 Input the values one by one according to the promt and your application will be set up automatically.
@@ -52,7 +44,7 @@ The output will look like the following:
 
 ```shell
 application:
-  domain: -production.dkvmnr.go-gin.h8r.app
+  domain: production.xxxxx.go-gin.h8r.app
   ingress: 101.32.16.242
 repository:
   backend: |
@@ -63,24 +55,26 @@ repository:
     https://github.com/h8r-dev/docs2.git
 infra:
   - type: prometheus
-    url: dkvmnr.prom.stack.h8r.io
+    url: xxxxx.prom.stack.h8r.io
   - type: grafana
-    url: dkvmnr.grafana.stack.h8r.io
+    url: xxxxx.grafana.stack.h8r.io
     username: admin
     password: |
       prom-operator
   - type: alertManager
-    url: dkvmnr.alert.stack.h8r.io
+    url: xxxxx.alert.stack.h8r.io
   - type: argoCD
-    url: dkvmnr.argocd.stack.h8r.io
+    url: xxxxx.argocd.stack.h8r.io
     username: admin
     password: |
       LTXbYLAVFkPQ-Z9o
   - type: nocalhost
-    url: dkvmnr.nocalhost.stack.h8r.io
+    url: xxxxx.nocalhost.stack.h8r.io
     username: admin@admin.com
     password: "123456"
 
 ```
 
 Congrats! You have initialized your application with `hln` successfully. Click the github url to start developing your new application. All of the Cloud-Native infrastructure and CI/CD pipelines have been set up properly. Feel free to click these links and input the account and password of each component to see its dashboard.
+
+## Clean up

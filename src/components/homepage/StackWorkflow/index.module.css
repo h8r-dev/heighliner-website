@@ -7,7 +7,7 @@
   margin-bottom: 60px;
 }
 
-.workflowImage svg {
+.workflowImage img {
   width: 405px;
 }
 
@@ -35,6 +35,9 @@
 @media screen and (max-width: 996px) {
   .separator, .workflowText {
     display: none;
+  }
+  .workflow {
+    padding: 0 var(--ifm-spacing-horizontal);
   }
 }
 
