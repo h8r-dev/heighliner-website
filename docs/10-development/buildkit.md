@@ -12,7 +12,7 @@ If you have Docker installed in your local machine, then `hln` CLI will use it b
 
 ## Use Remote BuildKit
 
-If you don't want to run BuildKit locally, then try the follow steps to use remote BuildKit.
+If you don't want to run BuildKit locally, then try the following steps to use remote BuildKit.
 
 Start buildkit in remote machine:
 
@@ -33,4 +33,6 @@ Set env:
 export BUILDKIT_HOST=tcp://127.0.0.1:1235
 ```
 
-Then you can use `hln` and `dagger` as usual.
+Then you can use `hln` as usual.
+
+Refer to [Dagger Customizing Buildkit documentation](https://docs.dagger.io/1223/custom-buildkit/) for more details.
