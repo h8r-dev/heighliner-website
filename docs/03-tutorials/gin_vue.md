@@ -57,6 +57,3 @@ hln web
 
 ## Down
 
-```shell
-dagger do down --log-format plain -p ./plans
-```
