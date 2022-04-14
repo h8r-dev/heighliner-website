@@ -51,3 +51,4 @@ dagger do up --log-format plain -p ./plans
 
 ## Down
 
+## Full list of capabilities

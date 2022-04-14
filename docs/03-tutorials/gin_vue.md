@@ -57,3 +57,11 @@ hln web
 
 ## Down
 
+## Full list of capabilities
+
+- 检查前置条件
+- 自动创建 Github 仓库和初始化 Helm Chart：包含 go-gin 框架的后端仓库，vue.js 的前端仓库以及 Helm 仓库
+- 部署应用，支持 Ingress 访问(h8r.app)
+- 创建并配置 Infra 层应用，包括 Nocalhost、Loki、Prometheus、Grafana、Alertmanager，支持 Ingress 访问(h8r.io)
+- 使用 Github Organization 创建 Nocalhost 用户，初始化应用、集群、开发空间
+- Nocalhost 一键开发和调试
