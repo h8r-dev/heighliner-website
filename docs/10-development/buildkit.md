@@ -33,6 +33,6 @@ Set env:
 export BUILDKIT_HOST=tcp://127.0.0.1:1235
 ```
 
-Then you can use `hln` as usual.
+Then `hln` will talk to the remote BuildKit instead of local Docker daemon whenever you use `hln` features.
 
 Refer to [Dagger Customizing Buildkit documentation](https://docs.dagger.io/1223/custom-buildkit/) for more details.
