@@ -60,10 +60,10 @@ const config = {
           {
             type: "doc",
             docId: "overview/intro",
-            position: "right",
+            position: "left",
             label: "Docs",
           },
-          { to: "/blog", label: "Blog", position: "right" },
+          { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://github.com/h8r-dev/heighliner-website",
             position: 'right',

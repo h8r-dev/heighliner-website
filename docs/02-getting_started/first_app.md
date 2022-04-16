@@ -20,15 +20,21 @@ hln list stacks
 Output:
 
 ```shell
-NAME          VERSION  DESCRIPTION
-gin-vue       latest
-...
+NAME      VERSION  DESCRIPTION
+gin-vue   latest
+gin-next  latest
 ```
 
 You can choose the stack that fits your language and framework.
 In the following example, we will use `gin-vue`.
 
 ## Create your application
+
+Check and download dependencies:
+
+```shell
+hln check
+```
 
 Create your application interactively:
 
@@ -38,7 +44,9 @@ hln up -s gin-vue -i
 
 Input the values one by one according to the promt and your application will be set up automatically.
 
-> If the progress of spinning up your application failed accidentally, feel free to **rerun** the `hln up -i` command and input the same values again. `hln` has the ability of caching.
+![alt](/img/docs/dagger_output.png)
+
+> If it failed due to unexpected network problems, feel free to **rerun** the `hln up -i` command.
 ![hln CLI failure](/img/docs/hln_cli_failure.png)
 
 The output will look like the following:
