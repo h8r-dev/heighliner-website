@@ -44,12 +44,11 @@ hln up -s gin-vue -i
 
 Input the values one by one according to the promt and your application will be set up automatically.
 
-![alt](/img/docs/dagger_output.png)
-
 > If it failed due to unexpected network problems, feel free to **rerun** the `hln up -i` command.
-![hln CLI failure](/img/docs/hln_cli_failure.png)
 
 The output will look like the following:
+
+![alt](/img/docs/dagger_output.png)
 
 ```shell
 application:
@@ -82,6 +81,12 @@ infra:
     username: admin@admin.com
     password: "123456"
 
+```
+
+Check the status of your application:
+
+```shell
+hln status
 ```
 
 Congrats! You have initialized your application with `hln` successfully. Click the github url to start developing your new application. All of the Cloud-Native infrastructure and CI/CD pipelines have been set up properly. Feel free to click these links and input the account and password of each component to see its dashboard.
