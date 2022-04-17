@@ -55,9 +55,9 @@ You can use Heighliner to spin up the development environment, and then can focu
 
 ## What's Next
 
+- Learn about Heighliner [concepts](./concepts.md) and [platform architecture](./arch.md).
 - [Install and setup Heighliner](/docs/getting_started/installation).
 - Explore use cases with [hands-on tutorials](/docs/tutorials/gin_vue).
-- Learn about [Heighliner Platform Architecture](./arch.md).
 - Learn about [how Heighliner compares to other tools and services](./comparison.md).
 
 ## Community
