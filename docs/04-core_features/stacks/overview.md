@@ -5,7 +5,9 @@ sidebar_position: 1
 
 ## What Is Stack?
 
-Heighliner Stack is a collection of orchestrated plans to one-click setup the development environment. You can choose a specific language and framework (Go-Gin, Spring, React, etc) to write your app code. Then Heighliner Stack do the rest -- it will orchestrate the infrastructure setup which optimize for your apps with cloud native best practices.
+A Stack is a collection of orchestrated plans to one-command setup the development environment.
+You can choose a specific language and framework (Go-Gin, Spring, React, etc), then Heighliner Stack will orchestrate the infrastructure setup.
+These are automatically optimized for your apps with cloud native best practices.
 
 ## How Does Stack Work?
 

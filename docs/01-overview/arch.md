@@ -9,14 +9,6 @@ The section below provides some useful description and links to build up this un
 
 From a high-level view, Heighliner contains the following components:
 
-## Heighliner StackHub
-
-StackHub stores Heighliner [stacks](/docs/overview/concepts#stack) and provides a searchable interface to find the right stack for your app.
-We provide a default StackHub hosted on the cloud to store the default stacks.
-When you use the CLI/UI to use the default stacks, they are availabe to you.
-
-For more info, please refer to the [StackHub](/docs/core_features/stacks/stackhub) page.
-
 ## Heighliner CLI
 
 Heighliner CLI provides the best local experience to work with stacks.
@@ -33,6 +25,14 @@ Heighliner Server provides services to streamline development workflow.
 There are necessary services that cannot be achieved at the client side.
 For example, you will need a service to allocate sub-domains for your apps, distribute TLS certs, etc.
 In order to achieve this, Heighliner Server supports such features to simplify the development process.
+
+## Heighliner StackHub
+
+StackHub stores Heighliner [stacks](/docs/overview/concepts#stack) and provides a searchable interface to find the right stack for your app.
+We provide a default StackHub hosted on the cloud to store the default stacks.
+When you use the CLI/UI to use the default stacks, they are availabe to you.
+
+For more info, please refer to the [StackHub](/docs/core_features/stacks/stackhub) page.
 
 ## Kubernetes
 
