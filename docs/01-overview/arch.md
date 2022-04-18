@@ -11,7 +11,7 @@ From a high-level view, Heighliner contains the following components:
 
 ## Heighliner CLI
 
-Heighliner CLI provides the best local experience to work with stacks.
+Heighliner CLI provides the best local experience to work with Heighliner [stacks]((/docs/overview/concepts#stack)).
 It walks users through the process of using Heighliner Stacks to setup environments for their apps.
 It can be used to search and download stacks, manages secrets, provide interactive input based on stack schema.
 
