@@ -68,10 +68,19 @@ Connect to remote machine as **root** user:
 ssh root@$REMOTE_IP
 ```
 
-Download the latest version of [Buildkit](https://github.com/moby/buildkit/releases) and extract it.
+Download the latest version of [Buildkit](https://github.com/moby/buildkit/releases):
 
 ```shell
-nohup ./bin/buildkitd --addr tcp://127.0.0.1:1234 > ~/buildkit.log 2>&1 &
+# This is just an example for linux
+wget https://github.com/moby/buildkit/releases/download/v0.10.1/buildkit-v0.10.1.linux-amd64.tar.gz
+tar zxvf buildkit-v0.10.1.linux-amd64.tar.gz
+export PATH="$PWD/bin/:$PATH"
+```
+
+Start buildkitd in the background:
+
+```shell
+nohup buildkitd --addr tcp://127.0.0.1:1234 > ~/buildkit.log 2>&1 &
 ```
 
 Make sure your buildkitd is running.
