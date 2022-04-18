@@ -62,7 +62,7 @@ export BUILDKIT_HOST=docker-container://hln-buildkitd
 
 You can run buildkit binary directly.
 
-Connect to remote machine with root user:
+Connect to remote machine as **root** user:
 
 ```shell
 ssh root@$REMOTE_IP
