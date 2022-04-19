@@ -8,6 +8,9 @@ Heighliner is a modern app development platform.
 It aims to help developers to build apps easily and quickly using state-of-the-art cloud native stacks.
 You can use Heighliner to spin up the development environment, and then can focus on writing the business code without worrying build and deploy.
 
+
+![alt](/img/docs/overview.png)
+
 ## Why Heighliner
 
 - **Smart platform**:
