@@ -19,41 +19,98 @@ import TabItem from '@theme/TabItem';
 
 <Tabs
 className="unique-tabs"
-defaultValue="container"
+defaultValue="kubernetes"
 values={[
-{label: 'Container', value: 'container'},
+{label: 'Kubernetes', value: 'kubernetes'},
 {label: 'Binary', value: 'binary'},
 ]}>
 
-<TabItem value="container">
+<TabItem value="kubernetes">
 
-You can run buildkit as a container using Docker.
+You can run buildkit as a pod.  
 
-Connect to remote machine:
+Create buildkitd deployment:  
 
 ```shell
-ssh $USER@$REMOTE_IP
+cat <<EOF | kubectl apply -f -
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: buildkitd
+  name: buildkitd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: buildkitd
+  template:
+    metadata:
+      labels:
+        app: buildkitd
+    spec:
+      containers:
+        - name: buildkitd
+          image: moby/buildkit:master
+          args:
+            - --addr
+            - unix:///run/buildkit/buildkitd.sock
+            - --addr
+            - tcp://0.0.0.0:1234
+          readinessProbe:
+            exec:
+              command:
+                - buildctl
+                - debug
+                - workers
+            initialDelaySeconds: 5
+            periodSeconds: 30
+          livenessProbe:
+            exec:
+              command:
+                - buildctl
+                - debug
+                - workers
+            initialDelaySeconds: 5
+            periodSeconds: 30
+          securityContext:
+            privileged: true
+          ports:
+            - containerPort: 1234
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: buildkitd
+  name: buildkitd
+spec:
+  ports:
+    - port: 1234
+      protocol: TCP
+  selector:
+    app: buildkitd
+EOF
 ```
 
-Start the buildkitd container:
+Make sure the buildkitd is running:
 
 ```shell
-docker run -d --name hln-buildkitd --privileged --network=host docker.io/moby/buildkit:latest
+$ kubectl get deployment buildkitd
+NAME        READY   UP-TO-DATE   AVAILABLE   AGE
+buildkitd   1/1     1            1           4m26s
 ```
 
-Make sure your buildkitd container is running:
+Forward local port `1234` to buildkitd:
 
 ```shell
-$ docker ps
-CONTAINER ID   IMAGE                   COMMAND       CREATED          STATUS          PORTS     NAMES
-ba8ed1984dfc   moby/buildkit:latest    "buildkitd"   44 minutes ago   Up 44 minutes             hln-buildkitd
+kubectl port-forward service/buildkitd 1234:1234
 ```
 
-In **local** machine, set envs:
+Set env:
 
 ```shell
-export DOCKER_HOST=ssh://$USER@$REMOTE_IP
-export BUILDKIT_HOST=docker-container://hln-buildkitd
+export BUILDKIT_HOST=tcp://127.0.0.1:1234
 ```
 
 </TabItem>
