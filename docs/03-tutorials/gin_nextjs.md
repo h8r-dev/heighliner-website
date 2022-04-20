@@ -1,5 +1,5 @@
 ---
-title: Gin+NextJS Stack
+title: Gin+Nextjs Stack
 sidebar_position: 2
 ---
 

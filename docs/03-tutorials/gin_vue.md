@@ -1,5 +1,5 @@
 ---
-title: Gin+VUE Stack
+title: Gin+Vue Stack
 sidebar_position: 1
 ---
 
