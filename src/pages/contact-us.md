@@ -23,5 +23,12 @@ https://github.com/h8r-dev/heighliner/issues
 
 <img
   src={require('/img/heighliner-wechat.png').default}
-  alt="Example banner"
+  alt="Heighliner User Group on WeChat"
+/>
+
+## Follow Heighliner's WeChat Channel
+
+<img
+  src={require('/img/heighliner-wechat-channel.jpeg').default}
+  alt="Heighliner User Group on WeChat"
 />
