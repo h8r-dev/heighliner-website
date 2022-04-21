@@ -1,5 +1,6 @@
 ---
 title: Contributing Guide
+sidebar_position: 1
 ---
 
 This document guides you through the process of creating a [pull request](https://help.github.com/en/articles/about-pull-requests/).
