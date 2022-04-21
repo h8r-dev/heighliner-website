@@ -15,9 +15,13 @@ import { Innovation } from "../components/homepage/Innovation";
 import { JoinCommunity } from "../components/homepage/JoinCommunity";
 import { Footer } from "../components/homepage/Footer";
 
+import { Redirect } from '@docusaurus/router';
+import { customFields } from "@site/docusaurus.config";
+
 import styles from './index.module.css'
 
 export default function Home(): JSX.Element {
+  return <Redirect to={customFields.docsUrl as string} />
   return (
     <main className={styles.homepageWrapper}>
       <Head>
