@@ -148,12 +148,12 @@ Server Version: version.Info{Major:"1", Minor:"22", GitVersion:"v1.22.6", GitCom
 
 Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with the following scopes selected:
 
-- `repo`
-- `workflow`
-- `write:packages`
-- `delete:packages`
-- `admin:org`
-- `user`
-- `delete_repo`
+- [x] **repo** Full control of private repositories
+- [x] **workflow** Update GitHub Action workflows
+- [x] **write:packages** Upload packages to GitHub Package Registry
+- [x] **delete:packages** Delete packages from GitHub Package Registry
+- [x] **admin:org** Full control of orgs and teams, read and write org projects
+- [x] **user** Update ALL user data
+- [x] **delete_repo** Delete repositories
 
 ![alt](/img/docs/github_token_perm.png)
