@@ -35,6 +35,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           editUrl: "https://github.com/h8r-dev/heighliner-website",
+          remarkPlugins: [import('remark-code-import')],
         },
         blog: {
           showReadingTime: true,
@@ -42,7 +43,7 @@ const config = {
           editUrl: "https://github.com/h8r-dev/heighliner-website",
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.scss"),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
