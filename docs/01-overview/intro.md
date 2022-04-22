@@ -79,9 +79,8 @@ import { Video } from '@site/src/components/Video';
 
 ## Community
 
-- Learn how to [develop Heighliner locally](/docs/development/develop_h8r)
 - Start [contributing code](/docs/development/contributing)
-- [Contact us](/contact-us)
+- [Join the community](/contact-us)
 
 ## Development Status
 

@@ -1,14 +1,6 @@
----
-title: Contact Us
----
-
 # Contact Us
 
 We welcome you to keep in touch with Heighliner through a variety of channels for support, inspiring ideas and support.
-
-## Send an email
-
-contact@h8r.io
 
 ## Commit an issue on GitHub
 
@@ -17,7 +9,6 @@ https://github.com/h8r-dev/heighliner/issues
 ## Join Heighliner User Group on Discord
 
 // TODO
-
 
 ## Join Heighliner User Group on WeChat
 
@@ -32,3 +23,7 @@ https://github.com/h8r-dev/heighliner/issues
   src={require('/img/heighliner-wechat-channel.jpeg').default}
   alt="Heighliner User Group on WeChat"
 />
+
+## Email
+
+If you have any questions, don't hesitate to contact us at contact@h8r.io
