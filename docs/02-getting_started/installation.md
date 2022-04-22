@@ -146,14 +146,18 @@ Server Version: version.Info{Major:"1", Minor:"22", GitVersion:"v1.22.6", GitCom
 
 ## 3. Create Github Token
 
-Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with the following scopes selected:
+Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with these scopes selected:
+`repo`, `workflow`, `write:packages`, `delete:packages`, `admin:org`, `user`, `delete_repo`.
 
-- `repo`
-- `workflow`
-- `write:packages`
-- `delete:packages`
-- `admin:org`
-- `user`
-- `delete_repo`
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
-![alt](/img/docs/github_token_perm.png)
+<div
+  style={{
+    maxWidth: 700,
+    height: 'auto',
+    marginBottom: 100,
+    marginTop: 0,
+  }}
+>
+<img src={useBaseUrl('/img/docs/github_token_perm.png')} />
+</div>
