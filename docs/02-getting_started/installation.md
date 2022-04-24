@@ -48,9 +48,9 @@ Download binaries: [Github Release](https://github.com/h8r-dev/heighliner/releas
   </TabItem>
 </Tabs>
 
-## 2. Install Kubernetes Cluster
+## 2. Install Kubernetes
 
-Install `kubectl` command-line tool first by following the [instructions](https://kubernetes.io/docs/tasks/tools/).
+Install _kubectl_ first by following the [instructions](https://kubernetes.io/docs/tasks/tools/).
 
 Then choose one of the following methods to install a Kubernetes cluster:
 
@@ -144,7 +144,86 @@ Client Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.4", GitCom
 Server Version: version.Info{Major:"1", Minor:"22", GitVersion:"v1.22.6", GitCommit:"f59f5c2fda36e4036b49ec027e556a15456108f0", GitTreeState:"clean", BuildDate:"2022-01-19T17:26:47Z", GoVersion:"go1.16.12", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
-## 3. Create Github Token
+## 3. Install Buildkit Service
+
+Create buildkitd deployment:  
+
+```shell
+cat <<EOF | kubectl apply -f -
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: buildkitd
+  name: buildkitd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: buildkitd
+  template:
+    metadata:
+      labels:
+        app: buildkitd
+    spec:
+      containers:
+        - name: buildkitd
+          image: moby/buildkit:master
+          args:
+            - --addr
+            - unix:///run/buildkit/buildkitd.sock
+            - --addr
+            - tcp://0.0.0.0:1234
+          readinessProbe:
+            exec:
+              command:
+                - buildctl
+                - debug
+                - workers
+            initialDelaySeconds: 5
+            periodSeconds: 30
+          livenessProbe:
+            exec:
+              command:
+                - buildctl
+                - debug
+                - workers
+            initialDelaySeconds: 5
+            periodSeconds: 30
+          securityContext:
+            privileged: true
+          ports:
+            - containerPort: 1234
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: buildkitd
+  name: buildkitd
+spec:
+  ports:
+    - port: 1234
+      protocol: TCP
+  selector:
+    app: buildkitd
+EOF
+```
+
+Make sure the buildkitd is running:
+
+```shell
+kubectl get deployment buildkitd
+```
+
+Output:
+
+```shell
+NAME        READY   UP-TO-DATE   AVAILABLE   AGE
+buildkitd   1/1     1            1           4m26s
+```
+
+## 4. Create Github Token
 
 Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with these scopes selected:
 `repo`, `workflow`, `write:packages`, `delete:packages`, `admin:org`, `user`, `delete_repo`.
