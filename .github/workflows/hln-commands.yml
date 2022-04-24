@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
       - name: Create local changes
         run: |
-                git clone -b $SOURCE_BRANCH https://username:${{ secrets.BOT_GITHUB_TOKEN }}@github.com/h8r-dev/heighliner.git ../hln
+          git clone -b $SOURCE_BRANCH https://username:${{ secrets.BOT_GITHUB_TOKEN }}@github.com/h8r-dev/heighliner.git ../hln
           rm $TARGET_DIR/*.md
           cp ../hln/$SOURCE_DIR/*.md $TARGET_DIR
       - name: Commit files
