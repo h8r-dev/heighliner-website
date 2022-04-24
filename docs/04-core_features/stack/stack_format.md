@@ -1,6 +1,6 @@
 ---
 title: Stack Format
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 A stack follows specific format to interact with Heighliner platform.
@@ -31,7 +31,7 @@ This directory contains the execution plans to setup the development environment
 ## test/
 
 This directory contains the testing code to verify the current stack.
-You can take a look at [gin-vue test](https://github.com/h8r-dev/stacks/tree/main/gin-vue/test) to learn more details of how to test.
+See [this guide](/docs/core_features/stack/stack_testing) for more details.
 
 ## cue.mods
 
