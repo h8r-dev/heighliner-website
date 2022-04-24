@@ -66,6 +66,7 @@ $desktop-xl-width: 1160px;
   --ifm-pagination-nav-border-radius: 0;
   --ifm-pre-padding: 2rem;
   --ifm-toc-link-color: var(--ifm-color-primary-dark);
+  --ifm-footer-link-color: #999;
 }
 
 html[data-theme="dark"] {
@@ -107,6 +108,13 @@ code,
   color: var(--ifm-code-color);
   .alert & {
     color: var(--ifm-alert-foreground-color);
+  }
+}
+
+
+html[data-theme="dark"] {
+  .breadcrumbs__link {
+    color: #fff;
   }
 }
 
@@ -244,18 +252,28 @@ h1[class^="h1Heading"] {
 .hash-link::before {
   color: var(--ifm-color-info);
 }
-/* navbar */
+
+/* navbar  */
+
+// Navbar left logo
 .navbar__brand .navbar__logo {
-  height: 5rem;
-  @include desktop {
-    height: var(--ifm-navbar-height);
-  }
+  height: 3rem;
 }
 
 .navbar {
   align-self: center;
   box-shadow: none;
   width: 100%;
+}
+
+.navbar__link {
+  color: white;
+}
+
+.navbar__link:hover, .navbar__link--active {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .navbar-sidebar__back {
@@ -287,24 +305,24 @@ h1[class^="h1Heading"] {
 
 .header-github-link,
 .header-github-link:hover {
-  background: url("/img/github-white.png") no-repeat;
+  background: url("/img/github-logo.svg") no-repeat;
   background-size: cover;
   @include tablet {
     background-color: var(--ifm-color-primary);
   }
 }
 
-// .header-discord-link,
-// .header-discord-link:hover {
-//   background: url("/img/discord-icon.svg") no-repeat;
-//   @include tablet {
-//     background-color: var(--ifm-color-primary);
-//   }
-// }
-
-.navbar .button svg {
-  display: none;
+.header-discord-link,
+.header-discord-link:hover {
+  background: url("/img/discord-logo.svg") no-repeat;
+  @include tablet {
+    background-color: var(--ifm-color-primary);
+  }
 }
+
+// .navbar .button svg {
+//   display: none;
+// }
 
 .navbar__toggle {
   filter: brightness(19);
@@ -313,15 +331,9 @@ h1[class^="h1Heading"] {
 /* sidebar */
 
 a[class^="sidebarLogo"] {
+  height: var(--ifm-navbar-height);
   img {
-    display: none !important;
-  }
-  background: url("/img/logo.svg") no-repeat left center;
-  background-size: contain;
-
-  html[data-theme="dark"] & {
-    background: url("/img/logo.svg") no-repeat left center;
-    background-size: contain;
+    height: 3rem;
   }
 }
 
@@ -416,7 +428,7 @@ button[class^="copyButton"] {
 }
 
 .menu {
-  padding: 3rem 0.5rem 0.5rem !important;
+  padding: 3rem 0.5rem 0.5rem;
 }
 
 .menu__link.button {
@@ -497,4 +509,25 @@ div[class*="admonition-"] .admonition-icon svg {
 img[alt="github-contribute"] {
   display: block;
   width: 180px;
+}
+
+.footer {
+  color: #999;
+}
+
+.footer__link-item {
+  color: #999;
+
+  &:hover {
+    color: #ddd;
+  }
+}
+
+aside > div > a {
+  min-height: inherit !important;
+  max-height: inherit !important;
+}
+
+.clean-btn {
+  background-color: #fff;
 }

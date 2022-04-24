@@ -51,9 +51,8 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Heighliner",
         logo: {
-          alt: "Heighliner Logo",
+          alt: "navbar-logo",
           src: "img/logo.svg",
         },
         items: [
@@ -63,7 +62,15 @@ const config = {
             position: "left",
             label: "Docs",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          {
+            to: "/blog",
+            label: "Blog",
+            position: "left",
+          },
+          {
+            type: "search",
+            position: "right",
+          },
           {
             href: "https://github.com/h8r-dev/heighliner-website",
             position: 'right',
