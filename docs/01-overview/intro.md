@@ -20,7 +20,7 @@ import { Video } from '@site/src/components/Video';
 >
   <Video
     poster="/img/homepage/video-poster.png"
-    src="https://dl.h8r.io/Heighliner-Introduction.mp4"
+    src="https://dl.h8r.io/Heighliner-Introduction-English.mp4"
   ></Video>
 </div>
 
