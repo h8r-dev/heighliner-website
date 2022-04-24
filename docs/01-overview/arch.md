@@ -9,7 +9,18 @@ The section below provides some useful description and links to build up this un
 
 From a high-level view, Heighliner contains the following components:
 
-![alt](/img/docs/arch.png)
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+<div
+  style={{
+    maxWidth: 800,
+    height: 'auto',
+    marginBottom: 50,
+    marginTop: 50,
+  }}
+>
+<img src={useBaseUrl('/img/docs/arch.png')} />
+</div>
 
 ## Heighliner CLI
 
