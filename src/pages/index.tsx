@@ -21,7 +21,7 @@ import { customFields } from "@site/docusaurus.config";
 import styles from './index.module.css'
 
 export default function Home(): JSX.Element {
-  return <Redirect to={customFields.docsUrl as string} />
+  // return <Redirect to={customFields.docsUrl as string} />
   return (
     <main className={styles.homepageWrapper}>
       <Head>

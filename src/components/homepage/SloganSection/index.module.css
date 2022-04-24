@@ -11,7 +11,7 @@
 
 .wrap {
   position: absolute;
-  top: 193px;
+  top: 214px;
   z-index: 100;
 }
 
@@ -34,11 +34,6 @@
   margin: 0;
 }
 
-.navItems * {
-  font-family: 'Josefin Sans', sans-serif !important;
-  font-weight: 400;
-}
-
 .navItems li {
   list-style: none;
 }
@@ -58,7 +53,6 @@
 }
 
 .sloganTextWrap > h1 {
-  font-weight: 700;
   font-size: 60px;
   line-height: 140%;
   margin-bottom: 0;
@@ -88,7 +82,8 @@
 .quickstart {
   border-radius: 0;
   background-color: #A5FFDB !important;
-  color: #123B53 !important;
+  /* color: #123B53 !important; */
+  color: #a9f7df;
   width: 233px;
   height: 60px;
   /* margin-left: 84px; */
@@ -139,6 +134,14 @@
   height: 790px;
   background-color: #000;
   opacity: 0.5;
+}
+
+.video {
+  position: absolute;
+  top: 35px;
+  left: 747px;
+  width: 600px;
+  height: 300px;
 }
 
 @media screen and (max-width: 996px) {

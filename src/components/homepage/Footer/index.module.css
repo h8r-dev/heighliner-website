@@ -6,11 +6,6 @@
   position: relative;
 }
 
-.outerWrap * {
-  font-family: 'Josefin Sans', sans-serif !important;
-  font-weight: 400;
-}
-
 .wrapper {
   display: flex;
   justify-content: space-between;

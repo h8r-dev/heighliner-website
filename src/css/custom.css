@@ -6,6 +6,26 @@
 
 /* You can override the default Infima variables here. */
 
+@font-face {
+  font-family: 'Jost';
+  src: url("/static/fonts/Jost-Light.ttf");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: face;
+  src: url("/static/fonts/Jost-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url("/static/fonts/Jost-Medium.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
+
 /* maven-pro-regular - latin */
 @font-face {
   font-family: "Maven Pro";

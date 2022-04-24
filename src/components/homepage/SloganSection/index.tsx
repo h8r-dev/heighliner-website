@@ -7,13 +7,13 @@ import Link from "@docusaurus/Link";
 import clsx from "clsx";
 import { customFields } from "@site/docusaurus.config";
 
-import styles from './index.module.css'
+import styles from "./index.module.css";
 
-import BlueLogoSvg from '@site/static/img/homepage/blue-logo.svg'
-import WhiteHeighlinerSvg from '@site/static/img/homepage/white-heighliner.svg'
+import WhiteHeighlinerSvg from "@site/static/img/homepage/white-heighliner.svg";
+import { Video } from "@site/src/components/Video";
 
 function handleRequestAccess() {
-  console.log('request access from popover')
+  console.log("request access from popover");
 }
 
 export function SloganSection(): React.ReactElement {
@@ -25,7 +25,14 @@ export function SloganSection(): React.ReactElement {
           <header>
             <nav className={styles.navbar}>
               <div className={styles.logoWrap}>
-                <BlueLogoSvg style={{ marginRight: 10 }} />
+                <img
+                  src={
+                    require("@site/static/img/homepage/slogansection/purple-logo@3x.webp")
+                      .default
+                  }
+                  style={{ marginRight: 18, width: 51, height: 33 }}
+                  alt="with heighliner"
+                />
                 <WhiteHeighlinerSvg />
               </div>
               <ul className={styles.navItems}>
@@ -43,27 +50,36 @@ export function SloganSection(): React.ReactElement {
           </header>
           <main className={styles.wrap}>
             <div className={styles.sloganTextWrap}>
-              <h1>Spin up your</h1>
-              <h1>cloud-native</h1>
-              <h1>stack in <em>minutes</em></h1>
+              <h1>0 configuration to </h1>
+              <h1>build modern Cloud</h1>
+              <h1>App</h1>
             </div>
             <div className={styles.actionsGroup}>
-              {/* <button
+              <button
                 onClick={handleRequestAccess}
                 className={styles.requestAccess}
               >
                 Request Early Access
-              </button> */}
+              </button>
               <Link
-                className={clsx('button button--lg button--secondary', styles.quickstart)}
+                className={clsx(
+                  "button button--lg button--secondary",
+                  styles.quickstart
+                )}
                 to={customFields.quickStartUrl as string}
               >
                 Quick Start
               </Link>
             </div>
+            <div className={styles.video}>
+              <Video
+                poster="/img/homepage/video-poster.png"
+                src="https://dl.h8r.io/Heighliner-Introduction-English.mp4"
+              ></Video>
+            </div>
           </main>
         </div>
       </div>
     </div>
-  )
+  );
 }
