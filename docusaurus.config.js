@@ -2,7 +2,6 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
-// const remarkCodeImport = require("remark-code-import");
 // const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 const mainGithubUrl = "https://github.com/h8r-dev/heighliner-website";
@@ -33,8 +32,8 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl: "https://github.com/h8r-dev/heighliner-website",
+          editUrl: "https://github.com/h8r-dev/heighliner-website/blob/main/",
+          docLayoutComponent: require.resolve('./src/themes/DocPage'),
         },
         blog: {
           showReadingTime: true,

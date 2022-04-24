@@ -1,5 +1,3 @@
-// @use "sass:meta";
-
 $tablet-width: 996px;
 $desktop-width: 997px;
 $desktop-xl-width: 1160px;
@@ -379,6 +377,18 @@ div[class^="codeBlockContainer"] {
 
   pre {
     border-radius: var(--ifm-global-radius);
+  }
+}
+
+a {
+  code {
+    color: var(--ifm-code-color);
+  }
+}
+
+.markdown a {
+  &:hover {
+    text-decoration-color: #fff;
   }
 }
 

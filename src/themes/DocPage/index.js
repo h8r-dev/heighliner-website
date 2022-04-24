@@ -5,7 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, { useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
+import Lightense from 'lightense-images'
 import {MDXProvider} from '@mdx-js/react';
 import renderRoutes from '@docusaurus/renderRoutes';
 import Layout from '@theme/Layout';
@@ -17,7 +18,6 @@ import BackToTopButton from '@theme/BackToTopButton';
 import {matchPath} from '@docusaurus/router';
 import {translate} from '@docusaurus/Translate';
 import clsx from 'clsx';
-import styles from './styles.module.css';
 import {
   ThemeClassNames,
   docVersionSearchTag,
@@ -26,6 +26,8 @@ import {
   DocsVersionProvider,
 } from '@docusaurus/theme-common';
 import Head from '@docusaurus/Head';
+
+import styles from './styles.module.css';
 
 function DocPageContent({
   currentDocRoute,
@@ -44,6 +46,19 @@ function DocPageContent({
 
     setHiddenSidebarContainer((value) => !value);
   }, [hiddenSidebar]);
+
+  useEffect(() => {
+    Lightense('.markdown img', {
+      time: 300,
+      padding: 40,
+      offset: 40,
+      keyboard: true,
+      cubicBezier: 'cubic-bezier(.2, 0, .1, 1)',
+      background: 'rgba(0, 0, 0, .18)',
+      zIndex: 2147483647
+    });
+  }, [children])
+
   return (
     <Layout
       wrapperClassName={ThemeClassNames.wrapper.docsPages}
@@ -146,6 +161,7 @@ function DocPage(props) {
   const sidebar = sidebarName
     ? versionMetadata.docsSidebars[sidebarName]
     : null;
+
   return (
     <>
       <Head>
