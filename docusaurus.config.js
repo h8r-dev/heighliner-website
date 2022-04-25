@@ -139,8 +139,7 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Heighliner, Inc. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        // darkTheme: darkCodeTheme,
+        theme: require('prism-react-renderer/themes/dracula'),
       },
       algolia: {
         appId: 'U4KQYASQJZ',
