@@ -29,10 +29,9 @@ values={[
 
 You can run buildkit as a pod.  
 
-Create buildkitd deployment:  
+Save the following as `buildkit.yaml`:
 
-```shell
-cat <<EOF | kubectl apply -f -
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -51,7 +50,7 @@ spec:
     spec:
       containers:
         - name: buildkitd
-          image: moby/buildkit:master
+          image: moby/buildkit:v0.10.1
           args:
             - --addr
             - unix:///run/buildkit/buildkitd.sock
@@ -90,13 +89,23 @@ spec:
       protocol: TCP
   selector:
     app: buildkitd
-EOF
+```
+
+Create the Buildkit service:
+
+```shell
+kubectl create -f buildkit.yaml
 ```
 
 Make sure the buildkitd is running:
 
 ```shell
-$ kubectl get deployment buildkitd
+kubectl get deployment buildkitd
+```
+
+Output:
+
+```shell
 NAME        READY   UP-TO-DATE   AVAILABLE   AGE
 buildkitd   1/1     1            1           4m26s
 ```
