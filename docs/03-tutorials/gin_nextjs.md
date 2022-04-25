@@ -21,7 +21,7 @@ Clone the stacks repo:
 
 ```shell
 git clone git@github.com:h8r-dev/stacks.git
-cd stacks
+cd stacks/gin-next
 ```
 
 Set environment variables:
