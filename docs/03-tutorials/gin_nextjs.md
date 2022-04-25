@@ -11,10 +11,16 @@ Make sure you have followed [the installation guide](/docs/getting_started/insta
 
 ## Quickstart
 
+Make sure your cluster has ingress controller:
+
+```shell
+kubectl wait --namespace ingress-nginx --for=condition=ready pod --selector=app.kubernetes.io/component=controller --timeout=90s
+```
+
 Prepare kubeconfig for the runner:
 
 ```shell
-kubectl config view --flatten --minify | sed -e 's?server: https://127.0.0.1:[0-9]*?server: https://kubernetes.default.svc?' > ~/.kube/kind
+kubectl config view --flatten --minify | sed -e 's?server: https://127.0.0.1:[0-9]*?server: https://kubernetes.default.svc?' > ./kubeconfig
 ```
 
 Clone the stacks repo:
@@ -28,14 +34,20 @@ Set environment variables:
 
 ```shell
 export BUILDKIT_HOST=tcp://127.0.0.1:1234
-export KUBECONFIG=$HOME/.kube/kind
+export KUBECONFIG=$PWD/kubeconfig
 export APP_NAME="orders"
 export GITHUB_TOKEN=[Github personal access token]
 export ORGANIZATION=[organization name or github id]
 export CLOUD_PROVIDER=kind
 ```
 
-Create your app:
+Create a tunnel to buildkit service:
+
+```shell
+kubectl port-forward service/buildkitd 1234:1234
+```
+
+Open another terminal, create your app:
 
 ```shell
 hof mod vendor cue && \
@@ -45,13 +57,19 @@ dagger do up -p ./plans --log-format plain
 
 ## Verify
 
-Put the following lines into your `/etc/hosts`:
+Get your ingress IP first:
+
+```shell
+kubectl -n ingress-nginx get svc ingress-nginx-controller -o=jsonpath='{.status.loadBalancer.ingress[0].ip}'
+```
+
+Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
 
 ```txt
-127.0.0.1 argocd.h8r.infra
-127.0.0.1 orders-frontend.h8r.application
-127.0.0.1 orders-backend.h8r.application
-127.0.0.1 grafana.h8r.infra
-127.0.0.1 alert.h8r.infra
-127.0.0.1 prometheus.h8r.infra
+<ingress-ip> argocd.h8r.infra
+<ingress-ip> orders-frontend.h8r.application
+<ingress-ip> orders-backend.h8r.application
+<ingress-ip> grafana.h8r.infra
+<ingress-ip> alert.h8r.infra
+<ingress-ip> prometheus.h8r.infra
 ```
