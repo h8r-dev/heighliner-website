@@ -114,7 +114,7 @@ kind create cluster --image=kindest/node:v1.23.5 --config=kind.yaml
 Install ingress controller on the cluster:
 
 ```shell
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/kind/deploy.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
 ```
 
 </TabItem>
