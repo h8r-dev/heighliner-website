@@ -12,9 +12,9 @@ The core team of Heighliner comes from  [https://nocalhost.dev](https://nocalhos
 
 We are a young team, advocating freedom and openness, and have gathered a group of small partners who are full of curiosity, love open source, and dream of using technology to change the world. We aim to use the most advanced cloud-native open source technology, so that users don't need to care about infrastructure, get a better development experience and the advantages of multi-cloud delivery, cost reduction and efficiency improvement.
 
-## Openning Position 1: Sr. Manager, Developer Relations（Remote, United States）
+## Openning Position: Sr. Manager, Developer Relations(Remote, United States)
 
-We are seeking a Manager based in the Americas to build and lead the team of Developer Advocates. 
+We are seeking a manager based in the Americas to build and lead the team of Developer Advocates. 
 
 As the leader of Developer Relations team, you will:
 
@@ -35,7 +35,8 @@ You are a great fit for this role if:
 
 Send us an email to apply this position: <a href="mailto:hr@h8r.io">hr@h8r.io</a>
 
-## Openning Position 2: Developer Advocate
+## Openning Position: Developer Advocate(Remote, United States)
+
 
 Developer Advocates are responsible for the relationship between developers, communities, partners and Heighliner.
 
@@ -58,7 +59,9 @@ You are a great fit for this role if:
 
 Send us an email to apply this position: <a href="mailto:hr@h8r.io">hr@h8r.io</a>
 
-## Openning Position 3: Backend Engineer
+
+## Openning Position: Backend Engineer(Remote, United States)
+
 
 Backend Enginneers are responsible for the building of our reliable high-performance Heighliner Engine and Platform.
 
