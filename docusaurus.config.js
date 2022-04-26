@@ -1,4 +1,4 @@
-// @ts-check
+// @ts-nocheck
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
@@ -27,13 +27,13 @@ const config = {
 
   presets: [
     [
-      "classic",
+      "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl: "https://github.com/h8r-dev/heighliner-website",
+          editUrl: "https://github.com/h8r-dev/heighliner-website/blob/main/",
+          docLayoutComponent: require.resolve('./src/themes/DocPage'),
         },
         blog: {
           showReadingTime: true,
@@ -41,7 +41,7 @@ const config = {
           editUrl: "https://github.com/h8r-dev/heighliner-website",
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: require.resolve("./src/css/custom.scss"),
         },
       }),
     ],
@@ -51,9 +51,8 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Heighliner",
         logo: {
-          alt: "Heighliner Logo",
+          alt: "navbar-logo",
           src: "img/logo.svg",
         },
         items: [
@@ -63,7 +62,15 @@ const config = {
             position: "left",
             label: "Docs",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          {
+            to: "/blog",
+            label: "Blog",
+            position: "left",
+          },
+          {
+            type: "search",
+            position: "right",
+          },
           {
             href: "https://github.com/h8r-dev/heighliner-website",
             position: 'right',
@@ -71,6 +78,7 @@ const config = {
             'aria-label': 'GitHub repository',
           },
         ],
+        hideOnScroll: true,
       },
       footer: {
         style: "dark",
@@ -131,15 +139,20 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Heighliner, Inc. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        // darkTheme: darkCodeTheme,
+        theme: require('prism-react-renderer/themes/dracula'),
       },
       algolia: {
         appId: 'U4KQYASQJZ',
         apiKey: '232ec1aa85b14f42f196b5dea41fbac8',
         indexName: 'heighliner-docs',
       },
+      colorMode: {
+        defaultMode: "light",
+      },
     }),
+  plugins: [
+    "docusaurus-plugin-sass",
+  ],
 };
 
 module.exports = config;

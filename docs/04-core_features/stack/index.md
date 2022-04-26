@@ -1,11 +1,10 @@
 ---
-title: Overview
-sidebar_position: 1
+title: Stack
 ---
 
-## What Is Stack?
+## What is Stack?
 
-A Heighliner Stack is a collection of orchestrated plans to one-command setup the development environment.
+A (Heighliner) Stack is a collection of orchestrated plans to one-command setup the development environment.
 You can choose a specific language and framework (Go-Gin, Spring, React, etc), then Heighliner Stack will orchestrate the infrastructure setup.
 These are automatically optimized for your apps with cloud native best practices.
 

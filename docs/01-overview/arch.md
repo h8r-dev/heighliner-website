@@ -9,7 +9,18 @@ The section below provides some useful description and links to build up this un
 
 From a high-level view, Heighliner contains the following components:
 
-![alt](/img/docs/arch.png)
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+<div
+  style={{
+    maxWidth: 800,
+    height: 'auto',
+    marginBottom: 50,
+    marginTop: 50,
+  }}
+>
+<img src={useBaseUrl('/img/docs/arch.png')} />
+</div>
 
 ## Heighliner CLI
 
@@ -24,10 +35,12 @@ For more details and examples, please refer to the [hln CLI](/docs/cli/hln/overv
 ## Heighliner StackHub
 
 StackHub stores Heighliner [stacks](/docs/overview/concepts#stack) and provides a searchable interface to find the right stack for your app.
-We provide a default StackHub hosted on the cloud which stores the default stacks.
-When you use the CLI/UI it will provide the default ones.
+It could be used to download and install a stack, or to search for stacks.
+Under the hood, it could be some kind of storage backends, such as object storage buckets, or OCI compatible hub (e.g. Harbor).
+Heighliner platform will recognize and index the data, and serve users with search results.
 
-For more info, please refer to the [StackHub](/docs/core_features/stacks/stackhub) page.
+We provide a default StackHub hosted on the cloud which stores the default stacks.
+When you use the CLI/UI it will use the default one.
 
 ## Heighliner Service
 

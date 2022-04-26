@@ -3,11 +3,11 @@ title: Installation
 sidebar_position: 1
 ---
 
-
-## 1. Install `hln` CLI
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## 1. Install hln CLI
 
 <Tabs>
   <TabItem value="macos" label="MacOS" default>
@@ -48,9 +48,9 @@ Download binaries: [Github Release](https://github.com/h8r-dev/heighliner/releas
   </TabItem>
 </Tabs>
 
-## 2. Install Kubernetes Cluster
+## 2. Install Kubernetes
 
-Install `kubectl` command-line tool first by following the [instructions](https://kubernetes.io/docs/tasks/tools/).
+Install _kubectl_ first by following [the Kubernetes documentation](https://kubernetes.io/docs/tasks/tools/).
 
 Then choose one of the following methods to install a Kubernetes cluster:
 
@@ -68,51 +68,68 @@ values={[
 
 <TabItem value="kind">
 
-Follow [kind installation guide](https://kind.sigs.k8s.io/docs/user/quick-start/#installation) to install `kind` command-line tool.
+Install _kind_ command-line tool by following [the kind installation guide](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
 
-Then spins up a kind cluster:
+We recommend setting Docker Resources to 8 cores and 16Gb mem:
 
-```shell
-cat <<EOF | kind create cluster --image=kindest/node:v1.23.5 --config=-
+<div
+  style={{
+    maxWidth: 800,
+    height: 'auto',
+    marginBottom: 30,
+    marginTop: 30,
+  }}
+>
+<img src={useBaseUrl('/img/docs/docker_resources.png')} />
+</div>
+
+Save the following configuration as `kind.yaml`:
+
+```yaml
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
-- role: control-plane
-  kubeadmConfigPatches:
-  - |
-    kind: InitConfiguration
-    nodeRegistration:
-      kubeletExtraArgs:
-        node-labels: "ingress-ready=true"
-  extraPortMappings:
-  - containerPort: 80
-    hostPort: 80
-    protocol: TCP
-  - containerPort: 443
-    hostPort: 443
-    protocol: TCP
-EOF
+  - role: control-plane
+    kubeadmConfigPatches:
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            node-labels: "ingress-ready=true"
+    extraPortMappings:
+      - containerPort: 80
+        hostPort: 80
+        protocol: TCP
+      - containerPort: 443
+        hostPort: 443
+        protocol: TCP
 ```
 
-Install ingress controller to enable ingress routing:
+Create a kind cluster from the config:
 
 ```shell
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/kind/deploy.yaml
+kind create cluster --image=kindest/node:v1.23.5 --config=kind.yaml
+```
+
+Install ingress controller on the cluster:
+
+```shell
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
 ```
 
 </TabItem>
 
 <TabItem value="minikube">
 
-Follow the minikube [installation guide](https://minikube.sigs.k8s.io/docs/start/).
+Install _minikube_ command-line tool by following [the minikube installation guide](https://minikube.sigs.k8s.io/docs/start/).
 
-Then spins up a minikube cluster
+Then create a cluster (we recommend using 8 cores and 16Gb mem):
 
 ```shell
-minikube start
+minikube start --cpus=8 --memory=16384 --kubernetes-version=v1.23.5
 ```
 
-Install ingress controller to enable ingress routing:
+Install ingress controller on the cluster:
 
 ```shell
 minikube addons enable ingress
@@ -127,6 +144,13 @@ minikube addons enable ingress
 <TabItem value="aliyun">
 </TabItem>
 <TabItem value="tencent">
+
+Install ingress controller on the cluster:
+
+```shell
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/cloud/deploy.yaml
+```
+
 </TabItem>
 
 </Tabs>
@@ -141,19 +165,104 @@ Output:
 
 ```shell
 Client Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.4", GitCommit:"e6c093d87ea4cbb530a7b2ae91e54c0842d8308a", GitTreeState:"clean", BuildDate:"2022-02-16T12:30:48Z", GoVersion:"go1.17.6", Compiler:"gc", Platform:"darwin/amd64"}
-Server Version: version.Info{Major:"1", Minor:"22", GitVersion:"v1.22.6", GitCommit:"f59f5c2fda36e4036b49ec027e556a15456108f0", GitTreeState:"clean", BuildDate:"2022-01-19T17:26:47Z", GoVersion:"go1.16.12", Compiler:"gc", Platform:"linux/amd64"}
+Server Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.5", GitCommit:"c285e781331a3785a7f436042c65c5641ce8a9e9", GitTreeState:"clean", BuildDate:"2022-03-24T22:10:16Z", GoVersion:"go1.17.8", Compiler:"gc", Platform:"linux/arm64"}
 ```
 
-## 3. Create Github Token
+## 3. Install Buildkit Service
 
-Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with the following scopes selected:
+Save the following as `buildkit.yaml`:
 
-- `repo`
-- `workflow`
-- `write:packages`
-- `delete:packages`
-- `admin:org`
-- `user`
-- `delete_repo`
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: buildkitd
+  name: buildkitd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: buildkitd
+  template:
+    metadata:
+      labels:
+        app: buildkitd
+    spec:
+      containers:
+        - name: buildkitd
+          image: moby/buildkit:v0.10.1
+          args:
+            - --addr
+            - unix:///run/buildkit/buildkitd.sock
+            - --addr
+            - tcp://0.0.0.0:1234
+          readinessProbe:
+            exec:
+              command:
+                - buildctl
+                - debug
+                - workers
+            initialDelaySeconds: 5
+            periodSeconds: 30
+          livenessProbe:
+            exec:
+              command:
+                - buildctl
+                - debug
+                - workers
+            initialDelaySeconds: 5
+            periodSeconds: 30
+          securityContext:
+            privileged: true
+          ports:
+            - containerPort: 1234
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: buildkitd
+  name: buildkitd
+spec:
+  ports:
+    - port: 1234
+      protocol: TCP
+  selector:
+    app: buildkitd
+```
 
-![alt](/img/docs/github_token_perm.png)
+Create the Buildkit service:
+
+```shell
+kubectl create -f buildkit.yaml
+```
+
+Make sure the buildkitd is running:
+
+```shell
+kubectl get deployment buildkitd
+```
+
+Output:
+
+```shell
+NAME        READY   UP-TO-DATE   AVAILABLE   AGE
+buildkitd   1/1     1            1           4m26s
+```
+
+## 4. Create Github Token
+
+Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with these scopes selected:
+`repo`, `workflow`, `write:packages`, `delete:packages`, `admin:org`, `user`, `delete_repo`.
+
+<div
+  style={{
+    maxWidth: 700,
+    height: 'auto',
+    marginBottom: 30,
+    marginTop: 30,
+  }}
+>
+<img src={useBaseUrl('/img/docs/github_token_perm.png')} />
+</div>

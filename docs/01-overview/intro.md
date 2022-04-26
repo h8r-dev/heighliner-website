@@ -8,7 +8,6 @@ Heighliner is a modern app development platform.
 It aims to help developers to build apps easily and quickly using state-of-the-art cloud native stacks.
 You can use Heighliner to spin up the development environment, and then can focus on writing the business code without worrying build and deploy.
 
-
 import { Video } from '@site/src/components/Video';
 
 <div
@@ -21,7 +20,7 @@ import { Video } from '@site/src/components/Video';
 >
   <Video
     poster="/img/homepage/video-poster.png"
-    src="https://dl.h8r.io/Heighliner-Introduction.mp4"
+    src="https://dl.h8r.io/Heighliner-Introduction-English.mp4"
   ></Video>
 </div>
 
@@ -79,9 +78,8 @@ import { Video } from '@site/src/components/Video';
 
 ## Community
 
-- Learn how to [develop Heighliner locally](/docs/development/develop_h8r)
 - Start [contributing code](/docs/development/contributing)
-- [Contact us](/contact-us)
+- [Join the community](/contact-us)
 
 ## Development Status
 
