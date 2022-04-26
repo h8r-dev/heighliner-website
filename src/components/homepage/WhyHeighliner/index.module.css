@@ -1,11 +1,12 @@
 .wrapper {
   width: 100%;
-  background-color: #f3f3f3;
+  background-color: #000;
   padding-bottom: 96px;
 }
 
 .title {
   margin-bottom: 41px;
+  color: #fff;
 }
 
 .caption {
@@ -13,9 +14,10 @@
   letter-spacing: -0.24px;
   max-width: 1083px;
   margin: 0 auto;
-  margin-bottom: 39px;
+  /* margin-bottom: 39px; */
   line-height: 37px;
-  color: #080930;
+  color: #fff;
+  font-weight: 300 !important;
 }
 
 .compare {
@@ -39,6 +41,61 @@
   font-weight: bold;
   white-space: nowrap;
 }
+
+.layerContain {
+  margin-top: 76px;
+  position: relative;
+}
+
+.layerImg {
+  max-width: 1288px;
+  background-color: #000;
+}
+
+.upperLayer { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 50%;
+  line-height: 0;
+  border-right-style: solid;
+  border-right-color: rgba(255, 255, 255, 0.8);
+}
+
+.pole {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: ew-resize;
+  border-radius: 50%;
+  background-image: linear-gradient(115deg, #dccbda -12%, #debcda 89%, #eee 116%);
+  transform: translate(-50%, -50%);
+}
+
+.pole:after, .pole:before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  border-top: solid 2px #4c3761;
+  border-left: solid 2px #4c3761;
+  transform-origin: 0 0;
+}
+
+.pole:before {
+  left: 8px;
+  transform: rotate(-45deg);
+}
+
+.pole:after {
+  left: 38px;
+  transform: rotate(135deg);
+}
+
+
 
 @media screen and (max-width: 996px) {
   .compare {

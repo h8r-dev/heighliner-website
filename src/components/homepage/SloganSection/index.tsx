@@ -11,6 +11,7 @@ import styles from "./index.module.css";
 
 import WhiteHeighlinerSvg from "@site/static/img/homepage/white-heighliner.svg";
 import { Video } from "@site/src/components/Video";
+import AutoDownCounter from "./AutoDownCounter";
 
 function handleRequestAccess() {
   console.log("request access from popover");
@@ -50,7 +51,15 @@ export function SloganSection(): React.ReactElement {
           </header>
           <main className={styles.wrap}>
             <div className={styles.sloganTextWrap}>
-              <h1>0 configuration to </h1>
+              <h1>
+                <AutoDownCounter
+                  startPoint={3000}
+                  endPoint={0}
+                  interval={1}
+                  minuend={25}
+                />{" "}
+                configuration to{" "}
+              </h1>
               <h1>build modern Cloud</h1>
               <h1>App</h1>
             </div>

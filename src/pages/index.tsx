@@ -28,7 +28,7 @@ export default function Home(): JSX.Element {
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minium-scale=1.0, user-scalable=no" />
       </Head>
       <SloganSection />
-      <HeighlinerDetail />
+      {/* <HeighlinerDetail /> */}
       <WhyHeighliner />
       <HeighlinerFeatures />
       <StackWorkflow />

@@ -49,7 +49,7 @@
 
 .sloganTextWrap {
   color: #fff;
-  margin-bottom: 113px;
+  margin-bottom: 88px;
 }
 
 .sloganTextWrap > h1 {
@@ -68,30 +68,28 @@
   width: 233px;
   height: 60px;
 
-  background-color: rgba(195, 210, 243, 0.13);
+  background-color: #262e40;
   border-radius: 0;
-  color: #C6E7E8;
-  font-weight: 800;
+  color: #fff;
   font-size: 18px;
 
   border: none;
   outline: none;
   cursor: pointer;
+
+  margin-right: 79.8px;
 }
 
 .quickstart {
   border-radius: 0;
-  background-color: #A5FFDB !important;
-  /* color: #123B53 !important; */
-  color: #a9f7df;
+  background-color: #a9f7df !important;
+  color: #080930 !important;
   width: 233px;
   height: 60px;
-  /* margin-left: 84px; */
   line-height: 2.4;
   border: none;
   outline: none;
   font-size: 18px;
-  font-weight: 800;
 }
 
 .quickstart:hover {
