@@ -1,100 +1,81 @@
 ---
-title: 加入我们
+title: Join us
 ---
 
-# 加入 Heighliner 构建未来云原生
+# Join Heighliner and build the future of Cloud Native
 
-## 我们是一家什么样的公司
+## About Heighliner
 
-Heighliner 是一家专注于云原生开发者体验、秉承开源理念、为客户提供高效安全应用开发平台的技术公司。
+Heighliner is a modern app development platform. It aims to help developers to build apps easily and quickly using state-of-the-art cloud native stacks. You can use Heighliner to spin up the development environment, and then can focus on writing the business code without worrying build and deploy.
 
-公司刚创立，创始人是由腾讯和阿里的高级专家组成的明星团队，深耕云原生领域，团队核心成员来自于 CNCF 知名开源项目： [https://nocalhost.dev](https://nocalhost.dev) [https://kubevela.io](https://kubevela.io) 。公司已经获得知名 VC 的 2000 万元天使轮投资，当前正在积极招募人才。
+The core team of Heighliner comes from  [https://nocalhost.dev](https://nocalhost.dev) [https://kubevela.io](https://kubevela.io) . 
 
-我们是一个年轻的团队，崇尚自由开放，聚集了一群充满好奇心、热爱开源、梦想用科技改变世界的小伙伴。我们旨在通过最先进的云原生开源技术，让用户无需关心基础设施，获得更好的开发体验以及多云交付、降本提效的优势。
+We are a young team, advocating freedom and openness, and have gathered a group of small partners who are full of curiosity, love open source, and dream of using technology to change the world. We aim to use the most advanced cloud-native open source technology, so that users don't need to care about infrastructure, get a better development experience and the advantages of multi-cloud delivery, cost reduction and efficiency improvement.
 
-## 工作环境
+## Openning Position 1: Sr. Manager, Developer Relations（Remote, United States）
 
-我们现有办公室在深圳西丽商务区，临近地铁 5 、7 号线，周边配套齐全，交通生活非常方便。
+We are seeking a Manager based in the Americas to build and lead the team of Developer Advocates. 
 
-我们推崇弹性灵活的工作方式，以适应每位同学充分发挥创造力和生产力的需求。
+As the leader of Developer Relations team, you will:
 
-标配 4K 显示器 + MacBook Pro ，我们还有灵活的办公用品购买政策，员工自行选择需要的办公设备。
+- Recruit, hire, develop and retain Developer Advocates based in the North America
+- Collaborate to improve the relations between developers, industry partners and Heighliner
+- Share our approach to community and advocacy with others in the industry through content like blogs, videos and presentations at summits.
+- Identify and advance community collaboration opportunities
 
-## 高级前端工程师
+You are a great fit for this role if:
 
-薪酬范围：30-45k * 16 + 期权; 薪酬对外有竞争力、对内公平;
+- You love open source and Cloud Native.
+- You have a passion for building talent via mentorship and/or through direct management
+- You are a strong communicator and advocate for your people
+- You know about DevOps and Cloud Native
+- You know any of these: Heighliner,Dagger,CUE,Terraform,Nocalhost,KubeVela,Kubernetes
+- You have experience managing a team or working as a Developer Advocate or similar role
+- 5+ years of experience in technology
 
-工作地点：深圳，远程办公；
+Send us an email to apply this position: <a href="mailto:hr@h8r.io">hr@h8r.io</a>
 
-岗位职责：
-- 主导面向开发者的应用开发平台的前端开发
-- 主导企业级 SaaS 服务的前端开发
-- 主导公司前端业务架构制定
-- 主导公司 UI/UX 用户体验提升计划
+## Openning Position 2: Developer Advocate
 
-岗位要求:
-- 全面的前端技术体系能力，可领导前端小组
-- 计算机基础扎实，熟练掌握 JavaScript ，CSS ，HTML 等前端技术及相关标准规范
-- 至少熟悉一种主流前端框架以及相关技术栈 (React 、Vue 、Redux 、MobX)
-- 至少了解一门后端开发语言 (Golang 、Python 、Java)
-- 了解 CI/CD 、DevOps 常见工具和云服务使用体系
-- 英语水平良好，可无障碍阅读官方英文文档
+Developer Advocates are responsible for the relationship between developers, communities, partners and Heighliner.
 
-加分项：
-- 有带领团队经验
-- 有跨终端开发经验者优先 (React Native 、Flutter 、Electron)
-- 开发者工具开发经历
-- 云原生项目开发经历
-- 开源项目贡献经历
-- 英语听说能力好
+As a Developer Advocate, you will:
 
-## 中级前端工程师
+- Collaborate to improve the relations between developers, industry partners and Heighliner
+- Share our approach to community and advocacy with others in the industry through content like blogs, videos and presentations at summits.
+- Identify and advance community collaboration opportunities
+- Operate our Twitter,Discord,Youtube accounts
+- Organize community meetups
+- Talk with our users,fans and partners to gather any useful information
 
-薪酬范围：15-30k * 16 + 期权; 薪酬对外有竞争力、对内公平;
+You are a great fit for this role if:
 
-工作地点：深圳，远程办公；
+- You love open source and Cloud Native.
+- You are a strong communicator and advocate for your people
+- You know about DevOps and Cloud Native
+- You know any of these: Heighliner,Dagger,CUE,Terraform,Nocalhost,KubeVela,Kubernetes
+- 2+ years of experience in technology
 
-岗位职责：
-- 参与面向开发者的应用开发平台的前端开发
-- 参与企业级 SaaS 服务的前端开发
-- 参与公司前端业务架构制定
-- 参与公司 UI/UX 用户体验提升计划
+Send us an email to apply this position: <a href="mailto:hr@h8r.io">hr@h8r.io</a>
 
-岗位要求:
-- 较为全面的前端技术体系能力，可独立负责前端项目
-- 计算机基础扎实，熟练掌握 JavaScript ，CSS ，HTML 等前端技术及相关标准规范
-- 至少熟悉一种主流前端框架以及相关技术栈 (React 、Vue 、Redux 、MobX)
-- 至少了解一门后端开发语言 (Golang 、Python 、Java)
-- 了解 CI/CD 、DevOps 常见工具和云服务使用体系
-- 英语水平良好，可无障碍阅读官方英文文档
+## Openning Position 3: Backend Engineer
 
-加分项：
-- 开发者工具开发经历
-- 有跨终端开发经验者优先 (React Native 、Flutter 、Electron)
-- 云原生项目开发经历
-- 开源项目贡献经历
-- 英语听说能力好
+Backend Enginneers are responsible for the building of our reliable high-performance Heighliner Engine and Platform.
 
-## 中级后端工程师
 
-薪酬范围：20-30k * 16 + 期权; 薪酬对外有竞争力、对内公平;
+As a Backend Enginneer, you will:
 
-工作地点：深圳，远程办公；
+- Design and code the core features of Heighliner Engine and Platform
+- Review peers' PR to improve the quality
+- Make amazing Heighliner stacks that simplify development of cloud apps
+- Write tech blogs and participate meetups to share the tech ideas
 
-岗位职责：
-- 负责商业产品和开源项目的后端技术研发
-- 官方文档的建设与维护，为用户提供友好便利的文档
-- 探索云原生领域前沿技术，持续演进产品和项目
-- 参与开源项目社区建设与推广
+You are a great fit for this role if:
 
-岗位要求:
-- 计算机基础扎实，熟练掌握一门后端语言 (Go/Java/Python)
-- 有大型后端系统开发经验
-- 了解 CI/CD 、DevOps 常见工具和云服务使用体系
-- 英语水平良好，可无障碍阅读和编写官方英文文档
+- You love open source and Cloud Native.
+- You are familiar with golang,Java,Python,Node
+- You know about DevOps and Cloud Native
+- You are familiar with : Heighliner,Dagger,CUE,Terraform,Nocalhost,KubeVela,Kubernetes
+- 2+ years of experience in backend enginneering
 
-加分项：
-- 开发者工具开发经历
-- 云原生项目开发经历
-- 开源项目贡献经历
-- 英语听说能力好
+Send us an email to apply this position: <a href="mailto:hr@h8r.io">hr@h8r.io</a>
