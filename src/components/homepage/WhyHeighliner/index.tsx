@@ -6,15 +6,14 @@ import React from "react";
 import clsx from "clsx";
 
 import styles from "./index.module.css";
-import { SectionTitleIcon } from "../SectionTitleIcon";
 import PicturesSlider from "./PicturesSlider";
+import Features from "./Features";
 
 export function WhyHeighliner(): React.ReactElement {
   return (
     <div className={styles.wrapper}>
       <div className="container">
         <h1 className={clsx("homepage-section-title", styles.title)}>
-          {/* <SectionTitleIcon /> */}
           Why Heighliner stack?
         </h1>
         <p className={styles.caption}>
@@ -25,7 +24,8 @@ export function WhyHeighliner(): React.ReactElement {
           applications.
         </p>
         <main>
-          <PicturesSlider></PicturesSlider>
+          <PicturesSlider />
+          <Features />
         </main>
       </div>
     </div>

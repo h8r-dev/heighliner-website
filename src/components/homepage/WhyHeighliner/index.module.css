@@ -2,6 +2,7 @@
   width: 100%;
   background-color: #000;
   padding-bottom: 96px;
+  padding-top: 116px;
 }
 
 .title {
@@ -14,7 +15,6 @@
   letter-spacing: -0.24px;
   max-width: 1083px;
   margin: 0 auto;
-  /* margin-bottom: 39px; */
   line-height: 37px;
   color: #fff;
   font-weight: 300 !important;
@@ -45,6 +45,7 @@
 .layerContain {
   margin-top: 76px;
   position: relative;
+  overflow-x: hidden;
 }
 
 .layerImg {
@@ -55,7 +56,6 @@
 .upperLayer { 
   position: absolute;
   top: 0;
-  left: 0;
   overflow: hidden;
   width: 50%;
   line-height: 0;
@@ -66,6 +66,7 @@
 .pole {
   position: absolute;
   top: 50%;
+  /* z-index: 1; */
   width: 44px;
   height: 44px;
   cursor: ew-resize;
@@ -95,7 +96,26 @@
   transform: rotate(135deg);
 }
 
+.flexContain {
+  display: flex;
+}
 
+.featureContain {
+  flex-direction: column;
+  width: 216px;
+}
+
+.featureTitle {
+  font-size: 35px;
+  color: #fff;
+  border-bottom-style: solid;
+  border-bottom-color: #fff;
+}
+
+.featureDescription {
+  font-size: 16px;
+  color: #fff;
+}
 
 @media screen and (max-width: 996px) {
   .compare {
