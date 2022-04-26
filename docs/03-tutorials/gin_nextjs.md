@@ -11,49 +11,31 @@ Make sure you have followed [the installation guide](/docs/getting_started/insta
 
 ## Quickstart
 
-Make sure your cluster has ingress controller:
-
-```shell
-kubectl wait --namespace ingress-nginx --for=condition=ready pod --selector=app.kubernetes.io/component=controller --timeout=90s
-```
-
-Prepare kubeconfig for the runner:
-
-```shell
-kubectl config view --flatten --minify | sed -e 's?server: https://127.0.0.1:[0-9]*?server: https://kubernetes.default.svc?' > ./kubeconfig
-```
-
-Clone the stacks repo:
-
-```shell
-git clone git@github.com:h8r-dev/stacks.git
-cd stacks/gin-next
-```
-
 Set environment variables:
 
 ```shell
-export BUILDKIT_HOST=tcp://127.0.0.1:1234
-export KUBECONFIG=$PWD/kubeconfig
 export APP_NAME="orders"
 export GITHUB_TOKEN=[Github personal access token]
 export ORGANIZATION=[organization name or github id]
-export CLOUD_PROVIDER=kind
 ```
 
-Create a tunnel to buildkit service:
+Create your app using gin-next stack:
 
 ```shell
-kubectl port-forward service/buildkitd 1234:1234
+hln up -s=gin-next
 ```
 
-Open another terminal, create your app:
+Output:
+TODO
+
+Once it is done, you can check the status of your application:
 
 ```shell
-hof mod vendor cue && \
-dagger project update && \
-dagger do up -p ./plans --log-format plain
+hln status
 ```
+
+Output:
+TODO
 
 ## Verify
 
@@ -73,3 +55,6 @@ Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above
 <ingress-ip> alert.h8r.infra
 <ingress-ip> prometheus.h8r.infra
 ```
+
+Check your ArgoCD dashboard at `https://argocd.h8r.infra/`:
+TODO

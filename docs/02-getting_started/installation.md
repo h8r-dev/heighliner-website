@@ -151,105 +151,28 @@ Install ingress controller on the cluster:
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/cloud/deploy.yaml
 ```
 
+Make sure ingress controller is ready:
+
+```shell
+kubectl wait --namespace ingress-nginx --for=condition=ready pod --selector=app.kubernetes.io/component=controller --timeout=90s
+```
+
 </TabItem>
 
 </Tabs>
 
-Check if the cluster is ready:
+## 3. Install Heighliner dependencies
+
+hln provides a command to install dependent tools and services:
 
 ```shell
-kubectl version
+hln init
 ```
 
-Output:
+This command will install the following tools and services:
 
-```shell
-Client Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.4", GitCommit:"e6c093d87ea4cbb530a7b2ae91e54c0842d8308a", GitTreeState:"clean", BuildDate:"2022-02-16T12:30:48Z", GoVersion:"go1.17.6", Compiler:"gc", Platform:"darwin/amd64"}
-Server Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.5", GitCommit:"c285e781331a3785a7f436042c65c5641ce8a9e9", GitTreeState:"clean", BuildDate:"2022-03-24T22:10:16Z", GoVersion:"go1.17.8", Compiler:"gc", Platform:"linux/arm64"}
-```
-
-## 3. Install Buildkit Service
-
-Save the following as `buildkit.yaml`:
-
-```yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  labels:
-    app: buildkitd
-  name: buildkitd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: buildkitd
-  template:
-    metadata:
-      labels:
-        app: buildkitd
-    spec:
-      containers:
-        - name: buildkitd
-          image: moby/buildkit:v0.10.1
-          args:
-            - --addr
-            - unix:///run/buildkit/buildkitd.sock
-            - --addr
-            - tcp://0.0.0.0:1234
-          readinessProbe:
-            exec:
-              command:
-                - buildctl
-                - debug
-                - workers
-            initialDelaySeconds: 5
-            periodSeconds: 30
-          livenessProbe:
-            exec:
-              command:
-                - buildctl
-                - debug
-                - workers
-            initialDelaySeconds: 5
-            periodSeconds: 30
-          securityContext:
-            privileged: true
-          ports:
-            - containerPort: 1234
----
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    app: buildkitd
-  name: buildkitd
-spec:
-  ports:
-    - port: 1234
-      protocol: TCP
-  selector:
-    app: buildkitd
-```
-
-Create the Buildkit service:
-
-```shell
-kubectl create -f buildkit.yaml
-```
-
-Make sure the buildkitd is running:
-
-```shell
-kubectl get deployment buildkitd
-```
-
-Output:
-
-```shell
-NAME        READY   UP-TO-DATE   AVAILABLE   AGE
-buildkitd   1/1     1            1           4m26s
-```
+- _dagger_, _nhctl_, _terraform_ CLI tools under ~/.hln/bin/
+- Buildkit deployment and service on Kubernetes cluster
 
 ## 4. Create Github Token
 
@@ -266,3 +189,9 @@ Create a [GitHub personal access token](https://docs.github.com/en/authenticatio
 >
 <img src={useBaseUrl('/img/docs/github_token_perm.png')} />
 </div>
+
+Then set the token as `GITHUB_TOKEN` environment variable:
+
+```shell
+export GITHUB_TOKEN=<your-fresh-token>
+```
