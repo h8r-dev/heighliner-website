@@ -33,7 +33,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/h8r-dev/heighliner-website/blob/main/",
-          docLayoutComponent: require.resolve('./src/themes/DocPage'),
+          // docLayoutComponent: require.resolve('./src/themes/DocPage'),
         },
         blog: {
           showReadingTime: true,
@@ -41,7 +41,7 @@ const config = {
           editUrl: "https://github.com/h8r-dev/heighliner-website",
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.scss"),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
