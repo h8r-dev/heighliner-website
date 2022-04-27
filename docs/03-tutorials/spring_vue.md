@@ -3,20 +3,4 @@ title: Spring+Vue Stack
 sidebar_position: 2
 ---
 
-## Setup
-
-## Up
-
-## Status
-
-## Web
-
-## Logs
-
-## Metrics
-
-## Scale
-
-## Remote Development
-
-## Down
+![alt](/img/docs/spring.png)

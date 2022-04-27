@@ -14,8 +14,8 @@ import { Video } from '@site/src/components/Video';
   style={{
     maxWidth: 800,
     height: 'auto',
-    marginBottom: 100,
-    marginTop: 100
+    marginBottom: 50,
+    marginTop: 50
   }}
 >
   <Video
@@ -95,5 +95,5 @@ export const Highlight = ({children, color}) => (
   </span>
 );
 
-Heighliner is <Highlight color="#eb34ba">Pre-Alpha</Highlight> and being actively developed by the community.
+Heighliner is in <Highlight color="#eb34ba">Alpha</Highlight> stage and being actively developed.
 Our releases can be found [here](https://github.com/h8r-dev/heighliner/releases).

@@ -9,7 +9,18 @@ The section below provides some useful description and links to build up this un
 
 From a high-level view, Heighliner contains the following components:
 
-![alt](/img/docs/arch.png)
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+<div
+  style={{
+    maxWidth: 800,
+    height: 'auto',
+    marginBottom: 50,
+    marginTop: 50,
+  }}
+>
+<img src={useBaseUrl('/img/docs/arch.png')} />
+</div>
 
 ## Heighliner CLI
 
@@ -19,7 +30,7 @@ It can be used to search and download stacks, manages secrets, provide interacti
 
 With Heighliner CI, you can also do IaC style GitOps workflow.
 
-For more details and examples, please refer to the [hln CLI](/docs/cli/hln/overview) page.
+For more details and examples, please refer to the [hln CLI](/docs/cli/hln/) page.
 
 ## Heighliner StackHub
 

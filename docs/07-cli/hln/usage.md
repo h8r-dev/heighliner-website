@@ -3,17 +3,7 @@ title: Usage
 sidebar_position: 2
 ---
 
-:::info
-
-Read the [Installation guide](/docs/getting_started/installation) and install hln firstly.
-
-:::
-
 Overall, hln has two aspects of ability, namely stack management and application management. Most commands of hln are related to stack or application.
-
-## Check dependencies
-
-The [`hln check`](commands/hln_check) command will check if an available version of every dependency is installed properly. If not, hln will try to install it automatically.
 
 ## Manage stacks
 

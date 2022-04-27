@@ -1,0 +1,15 @@
+/*
+* Fix selected text background color on dark mode.
+*/
+
+.homepageWrapper {
+  * {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+    &::selection {
+      background-color: rgb(175, 201, 250) !important;
+    }
+  }
+}

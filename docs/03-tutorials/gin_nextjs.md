@@ -1,54 +1,60 @@
 ---
 title: Gin+Nextjs Stack
-sidebar_position: 2
+sidebar_position: 1
 ---
 
-## Setup
+:::info
 
-Clone the stacks repo:
+Make sure you have followed [the installation guide](/docs/getting_started/installation) before continuing.
 
-```shell
-git clone git@github.com:h8r-dev/stacks.git
-cd stacks
-git submodule init && git submodule update
-```
+:::
+
+## Quickstart
 
 Set environment variables:
 
 ```shell
-export KUBECONFIG="$HOME/.kube/config"
 export APP_NAME="orders"
 export GITHUB_TOKEN=[Github personal access token]
 export ORGANIZATION=[organization name or github id]
 ```
 
-Create the Gin+VUE app:
+Create your app using gin-next stack:
 
 ```shell
-cd gin-next
-hof mod vendor cue
-dagger project init
-dagger project update
+hln up -s=gin-next
 ```
 
-## Up
+Output:
+TODO
+
+Once it is done, you can check the status of your application:
 
 ```shell
-dagger do up --log-format plain -p ./plans
+hln status
 ```
 
-## Web
+Output:
+TODO
 
-## Status
+## Verify
 
-## Logs
+Get your ingress IP first:
 
-## Metrics
+```shell
+kubectl -n ingress-nginx get svc ingress-nginx-controller -o=jsonpath='{.status.loadBalancer.ingress[0].ip}'
+```
 
-## Scale
+Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
 
-## Remote Development
+```txt
+<ingress-ip> argocd.h8r.infra
+<ingress-ip> orders-frontend.h8r.application
+<ingress-ip> orders-backend.h8r.application
+<ingress-ip> grafana.h8r.infra
+<ingress-ip> alert.h8r.infra
+<ingress-ip> prometheus.h8r.infra
+```
 
-## Down
-
-## Full list of capabilities
+Check your ArgoCD dashboard at `https://argocd.h8r.infra/`:
+TODO
