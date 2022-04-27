@@ -1,0 +1,118 @@
+.title {
+  margin-top: 100px;
+  font-family: Jost;
+  font-size: 61px;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000;
+  margin-bottom: 150px;
+}
+
+.cardWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 158px;
+}
+
+.cardWrapper > .card:first-child {
+  margin-right: 53px;
+}
+
+.card {
+  width: 539px;
+  height: 618px;
+  position: relative;
+  background: linear-gradient(180deg, #FFFFFF 12.5%, #FAFAFE 68.75%, #EFEDF3 99.99%, #E5E2E9 100%);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card .logoWrapper {
+  width: 205px;
+  height: 205px;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.card .logoWrapper .leftLogo {
+  width: 142px;
+}
+
+.card .logoWrapper .rightLogo {
+  width: 133px;
+}
+
+.card .desc > div {
+  flex-grow: 0;
+  font-family: Jost;
+  font-size: 31px;
+  line-height: 34px;
+  font-weight: 300;
+  letter-spacing: -0.24px;
+  text-align: center;
+  color: #080930;
+}
+
+.card .desc > div:nth-child(1) {
+  margin-top: 123px;
+}
+
+.card .desc > div:nth-child(2) {
+  margin-top: 18px;
+}
+
+.card .desc > div:nth-child(3) {
+  margin-top: 22px;
+}
+
+.card .introduce {
+  display: flex;
+  margin-top: 82px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card .introduce .personPhoto {
+  width: 188px;
+  margin-left: 65px;
+}
+
+.card .introduce .personDesc {
+  width: 100%;
+}
+
+.card .introduce .personDesc .personName {
+  font-size: 29px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: -0.24px;
+  text-align: center;
+  color: #000;
+}
+
+.card .introduce .personDesc .personTitle {
+  margin-top: 22px;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: -0.24px;
+  text-align: center;
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
+

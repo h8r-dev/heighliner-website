@@ -1,0 +1,39 @@
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.titleWrapper .title {
+  width: 602px;
+  font-size: 61px;
+  line-height: 1.48;
+  text-align: left;
+  color: #080930;
+  padding: 15px 0px;
+}
+
+.titleWrapper .any {
+  font-weight: 800;
+  background: linear-gradient(90.1deg, #74A3FF 0%, #ABFED5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.imgWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.connectAny {
+  max-width: 1133px;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+}
+
+

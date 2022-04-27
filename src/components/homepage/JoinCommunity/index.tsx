@@ -1,28 +1,41 @@
 /**
- * Show `join the community` content
+ * Create by ze.zhang on 2022.4.27
  */
-
-import clsx from "clsx";
 import React from "react";
-import Link from "@docusaurus/Link";
-import { customFields } from "@site/docusaurus.config";
 
-import JoinCommunityBgSvg from '@site/static/img/homepage/join-community-bg.svg'
-import styles from './index.module.css'
+import styles from './index.module.css';
+
+interface IconType {
+  src: string,
+  alt: string,
+}
+
+const iconList: IconType[] = [
+  {
+    src: require('@site/static/img/homepage/heighliner-innovation-logo.png').default,
+    alt: 'github'
+  },
+  {
+    src: require('@site/static/img/homepage/k8s-logo.png').default,
+    alt: 'discord',
+  },
+  {
+    src: require('@site/static/img/homepage/terraform-logo.png').default,
+    alt: 'wechat',
+  },
+]
 
 export function JoinCommunity() {
   return (
-    <div className={styles.wrapper}>
-      <JoinCommunityBgSvg className={styles.bg} />
-      <div className={styles.content}>
-        <img src={require('@site/static/img/homepage/join-community-logo-img.png').default} alt="xxx" />
-        <div className={styles.title}>Join the community</div>
-        <Link
-          className={clsx('button button--lg button--secondary', styles.btn)}
-          to={customFields.quickStartUrl as string}
-        >
-          Quick Start
-        </Link>
+    <div >
+      <div className={styles.title}>Join the community</div>
+      <div className={styles.iconWrapper}>
+        {
+          iconList.map(item => {
+            let {src, alt} = item;
+            return <img src={src} alt={alt} className={styles.icon}/>
+          })
+        }
       </div>
     </div>
   )

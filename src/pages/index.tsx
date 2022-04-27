@@ -13,6 +13,8 @@ import { WhyHeighliner } from "../components/homepage/WhyHeighliner";
 import { StackWorkflow } from "../components/homepage/StackWorkflow";
 import { Innovation } from "../components/homepage/Innovation";
 import { JoinCommunity } from "../components/homepage/JoinCommunity";
+import { ConnectAny } from "../components/homepage/ConnectAny";
+import { Community } from "@site/src/components/homepage/Community";
 import { Footer } from "../components/homepage/Footer";
 
 import { Redirect } from '@docusaurus/router';
@@ -33,6 +35,8 @@ export default function Home(): JSX.Element {
       <HeighlinerFeatures />
       <StackWorkflow />
       <Innovation />
+      <ConnectAny />
+      <Community />
       <JoinCommunity />
       <Footer />
     </main>
