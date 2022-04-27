@@ -25,6 +25,7 @@ const config = {
     docsUrl: "/docs/overview/intro",
     blogUrl: "/blog",
     githubUrl: mainGithubUrl,
+    discordUrl: 'https://discord.gg/WphTbdVHFA',
   },
 
   presets: [
