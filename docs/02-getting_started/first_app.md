@@ -3,6 +3,8 @@ title: Your First App
 sidebar_position: 2
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 :::info
 
 Make sure you have followed [the installation guide](/docs/getting_started/installation) before continuing.
@@ -46,7 +48,16 @@ If `hln up` command failed due to unexpected network problems, feel free to **re
 
 The output will look like the following:
 
-![alt](/img/docs/dagger_output.png)
+<div
+  style={{
+    maxWidth: 1000,
+    height: 'auto',
+    marginBottom: 30,
+    marginTop: 30,
+  }}
+>
+<img src={useBaseUrl('/img/docs/dagger_output.png')} />
+</div>
 
 Check the status of your application:
 

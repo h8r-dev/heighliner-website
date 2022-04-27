@@ -172,6 +172,7 @@ hln init
 This command will install the following tools and services:
 
 - _dagger_, _nhctl_, _terraform_ CLI tools under ~/.hln/bin/
+- _heighliner_ namespace
 - Buildkit deployment and service on Kubernetes cluster
 
 ## 4. Create Github Token
@@ -190,7 +191,7 @@ Create a [GitHub personal access token](https://docs.github.com/en/authenticatio
 <img src={useBaseUrl('/img/docs/github_token_perm.png')} />
 </div>
 
-Then set the token as `GITHUB_TOKEN` environment variable:
+Then set the token as _GITHUB_TOKEN_ environment variable:
 
 ```shell
 export GITHUB_TOKEN=<your-fresh-token>
