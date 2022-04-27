@@ -30,7 +30,7 @@ It can be used to search and download stacks, manages secrets, provide interacti
 
 With Heighliner CI, you can also do IaC style GitOps workflow.
 
-For more details and examples, please refer to the [hln CLI](/docs/cli/hln/overview) page.
+For more details and examples, please refer to the [hln CLI](/docs/cli/hln/) page.
 
 ## Heighliner StackHub
 
