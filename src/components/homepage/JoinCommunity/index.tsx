@@ -10,6 +10,7 @@ interface IconType {
   src: string,
   alt: string,
   link?: string,
+  qrCode?: string
 }
 
 const iconList: IconType[] = [
@@ -18,15 +19,16 @@ const iconList: IconType[] = [
     alt: 'github',
     link: customFields.githubUrl as string
   },
-  // annotate discord and wechat link
-  // {
-  //   src: require('@site/static/img/homepage/joincommunity/discourd.webp').default,
-  //   alt: 'discord',
-  // },
-  // {
-  //   src: require('@site/static/img/homepage/joincommunity/wechat.webp').default,
-  //   alt: 'wechat',
-  // },
+  {
+    src: require('@site/static/img/homepage/joincommunity/discourd.webp').default,
+    alt: 'discord',
+    link: customFields.discordUrl as string
+  },
+  {
+    src: require('@site/static/img/homepage/joincommunity/wechat.webp').default,
+    alt: 'wechat',
+    qrCode: require('@site/static/img/heighliner-wechat-channel.jpeg').default,
+  },
 ]
 
 export function JoinCommunity() {
@@ -40,11 +42,18 @@ export function JoinCommunity() {
       <div className={styles.title}>Join the community</div>
       <div className={styles.iconWrapper}>
         {
-          iconList.map((item: IconType, key: number) => {
-            let {src, alt, link} = item;
+          iconList.map((item: IconType) => {
+            let {src, alt, link, qrCode} = item;
             return (
-              <div className={styles.icon} key={key}>
+              <div className={styles.icon} key={alt}>
                 <img src={src} alt={alt} onClick={() => hendleClick(link)}/>
+                {
+                  qrCode && (
+                    <div className={styles.qrcodeWrapper}>
+                      <img src={qrCode}/>
+                    </div>
+                  )
+                }
               </div>
             )
           })
