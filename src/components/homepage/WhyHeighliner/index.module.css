@@ -1,7 +1,6 @@
 .wrapper {
   width: 100%;
   background-color: #000;
-  padding-bottom: 96px;
   padding-top: 116px;
 }
 
@@ -96,13 +95,16 @@
   transform: rotate(135deg);
 }
 
-.flexContain {
+.featuresContain {
   display: flex;
+  justify-content: space-around;
 }
 
 .featureContain {
+  display: flex;
   flex-direction: column;
   width: 216px;
+  margin-top: 123px;
 }
 
 .featureTitle {
@@ -110,11 +112,23 @@
   color: #fff;
   border-bottom-style: solid;
   border-bottom-color: #fff;
+  border-bottom-width: 1px;
+}
+
+.featureImg {
+  margin-top: 35px;
 }
 
 .featureDescription {
   font-size: 16px;
   color: #fff;
+  margin-top: 30px;
+  width: 256px;
+}
+
+.waveSVG {
+  display: block;
+  margin-top: 80px;
 }
 
 @media screen and (max-width: 996px) {

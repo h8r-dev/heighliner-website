@@ -11,6 +11,7 @@ import { HeighlinerDetail } from "../components/homepage/HeighlinerDetail";
 import { HeighlinerFeatures } from "../components/homepage/HeighlinerFeatures";
 import { WhyHeighliner } from "../components/homepage/WhyHeighliner";
 import { StackWorkflow } from "../components/homepage/StackWorkflow";
+import { ChooseStack } from "../components/homepage/ChooseStacks";
 import { Innovation } from "../components/homepage/Innovation";
 import { JoinCommunity } from "../components/homepage/JoinCommunity";
 import { ConnectAny } from "../components/homepage/ConnectAny";
@@ -32,8 +33,9 @@ export default function Home(): JSX.Element {
       <SloganSection />
       {/* <HeighlinerDetail /> */}
       <WhyHeighliner />
-      <HeighlinerFeatures />
+      {/* <HeighlinerFeatures /> */}
       <StackWorkflow />
+      <ChooseStack />
       <Innovation />
       <ConnectAny />
       <Community />

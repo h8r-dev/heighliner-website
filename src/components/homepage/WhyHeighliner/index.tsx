@@ -5,6 +5,8 @@
 import React from "react";
 import clsx from "clsx";
 
+import WaveSVG from "/static/img/homepage/whyheighliner/slogan-wave-bottom.svg";
+
 import styles from "./index.module.css";
 import PicturesSlider from "./PicturesSlider";
 import Features from "./Features";
@@ -27,6 +29,9 @@ export function WhyHeighliner(): React.ReactElement {
           <PicturesSlider />
           <Features />
         </main>
+      </div>
+      <div>
+       <WaveSVG className={styles.waveSVG}/>
       </div>
     </div>
   );

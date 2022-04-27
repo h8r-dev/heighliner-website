@@ -15,9 +15,14 @@ export default function Feature({
   description,
 }: Props): React.ReactElement {
   return (
-    <div className={clsx(styles.flexContain, styles.featureContain)}>
+    <div className={styles.featureContain}>
       <div className={styles.featureTitle}>{title}</div>
-      <img src={imgPath} alt="with heighliner" />
+      <img
+        src={imgPath}
+        alt="with heighliner"
+        style={{ width: 150, height: 150 }}
+        className={styles.featureImg}
+      />
       <div className={styles.featureDescription}>{description}</div>
     </div>
   );
