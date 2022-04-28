@@ -23,7 +23,7 @@ hln list stacks
 
 Output:
 
-![alt](/img/docs/stacks-list.png)
+![alt](/img/docs/getting-started/stacks-list.png)
 
 ## Create your application
 
@@ -34,6 +34,8 @@ hln up -s sample -i
 ```
 
 Input the values one by one according to the promt:
+
+> Note: APP_NAME needs to meet the [DNS1123](https://datatracker.ietf.org/doc/html/rfc1123) rule
 
 ![alt](/img/docs/interactive-prompt.png)
 
@@ -56,6 +58,16 @@ After you start running it, it would look like:
 <img src={useBaseUrl('/img/docs/dagger_output.png')} />
 </div>
 
+Set up the following `Hosts`:
+
+```shell
+127.0.0.1 argocd.h8r.infra
+127.0.0.1 ${APP_NAME}-frontend.h8r.application
+127.0.0.1 grafana.h8r.infra
+127.0.0.1 alert.h8r.infra
+127.0.0.1 prometheus.h8r.infra
+```
+
 Check the status of your application:
 
 ```shell
@@ -73,8 +85,9 @@ Congrats! You have crated your first application with `hln` successfully. All of
 ![alt](/img/docs/github-repos.png)
 
 **ArgoCD:**
+access to: http://argocd.h8r.infra
 
-![alt](/img/docs/todo.jpg)
+![alt](/img/docs/getting-started/argocd.png)
 
 ## Clean up
 
