@@ -5,8 +5,6 @@
 import React from "react";
 import clsx from "clsx";
 
-import { Direction } from "@site/src/components/Line";
-
 import styles from "./index.module.css";
 import NerveCell from "./NerveCell";
 import Line from "./Line";
@@ -18,7 +16,7 @@ export function StackWorkflow(): React.ReactElement {
       <h1 className={clsx("homepage-section-title", styles.title)}>
         How stack works?
       </h1>
-      <ul className={clsx("container", styles.workflow)}>
+      <ul className={clsx(styles.workflow)}>
         <li className={styles.workflowImage}>
           <img
             src={
@@ -35,7 +33,7 @@ export function StackWorkflow(): React.ReactElement {
           <Line />
           <NerveCell />
         </li>
-        <li className={styles.workflowText}>
+        <li>
           <Steps />
         </li>
       </ul>

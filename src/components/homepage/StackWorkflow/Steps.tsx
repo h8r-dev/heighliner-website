@@ -13,7 +13,7 @@ export default function Steps(): React.ReactElement {
   return (
     <div className={styles.stepsWrap}>
       {terminals.map((terminal) => 
-        <Step title={terminal.title} />
+        <Step key={terminal.title} title={terminal.title} />
       )}
     </div>
   );

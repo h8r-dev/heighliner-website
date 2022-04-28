@@ -36,7 +36,7 @@ export default function Home(): JSX.Element {
       {/* <HeighlinerFeatures /> */}
       <StackWorkflow />
       <ChooseStack />
-      <Innovation />
+      {/* <Innovation /> */}
       <ConnectAny />
       <Community />
       <JoinCommunity />

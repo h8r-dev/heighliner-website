@@ -18,7 +18,7 @@ const config = {
   organizationName: "h8r-dev", // Usually your GitHub org/user name.
   projectName: "heighliner-website", // Usually your repo name.
 
-  staticDirectories: ['public', 'static'],
+  staticDirectories: ['static'],
 
   customFields: {
     quickStartUrl: "/docs/getting_started/installation",
