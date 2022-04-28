@@ -20,13 +20,7 @@ export function StackWorkflow(): React.ReactElement {
       </h1>
       <ul className={clsx("container", styles.workflow)}>
         <li className={styles.workflowImage}>
-          <img
-            src={
-              require("@site/static/img/homepage/workflow/workflow@3x.webp")
-                .default
-            }
-            alt="workflow"
-          />
+          <img src={require("@site/static/img/homepage/workflow/workflow2.webp").default} alt="workflow"/>
         </li>
         <li className={styles.separator}>
           <NerveCell />
