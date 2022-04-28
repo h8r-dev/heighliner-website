@@ -3,6 +3,8 @@ title: Your First App
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 :::info
@@ -23,7 +25,12 @@ hln list stacks
 
 Output:
 
-![alt](/img/docs/getting-started/stacks-list.png)
+```shell
+NAME      VERSION  DESCRIPTION
+gin-next  0.0.1
+sample    0.0.1
+gin-vue   0.0.1
+```
 
 ## Create your application
 
@@ -35,7 +42,7 @@ hln up -s sample -i
 
 Input the values one by one according to the promt:
 
-> Note: APP_NAME needs to meet the [DNS1123](https://datatracker.ietf.org/doc/html/rfc1123) rule
+> Note: APP_NAME should obey the rules in [DNS1123](https://datatracker.ietf.org/doc/html/rfc1123)
 
 ![alt](/img/docs/interactive-prompt.png)
 
@@ -45,27 +52,43 @@ If `hln up` command failed due to unexpected network problems, feel free to **re
 
 :::
 
-After you start running it, it would look like:
+Get your ingress IP:
 
-<div
-  style={{
-    maxWidth: 1000,
-    height: 'auto',
-    marginBottom: 30,
-    marginTop: 30,
-  }}
->
-<img src={useBaseUrl('/img/docs/dagger_output.png')} />
-</div>
+<Tabs
+className="unique-tabs"
+defaultValue="cloud"
+values={[
+{label: 'Cloud', value: 'cloud'},
+{label: 'Kind/Minikube', value: 'local'},
+]}>
 
-Set up the following `Hosts`:
+<TabItem value="local">
 
 ```shell
-127.0.0.1 argocd.h8r.infra
-127.0.0.1 ${APP_NAME}-frontend.h8r.application
-127.0.0.1 grafana.h8r.infra
-127.0.0.1 alert.h8r.infra
-127.0.0.1 prometheus.h8r.infra
+127.0.0.1
+```
+
+</TabItem>
+
+<TabItem value="cloud">
+
+```shell
+kubectl -n ingress-nginx get svc ingress-nginx-controller -o=jsonpath='{.status.loadBalancer.ingress[0].ip}'
+```
+
+</TabItem>
+
+</Tabs>
+
+Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
+> Note: replace APP_NAME with your previous input
+
+```txt
+<ingress-ip> argocd.h8r.infra
+<ingress-ip> ${APP_NAME}-frontend.h8r.application
+<ingress-ip> grafana.h8r.infra
+<ingress-ip> alert.h8r.infra
+<ingress-ip> prometheus.h8r.infra
 ```
 
 Check the status of your application:
@@ -80,12 +103,11 @@ Output:
 
 Congrats! You have crated your first application with `hln` successfully. All of the cloud-native infrastructure have been set up properly. Click the Github url and dashboard links to see the effects.
 
-**Github:**
+**Github** repos:
 
 ![alt](/img/docs/github-repos.png)
 
-**ArgoCD:**
-access to: http://argocd.h8r.infra
+Check your **ArgoCD** dashboard at [argocd.h8r.infra](http://argocd.h8r.infra):
 
 ![alt](/img/docs/getting-started/argocd.png)
 

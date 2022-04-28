@@ -46,10 +46,10 @@ Get your ingress IP:
 
 <Tabs
 className="unique-tabs"
-defaultValue="local"
+defaultValue="cloud"
 values={[
-{label: 'Kind/Minikube', value: 'local'},
 {label: 'Cloud', value: 'cloud'},
+{label: 'Kind/Minikube', value: 'local'},
 ]}>
 
 <TabItem value="local">
@@ -69,8 +69,6 @@ kubectl -n ingress-nginx get svc ingress-nginx-controller -o=jsonpath='{.status.
 </TabItem>
 
 </Tabs>
-
-
 
 Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
 
