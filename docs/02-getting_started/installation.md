@@ -123,16 +123,22 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main
 
 Install _minikube_ command-line tool by following [the minikube installation guide](https://minikube.sigs.k8s.io/docs/start/).
 
-Then create a cluster (we recommend using 8 cores and 16Gb mem):
+Then create a cluster (we recommend using 4 cores and 8Gb memory):
 
 ```shell
-minikube start --cpus=8 --memory=16384 --kubernetes-version=v1.23.5
+minikube start --cpus=4 --memory=8g --kubernetes-version=v1.23.5
 ```
 
 Install ingress controller on the cluster:
 
 ```shell
 minikube addons enable ingress
+```
+
+Expose ingress port using minikube tunnel:
+
+```shell
+sudo minikube tunnel
 ```
 
 </TabItem>
