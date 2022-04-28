@@ -58,14 +58,35 @@ After you start running it, it would look like:
 <img src={useBaseUrl('/img/docs/dagger_output.png')} />
 </div>
 
-Set up the following `Hosts`:
+<TabItem value="local">
 
 ```shell
-127.0.0.1 argocd.h8r.infra
-127.0.0.1 ${APP_NAME}-frontend.h8r.application
-127.0.0.1 grafana.h8r.infra
-127.0.0.1 alert.h8r.infra
-127.0.0.1 prometheus.h8r.infra
+127.0.0.1
+```
+
+</TabItem>
+
+<TabItem value="cloud">
+
+```shell
+kubectl -n ingress-nginx get svc ingress-nginx-controller -o=jsonpath='{.status.loadBalancer.ingress[0].ip}'
+```
+
+</TabItem>
+
+</Tabs>
+
+
+
+Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
+
+```txt
+<ingress-ip> argocd.h8r.infra
+<ingress-ip> orders-frontend.h8r.application
+<ingress-ip> orders-backend.h8r.application
+<ingress-ip> grafana.h8r.infra
+<ingress-ip> alert.h8r.infra
+<ingress-ip> prometheus.h8r.infra
 ```
 
 Check the status of your application:
@@ -85,7 +106,7 @@ Congrats! You have crated your first application with `hln` successfully. All of
 ![alt](/img/docs/github-repos.png)
 
 **ArgoCD:**
-access to: http://argocd.h8r.infra
+Check your ArgoCD dashboard at [argocd.h8r.infra](http://argocd.h8r.infra):
 
 ![alt](/img/docs/getting-started/argocd.png)
 
