@@ -126,19 +126,7 @@ Install _minikube_ command-line tool by following [the minikube installation gui
 Then create a cluster (we recommend using 4 cores and 8Gb memory):
 
 ```shell
-minikube start --cpus=4 --memory=8g --kubernetes-version=v1.23.5
-```
-
-Install ingress controller on the cluster:
-
-```shell
-minikube addons enable ingress
-```
-
-Expose ingress port using minikube tunnel:
-
-```shell
-sudo minikube tunnel
+minikube start --cpus=4 --memory=8g --kubernetes-version=v1.23.5 --driver docker --addons ingress --ports 127.0.0.1:443:443 --ports 127.0.0.1:80:80
 ```
 
 </TabItem>
