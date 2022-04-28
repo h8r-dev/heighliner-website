@@ -1,7 +1,10 @@
 ---
-title: Gin+Nextjs Stack
+title: Gin+Nextjs App
 sidebar_position: 1
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 :::info
 
@@ -37,13 +40,37 @@ hln status
 Output:
 TODO
 
-## Verify
+## See the Results
 
-Get your ingress IP first:
+Get your ingress IP:
+
+<Tabs
+className="unique-tabs"
+defaultValue="local"
+values={[
+{label: 'Kind/Minikube', value: 'local'},
+{label: 'Cloud', value: 'cloud'},
+]}>
+
+<TabItem value="local">
+
+```shell
+127.0.0.1
+```
+
+</TabItem>
+
+<TabItem value="cloud">
 
 ```shell
 kubectl -n ingress-nginx get svc ingress-nginx-controller -o=jsonpath='{.status.loadBalancer.ingress[0].ip}'
 ```
+
+</TabItem>
+
+</Tabs>
+
+
 
 Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
 

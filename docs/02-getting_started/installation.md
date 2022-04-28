@@ -70,11 +70,11 @@ values={[
 
 Install _kind_ command-line tool by following [the kind installation guide](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
 
-We recommend setting Docker Resources to 8 cores and 16Gb mem:
+We recommend setting Docker Resources to 4 cores and 8Gb mem:
 
 <div
   style={{
-    maxWidth: 800,
+    maxWidth: 1000,
     height: 'auto',
     marginBottom: 30,
     marginTop: 30,
