@@ -4,6 +4,8 @@ sidebar_position: 2
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 :::info
 
@@ -58,6 +60,16 @@ After you start running it, it would look like:
 <img src={useBaseUrl('/img/docs/dagger_output.png')} />
 </div>
 
+Get your ingress IP:
+
+<Tabs
+className="unique-tabs"
+defaultValue="local"
+values={[
+{label: 'Kind/Minikube', value: 'local'},
+{label: 'Cloud', value: 'cloud'},
+]}>
+
 <TabItem value="local">
 
 ```shell
@@ -76,14 +88,11 @@ kubectl -n ingress-nginx get svc ingress-nginx-controller -o=jsonpath='{.status.
 
 </Tabs>
 
-
-
 Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
 
 ```txt
 <ingress-ip> argocd.h8r.infra
-<ingress-ip> orders-frontend.h8r.application
-<ingress-ip> orders-backend.h8r.application
+<ingress-ip> sample-frontend.h8r.application
 <ingress-ip> grafana.h8r.infra
 <ingress-ip> alert.h8r.infra
 <ingress-ip> prometheus.h8r.infra
@@ -106,6 +115,7 @@ Congrats! You have crated your first application with `hln` successfully. All of
 ![alt](/img/docs/github-repos.png)
 
 **ArgoCD:**
+
 Check your ArgoCD dashboard at [argocd.h8r.infra](http://argocd.h8r.infra):
 
 ![alt](/img/docs/getting-started/argocd.png)
