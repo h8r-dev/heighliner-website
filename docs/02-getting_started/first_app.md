@@ -35,6 +35,8 @@ hln up -s sample -i
 
 Input the values one by one according to the promt:
 
+> Note: APP_NAME needs to meet the [DNS1123](https://datatracker.ietf.org/doc/html/rfc1123) rule
+
 ![alt](/img/docs/interactive-prompt.png)
 
 :::tip
