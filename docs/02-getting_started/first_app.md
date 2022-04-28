@@ -23,19 +23,19 @@ hln list stacks
 
 Output:
 
-![alt](/img/docs/todo.jpg)
+![alt](/img/docs/stacks-list.png)
 
 ## Create your application
 
 Create your application interactively:
 
 ```shell
-hln up -s nextjs -i
+hln up -s sample -i
 ```
 
 Input the values one by one according to the promt:
 
-![alt](/img/docs/todo.jpg)
+![alt](/img/docs/interactive-prompt.png)
 
 :::tip
 
@@ -68,19 +68,11 @@ Output:
 
 Congrats! You have crated your first application with `hln` successfully. All of the cloud-native infrastructure have been set up properly. Click the Github url and dashboard links to see the effects.
 
-Github:
+**Github:**
 
-![alt](/img/docs/todo.jpg)
+![alt](/img/docs/github-repos.png)
 
-ArgoCD:
-
-![alt](/img/docs/todo.jpg)
-
-Grafana:
-
-![alt](/img/docs/todo.jpg)
-
-Nocalhost:
+**ArgoCD:**
 
 ![alt](/img/docs/todo.jpg)
 
