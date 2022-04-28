@@ -161,19 +161,19 @@ kubectl wait --namespace ingress-nginx --for=condition=ready pod --selector=app.
 
 </Tabs>
 
-## 3. Install Heighliner dependencies and buildkit
+## 3. Install Heighliner dependencies
 
 hln provides a command to install dependent tools and services:
 
 ```shell
-hln init --install-buildkit
+hln init
 ```
 
 This command will install the following tools and services:
 
 - _dagger_, _nhctl_, _terraform_ CLI tools under ~/.hln/bin/
 - _heighliner_ namespace
-- Buildkit deployment and service on Kubernetes cluster
+- _buildkit_ deployment and service on Kubernetes cluster
 
 ## 4. Create Github Token
 
