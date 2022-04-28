@@ -76,7 +76,7 @@ export default function PicturesSlider(): React.ReactElement {
       <div className={styles.underLayer}>
         <img
           src={
-            require("@site/static/img/homepage/whyheighliner/chaos.png").default
+            require("@site/static/img/homepage/whyheighliner/chaos@3x.webp").default
           }
           alt="with heighliner"
           className={styles.layerImg}
@@ -89,7 +89,7 @@ export default function PicturesSlider(): React.ReactElement {
       >
         <img
           src={
-            require("@site/static/img/homepage/whyheighliner/clip@3x.webp")
+            require("@site/static/img/homepage/whyheighliner/chip@3x.webp")
               .default
           }
           className={styles.layerImg}

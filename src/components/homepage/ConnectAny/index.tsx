@@ -15,7 +15,7 @@ export function ConnectAny() {
       </div>
       <div className={styles.imgWrapper}>
         <img
-          src={require('@site/static/img/homepage/connectany/connect-any.webp').default}
+          src={require('@site/static/img/homepage/connectany/connect-any-5.webp').default}
           alt="Connect Any"
           className={styles.connectAny}
         />

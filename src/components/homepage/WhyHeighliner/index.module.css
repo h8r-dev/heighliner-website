@@ -126,9 +126,8 @@
   width: 256px;
 }
 
-.waveSVG {
-  display: block;
-  margin-top: 80px;
+.wavePic{
+  width: 100%;
 }
 
 @media screen and (max-width: 996px) {

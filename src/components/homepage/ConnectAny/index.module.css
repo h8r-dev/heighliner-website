@@ -28,6 +28,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.imgWrapper:before {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  top: 60%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  -webkit-filter: blur(50px);
+  filter: blur(50px);
+  background-image: linear-gradient(180deg, rgba(23, 74, 255, 0.5) 0%, rgba(23, 74, 255, 0.5) 100%);
 }
 
 .connectAny {
