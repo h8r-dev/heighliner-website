@@ -144,10 +144,49 @@ sudo minikube tunnel
 </TabItem>
 
 <TabItem value="aws">
+
+Install ingress controller on the cluster:
+
+```shell
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/cloud/deploy.yaml
+```
+
+Make sure ingress controller is ready:
+
+```shell
+kubectl wait --namespace ingress-nginx --for=condition=ready pod --selector=app.kubernetes.io/component=controller --timeout=90s
+```
+
 </TabItem>
 <TabItem value="azure">
+
+Install ingress controller on the cluster:
+
+```shell
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/cloud/deploy.yaml
+```
+
+Make sure ingress controller is ready:
+
+```shell
+kubectl wait --namespace ingress-nginx --for=condition=ready pod --selector=app.kubernetes.io/component=controller --timeout=90s
+```
+
 </TabItem>
 <TabItem value="aliyun">
+
+Install ingress controller on the cluster:
+
+```shell
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/cloud/deploy.yaml
+```
+
+Make sure ingress controller is ready:
+
+```shell
+kubectl wait --namespace ingress-nginx --for=condition=ready pod --selector=app.kubernetes.io/component=controller --timeout=90s
+```
+
 </TabItem>
 <TabItem value="tencent">
 
