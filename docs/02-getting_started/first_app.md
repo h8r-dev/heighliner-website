@@ -23,12 +23,7 @@ hln list stacks
 
 Output:
 
-```shell
-NAME      VERSION  DESCRIPTION
-nextjs    v0.0.1
-gin-next  v0.0.1
-gin-vue   v0.0.1
-```
+![alt](/img/docs/todo.jpg)
 
 ## Create your application
 
@@ -38,7 +33,9 @@ Create your application interactively:
 hln up -s nextjs -i
 ```
 
-Input the values one by one according to the promt to setup your application.
+Input the values one by one according to the promt:
+
+![alt](/img/docs/todo.jpg)
 
 :::tip
 
@@ -46,7 +43,7 @@ If `hln up` command failed due to unexpected network problems, feel free to **re
 
 :::
 
-The output will look like the following:
+After you start running it, it would look like:
 
 <div
   style={{
@@ -65,7 +62,27 @@ Check the status of your application:
 hln status
 ```
 
-Congrats! You have crated your application with `hln` successfully. Click the github url to start developing your new application. All of the Cloud-Native infrastructure and CI/CD pipelines have been set up properly. Feel free to click these links and input the account password of each component to see its dashboard.
+Output:
+
+![alt](/img/docs/todo.jpg)
+
+Congrats! You have crated your first application with `hln` successfully. All of the cloud-native infrastructure have been set up properly. Click the Github url and dashboard links to see the effects.
+
+Github:
+
+![alt](/img/docs/todo.jpg)
+
+ArgoCD:
+
+![alt](/img/docs/todo.jpg)
+
+Grafana:
+
+![alt](/img/docs/todo.jpg)
+
+Nocalhost:
+
+![alt](/img/docs/todo.jpg)
 
 ## Clean up
 
