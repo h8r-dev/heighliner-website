@@ -30,6 +30,7 @@ const config = {
     ginVueStackUrl: '/docs/tutorials/gin_vue',
     remixStackUrl: '/docs/tutorials/remix',
     sprintVueStackUrl: '/docs/tutorials/spring_vue',
+    newsletterUrl: 'https://h8r.hedwig.pub/',
   },
 
   presets: [

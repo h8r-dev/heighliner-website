@@ -75,9 +75,14 @@
 
   border: none;
   outline: none;
-  cursor: pointer;
 
   margin-right: 79.8px;
+  line-height: 2.3;
+
+  &:hover {
+    background-color: #191e2a;
+    color: #fff;
+  }
 }
 
 .quickstart {
@@ -86,19 +91,16 @@
   color: #080930 !important;
   width: 233px;
   height: 60px;
-  line-height: 2.4;
+  line-height: 2.3;
   border: none;
   outline: none;
   font-size: 18px;
-}
 
-.quickstart:hover {
-  background-color: #95E3CB !important;
-}
-
-.quickstart :hover {
-  border: none;
-  outline: none;
+  &:hover {
+    background-color: #82cfb7 !important;
+    border: none;
+    outline: none;
+  }
 }
 
 .actionsGroup {
@@ -175,7 +177,6 @@
 }
 
 @media screen and (max-width: 600px) {
-
   .navItems li:not(:last-child) {
     margin-right: 15px;
   }
