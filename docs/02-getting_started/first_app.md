@@ -100,7 +100,6 @@ kubectl -n ingress-nginx get svc ingress-nginx-controller -o=jsonpath='{.status.
 </Tabs>
 
 Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
-> Note: replace APP_NAME with your previous input (e.g. 'orders')
 
 ```txt
 <ingress-ip> argocd.h8r.site
@@ -110,6 +109,10 @@ Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above
 Check your **ArgoCD** dashboard at [argocd.h8r.infra](http://argocd.h8r.infra):
 
 ![alt](/img/docs/getting-started/argocd-screenshot.png)
+
+View you frontend application at [hello-world-frontend.h8r.site](http://hello-world-frontend.h8r.site):
+
+![alt](/img/docs/todo.jpg)
 
 You can also check if your repos on **Github**:
 
