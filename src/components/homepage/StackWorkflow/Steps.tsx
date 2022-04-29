@@ -70,7 +70,6 @@ export default function Steps(): React.ReactElement {
               window.addEventListener('scroll', () => {
                 if (isEleVisible(dom) && !renderFlag) {
                   if (dom && LibComponent) {
-                    console.warn('渲染' + id)
                     renderFlag = true;
                     LibComponent.create(`data:text/plain;base64,${asciiData}`, dom, {
                       loop: true,
@@ -79,7 +78,6 @@ export default function Steps(): React.ReactElement {
                       fit: false,
                       theme: 'asciinema',
                       rows: 19,
-                      // terminalFontFamily: "sans-serif",
                     })
                   }
                 }
