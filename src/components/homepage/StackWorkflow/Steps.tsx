@@ -78,7 +78,6 @@ export default function Steps(): React.ReactElement {
                       fit: false,
                       theme: 'asciinema',
                       rows: 19,
-                      // terminalFontFamily: "sans-serif",
                     })
                   }
                 }

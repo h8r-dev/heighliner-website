@@ -1,7 +1,10 @@
 ---
-title: Gin+Nextjs Stack
+title: Gin+Nextjs App
 sidebar_position: 1
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 :::info
 
@@ -37,13 +40,35 @@ hln status
 Output:
 TODO
 
-## Verify
+## See the Results
 
-Get your ingress IP first:
+Get your ingress IP:
+
+<Tabs
+className="unique-tabs"
+defaultValue="cloud"
+values={[
+{label: 'Cloud', value: 'cloud'},
+{label: 'Kind/Minikube', value: 'local'},
+]}>
+
+<TabItem value="local">
+
+```shell
+127.0.0.1
+```
+
+</TabItem>
+
+<TabItem value="cloud">
 
 ```shell
 kubectl -n ingress-nginx get svc ingress-nginx-controller -o=jsonpath='{.status.loadBalancer.ingress[0].ip}'
 ```
+
+</TabItem>
+
+</Tabs>
 
 Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
 
@@ -56,5 +81,5 @@ Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above
 <ingress-ip> prometheus.h8r.infra
 ```
 
-Check your ArgoCD dashboard at `https://argocd.h8r.infra/`:
+Check your ArgoCD dashboard at [argocd.h8r.infra](http://argocd.h8r.infra):
 TODO

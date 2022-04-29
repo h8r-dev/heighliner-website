@@ -61,7 +61,7 @@ const config = {
       navbar: {
         logo: {
           alt: "navbar-logo",
-          src: "img/logo.svg",
+          src: "/img/homepage/slogansection/purple-logo@3x.webp",
         },
         items: [
           {

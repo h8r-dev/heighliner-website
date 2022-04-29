@@ -9,6 +9,7 @@
 
 .title {
   margin-bottom: 60px;
+  color: #080930;
 }
 
 .workflowImage img {
@@ -102,7 +103,7 @@
 
 .stepWrap .terminal{
   :global(.asciinema-terminal *){
-    font-family: sans-serif;
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
   }
 }
 

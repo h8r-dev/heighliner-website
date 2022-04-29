@@ -1,5 +1,5 @@
 ---
-title: Spring+Vue Stack
+title: Spring+Vue App
 sidebar_position: 2
 ---
 

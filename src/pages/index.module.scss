@@ -20,3 +20,8 @@
   background-size: 30px 30px;
   background-color: rgba(243, 242, 235, 0.1);
 }
+
+:global(.homepage-section-title) {
+  font-size: 61px;
+  text-align: center;
+}

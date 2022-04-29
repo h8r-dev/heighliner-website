@@ -24,6 +24,7 @@ Or use the install script:
 ```bash
 curl -L https://dl.h8r.io/hln/install.sh | sh
 ./bin/hln version
+sudo mv bin/hln /usr/local/bin/hln
 ```
 
 Or download binaries: [Github Release](https://github.com/h8r-dev/heighliner/releases)
@@ -36,6 +37,7 @@ Use the install script:
 ```bash
 curl -L https://dl.h8r.io/hln/install.sh | sh
 ./bin/hln version
+sudo mv bin/hln /usr/local/bin/hln
 ```
 
 Or download binaries: [Github Release](https://github.com/h8r-dev/heighliner/releases)
@@ -70,18 +72,21 @@ values={[
 
 Install _kind_ command-line tool by following [the kind installation guide](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
 
-We recommend setting Docker Resources to 8 cores and 16Gb mem:
+(Optional) We recommend setting Docker Resources to 4 cores and 8Gb mem:
+<details>
+  <summary>Docker Desktop Settings</summary>
+  <div
+    style={{
+      maxWidth: 1000,
+      height: 'auto',
+      marginBottom: 30,
+      marginTop: 30,
+    }}
+  >
+    <img src={useBaseUrl('/img/docs/docker_resources.png')} />
+  </div>
+</details>
 
-<div
-  style={{
-    maxWidth: 800,
-    height: 'auto',
-    marginBottom: 30,
-    marginTop: 30,
-  }}
->
-<img src={useBaseUrl('/img/docs/docker_resources.png')} />
-</div>
 
 Save the following configuration as `kind.yaml`:
 
@@ -123,10 +128,10 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main
 
 Install _minikube_ command-line tool by following [the minikube installation guide](https://minikube.sigs.k8s.io/docs/start/).
 
-Then create a cluster (we recommend using 8 cores and 16Gb mem):
+Then create a cluster (we recommend using 4 cores and 8Gb memory):
 
 ```shell
-minikube start --cpus=8 --memory=16384 --kubernetes-version=v1.23.5
+minikube start --cpus=4 --memory=8g --kubernetes-version=v1.23.5
 ```
 
 Install ingress controller on the cluster:
@@ -135,13 +140,58 @@ Install ingress controller on the cluster:
 minikube addons enable ingress
 ```
 
+Expose ingress port using minikube tunnel:
+
+```shell
+sudo minikube tunnel
+```
+
 </TabItem>
 
 <TabItem value="aws">
+
+Install ingress controller on the cluster:
+
+```shell
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/cloud/deploy.yaml
+```
+
+Make sure ingress controller is ready:
+
+```shell
+kubectl wait --namespace ingress-nginx --for=condition=ready pod --selector=app.kubernetes.io/component=controller --timeout=90s
+```
+
 </TabItem>
 <TabItem value="azure">
+
+Install ingress controller on the cluster:
+
+```shell
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/cloud/deploy.yaml
+```
+
+Make sure ingress controller is ready:
+
+```shell
+kubectl wait --namespace ingress-nginx --for=condition=ready pod --selector=app.kubernetes.io/component=controller --timeout=90s
+```
+
 </TabItem>
 <TabItem value="aliyun">
+
+Install ingress controller on the cluster:
+
+```shell
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/cloud/deploy.yaml
+```
+
+Make sure ingress controller is ready:
+
+```shell
+kubectl wait --namespace ingress-nginx --for=condition=ready pod --selector=app.kubernetes.io/component=controller --timeout=90s
+```
+
 </TabItem>
 <TabItem value="tencent">
 
@@ -172,7 +222,16 @@ hln init
 This command will install the following tools and services:
 
 - _dagger_, _nhctl_, _terraform_ CLI tools under ~/.hln/bin/
-- Buildkit deployment and service on Kubernetes cluster
+- _heighliner_ namespace
+- _buildkit_ deployment and service on Kubernetes cluster
+
+If it is successful, it should output:
+
+```shell
+...
+Waiting buildkitd to be ready...
+buildkitd is ready!
+```
 
 ## 4. Create Github Token
 
@@ -190,7 +249,7 @@ Create a [GitHub personal access token](https://docs.github.com/en/authenticatio
 <img src={useBaseUrl('/img/docs/github_token_perm.png')} />
 </div>
 
-Then set the token as `GITHUB_TOKEN` environment variable:
+Then set the token as _GITHUB_TOKEN_ environment variable:
 
 ```shell
 export GITHUB_TOKEN=<your-fresh-token>

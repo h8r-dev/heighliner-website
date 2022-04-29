@@ -1,4 +1,4 @@
 ---
-title: Overview
+title: Observability
 sidebar_position: 1
 ---
