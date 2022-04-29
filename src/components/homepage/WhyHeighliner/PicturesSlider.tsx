@@ -32,8 +32,11 @@ export default function PicturesSlider(): React.ReactElement {
     setIsDown(true);
 
     // Get the starting position of cursor
-    if(getDeviceType() === DeviceType.Mobile) {
-      event.clientX = event.touches[0].clientX
+    if (
+      getDeviceType() === DeviceType.Mobile ||
+      getDeviceType() === DeviceType.Tablet
+    ) {
+      event.clientX = event.touches[0].clientX;
     }
     setStartPosX(event.clientX);
     startPosXRef.current = event.clientX;
@@ -50,9 +53,12 @@ export default function PicturesSlider(): React.ReactElement {
       isDownRef.current &&
       upperLayerWidthRef.current >= 0 &&
       upperLayerWidthRef.current <= imgWidth
-      ) {
+    ) {
       // Calculate the movement of pole and upperLayer
-      if(getDeviceType() === DeviceType.Mobile) {
+      if (
+        getDeviceType() === DeviceType.Mobile ||
+        getDeviceType() === DeviceType.Tablet
+      ) {
         event.clientX = event.touches[0].clientX;
       }
       const deltaX = startPosXRef.current - event.clientX;
@@ -76,6 +82,10 @@ export default function PicturesSlider(): React.ReactElement {
       startPosXRef.current = event.clientX;
       poleLeftRef.current = poleMovement;
       upperLayerWidthRef.current = upperLayerMovement;
+
+      event.stopImmediatePropagation();
+
+      return false;
     }
   }
 
@@ -93,7 +103,8 @@ export default function PicturesSlider(): React.ReactElement {
         <div className={styles.underLayer}>
           <img
             src={
-              require("@site/static/img/homepage/whyheighliner/chaos@3x.webp").default
+              require("@site/static/img/homepage/whyheighliner/chaos@3x.webp")
+                .default
             }
             alt="with heighliner"
             className={styles.layerImg}
@@ -106,7 +117,8 @@ export default function PicturesSlider(): React.ReactElement {
         >
           <img
             src={
-              require("@site/static/img/homepage/whyheighliner/chip@3x.webp").default
+              require("@site/static/img/homepage/whyheighliner/chip@3x.webp")
+                .default
             }
             className={styles.layerImg}
             alt="with heighliner"
@@ -125,15 +137,15 @@ export default function PicturesSlider(): React.ReactElement {
           }
           className={styles.below}
         />
-          <img
-            src={
-              require("/static/img/homepage/whyheighliner/pole@3x.webp").default
-            }
-            onMouseDown={handleMouseDown}
-            onTouchStart={handleMouseDown}
-            style={{ left: poleLeft }}
-            className={styles.pole}
-          />
+        <img
+          src={
+            require("/static/img/homepage/whyheighliner/pole@3x.webp").default
+          }
+          onMouseDown={handleMouseDown}
+          onTouchStart={handleMouseDown}
+          style={{ left: poleLeft }}
+          className={styles.pole}
+        />
       </div>
     </div>
   );
