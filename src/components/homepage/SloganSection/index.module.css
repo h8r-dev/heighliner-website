@@ -84,8 +84,20 @@
   display: inline-block;
 }
 
-.zeroEffect {
-  transform: scale(1.5) scale(1);
+@keyframes zoominout {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.08, 1.08);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.zeroEffect{
+  animation: zoominout 1s infinite;
 }
 
 .requestAccess {

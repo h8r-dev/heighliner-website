@@ -5,7 +5,7 @@
 import React from "react";
 import clsx from "clsx";
 
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 import PicturesSlider from "./PicturesSlider";
 import Features from "./Features";
 
@@ -13,7 +13,7 @@ export function WhyHeighliner(): React.ReactElement {
   return (
     <>
       <div className={styles.wrapper}>
-        <div className={clsx("container", styles.content)}>
+        <div className={clsx(styles.content)}>
           <h1 className={clsx("homepage-section-title", styles.title)}>
             Why Heighliner stack?
           </h1>

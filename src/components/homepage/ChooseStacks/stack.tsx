@@ -17,16 +17,6 @@ interface Props {
 export default function Stack(props: Props): React.ReactElement {
   return (
     <div className={styles.stackWrap}>
-      {/* {props.showMiddleCubes && (
-        <img
-          src={
-            require("/static/img/homepage/choosestacks/middlecubes@3x.webp")
-              .default
-          }
-          alt="with heighliner"
-          className={styles.middleCubes}
-        />
-      )} */}
       <img className={styles.decoratedIcon} src={props.decoratedIcon}></img>
       <div className={styles.stackName}>{props.name}</div>
       <div className={clsx(styles.frameworkIcon, styles.firstIcon)}>

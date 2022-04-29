@@ -1,6 +1,10 @@
 import React, { useRef } from "react";
 import { useEffect, useState } from "react";
 
+import ZeroSVG from "/static/img/homepage/slogansection/zero.svg";
+
+import styles from "./index.module.css";
+
 interface Props {
   startPoint?: number;
   endPoint: number;
@@ -9,7 +13,7 @@ interface Props {
 }
 
 export default function AutoDownCounter({
-  startPoint = 0,
+  startPoint,
   endPoint,
   interval,
   minuend,
@@ -32,5 +36,15 @@ export default function AutoDownCounter({
     };
   }, []);
 
-  return <span>{counter}</span>;
+  return (
+    <span className={styles.autoDownCounterText}>
+      {/* {counter > endPoint ? (
+        counter
+      ) : ( */}
+        <div className={styles.zeroEffect}>
+          <ZeroSVG />
+        </div>
+      {/* )} */}
+    </span>
+  );
 }

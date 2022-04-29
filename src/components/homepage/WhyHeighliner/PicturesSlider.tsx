@@ -1,15 +1,21 @@
-import { limitInRange } from "@site/src/utils/MathPlus";
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
-import styles from "./index.module.css";
+
+import { limitInRange } from "@site/src/utils/MathPlus";
+
+import styles from "./index.module.scss";
+
+const poleAxisLeft = -22;
+const poleAxisRight = 24;
+const prePlace = 434;
 
 export default function PicturesSlider(): React.ReactElement {
   const [isDown, setIsDown] = useState(false);
   const isDownRef = useRef(isDown);
 
-  const [poleLeft, setPoleLeft] = useState<number>(795);
+  const [poleLeft, setPoleLeft] = useState<number>(poleAxisLeft + prePlace);
   const poleLeftRef = useRef(poleLeft);
 
-  const [upperLayerWidth, setUpperLayerStyle] = useState<number>(795);
+  const [upperLayerWidth, setUpperLayerStyle] = useState<number>(prePlace);
   const upperLayerWidthRef = useRef(upperLayerWidth);
 
   const [startPosX, setStartPosX] = useState(0);
@@ -40,12 +46,12 @@ export default function PicturesSlider(): React.ReactElement {
       isDownRef.current &&
       upperLayerWidthRef.current >= 0 &&
       upperLayerWidthRef.current <= imgWidth
-    ) {
+      ) {
       // Calculate the movement of pole and upperLayer
       const deltaX = startPosXRef.current - event.clientX;
       const poleMovement = limitInRange(
-        0,
-        imgWidth,
+        poleAxisLeft,
+        imgWidth - poleAxisRight,
         poleLeftRef.current - deltaX
       );
       const upperLayerMovement = limitInRange(
@@ -68,40 +74,56 @@ export default function PicturesSlider(): React.ReactElement {
 
   return (
     <div
-      className={styles.layerContain}
+      className={styles.layerWrap}
       onMouseUp={handleMouseUpOrLeave}
       onMouseLeave={handleMouseUpOrLeave}
       onMouseMove={handleMouseMove}
     >
-      <div className={styles.underLayer}>
+      <div className={styles.layerContain}>
+        <div className={styles.underLayer}>
+          <img
+            src={
+              require("@site/static/img/homepage/whyheighliner/chaos@3x.webp").default
+            }
+            alt="with heighliner"
+            className={styles.layerImg}
+          />
+        </div>
+        <div
+          className={styles.upperLayer}
+          style={{ width: upperLayerWidth }}
+          ref={upperLayerRef}
+        >
+          <img
+            src={
+              require("@site/static/img/homepage/whyheighliner/chip@3x.webp").default
+            }
+            className={styles.layerImg}
+            alt="with heighliner"
+            ref={imgEl}
+          />
+        </div>
         <img
           src={
-            require("@site/static/img/homepage/whyheighliner/chaos@3x.webp").default
+            require("/static/img/homepage/whyheighliner/rail@3x.webp").default
           }
-          alt="with heighliner"
-          className={styles.layerImg}
+          className={styles.above}
         />
-      </div>
-      <div
-        className={styles.upperLayer}
-        style={{width: upperLayerWidth}}
-        ref={upperLayerRef}
-      >
         <img
           src={
-            require("@site/static/img/homepage/whyheighliner/chip@3x.webp")
-              .default
+            require("/static/img/homepage/whyheighliner/rail@3x.webp").default
           }
-          className={styles.layerImg}
-          alt="with heighliner"
-          ref={imgEl}
+          className={styles.below}
         />
+          <img
+            src={
+              require("/static/img/homepage/whyheighliner/pole@3x.webp").default
+            }
+            onMouseDown={handleMouseDown}
+            style={{ left: poleLeft }}
+            className={styles.pole}
+          />
       </div>
-      <span
-        className={styles.pole}
-        style={{ left: poleLeft }}
-        onMouseDown={handleMouseDown}
-      ></span>
     </div>
   );
 }

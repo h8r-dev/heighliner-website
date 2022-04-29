@@ -1,7 +1,7 @@
 import React from "react";
 
 import Feature from "./Feature";
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 
 const features = [
   {

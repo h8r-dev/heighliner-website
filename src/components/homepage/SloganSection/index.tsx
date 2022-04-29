@@ -57,7 +57,7 @@ export function SloganSection(): React.ReactElement {
                     startPoint={3000}
                     endPoint={0}
                     interval={1}
-                    minuend={25}
+                    minuend={5}
                   />{" "}
                   configuration to{" "}
                 </h1>
