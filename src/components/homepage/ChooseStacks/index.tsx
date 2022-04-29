@@ -39,17 +39,7 @@ const stacks = [
 export function ChooseStack(): React.ReactElement {
   return (
     <div className={styles.wrapper}>
-      {/* <img 
-        src={require("/static/img/homepage/choosestacks/toprighcubes@3x.webp").default}
-        alt="with heighliner"
-        className={styles.topRightCubes}
-      />
-      <img 
-        src={require("/static/img/homepage/choosestacks/downleftcubes@3x.webp").default}
-        alt="with heighliner"
-        className={styles.downLeftCubes}
-      /> */}
-      <h1 className={clsx("homepage-section-title")}>
+      <h1 className={clsx("homepage-section-title", styles.title)}>
         Start from a dedicated stack
       </h1>
       <div className={styles.stacksWrap}>
