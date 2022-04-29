@@ -158,6 +158,10 @@
     height: 45px;
   }
 
+  .contentWrap{
+    margin-left: 50px;
+  }
+
   .sloganTextWrap {
     margin-bottom: 44px;
   }
@@ -185,6 +189,7 @@
 
   .contentWrap{
     justify-content: center;
+    margin-left: 0;
   }
 
   .navItems li:not(:last-child) {
