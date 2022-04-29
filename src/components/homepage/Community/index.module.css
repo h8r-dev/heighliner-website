@@ -1,12 +1,3 @@
-.title {
-  margin-top: 100px;
-  line-height: 1.4;
-  letter-spacing: normal;
-  text-align: center;
-  color: #000;
-  margin-bottom: 150px;
-}
-
 .cardWrapper {
   display: flex;
   align-items: center;

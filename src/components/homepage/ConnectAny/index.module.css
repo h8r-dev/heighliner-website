@@ -6,7 +6,7 @@
   margin-top: 70px;
 }
 
-.titleWrapper .title {
+.titleWrapper .titleConnectAny {
   width: 602px;
   line-height: 1.48;
   text-align: left;
@@ -57,16 +57,25 @@
   text-align: center;
 }
 
+.titleCommunity{
+  margin-top: 100px;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000;
+  margin-bottom: 150px;
+}
+
 @media screen and (max-width: 996px) {
 
-  .titleWrapper .title {
+  .titleWrapper .titleConnectAny {
     width: 500px;
   }
 }
 
 @media screen and (max-width: 600px) {
 
-  .titleWrapper .title {
+  .titleWrapper .titleConnectAny {
     width: 300px;
   }
 }

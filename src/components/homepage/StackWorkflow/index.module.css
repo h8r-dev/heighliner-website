@@ -1,9 +1,5 @@
 .wrapper {
   position: relative;
-  /* the backgorund table */
-  background: linear-gradient(90deg,rgba(239, 235, 242, 1) 1px,transparent 0), linear-gradient(rgba(239, 235, 242, 1) 1px,transparent 0);
-  background-size: 30px 30px;
-  background-color: rgba(243, 242, 235, 0.1);
 }
 
 .wavePic{
