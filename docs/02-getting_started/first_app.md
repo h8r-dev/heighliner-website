@@ -15,7 +15,7 @@ Make sure you have followed [the installation guide](/docs/getting_started/insta
 
 Ever want to have a Vercel-style experience when creating your nextjs app?
 But without the limitation to a specific vendor?
-In this doc, we will show you how to create a simple nextjs app with a open source, cloud native stack.
+In this doc, we will show you how to create a nextjs app in Vercel style with an open source, cloud native stack.
 
 ## List all stacks
 

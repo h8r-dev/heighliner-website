@@ -57,10 +57,7 @@ defaultValue="kind"
 values={[
 {label: 'Kind', value: 'kind'},
 {label: 'Minikube', value: 'minikube'},
-{label: 'AWS', value: 'aws'},
-{label: 'Azure', value: 'azure'},
-{label: 'Alibaba', value: 'aliyun'},
-{label: 'Tencent', value: 'tencent'},
+{label: 'Hosted Cloud K8s', value: 'cloud'},
 ]}>
 
 <TabItem value="kind">
@@ -142,64 +139,29 @@ sudo minikube tunnel
 
 </TabItem>
 
-<TabItem value="aws">
+<TabItem value="cloud">
 
-Install ingress controller on the cluster:
+You can also choose one of the following cloud providers for hosted k8s services:
 
-```shell
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/cloud/deploy.yaml
-```
+- [AWS EKS](https://aws.amazon.com/eks/)
+- [Azure AKS](https://azure.microsoft.com/en-us/services/kubernetes-service/#overview)
+- [Google GKE](https://cloud.google.com/kubernetes-engine)
+- [Alibaba ACK](https://www.aliyun.com/product/kubernetes)
+- [Tencent TKE](https://cloud.tencent.com/product/tke)
 
-Make sure ingress controller is ready:
-
-```shell
-kubectl wait --namespace ingress-nginx --for=condition=ready pod --selector=app.kubernetes.io/component=controller --timeout=90s
-```
-
-</TabItem>
-<TabItem value="azure">
-
-Install ingress controller on the cluster:
-
-```shell
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/cloud/deploy.yaml
-```
-
-Make sure ingress controller is ready:
+Once a cluster is created, you can check if the ingress controller is installed by running the following command:
 
 ```shell
 kubectl wait --namespace ingress-nginx --for=condition=ready pod --selector=app.kubernetes.io/component=controller --timeout=90s
 ```
 
-</TabItem>
-<TabItem value="aliyun">
-
-Install ingress controller on the cluster:
+If it is not, you can install it by running the following command:
 
 ```shell
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/cloud/deploy.yaml
 ```
 
-Make sure ingress controller is ready:
-
-```shell
-kubectl wait --namespace ingress-nginx --for=condition=ready pod --selector=app.kubernetes.io/component=controller --timeout=90s
-```
-
-</TabItem>
-<TabItem value="tencent">
-
-Install ingress controller on the cluster:
-
-```shell
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/cloud/deploy.yaml
-```
-
-Make sure ingress controller is ready:
-
-```shell
-kubectl wait --namespace ingress-nginx --for=condition=ready pod --selector=app.kubernetes.io/component=controller --timeout=90s
-```
+For more info about installing the ingress controller, see [the ingress-nginx installation guide](https://kubernetes.github.io/ingress-nginx/deploy/).
 
 </TabItem>
 
