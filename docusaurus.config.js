@@ -49,7 +49,7 @@ const config = {
           editUrl: "https://github.com/h8r-dev/heighliner-website",
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: require.resolve("./src/css/custom.scss"),
         },
       }),
     ],
@@ -61,7 +61,7 @@ const config = {
       navbar: {
         logo: {
           alt: "navbar-logo",
-          src: "img/logo.svg",
+          src: "/img/homepage/slogansection/purple-logo@3x.webp",
         },
         items: [
           {
