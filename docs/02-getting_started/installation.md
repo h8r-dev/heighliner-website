@@ -43,11 +43,6 @@ sudo mv bin/hln /usr/local/bin/hln
 Or download binaries: [Github Release](https://github.com/h8r-dev/heighliner/releases)
 
   </TabItem>
-  <TabItem value="windows" label="Windows">
-
-Download binaries: [Github Release](https://github.com/h8r-dev/heighliner/releases)
-
-  </TabItem>
 </Tabs>
 
 ## 2. Install Kubernetes
@@ -86,7 +81,6 @@ Install _kind_ command-line tool by following [the kind installation guide](http
     <img src={useBaseUrl('/img/docs/docker_resources.png')} />
   </div>
 </details>
-
 
 Save the following configuration as `kind.yaml`:
 
