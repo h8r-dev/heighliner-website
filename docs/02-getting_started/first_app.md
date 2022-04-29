@@ -53,7 +53,7 @@ Path to your kubeconfig file (required):
 
 Which github organization do you want to use? (required):
 
-> my-org
+> organization name or github id
 ```
 
 Then it will start executing the setup instructions. Output looks like:
@@ -112,7 +112,7 @@ Check your **ArgoCD** dashboard at [argocd.h8r.infra](http://argocd.h8r.infra):
 
 View you frontend application at [hello-world-frontend.h8r.site](http://hello-world-frontend.h8r.site):
 
-![alt](/img/docs/todo.jpg)
+![alt](/img/docs/getting-started/sample-application.png)
 
 You can also check if your repos on **Github**:
 
