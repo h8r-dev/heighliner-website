@@ -100,3 +100,12 @@
     text-decoration-color: #7a2cee;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .link{
+    font-size: 14px;
+    top: 240px;
+    left: 220px;
+    width: 100px;
+  }
+}
