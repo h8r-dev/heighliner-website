@@ -7,15 +7,11 @@ import Link from "@docusaurus/Link";
 import clsx from "clsx";
 import { customFields } from "@site/docusaurus.config";
 
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 
 import WhiteHeighlinerSvg from "@site/static/img/homepage/white-heighliner.svg";
 import { Video } from "@site/src/components/Video";
 import AutoDownCounter from "./AutoDownCounter";
-
-function handleRequestAccess() {
-  console.log("request access from popover");
-}
 
 export function SloganSection(): React.ReactElement {
   return (
@@ -65,27 +61,23 @@ export function SloganSection(): React.ReactElement {
                 <h1>App</h1>
               </div>
               <div className={styles.actionsGroup}>
-                <button
-                  onClick={handleRequestAccess}
-                  className={styles.requestAccess}
+                <Link
+                  className={clsx("button button--lg", styles.requestAccess)}
+                  to={customFields.newsletterUrl as string}
                 >
                   Request Early Access
-                </button>
+                </Link>
                 <Link
-                  className={clsx(
-                    "button button--lg button--secondary",
-                    styles.quickstart
-                  )}
+                  className={clsx("button button--lg button--secondary", styles.quickstart)}
                   to={customFields.quickStartUrl as string}
                 >
                   Quick Start
                 </Link>
               </div>
-
             </main>
             <div className={styles.video}>
               <Video
-                poster="img/vidio-cover-photo-2.png"
+                poster="/img/vidio-photo-2.webp"
                 src="https://dl.h8r.io/Heighliner-Introduction-English.mp4"
               />
             </div>

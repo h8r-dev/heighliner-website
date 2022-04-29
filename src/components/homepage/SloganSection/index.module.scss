@@ -1,0 +1,243 @@
+.wrapper {
+  width: 100%;
+  background-color: #000;
+  position: relative;
+  height: 790px;
+
+  background-image: url('/static/img/homepage/slogan-bg.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contentWrap{
+  display: flex;
+  width: 100%;
+  padding-top: 160px;
+  top: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrap {
+  position: relative;
+  z-index: 100;
+}
+
+.video {
+  width: 600px;
+  height: 300px;
+  position: relative;
+  margin-left: 50px;
+}
+
+.navbar {
+  padding-top: 32px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+}
+
+.navItems {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navItems li {
+  list-style: none;
+}
+
+.navItems li:not(:last-child) {
+  margin-right: 38px;
+}
+
+.navItems li a {
+  color: #fff;
+  font-size: 16px;
+}
+
+.sloganTextWrap {
+  color: #fff;
+  margin-bottom: 88px;
+}
+
+.sloganTextWrap > h1 {
+  font-size: 60px;
+  line-height: 140%;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.sloganTextWrap > h1 > em {
+  color: #A5FFDB;
+  font-style: normal;
+}
+
+.autoDownCounterText {
+  width: 130px;
+  display: inline-block;
+}
+
+@keyframes zoominout {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.08, 1.08);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.zeroEffect{
+  animation: zoominout 1s infinite;
+}
+
+.requestAccess {
+  width: 233px;
+  height: 60px;
+
+  background-color: #262e40;
+  border-radius: 0;
+  color: #fff;
+  font-size: 18px;
+
+  border: none;
+  outline: none;
+
+  margin-right: 79.8px;
+  line-height: 2.3;
+
+  &:hover {
+    background-color: #191e2a;
+    color: #fff;
+  }
+}
+
+.quickstart {
+  border-radius: 0;
+  background-color: #a9f7df !important;
+  color: #080930 !important;
+  width: 233px;
+  height: 60px;
+  line-height: 2.3;
+  border: none;
+  outline: none;
+  font-size: 18px;
+
+  &:hover {
+    background-color: #82cfb7 !important;
+    border: none;
+    outline: none;
+  }
+}
+
+.actionsGroup {
+  display: flex;
+}
+
+.waveBottom {
+  position: absolute;
+  z-index: 10;
+  bottom: -1px;
+  background-color: transparent;
+  width: 100%;
+  display: block;
+  left: 0;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #00000088;
+}
+
+.backgroundMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 790px;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 996px) {
+
+  .quickstart, .requestAccess {
+    font-size: 15px;
+    width: 173px;
+    height: 45px;
+  }
+
+  .contentWrap{
+    margin-left: 50px;
+  }
+
+  .sloganTextWrap {
+    margin-bottom: 44px;
+  }
+
+  .sloganTextWrap > h1 {
+    font-size: 45px;
+  }
+
+  .quickstart {
+    line-height: 1.9;
+    /* margin-left: 63px; */
+  }
+
+  .actionsGroup {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .video{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .contentWrap{
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .navItems li:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  .sloganTextWrap > h1 {
+    font-size: 40px;
+  }
+
+  .actionsGroup {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .quickstart {
+    margin-left: 0;
+  }
+
+  .requestAccess {
+    margin-bottom: 20px;
+  }
+
+  .requestAccess, .quickstart {
+    width: 100%;
+  }
+
+}

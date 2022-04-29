@@ -7,7 +7,7 @@ import React from "react";
 import { Player, BigPlayButton, ControlBar, LoadingSpinner } from 'video-react'
 import "video-react/dist/video-react.css"; // import css
 
-import styles from './index.module.css'
+import styles from './index.module.scss'
 
 export interface VideoProps {
   poster: string
@@ -19,7 +19,8 @@ export function Video({
   src,
 }: VideoProps): React.ReactElement {
   return (
-    <div className={styles.wrapper}>
+    // use id becase add the weight
+    <div id={styles.vidioWrapper}>
       <Player
         playsInline
         poster={poster}

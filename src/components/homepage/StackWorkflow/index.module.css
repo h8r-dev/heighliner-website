@@ -1,9 +1,5 @@
 .wrapper {
   position: relative;
-  /* the backgorund table */
-  background: linear-gradient(90deg,rgba(239, 235, 242, 1) 1px,transparent 0), linear-gradient(rgba(239, 235, 242, 1) 1px,transparent 0);
-  background-size: 30px 30px;
-  background-color: rgba(243, 242, 235, 0.1);
 }
 
 .wavePic{
@@ -57,6 +53,7 @@
 
 .step {
   display: flex;
+  width: 540px;
 }
 
 .stepIcon img {
@@ -87,6 +84,10 @@
   flex-direction: column;
 }
 
+.stepsWrap *{
+  font-family: AppleSystemUIFont!important;
+}
+
 .stepWrap{
   
 }
@@ -100,8 +101,8 @@
 }
 
 .terminal {
-  width: 394px;
-  height: 344px;
+  width: 540px;
+  height: 384px;
   background-color: #000;
   border-radius: 10px;
   margin-bottom: 78px;

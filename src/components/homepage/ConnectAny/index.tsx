@@ -11,7 +11,7 @@ export function ConnectAny() {
     <div>
       <div className={styles.titleWrapper}>
         <div
-             className={clsx("homepage-section-title", styles.title)}
+             className={clsx("homepage-section-title", styles.titleConnectAny)}
         >
           Connect <span className={styles.any}>any</span> preferred Tools and platform
         </div>
@@ -23,6 +23,7 @@ export function ConnectAny() {
           className={styles.connectAny}
         />
       </div>
+      <div className={clsx("homepage-section-title", styles.titleCommunity)}>Community Collaboration</div>
     </div>
   )
 }
