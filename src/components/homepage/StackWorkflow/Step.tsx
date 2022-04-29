@@ -1,7 +1,7 @@
 import React from "react";
 
 import "asciinema-player/dist/bundle/asciinema-player.css"
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 
 export interface StepProps {
   title: string

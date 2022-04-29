@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import BrowserOnly from '@docusaurus/BrowserOnly';
 
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 import Step, {StepProps} from "./Step";
 import {
   hlnListStacks,
@@ -44,20 +44,46 @@ export default function Steps(): React.ReactElement {
         {() => {
           window.addEventListener('load', () => {
             const LibComponent = require('asciinema-player');
+
+            /**
+             * judge dom is visible
+             * @param ele dom
+             * return boolean
+             */
+            function isEleVisible(ele) {
+              var {top, right, bottom, left} = ele.getBoundingClientRect()
+              var w = window.innerWidth
+              var h = window.innerHeight
+              if (bottom < 0 || top > h) {
+                return false
+              }
+              if (right < 0 || left > w) {
+                return false
+              }
+              return true
+            }
+
             window.terminals.map(item => {
               let {id, asciiData} = item;
               let dom = document.getElementById(id);
-              if (dom && LibComponent) {
-                LibComponent.create(`data:text/plain;base64,${asciiData}`, dom, {
-                  loop: true,
-                  autoPlay: true,
-                  terminalFontSize: '14px',
-                  fit: false,
-                  theme: 'monokai',
-                  rows: 19,
-                  terminalFontFamily: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
-                })
-              }
+              let renderFlag = false;
+              window.addEventListener('scroll', () => {
+                if (isEleVisible(dom) && !renderFlag) {
+                  if (dom && LibComponent) {
+                    console.warn('渲染' + id)
+                    renderFlag = true;
+                    LibComponent.create(`data:text/plain;base64,${asciiData}`, dom, {
+                      loop: true,
+                      autoPlay: true,
+                      terminalFontSize: '14px',
+                      fit: false,
+                      theme: 'asciinema',
+                      rows: 19,
+                      // terminalFontFamily: "sans-serif",
+                    })
+                  }
+                }
+              })
             })
           })
           return <></>;

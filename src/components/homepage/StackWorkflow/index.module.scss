@@ -84,14 +84,6 @@
   flex-direction: column;
 }
 
-.stepsWrap *{
-  font-family: AppleSystemUIFont!important;
-}
-
-.stepWrap{
-  
-}
-
 .stepTitle {
   font-size: 27px;
   color: #6002ee;
@@ -106,4 +98,10 @@
   background-color: #000;
   border-radius: 10px;
   margin-bottom: 78px;
+}
+
+.stepWrap .terminal{
+  :global(.asciinema-terminal *){
+    font-family: sans-serif;
+  }
 }
