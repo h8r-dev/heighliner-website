@@ -1,12 +1,13 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import { limitInRange } from "@site/src/utils/MathPlus";
+import { DeviceType, getDeviceType } from "@site/src/utils/Environment";
 
 import styles from "./index.module.scss";
 
 const poleAxisLeft = -22;
 const poleAxisRight = 24;
-const prePlace = 434;
+const prePlace = 465;
 
 export default function PicturesSlider(): React.ReactElement {
   const [isDown, setIsDown] = useState(false);
@@ -31,6 +32,9 @@ export default function PicturesSlider(): React.ReactElement {
     setIsDown(true);
 
     // Get the starting position of cursor
+    if(getDeviceType() === DeviceType.Mobile) {
+      event.clientX = event.touches[0].clientX
+    }
     setStartPosX(event.clientX);
     startPosXRef.current = event.clientX;
   }
@@ -48,6 +52,9 @@ export default function PicturesSlider(): React.ReactElement {
       upperLayerWidthRef.current <= imgWidth
       ) {
       // Calculate the movement of pole and upperLayer
+      if(getDeviceType() === DeviceType.Mobile) {
+        event.clientX = event.touches[0].clientX;
+      }
       const deltaX = startPosXRef.current - event.clientX;
       const poleMovement = limitInRange(
         poleAxisLeft,
@@ -78,6 +85,9 @@ export default function PicturesSlider(): React.ReactElement {
       onMouseUp={handleMouseUpOrLeave}
       onMouseLeave={handleMouseUpOrLeave}
       onMouseMove={handleMouseMove}
+      onTouchEnd={handleMouseUpOrLeave}
+      onTouchCancel={handleMouseUpOrLeave}
+      onTouchMove={handleMouseMove}
     >
       <div className={styles.layerContain}>
         <div className={styles.underLayer}>
@@ -120,6 +130,7 @@ export default function PicturesSlider(): React.ReactElement {
               require("/static/img/homepage/whyheighliner/pole@3x.webp").default
             }
             onMouseDown={handleMouseDown}
+            onTouchStart={handleMouseDown}
             style={{ left: poleLeft }}
             className={styles.pole}
           />
