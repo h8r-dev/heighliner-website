@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   user-select: none;
+  margin-top: 70px;
 }
 
 .titleWrapper .title {

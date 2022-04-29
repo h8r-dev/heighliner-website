@@ -13,6 +13,8 @@ import Steps from "./Steps";
 export function StackWorkflow(): React.ReactElement {
   return (
     <div className={styles.wrapper}>
+      <img src={require("@site/static/img/homepage/whyheighliner/slogan-wave-3.webp").default} alt="wave"
+           className={styles.wavePic}/>
       <h1 className={clsx("homepage-section-title", styles.title)}>
         How stack works?
       </h1>

@@ -30,10 +30,6 @@ export function WhyHeighliner(): React.ReactElement {
           </main>
         </div>
       </div>
-      <div>
-        <img src={require("@site/static/img/homepage/whyheighliner/slogan-wave-3.webp").default} alt="wave"
-             className={styles.wavePic}/>
-      </div>
     </>
   );
 }
