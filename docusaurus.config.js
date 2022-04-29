@@ -26,6 +26,10 @@ const config = {
     blogUrl: "/blog",
     githubUrl: mainGithubUrl,
     discordUrl: 'https://discord.gg/WphTbdVHFA',
+    ginNextStackUrl: '/docs/tutorials/gin_nextjs',
+    ginVueStackUrl: '/docs/tutorials/gin_vue',
+    remixStackUrl: '/docs/tutorials/remix',
+    sprintVueStackUrl: '/docs/tutorials/spring_vue',
   },
 
   presets: [
