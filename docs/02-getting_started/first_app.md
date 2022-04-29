@@ -56,10 +56,10 @@ Get your ingress IP:
 
 <Tabs
 className="unique-tabs"
-defaultValue="cloud"
+defaultValue="local"
 values={[
-{label: 'Cloud', value: 'cloud'},
 {label: 'Kind/Minikube', value: 'local'},
+{label: 'Cloud', value: 'cloud'},
 ]}>
 
 <TabItem value="local">
@@ -84,11 +84,8 @@ Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above
 > Note: replace APP_NAME with your previous input
 
 ```txt
-<ingress-ip> argocd.h8r.infra
-<ingress-ip> ${APP_NAME}-frontend.h8r.application
-<ingress-ip> grafana.h8r.infra
-<ingress-ip> alert.h8r.infra
-<ingress-ip> prometheus.h8r.infra
+<ingress-ip> argocd.h8r.site
+<ingress-ip> ${APP_NAME}-frontend.h8r.site
 ```
 
 Check the status of your application:
