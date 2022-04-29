@@ -13,9 +13,13 @@ Make sure you have followed [the installation guide](/docs/getting_started/insta
 
 :::
 
+Ever want to have a Vercel-style experience when creating your nextjs app?
+But without the limitation to a specific vendor?
+In this doc, we will show you how to create a simple nextjs app with a open source, cloud native stack.
+
 ## List all stacks
 
-List all Heighliner stacks:
+List all default stacks:
 
 ```shell
 hln list stacks
@@ -25,8 +29,8 @@ Output:
 
 ```shell
 NAME      VERSION  DESCRIPTION
-gin-next  0.0.1
 sample    0.0.1
+gin-next  0.0.1
 gin-vue   0.0.1
 ```
 
