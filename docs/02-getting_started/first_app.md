@@ -94,7 +94,7 @@ Congrats! You have crated your first application with `hln` successfully. All of
 
 Check your **ArgoCD** dashboard at [argocd.h8r.infra](http://argocd.h8r.infra):
 
-![alt](/img/docs/getting-started/argocd.png)
+![alt](/img/docs/getting-started/argocd-screenshot.png)
 
 ## Clean up
 
