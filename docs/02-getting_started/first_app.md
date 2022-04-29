@@ -70,8 +70,8 @@ If `hln up` command failed due to unexpected network problems, feel free to **re
 
 :::
 
-Congrats! You have crated your first application with `hln` successfully. All of the cloud-native infrastructure have been set up properly.
-Click the Github url and dashboard links to see the effects.
+Congrats! You have created your first application with `hln` successfully. All of the cloud-native architecture have been set up properly.
+Click the GitHub url and dashboard links to see the effects.
 
 ## See the effects
 
@@ -110,7 +110,7 @@ Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above
 <ingress-ip> hello-world-frontend.h8r.site
 ```
 
-Check your **ArgoCD** dashboard at [argocd.h8r.infra](http://argocd.h8r.infra):
+Check your **ArgoCD** dashboard at [argocd.h8r.site](http://argocd.h8r.site):
 
 ![alt](/img/docs/getting-started/argocd-screenshot.png)
 
