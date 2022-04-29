@@ -79,6 +79,15 @@
   font-style: normal;
 }
 
+.autoDownCounterText {
+  width: 130px;
+  display: inline-block;
+}
+
+.zeroEffect {
+  transform: scale(1.5) scale(1);
+}
+
 .requestAccess {
   width: 233px;
   height: 60px;
@@ -160,6 +169,10 @@
     height: 45px;
   }
 
+  .contentWrap{
+    margin-left: 50px;
+  }
+
   .sloganTextWrap {
     margin-bottom: 44px;
   }
@@ -187,6 +200,7 @@
 
   .contentWrap{
     justify-content: center;
+    margin-left: 0;
   }
 
   .navItems li:not(:last-child) {

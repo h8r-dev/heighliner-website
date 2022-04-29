@@ -11,11 +11,22 @@ interface Props {
   firstIcon: string;
   secondIcon?: string;
   link: string;
+  showMiddleCubes: boolean;
 }
 
 export default function Stack(props: Props): React.ReactElement {
   return (
     <div className={styles.stackWrap}>
+      {/* {props.showMiddleCubes && (
+        <img
+          src={
+            require("/static/img/homepage/choosestacks/middlecubes@3x.webp")
+              .default
+          }
+          alt="with heighliner"
+          className={styles.middleCubes}
+        />
+      )} */}
       <img className={styles.decoratedIcon} src={props.decoratedIcon}></img>
       <div className={styles.stackName}>{props.name}</div>
       <div className={clsx(styles.frameworkIcon, styles.firstIcon)}>
@@ -26,8 +37,8 @@ export default function Stack(props: Props): React.ReactElement {
           <img src={props.secondIcon}></img>
         </div>
       )}
-      <a href={props.link}>
-        <span className={styles.linkName}>
+      <a href={props.link} className={styles.link}>
+        <span>
           Read the document
           <LinkSVG style={{ marginLeft: 5 }} />
         </span>

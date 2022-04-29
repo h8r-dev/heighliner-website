@@ -4,11 +4,12 @@
 import React from 'react';
 
 import styles from "./index.module.css";
+import clsx from "clsx";
 
 export function Community() {
   return (
     <div>
-      <div className={styles.title}>Community Collaboration</div>
+      <div className={clsx("homepage-section-title", styles.title)}>Community Collaboration</div>
       {/* not use enum bacause only two card*/}
       <div className={styles.cardWrapper}>
         <div className={styles.card}>

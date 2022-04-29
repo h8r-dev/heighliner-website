@@ -1,5 +1,4 @@
 .wrapper {
-  background-color: #f3f3f3;
   position: relative;
   margin-top: 22px;
 }
@@ -24,14 +23,16 @@
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
+  max-width: 1110px;
+  margin: 73px auto  auto;
+}
 
-  & > img {
-    width: 114px;
-    height: 121px;
-    position: absolute;
-    left: 637px;
-    top: 0px;
-  }
+.middleCubes {
+  width: 114px;
+  height: 121px;
+  position: absolute;
+  left: 637px;
+  top: 0px;
 }
 
 .stackWrap {
@@ -41,6 +42,7 @@
   opacity: 0.82;
   background-color: #fff;
   position: relative;
+  border-left: 3px solid #9a66f5; 
 }
 
 .decoratedIcon {
@@ -63,7 +65,7 @@
 .frameworkIcon {
   width: 67px;
   height: 67px;
-  padding: 13px 17px;
+  // padding: 13px 17px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   background-color: #fff;
   position: absolute;
@@ -78,11 +80,19 @@
   left: 121px;
 }
 
-.linkName {
+.link {
   font-size: 22px;
-  font-weight: 500 !important;
-  color: #6002ee;
   position: absolute;
   left: 248px;
-  top: 272px;
+  top: 265px;
+  
+  & > span {
+    font-weight: 500 !important;
+    color: #6002ee;
+  }
+
+  & :hover {
+    text-decoration: underline;
+    text-decoration-color: #7a2cee;
+  }
 }

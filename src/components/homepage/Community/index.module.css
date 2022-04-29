@@ -1,7 +1,5 @@
 .title {
   margin-top: 100px;
-  font-family: Jost;
-  font-size: 61px;
   line-height: 1.4;
   letter-spacing: normal;
   text-align: center;
@@ -16,14 +14,10 @@
   margin-top: 158px;
 }
 
-.cardWrapper > .card:first-child {
-  margin-right: 53px;
-}
-
 .card {
   width: 539px;
-  height: 618px;
   position: relative;
+  margin: 0 25px;
   background: linear-gradient(180deg, #FFFFFF 12.5%, #FAFAFE 68.75%, #EFEDF3 99.99%, #E5E2E9 100%);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -78,16 +72,19 @@
   display: flex;
   margin-top: 82px;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-around;
+  margin-bottom: 70px;
 }
 
 .card .introduce .personPhoto {
-  width: 188px;
-  margin-left: 65px;
+  max-width: 188px;
+  margin-left: 30px;
+  flex-shrink: 1;
 }
 
 .card .introduce .personDesc {
-  width: 100%;
+  flex-shrink: 1;
+  max-width: 200px;
 }
 
 .card .introduce .personDesc .personName {
@@ -106,6 +103,29 @@
   letter-spacing: -0.24px;
   text-align: center;
   color: #000;
+}
+
+@media screen and (max-width: 996px) {
+
+  .cardWrapper {
+    flex-wrap: wrap;
+  }
+
+  .cardWrapper > .card:last-child {
+    margin-top: 130px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .card .introduce .personPhoto {
+    max-width: 130px;
+  }
+
+  .card .desc > div {
+    font-size: 22px;
+    line-height: 22px;
+  }
 }
 
 
