@@ -24,7 +24,7 @@ export function WhyHeighliner(): React.ReactElement {
             it significantly reduces the overhead of building cloud-native
             applications.
           </p>
-          <main>
+          <main className={styles.main}>
             <PicturesSlider/>
             <Features/>
           </main>

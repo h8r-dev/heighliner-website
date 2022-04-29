@@ -105,3 +105,18 @@
     font-family: sans-serif;
   }
 }
+
+@media screen and (max-width: 900px) {
+
+  .workflow{
+    display: none;
+  }
+
+  .wavePic{
+    margin-top: -1px;
+  }
+
+  .title{
+    display: none;
+  }
+}
