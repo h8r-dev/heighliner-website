@@ -64,6 +64,15 @@
   font-style: normal;
 }
 
+.autoDownCounterText {
+  width: 130px;
+  display: inline-block;
+}
+
+.zeroEffect {
+  transform: scale(1.5) scale(1);
+}
+
 .requestAccess {
   width: 233px;
   height: 60px;
