@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import BrowserOnly from '@docusaurus/BrowserOnly';
 
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 import Step, {StepProps} from "./Step";
 import {
   hlnListStacks,
@@ -55,7 +55,7 @@ export default function Steps(): React.ReactElement {
                   fit: false,
                   theme: 'monokai',
                   rows: 19,
-                  terminalFontFamily: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
+                  // terminalFontFamily: "Menlo",
                 })
               }
             })

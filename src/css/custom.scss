@@ -40,6 +40,27 @@ $desktop-xl-width: 1160px;
   font-weight: 500;
 }
 
+@font-face {
+  font-family: 'SourceCodePro';
+  src: url("/static/fonts/SourceCodePro-Regular.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'UbuntuMono';
+  src: url("/static/fonts/UbuntuMono-Regular.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Menlo';
+  src: url("/static/fonts/Menlo-Regular.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
+
 /* maven-pro-regular - latin */
 @font-face {
   font-family: "Maven Pro";
