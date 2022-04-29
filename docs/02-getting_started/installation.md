@@ -140,6 +140,8 @@ Then create a cluster (we recommend using 4 cores and 8Gb memory):
 minikube start --cpus=4 --memory=8g --kubernetes-version=v1.23.5
 ```
 
+> If command returns: The "docker" driver should not be used with root privileges. You can add `--force` flag.
+
 Install ingress controller on the cluster:
 
 ```shell
