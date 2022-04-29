@@ -76,6 +76,7 @@
 .card .introduce .personDesc {
   flex-shrink: 1;
   max-width: 200px;
+  margin-left: -30px;
 }
 
 .card .introduce .personDesc .personName {
@@ -116,6 +117,14 @@
   .card .desc > div {
     font-size: 22px;
     line-height: 22px;
+  }
+
+  .card .introduce .personDesc .personName {
+    font-size: 18px;
+  }
+
+  .card .introduce .personDesc .personTitle {
+    font-size: 12px;
   }
 }
 

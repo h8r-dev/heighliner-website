@@ -18,8 +18,11 @@ export default function Step({ title, asciiData }: StepProps): React.ReactElemen
     AsciinemaPlayer.create(`data:text/plain;base64,${asciiData}`, elem, {
       loop: true,
       autoPlay: true,
-      terminalFontSize: '12px',
+      terminalFontSize: '14px',
       fit: false,
+      theme: 'monokai',
+      rows: 19,
+      terminalFontFamily: "sans-serif"
     })
   }, [])
 

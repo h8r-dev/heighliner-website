@@ -1,0 +1,27 @@
+.videoControlBar {
+  background-color: #080930 !important;
+}
+
+#vidioWrapper {
+  filter: drop-shadow(2px 2px 15px rgba(130, 91, 199, 0.5));
+
+  :global(.video-react-big-play-button:before) {
+    content: "";
+  }
+
+  :global(.video-react-big-play-button-center) {
+    background: url("/static/img/start-vidio-photo.webp");
+    background-size: 65px 68px;
+    background-repeat: no-repeat;
+    width: 65px;
+    height: 68px;
+    margin-top: 0px;
+    margin-left: 0px;
+    transform: translateX(-52%) translateY(-50%);
+    border-width: 0px;
+
+    :global(span) {
+      display: none;
+    }
+  }
+}

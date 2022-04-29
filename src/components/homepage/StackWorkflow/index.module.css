@@ -53,6 +53,7 @@
 
 .step {
   display: flex;
+  width: 540px;
 }
 
 .stepIcon img {
@@ -81,6 +82,10 @@
 .stepsWrap {
   display: flex;
   flex-direction: column;
+}
+
+.stepsWrap *{
+  font-family: AppleSystemUIFont!important;
 }
 
 .stepWrap{
