@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React from "react";
 
 import Feature from "./Feature";
@@ -31,7 +32,7 @@ const features = [
 
 export default function Features(): React.ReactElement {
   return (
-    <div className={styles.featuresContain}>
+    <div className={clsx('container', styles.featuresContain)}>
       {features.map((feature) => (
         <Feature
           key={feature.title}
