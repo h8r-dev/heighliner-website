@@ -25,3 +25,10 @@
   font-size: 61px;
   text-align: center;
 }
+
+@media screen and(max-width: 600px){
+  :global(.homepage-section-title){
+    font-size: 45px;
+  }
+}
+

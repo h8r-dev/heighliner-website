@@ -27,8 +27,8 @@
 
 .logo {
   min-width: 100px;
-  margin:0 30px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  flex-shrink: 0;
 }
 
 .logoWrap {
@@ -43,7 +43,6 @@
 .linksWrap {
   flex: 1;
   display: flex;
-  margin-right: -90px;
 }
 
 .linksWrap li {
