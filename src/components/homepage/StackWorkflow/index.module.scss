@@ -13,6 +13,10 @@
   color: #080930;
 }
 
+.workflowImage {
+  margin-top: 9px;
+}
+
 .workflowImage img {
   width: 405px;
   margin-left: 10px;
@@ -27,8 +31,8 @@
 }
 
 .separator {
-  margin-top: 0px;
-  margin-left: 140px;
+  margin-top: 10px;
+  margin-left: 157px;
   margin-right: 140px;
   display: flex;
   flex-direction: column;
@@ -37,18 +41,6 @@
   justify-content: flex-start;
 }
 
-.workflow li {
-  list-style: none;
-}
-
-@media screen and (max-width: 996px) {
-  .separator, .workflowText {
-    display: none;
-  }
-  .workflow {
-    padding: 0 var(--ifm-spacing-horizontal);
-  }
-}
 
 .workflowSteps {
   padding: 0;
@@ -76,8 +68,9 @@
 }
 
 .line {
+  margin-top: -1px;
   width: 0px;
-  height: 470px;
+  height: 506px;
   border-style: solid;
   border-color: #b794f6;
   border-width: 1px;
@@ -119,5 +112,37 @@
 
   .title{
     display: none;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .separator {
+    margin-left: 87px;
+    margin-right: 70px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .separator {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.workflow li {
+  list-style: none;
+}
+
+@media screen and (max-width: 996px) {
+  .stepsWrap {
+    display: none;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .workflow {
+    padding: 0 var(--ifm-spacing-horizontal);
   }
 }
