@@ -119,6 +119,21 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main
 
 Install _minikube_ command-line tool by following [the minikube installation guide](https://minikube.sigs.k8s.io/docs/start/).
 
+(Optional) We recommend setting Docker Resources to 4 cores and 8Gb mem:
+<details>
+  <summary>Docker Desktop Settings</summary>
+  <div
+    style={{
+      maxWidth: 1000,
+      height: 'auto',
+      marginBottom: 30,
+      marginTop: 30,
+    }}
+  >
+    <img src={useBaseUrl('/img/docs/docker_resources.png')} />
+  </div>
+</details>
+
 Then create a cluster (we recommend using 4 cores and 8Gb memory):
 
 ```shell
