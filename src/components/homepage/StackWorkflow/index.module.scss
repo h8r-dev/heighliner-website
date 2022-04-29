@@ -96,7 +96,22 @@
 
 .stepWrap .terminal{
   :global(.asciinema-terminal *){
-    font-family: sans-serif;
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  .workflow{
+    display: none;
+  }
+
+  .wavePic{
+    margin-top: -1px;
+  }
+
+  .title{
+    display: none;
   }
 }
 
