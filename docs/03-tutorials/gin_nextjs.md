@@ -80,6 +80,3 @@ Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above
 <ingress-ip> alert.h8r.infra
 <ingress-ip> prometheus.h8r.infra
 ```
-
-Check your ArgoCD dashboard at [argocd.h8r.infra](http://argocd.h8r.infra):
-TODO
