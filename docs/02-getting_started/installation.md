@@ -24,6 +24,7 @@ Or use the install script:
 ```bash
 curl -L https://dl.h8r.io/hln/install.sh | sh
 ./bin/hln version
+sudo mv bin/hln /usr/local/bin/hln
 ```
 
 Or download binaries: [Github Release](https://github.com/h8r-dev/heighliner/releases)
@@ -36,6 +37,7 @@ Use the install script:
 ```bash
 curl -L https://dl.h8r.io/hln/install.sh | sh
 ./bin/hln version
+sudo mv bin/hln /usr/local/bin/hln
 ```
 
 Or download binaries: [Github Release](https://github.com/h8r-dev/heighliner/releases)
@@ -70,18 +72,21 @@ values={[
 
 Install _kind_ command-line tool by following [the kind installation guide](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
 
-We recommend setting Docker Resources to 4 cores and 8Gb mem:
+(Optional) We recommend setting Docker Resources to 4 cores and 8Gb mem:
+<details>
+  <summary>Docker Desktop Settings</summary>
+  <div
+    style={{
+      maxWidth: 1000,
+      height: 'auto',
+      marginBottom: 30,
+      marginTop: 30,
+    }}
+  >
+    <img src={useBaseUrl('/img/docs/docker_resources.png')} />
+  </div>
+</details>
 
-<div
-  style={{
-    maxWidth: 1000,
-    height: 'auto',
-    marginBottom: 30,
-    marginTop: 30,
-  }}
->
-<img src={useBaseUrl('/img/docs/docker_resources.png')} />
-</div>
 
 Save the following configuration as `kind.yaml`:
 

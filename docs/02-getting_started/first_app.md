@@ -13,8 +13,6 @@ Make sure you have followed [the installation guide](/docs/getting_started/insta
 
 :::
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eHcGZYJEqfk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-
 ## List all stacks
 
 List all Heighliner stacks:
@@ -87,16 +85,6 @@ Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above
 <ingress-ip> argocd.h8r.site
 <ingress-ip> ${APP_NAME}-frontend.h8r.site
 ```
-
-Check the status of your application:
-
-```shell
-hln status
-```
-
-Output:
-
-![alt](/img/docs/todo.jpg)
 
 Congrats! You have crated your first application with `hln` successfully. All of the cloud-native infrastructure have been set up properly. Click the Github url and dashboard links to see the effects.
 
