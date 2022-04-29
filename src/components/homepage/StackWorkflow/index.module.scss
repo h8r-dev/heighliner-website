@@ -100,8 +100,8 @@
   margin-bottom: 78px;
 }
 
-//.stepWrap .terminal{
-//  :global(.asciinema-terminal *){
-//    font-family: Menlo;
-//  }
-//}
+.stepWrap .terminal{
+  :global(.asciinema-terminal *){
+    font-family: sans-serif;
+  }
+}
