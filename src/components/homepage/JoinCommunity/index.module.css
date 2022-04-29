@@ -1,6 +1,4 @@
 .title {
-  font-family: Jost;
-  font-size: 48px;
   font-weight: 300;
   line-height: 1.5;
   text-align: center;
@@ -14,6 +12,10 @@
   justify-content: center;
   margin-top: 17px;
   padding-bottom: 216px;
+}
+
+.icon:hover{
+  box-shadow: 0px 0px 15px rgba(66, 26, 86, 0.24);
 }
 
 .icon {

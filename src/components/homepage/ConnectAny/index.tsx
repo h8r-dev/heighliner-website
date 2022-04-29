@@ -4,12 +4,15 @@
 import React from 'react';
 
 import styles from './index.module.css';
+import clsx from "clsx";
 
 export function ConnectAny() {
   return (
     <div>
       <div className={styles.titleWrapper}>
-        <div className={styles.title}>
+        <div
+             className={clsx("homepage-section-title", styles.title)}
+        >
           Connect <span className={styles.any}>any</span> preferred Tools and platform
         </div>
       </div>

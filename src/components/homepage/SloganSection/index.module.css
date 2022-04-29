@@ -9,10 +9,25 @@
   background-position: center;
 }
 
+.contentWrap{
+  display: flex;
+  width: 100%;
+  padding-top: 160px;
+  top: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .wrap {
-  position: absolute;
-  top: 214px;
+  position: relative;
   z-index: 100;
+}
+
+.video {
+  width: 600px;
+  height: 300px;
+  position: relative;
+  margin-left: 50px;
 }
 
 .navbar {
@@ -130,6 +145,7 @@
   left: 0;
   bottom: 0;
   right: 0;
+  background-color: #00000088;
 }
 
 .backgroundMask {
@@ -143,25 +159,16 @@
   opacity: 0.5;
 }
 
-.video {
-  position: absolute;
-  top: 35px;
-  left: 747px;
-  width: 600px;
-  height: 300px;
-}
-
 @media screen and (max-width: 996px) {
-  .wrap {
-    left: 50%;
-    transform: translateX(-50%);
-    top: 262px;
-  }
 
   .quickstart, .requestAccess {
     font-size: 15px;
     width: 173px;
     height: 45px;
+  }
+
+  .contentWrap{
+    margin-left: 50px;
   }
 
   .sloganTextWrap {
@@ -181,9 +188,18 @@
     width: 100%;
     justify-content: center;
   }
+
+  .video{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 600px) {
+
+  .contentWrap{
+    justify-content: center;
+    margin-left: 0;
+  }
 
   .navItems li:not(:last-child) {
     margin-right: 15px;

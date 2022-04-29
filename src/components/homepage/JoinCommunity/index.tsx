@@ -2,8 +2,9 @@
  * Create by ze.zhang on 2022.4.27
  */
 import React from "react";
-import {customFields} from "@site/docusaurus.config";
+import clsx from "clsx";
 
+import {customFields} from "@site/docusaurus.config";
 import styles from './index.module.css';
 
 interface IconType {
@@ -39,7 +40,9 @@ export function JoinCommunity() {
 
   return (
     <div>
-      <div className={styles.title}>Join the community</div>
+      <div className={clsx("homepage-section-title", styles.title)}>
+        Join the community
+      </div>
       <div className={styles.iconWrapper}>
         {
           iconList.map((item: IconType) => {
