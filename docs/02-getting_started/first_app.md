@@ -56,10 +56,10 @@ Get your ingress IP:
 
 <Tabs
 className="unique-tabs"
-defaultValue="cloud"
+defaultValue="local"
 values={[
-{label: 'Cloud', value: 'cloud'},
 {label: 'Kind/Minikube', value: 'local'},
+{label: 'Cloud', value: 'cloud'},
 ]}>
 
 <TabItem value="local">
