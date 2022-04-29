@@ -225,6 +225,14 @@ This command will install the following tools and services:
 - _heighliner_ namespace
 - _buildkit_ deployment and service on Kubernetes cluster
 
+If it is successful, it should output:
+
+```shell
+...
+Waiting buildkitd to be ready...
+buildkitd is ready!
+```
+
 ## 4. Create Github Token
 
 Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with these scopes selected:

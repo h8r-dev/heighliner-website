@@ -42,13 +42,34 @@ Input the values one by one according to the promt:
 
 > Note: APP_NAME should obey the rules in [DNS1123](https://datatracker.ietf.org/doc/html/rfc1123)
 
-![alt](/img/docs/interactive-prompt.png)
+```shell
+Name of your application (required):
+
+> hello-world
+
+Path to your kubeconfig file (required):
+
+> ~/.kube/config
+
+Which github organization do you want to use? (required):
+
+> my-org
+```
+
+Then it will start executing the setup instructions. Output looks like:
+
+![alt](/img/docs/stack_output.png)
 
 :::tip
 
 If `hln up` command failed due to unexpected network problems, feel free to **rerun** it again.
 
 :::
+
+Congrats! You have crated your first application with `hln` successfully. All of the cloud-native infrastructure have been set up properly.
+Click the Github url and dashboard links to see the effects.
+
+## See the effects
 
 Get your ingress IP:
 
@@ -79,22 +100,20 @@ kubectl -n ingress-nginx get svc ingress-nginx-controller -o=jsonpath='{.status.
 </Tabs>
 
 Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
-> Note: replace APP_NAME with your previous input
+> Note: replace APP_NAME with your previous input (e.g. 'orders')
 
 ```txt
 <ingress-ip> argocd.h8r.site
-<ingress-ip> ${APP_NAME}-frontend.h8r.site
+<ingress-ip> hello-world-frontend.h8r.site
 ```
-
-Congrats! You have crated your first application with `hln` successfully. All of the cloud-native infrastructure have been set up properly. Click the Github url and dashboard links to see the effects.
-
-**Github** repos:
-
-![alt](/img/docs/github-repos.png)
 
 Check your **ArgoCD** dashboard at [argocd.h8r.infra](http://argocd.h8r.infra):
 
 ![alt](/img/docs/getting-started/argocd-screenshot.png)
+
+You can also check if your repos on **Github**:
+
+![alt](/img/docs/github-repos.png)
 
 ## Clean up
 
