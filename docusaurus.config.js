@@ -144,7 +144,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Heighliner, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Heighliner, Inc.`,
       },
       prism: {
         theme: require('prism-react-renderer/themes/dracula'),

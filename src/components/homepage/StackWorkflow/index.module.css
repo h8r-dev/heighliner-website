@@ -1,38 +1,14 @@
 .wrapper {
-  padding: 126px 0 0px 0;
-  background-color: #f3f3f3;
   position: relative;
   /* the backgorund table */
-  background: linear-gradient(90deg,rgba(239, 235, 242, 1) 1px,transparent 0), linear-gradient(rgba(206,214,224,.32) 1px,transparent 0);
+  background: linear-gradient(90deg,rgba(239, 235, 242, 1) 1px,transparent 0), linear-gradient(rgba(239, 235, 242, 1) 1px,transparent 0);
   background-size: 30px 30px;
   background-color: rgba(243, 242, 235, 0.1);
 }
 
-/* the left mask */
-.wrapper:before{
-  content: "";
-  display: block;
-  position: absolute;
-  top: -130px;
-  width: 290px;
-  height: 520px;
-  -webkit-filter: blur(200px);
-  filter: blur(200px);
-  background-image: linear-gradient(180deg, rgba(24, 75, 255, 0) 0%, rgba(23, 74, 255, 0.5) 100%);
-}
-
-/* the right mask */
-.wrapper:after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -130px;
-  right: 0;
-  width: 305px;
-  height: 456px;
-  -webkit-filter: blur(200px);
-  filter: blur(200px);
-  background-image: linear-gradient(to left, rgba(24, 75, 255, 0) 0%, #174aff 100%);;
+.wavePic{
+  width: 100%;
+  margin-bottom: 126px;
 }
 
 .title {

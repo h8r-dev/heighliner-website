@@ -45,41 +45,43 @@ export function SloganSection(): React.ReactElement {
               </ul>
             </nav>
           </header>
-          <main className={styles.wrap}>
-            <div className={styles.sloganTextWrap}>
-              <h1>
-                <AutoDownCounter
-                  startPoint={3000}
-                  endPoint={0}
-                  interval={1}
-                  minuend={25}
-                />{" "}
-                configuration to{" "}
-              </h1>
-              <h1>build modern Cloud</h1>
-              <h1>App</h1>
-            </div>
-            <div className={styles.actionsGroup}>
-              <Link
-                className={clsx("button button--lg", styles.requestAccess)}
-                to={customFields.newsletterUrl as string}
-              >
-                Request Early Access
-              </Link>
-              <Link
-                className={clsx("button button--lg button--secondary", styles.quickstart)}
-                to={customFields.quickStartUrl as string}
-              >
-                Quick Start
-              </Link>
-            </div>
+          <div className={styles.contentWrap}>
+            <main className={styles.wrap}>
+              <div className={styles.sloganTextWrap}>
+                <h1>
+                  <AutoDownCounter
+                    startPoint={3000}
+                    endPoint={0}
+                    interval={1}
+                    minuend={25}
+                  />{" "}
+                  configuration to{" "}
+                </h1>
+                <h1>build modern Cloud</h1>
+                <h1>App</h1>
+              </div>
+              <div className={styles.actionsGroup}>
+                <Link
+                  className={clsx("button button--lg", styles.requestAccess)}
+                  to={customFields.newsletterUrl as string}
+                >
+                  Request Early Access
+                </Link>
+                <Link
+                  className={clsx("button button--lg button--secondary", styles.quickstart)}
+                  to={customFields.quickStartUrl as string}
+                >
+                  Quick Start
+                </Link>
+              </div>
+            </main>
             <div className={styles.video}>
               <Video
-                poster="/img/homepage/video-poster.png"
+                poster="img/vidio-cover-photo-2.png"
                 src="https://dl.h8r.io/Heighliner-Introduction-English.mp4"
-              ></Video>
+              />
             </div>
-          </main>
+          </div>
         </div>
       </div>
     </div>
