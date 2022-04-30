@@ -57,12 +57,12 @@ Path to your kubeconfig file (required):
 
 Which github organization do you want to use? (required):
 
-> organization name or github id
+> [organization name or github id, e.g. hongchao-org]
 ```
 
 Then it will start executing the setup instructions. Output looks like:
 
-![alt](/img/docs/stack_output.png)
+![alt](/img/docs/getting-started/stack_output.png)
 
 :::tip
 
@@ -78,7 +78,7 @@ hln status
 
 Output looks like:
 
-![alt](/img/docs/hln_status_output.png)
+![alt](/img/docs/getting-started/hln_status_output.png)
 
 Congrats! You have created your first application with `hln` successfully. All of the cloud-native architecture have been set up properly.
 Click the GitHub url and dashboard links to see the effects.
@@ -120,17 +120,46 @@ Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above
 <ingress-ip> hello-world-frontend.h8r.site
 ```
 
-Check your **ArgoCD** dashboard at [argocd.h8r.site](http://argocd.h8r.site), Get argocd credentials with `hln status` command:
+### ArgoCD
 
-![alt](/img/docs/getting-started/argocd-screenshot.png)
+Check your **ArgoCD** dashboard at [argocd.h8r.site](http://argocd.h8r.site):
+> Note: get argocd credentials with `hln status` command
 
-View you frontend application at [hello-world-frontend.h8r.site](http://hello-world-frontend.h8r.site):
+<div
+  style={{
+    maxWidth: 800,
+    height: 'auto',
+    marginBottom: 30,
+    marginTop: 30,
+  }}
+>
+  <img src={useBaseUrl('/img/docs/getting-started/argocd-home.png')} />
+</div>
+
+You can check the k8s resources for the application:
+
+![alt](/img/docs/getting-started/argocd-details.png)
+
+### Nextjs app
+
+View you nextjs app at [hello-world-frontend.h8r.site](http://hello-world-frontend.h8r.site):
 
 ![alt](/img/docs/getting-started/sample-application.png)
 
+### Github repos
+
 You can also check your repos on **Github**:
 
-![alt](/img/docs/github-repos.png)
+<div
+  style={{
+    maxWidth: 800,
+    height: 'auto',
+    marginBottom: 30,
+    marginTop: 30,
+  }}
+>
+  <img src={useBaseUrl('/img/docs/getting-started/github_repos.png')} />
+</div>
 
 ## Clean up
 
