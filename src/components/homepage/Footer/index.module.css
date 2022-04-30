@@ -1,14 +1,8 @@
 .outerWrap {
-  padding-top: 43px;
+  padding-top: 35px;
   background-color: #171F24;
   color: #f5f5f5;
-
   position: relative;
-}
-
-.outerWrap * {
-  font-family: 'Josefin Sans', sans-serif !important;
-  font-weight: 400;
 }
 
 .wrapper {
@@ -32,28 +26,38 @@
 }
 
 .logo {
-  padding-top: 18px;
   min-width: 100px;
+  margin-bottom: 20px;
+  flex-shrink: 0;
 }
 
 .logoWrap {
-  width: 54px;
   margin: 0 auto;
 }
 
-.logo > img {
-  width: 100%;
+.logoWrap img{
+  width: 36px;
+  margin-right: 10px;
 }
 
 .linksWrap {
   flex: 1;
   display: flex;
+  flex-shrink: 1;
+  padding-left: 30px;
 }
 
 .linksWrap li {
   list-style: none;
-  color: #f5f5f5;
-  width: 240px;
+  width: 205px;
+  color: #FFFFFF;
+  font-size: 12px;
+}
+
+.linksWrap li a{
+  font-size: 12px;
+  color: #fff;
+  line-height: 46px;
 }
 
 .links {
@@ -65,15 +69,18 @@
 
 .title {
   display: inline-block;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   text-align: left;
-  line-height: 62.4px;
+  line-height: 21px;
+  margin-bottom: 15px;
+  color: #FFFFFF;
 }
 
 .copyright {
   text-align: center;
-  padding: 20px;
+  padding-bottom: 20px;
+  font-size: 11px;
 }
 
 .footerBg {
@@ -116,6 +123,11 @@
 
   .title {
     text-align: center;
+  }
+
+  .linksWrap{
+    /*margin-right: 0px;*/
+    padding-left: 0px;
   }
 
   .linksWrap li {

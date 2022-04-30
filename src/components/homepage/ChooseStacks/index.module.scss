@@ -1,0 +1,111 @@
+.title {
+  color: #080930;
+}
+
+.wrapper {
+  position: relative;
+  margin-top: 22px;
+}
+
+.topRightCubes {
+  position: absolute;
+  width: 321.4px;
+  height: 326.3px;
+  right: 65px;
+  top: -173px;
+}
+
+.downLeftCubes {
+  width: 331px;
+  height: 331px;
+  position: absolute;
+  bottom: -225px;
+}
+
+.stacksWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  max-width: 1110px;
+  margin: 73px auto  auto;
+}
+
+.middleCubes {
+  width: 114px;
+  height: 121px;
+  position: absolute;
+  left: 637px;
+  top: 0px;
+}
+
+.stackWrap {
+  margin: 30.5px;
+  width: 494px;
+  height: 333px;
+  opacity: 0.82;
+  background-color: #fff;
+  position: relative;
+  border-left: 3px solid #9a66f5; 
+}
+
+.decoratedIcon {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 27px;
+  top: 56px;
+}
+
+.stackName {
+  font-size: 50px;
+  font-weight: 300 !important;
+  color: #1b2637;
+  position: absolute;
+  left: 32px;
+  top: 54px;
+}
+
+.frameworkIcon {
+  width: 67px;
+  height: 67px;
+  // padding: 13px 17px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  position: absolute;
+  top: 224px;
+}
+
+.firstIcon {
+  left: 28px;
+}
+
+.secondIcon {
+  left: 121px;
+}
+
+.link {
+  font-size: 22px;
+  position: absolute;
+  left: 248px;
+  top: 265px;
+  
+  & > span {
+    font-weight: 500 !important;
+    color: #6002ee;
+  }
+
+  & :hover {
+    text-decoration: underline;
+    text-decoration-color: #7a2cee;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .link{
+    font-size: 14px;
+    top: 240px;
+    left: 220px;
+    width: 100px;
+  }
+}

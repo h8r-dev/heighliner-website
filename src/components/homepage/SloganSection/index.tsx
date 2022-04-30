@@ -7,14 +7,11 @@ import Link from "@docusaurus/Link";
 import clsx from "clsx";
 import { customFields } from "@site/docusaurus.config";
 
-import styles from './index.module.css'
+import styles from "./index.module.scss";
 
-import BlueLogoSvg from '@site/static/img/homepage/blue-logo.svg'
-import WhiteHeighlinerSvg from '@site/static/img/homepage/white-heighliner.svg'
-
-function handleRequestAccess() {
-  console.log('request access from popover')
-}
+import WhiteHeighlinerSvg from "@site/static/img/homepage/white-heighliner.svg";
+import { Video } from "@site/src/components/Video";
+import AutoDownCounter from "./AutoDownCounter";
 
 export function SloganSection(): React.ReactElement {
   return (
@@ -25,7 +22,14 @@ export function SloganSection(): React.ReactElement {
           <header>
             <nav className={styles.navbar}>
               <div className={styles.logoWrap}>
-                <BlueLogoSvg style={{ marginRight: 10 }} />
+                <img
+                  src={
+                    require("@site/static/img/homepage/slogansection/purple-logo@3x.webp")
+                      .default
+                  }
+                  style={{ marginRight: 18, width: 51, height: 33 }}
+                  alt="with heighliner"
+                />
                 <WhiteHeighlinerSvg />
               </div>
               <ul className={styles.navItems}>
@@ -41,29 +45,45 @@ export function SloganSection(): React.ReactElement {
               </ul>
             </nav>
           </header>
-          <main className={styles.wrap}>
-            <div className={styles.sloganTextWrap}>
-              <h1>Spin up your</h1>
-              <h1>cloud-native</h1>
-              <h1>stack in <em>minutes</em></h1>
+          <div className={styles.contentWrap}>
+            <main className={styles.wrap}>
+              <div className={styles.sloganTextWrap}>
+                <h1>
+                  <AutoDownCounter
+                    startPoint={3000}
+                    endPoint={0}
+                    interval={1}
+                    minuend={5}
+                  />{" "}
+                  configuration to{" "}
+                </h1>
+                <h1>build modern Cloud</h1>
+                <h1>App</h1>
+              </div>
+              <div className={styles.actionsGroup}>
+                <Link
+                  className={clsx("button button--lg", styles.requestAccess)}
+                  to={customFields.newsletterUrl as string}
+                >
+                  Request Early Access
+                </Link>
+                <Link
+                  className={clsx("button button--lg button--secondary", styles.quickstart)}
+                  to={customFields.quickStartUrl as string}
+                >
+                  Quick Start
+                </Link>
+              </div>
+            </main>
+            <div className={styles.video}>
+              <Video
+                poster="/img/vidio-photo-2.webp"
+                src="https://dl.h8r.io/Heighliner-Introduction-English.mp4"
+              />
             </div>
-            <div className={styles.actionsGroup}>
-              {/* <button
-                onClick={handleRequestAccess}
-                className={styles.requestAccess}
-              >
-                Request Early Access
-              </button> */}
-              <Link
-                className={clsx('button button--lg button--secondary', styles.quickstart)}
-                to={customFields.quickStartUrl as string}
-              >
-                Quick Start
-              </Link>
-            </div>
-          </main>
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,0 +1,84 @@
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  margin-top: 70px;
+}
+
+.titleWrapper .titleConnectAny {
+  width: 602px;
+  line-height: 1.48;
+  text-align: left;
+  color: #080930;
+  padding: 15px 0px;
+}
+
+.titleWrapper .any {
+  font-weight: 800;
+  background: linear-gradient(90.1deg, #74A3FF 0%, #ABFED5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* todo */
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.imgWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.imgWrapper:before {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  top: 60%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  -webkit-filter: blur(50px);
+  filter: blur(50px);
+  background-image: linear-gradient(180deg, rgba(23, 74, 255, 0.5) 0%, rgba(23, 74, 255, 0.5) 100%);
+}
+
+.imgWrapper img {
+  width: 100%;
+}
+
+.connectAny {
+  max-width: 1133px;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+}
+
+.titleCommunity{
+  margin-top: 100px;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000;
+  margin-bottom: 150px;
+}
+
+@media screen and (max-width: 996px) {
+
+  .titleWrapper .titleConnectAny {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .titleWrapper .titleConnectAny {
+    width: 300px;
+  }
+}
+
+
+

@@ -14,15 +14,23 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/apple-touch-icon.png",
+  favicon: "img/website.ico",
   organizationName: "h8r-dev", // Usually your GitHub org/user name.
   projectName: "heighliner-website", // Usually your repo name.
+
+  staticDirectories: ['static'],
 
   customFields: {
     quickStartUrl: "/docs/getting_started/installation",
     docsUrl: "/docs/overview/intro",
     blogUrl: "/blog",
     githubUrl: mainGithubUrl,
+    discordUrl: 'https://discord.gg/WphTbdVHFA',
+    ginNextStackUrl: '/docs/tutorials/gin_nextjs',
+    ginVueStackUrl: '/docs/tutorials/gin_vue',
+    remixStackUrl: '/docs/tutorials/remix',
+    sprintVueStackUrl: '/docs/tutorials/spring_vue',
+    newsletterUrl: 'https://h8r.hedwig.pub/',
   },
 
   presets: [
@@ -41,7 +49,7 @@ const config = {
           editUrl: "https://github.com/h8r-dev/heighliner-website",
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: require.resolve("./src/css/custom.scss"),
         },
       }),
     ],
@@ -53,7 +61,7 @@ const config = {
       navbar: {
         logo: {
           alt: "navbar-logo",
-          src: "img/logo.svg",
+          src: "/img/homepage/slogansection/purple-logo@3x.webp",
         },
         items: [
           {
@@ -136,7 +144,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Heighliner, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Heighliner, Inc.`,
       },
       prism: {
         theme: require('prism-react-renderer/themes/dracula'),
