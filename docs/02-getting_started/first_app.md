@@ -13,6 +13,15 @@ Make sure you have followed [the installation guide](/docs/getting_started/insta
 
 :::
 
+<div
+  style={{
+    marginBottom: 50,
+    marginTop: 50,
+  }}
+>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Kat7GEfWXwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 Ever want to have a Vercel-style experience when creating your nextjs app?
 But without the limitation to a specific vendor?
 In this doc, we will show you how to create a nextjs app in Vercel style with an open source, cloud native stack.
