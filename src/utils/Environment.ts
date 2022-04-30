@@ -6,6 +6,9 @@ export enum DeviceType {
 
 export const getDeviceType = () => {
   const ua = navigator.userAgent;
+  if(/macintosh|mac os x/i.test(navigator.userAgent) && window.screen.height > window.screen.width){
+    return DeviceType.Tablet;
+  }
   if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
       return DeviceType.Tablet;
   }

@@ -208,6 +208,13 @@
   }
 }
 
+@media screen and (max-width: 800px){
+
+  .main{
+    display: none;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .imgCaption {
     font-size: 18px;
@@ -225,7 +232,4 @@
     padding-bottom: 100px;
   }
 
-  .main{
-    display: none;
-  }
 }
