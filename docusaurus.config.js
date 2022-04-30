@@ -155,7 +155,7 @@ const config = {
         indexName: 'heighliner-docs',
       },
       colorMode: {
-        defaultMode: "light",
+        defaultMode: "dark",
       },
     }),
   plugins: [
