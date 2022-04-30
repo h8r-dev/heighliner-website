@@ -70,18 +70,18 @@ If `hln up` command failed due to unexpected network problems, feel free to **re
 
 :::
 
-Congrats! You have created your first application with `hln` successfully. All of the cloud-native architecture have been set up properly.
-Click the GitHub url and dashboard links to see the effects.
-
 Get application status:
 
 ```shell
 hln status
 ```
 
-Output looks like: 
+Output looks like:
 
 ![alt](/img/docs/hln_status_output.png)
+
+Congrats! You have created your first application with `hln` successfully. All of the cloud-native architecture have been set up properly.
+Click the GitHub url and dashboard links to see the effects.
 
 ## See the effects
 
@@ -128,7 +128,7 @@ View you frontend application at [hello-world-frontend.h8r.site](http://hello-wo
 
 ![alt](/img/docs/getting-started/sample-application.png)
 
-You can also check if your repos on **Github**:
+You can also check your repos on **Github**:
 
 ![alt](/img/docs/github-repos.png)
 
