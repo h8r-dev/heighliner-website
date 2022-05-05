@@ -18,7 +18,7 @@ Set environment variables:
 
 ```shell
 export APP_NAME="orders"
-export GITHUB_TOKEN=[Github personal access token]
+export GITHUB_TOKEN=[GitHub personal access token]
 export ORGANIZATION=[organization name or github id]
 ```
 
@@ -112,6 +112,6 @@ Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above
 <ingress-ip> hello-world-frontend.h8r.site
 ```
 
-Check your repos on **Github**. It would look like:
+Check your repos on **GitHub**. It would look like:
 
 ![alt](/img/docs/tutorial/gin_next/github_repo.png)

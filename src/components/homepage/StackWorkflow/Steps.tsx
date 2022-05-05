@@ -12,17 +12,14 @@ const terminals: StepProps[] = [
   {
     title: 'Select',
     asciiData: hlnListStacks,
-    id: 'Select'
   },
   {
     title: 'Spin Up',
     asciiData: hlnSpinUp,
-    id: 'Spin Up',
   },
   {
     title: 'Enjoy',
     asciiData: hlnStatus,
-    id: 'Enjoy',
   },
 ];
 
@@ -33,7 +30,6 @@ export default function Steps(): React.ReactElement {
         <Step
           key={terminal.title}
           title={terminal.title}
-          id={terminal.id}
           asciiData={terminal.asciiData}
         />
       )}

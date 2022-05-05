@@ -13,7 +13,7 @@ You can choose a specific language and framework (Go-Gin, Spring, React, etc), t
 These are automatically optimized for your apps with cloud native best practices.
 
 A stack comes with inputs/outputs interfaces to interact with users.
-For example, you can specify your own Github token, kubeconfig, cloud credentials.
+For example, you can specify your own GitHub token, kubeconfig, cloud credentials.
 After a stack is used to setup the environment, it will provide outputs like the public DNS name of your app, monitoring dashboards, login credentials, etc.
 
 For more details and examples, please refer to the [Stack page](/docs/core_features/stack/).

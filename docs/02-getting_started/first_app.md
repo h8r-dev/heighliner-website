@@ -155,9 +155,9 @@ View you nextjs app at [hello-world-frontend.h8r.site](http://hello-world-fronte
 
 ![alt](/img/docs/getting-started/sample-application.png)
 
-### Github repos
+### GitHub repos
 
-You can also check your repos on **Github**:
+You can also check your repos on **GitHub**:
 
 <div
   style={{
