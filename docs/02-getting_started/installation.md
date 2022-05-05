@@ -12,17 +12,13 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <Tabs>
   <TabItem value="macos" label="MacOS" default>
 
-Homebrew:
+[HomeBrew](https://brew.sh):
 
 ```bash
 brew install h8r-dev/tap/heighliner
 hln version
 ```
-:::info
 
-Make sure you have HomeBrew installed before. [HomeBrew](https://brew.sh).
-
-:::
 Or use the install script:
 
 ```bash
