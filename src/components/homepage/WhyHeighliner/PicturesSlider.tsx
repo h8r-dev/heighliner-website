@@ -1,8 +1,7 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import { limitInRange } from "@site/src/utils/MathPlus";
-import { DeviceType, getDeviceType } from "@site/src/utils/Environment";
-
+import { isMobile, isTablet } from "react-device-detect";
 import styles from "./index.module.scss";
 
 const poleAxisLeft = -22;
@@ -32,10 +31,7 @@ export default function PicturesSlider(): React.ReactElement {
     setIsDown(true);
 
     // Get the starting position of cursor
-    if (
-      getDeviceType() === DeviceType.Mobile ||
-      getDeviceType() === DeviceType.Tablet
-    ) {
+    if (isMobile) {
       event.clientX = event.touches[0].clientX;
     }
     setStartPosX(event.clientX);
@@ -55,10 +51,7 @@ export default function PicturesSlider(): React.ReactElement {
       upperLayerWidthRef.current <= imgWidth
     ) {
       // Calculate the movement of pole and upperLayer
-      if (
-        getDeviceType() === DeviceType.Mobile ||
-        getDeviceType() === DeviceType.Tablet
-      ) {
+      if (isMobile) {
         event.clientX = event.touches[0].clientX;
       }
       const deltaX = startPosXRef.current - event.clientX;
