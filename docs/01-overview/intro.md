@@ -79,7 +79,7 @@ import { Video } from '@site/src/components/Video';
 ## Community
 
 - Start [contributing code](/docs/development/contributing)
-- [Join the community](/contact-us)
+- [Join community channels](/contact-us)
 
 ## Development Status
 

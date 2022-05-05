@@ -1,6 +1,6 @@
 # Contact Us
 
-We welcome you to keep in touch with Heighliner through a variety of channels for support, inspiring ideas and support.
+Got questions? Have feedback? Here are a couple of official channels to get in touch with us. 
 
 ## Commit an issue on GitHub
 
@@ -8,7 +8,7 @@ https://github.com/h8r-dev/heighliner/issues
 
 ## Join Heighliner User Group on Discord
 
-// TODO
+Join [our Discord channel](https://discord.gg/WphTbdVHFA).
 
 ## Join Heighliner User Group on WeChat
 
