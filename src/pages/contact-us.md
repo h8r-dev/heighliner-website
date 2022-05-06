@@ -1,10 +1,10 @@
 # Contact Us
 
-Got questions? Have feedback? Here are a couple of official channels to get in touch with us. 
+Got questions? Have feedback? Here are a couple of official channels to get in touch with us.
 
 ## Commit an issue on GitHub
 
-https://github.com/h8r-dev/heighliner/issues
+Create an issue on our [Github repo](https://github.com/h8r-dev/heighliner/issues)
 
 ## Join Heighliner User Group on Discord
 

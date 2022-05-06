@@ -25,6 +25,7 @@ export function Video({
         playsInline
         poster={poster}
         src={src}
+        preload="metadata"
       >
         <LoadingSpinner />
         <BigPlayButton position="center" />

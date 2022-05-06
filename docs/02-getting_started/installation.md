@@ -12,7 +12,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <Tabs>
   <TabItem value="macos" label="MacOS" default>
 
-Homebrew:
+[HomeBrew](https://brew.sh):
 
 ```bash
 brew install h8r-dev/tap/heighliner
@@ -27,7 +27,7 @@ curl -L https://dl.h8r.io/hln/install.sh | sh
 sudo mv bin/hln /usr/local/bin/hln
 ```
 
-Or download binaries: [Github Release](https://github.com/h8r-dev/heighliner/releases)
+Or download binaries: [GitHub Release](https://github.com/h8r-dev/heighliner/releases)
 
   </TabItem>
   <TabItem value="linux" label="Linux">
@@ -40,7 +40,7 @@ curl -L https://dl.h8r.io/hln/install.sh | sh
 sudo mv bin/hln /usr/local/bin/hln
 ```
 
-Or download binaries: [Github Release](https://github.com/h8r-dev/heighliner/releases)
+Or download binaries: [GitHub Release](https://github.com/h8r-dev/heighliner/releases)
 
   </TabItem>
 </Tabs>
@@ -206,7 +206,7 @@ Waiting buildkitd to be ready...
 buildkitd is ready!
 ```
 
-## 4. Create Github Token
+## 4. Create GitHub Token
 
 Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with these scopes selected:
 `repo`, `workflow`, `write:packages`, `delete:packages`, `admin:org`, `user`, `delete_repo`.

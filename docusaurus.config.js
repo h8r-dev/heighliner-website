@@ -4,7 +4,7 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 // const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
-const mainGithubUrl = "https://github.com/h8r-dev/heighliner-website";
+const mainGithubUrl = "https://github.com/h8r-dev/heighliner";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -16,7 +16,7 @@ const config = {
   onBrokenMarkdownLinks: "warn",
   favicon: "img/website.ico",
   organizationName: "h8r-dev", // Usually your GitHub org/user name.
-  projectName: "heighliner-website", // Usually your repo name.
+  projectName: "heighliner", // Usually your repo name.
 
   staticDirectories: ['static'],
 
@@ -96,7 +96,7 @@ const config = {
             items: [
               {
                 label: "Tutorial",
-                to: "/docs/overview/intro",
+                to: "/docs/getting_started/installation",
               },
             ],
           },

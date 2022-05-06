@@ -100,7 +100,7 @@ We capitalize the `<type>` to make sure the subject line is capitalized. `<type>
 
 #### `<scope>` (optional)
 
-Scope is optional, it may be provided to a commit’s type, to provide additional contextual information and is contained within parenthesis, it is could be anything specifying place of the commit change. Github issue link is
+Scope is optional, it may be provided to a commit’s type, to provide additional contextual information and is contained within parenthesis, it is could be anything specifying place of the commit change. GitHub issue link is
 also a valid scope. For example: Fix(cli), Feat(api), Fix(#233), etc.
 
 You can use `*` when the change affects more than a single scope.

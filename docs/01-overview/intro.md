@@ -53,8 +53,8 @@ import { Video } from '@site/src/components/Video';
 ## Features
 
 - Popular languages and frameworks support: Go-Gin, Spring, Express, Django, Rails, React, Vue.
-- Automated setup of Github repositories and scaffolds for app, deploy, and infra code.
-- Automated setup of CI pipelines on Github Action.
+- Automated setup of GitHub repositories and scaffolds for app, deploy, and infra code.
+- Automated setup of CI pipelines on GitHub Action.
 - Automated setup of Dockerfiles for container builds.
 - AUtomated setup of ArgoCD pipelines to deploy application and its infra dependencies.
 - Automated setup of Helm charts for Kubernetes ingress, services, and workloads, RBAC roles, etc.
