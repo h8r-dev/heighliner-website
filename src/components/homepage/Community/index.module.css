@@ -104,6 +104,13 @@
 }
 
 @media screen and (max-width: 600px) {
+  .card {
+    margin: 0 10px;
+  }
+
+  .card .introduce .personDesc {
+    margin-left: -20px;
+  }
 
   .card .introduce .personPhoto {
     max-width: 130px;
