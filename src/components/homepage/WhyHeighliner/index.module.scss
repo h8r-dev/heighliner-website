@@ -53,7 +53,7 @@
   position: relative;
   overflow-x: hidden;
   overflow-y: hidden;
-  box-shadow: 2px 2px 50px 25px rgba(145, 98, 228, 0.17);
+  box-shadow: 2px 2px 50px 10px rgba(145, 98, 228, 0.21);
   border: solid 1px #000;
 
 
@@ -73,10 +73,6 @@
     top: 370px;
   }
 
-  .poleWrap {
-
-  }
-
   .pole{
     width: 46px;
     height: 372px;
@@ -87,7 +83,7 @@
   }
 
   .layerImg {
-    max-width: 753px;
+    max-width: 702px;
     background-color: #000;
   }
 
