@@ -1,13 +1,8 @@
-.videoControlBar {
-  background-color: #080930 !important;
-}
-
-#vidioWrapper {
+#videoWrapper {
   filter: drop-shadow(2px 2px 15px rgba(130, 91, 199, 0.5));
 
   :global(.video-react-big-play-button:before) {
     content: "";
-    //background: url("/static/img/start-vidio-photo.webp");
     background-size: 65px 68px;
     background-repeat: no-repeat;
     width: 65px;
