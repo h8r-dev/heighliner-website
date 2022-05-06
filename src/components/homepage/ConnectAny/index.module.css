@@ -16,10 +16,9 @@
 
 .titleWrapper .any {
   font-weight: 800;
-  background: linear-gradient(90.1deg, #74A3FF 0%, #ABFED5 100%);
+  background: linear-gradient(90.1deg, #8965F6 0%, #A6AEEE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* todo */
   background-clip: text;
   text-fill-color: transparent;
 }
@@ -64,6 +63,7 @@
   text-align: center;
   color: #000;
   margin-bottom: 150px;
+  background: linear-gradient(0deg, #f5f3f8 0%, #a6aeee00 100%);
 }
 
 @media screen and (max-width: 996px) {

@@ -40,7 +40,7 @@ export function JoinCommunity() {
 
   return (
     <div>
-      <div className={clsx("homepage-section-title", styles.title)}>
+      <div className={styles.title}>
         Join the community
       </div>
       <div className={styles.iconWrapper}>

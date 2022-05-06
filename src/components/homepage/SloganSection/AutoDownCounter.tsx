@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 import { useEffect, useState } from "react";
 
-import ZeroSVG from "/static/img/homepage/slogansection/zero.svg";
-
 import styles from "./index.module.scss";
 
 interface Props {
@@ -42,8 +40,7 @@ export default function AutoDownCounter({
         counter
       ) : ( */}
         <div className={styles.zeroEffect}>
-          {/*<ZeroSVG />*/}
-          <img src={require('@site/static/img/zero.webp').default} alt="zero"/>
+          Zero
         </div>
       {/* )} */}
     </span>

@@ -28,7 +28,7 @@
   justify-content: center;
   position: relative;
   max-width: 1110px;
-  margin: 73px auto  auto;
+  margin: 48px auto  auto;
 }
 
 .middleCubes {
@@ -95,9 +95,17 @@
     color: #6002ee;
   }
 
-  & :hover {
-    text-decoration: underline;
-    text-decoration-color: #7a2cee;
+  &:hover{
+    text-decoration: none;
+  }
+
+  & span:hover {
+    border-bottom: 1px solid #7a2cee;
+  }
+
+  & img {
+    width: 13px;
+    margin-left: 8px;
   }
 }
 
