@@ -7,7 +7,7 @@
 
   :global(.video-react-big-play-button:before) {
     content: "";
-    background: url("/static/img/start-vidio-photo.webp");
+    //background: url("/static/img/start-vidio-photo.webp");
     background-size: 65px 68px;
     background-repeat: no-repeat;
     width: 65px;
@@ -26,4 +26,17 @@
       display: none;
     }
   }
+}
+
+.startVideo{
+  background: url("/static/img/start-vidio-photo.webp");
+  position: absolute;
+  width: 65px;
+  height: 68px;
+  top: 50%;
+  left: 50%;
+  background-size: 65px 68px;
+  transform: translateX(-52%) translateY(-50%);
+  z-index: 1;
+  cursor: pointer;
 }
