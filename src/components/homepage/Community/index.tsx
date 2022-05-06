@@ -39,6 +39,7 @@ export function Community() {
             <div className={styles.personDesc}>
               <div className={styles.personName}>Hongchao Deng</div>
               <div className={styles.personTitle}>CTO, Heighliner</div>
+              <div className={styles.personTitle}>Co-Chair, CNCF App-Delivery TAG</div>
             </div>
           </div>
         </div>
@@ -69,6 +70,7 @@ export function Community() {
             <div className={styles.personDesc}>
               <div className={styles.personName}>Solomon Hykes</div>
               <div className={styles.personTitle}>Founder, Dagger</div>
+              <div className={styles.personTitle}>Also known for founding Docker</div>
             </div>
           </div>
         </div>
