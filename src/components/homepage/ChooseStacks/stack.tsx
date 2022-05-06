@@ -2,8 +2,6 @@ import React from "react";
 import Link from "@docusaurus/Link";
 import clsx from "clsx";
 
-import LinkSVG from "/static/img/homepage/choosestacks/link.svg";
-
 import styles from "./index.module.scss";
 
 interface Props {
@@ -30,11 +28,7 @@ export default function Stack(props: Props): React.ReactElement {
       )}
       <Link to={props.link} className={styles.link}>
         <span>Read the document</span>
-        <img
-          src={
-            require("/static/img/homepage/choosestacks/link@3x.webp").default
-          }
-        />
+        <img src={require("/img/homepage/choosestacks/link@3x.webp").default} />
       </Link>
     </div>
   );
