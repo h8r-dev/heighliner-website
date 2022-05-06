@@ -4,10 +4,19 @@
 
 .homepageWrapper {
   // background-image: linear-gradient(87deg, #e8e3ed 0%, #e8e3ed 30%, #f8f6fa 45%, #f3f3fe 60%, #edeffe 75%, #e3e6fd 100%);
-  background: linear-gradient(89.73deg, rgba(232, 227, 237, 0.5) 66.74%, rgba(242, 240, 245, 0.5) 84.36%, rgba(248, 246, 250, 0.5) 103.55%, rgba(243, 243, 254, 0.5) 128.43%, rgba(237, 239, 254, 0.5) 148.65%, rgba(227, 230, 253, 0.5) 166.28%);
+  background: linear-gradient(
+    89.73deg,
+    rgba(232, 227, 237, 0.5) 66.74%,
+    rgba(242, 240, 245, 0.5) 84.36%,
+    rgba(248, 246, 250, 0.5) 103.55%,
+    rgba(243, 243, 254, 0.5) 128.43%,
+    rgba(237, 239, 254, 0.5) 148.65%,
+    rgba(227, 230, 253, 0.5) 166.28%
+  );
+  background-color: #fff; // Avoid the black background when user toggle the dark mode.
 
   * {
-    font-family: 'Jost', sans-serif;
+    font-family: "Jost", sans-serif;
     font-style: normal;
     font-weight: 400;
 
@@ -19,7 +28,8 @@
 
 .tableMask {
   // background: linear-gradient(90deg, rgba(239, 235, 242, 1) 1px, transparent 0), linear-gradient(rgba(239, 235, 242, 1) 1px, transparent 0);
-  background: linear-gradient(90deg, rgba(234, 227, 236, 1) 1px, transparent 0), linear-gradient(rgba(234, 227, 236, 1) 1px, transparent 0);
+  background: linear-gradient(90deg, rgba(234, 227, 236, 1) 1px, transparent 0),
+    linear-gradient(rgba(234, 227, 236, 1) 1px, transparent 0);
   background-size: 30px 30px;
   background-color: rgba(243, 242, 235, 0.1);
 }
@@ -29,9 +39,8 @@
   text-align: center;
 }
 
-@media screen and(max-width: 600px){
-  :global(.homepage-section-title){
+@media screen and(max-width: 600px) {
+  :global(.homepage-section-title) {
     font-size: 45px;
   }
 }
-
