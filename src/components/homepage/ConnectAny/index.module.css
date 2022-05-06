@@ -63,6 +63,7 @@
   text-align: center;
   color: #000;
   margin-bottom: 150px;
+  background: linear-gradient(0deg, #f5f3f8 0%, #a6aeee00 100%);
 }
 
 @media screen and (max-width: 996px) {
