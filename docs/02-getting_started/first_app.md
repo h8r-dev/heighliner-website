@@ -43,6 +43,20 @@ gin-next  0.0.1
 gin-vue   0.0.1
 ```
 
+<div
+  style={{
+    maxWidth: 800,
+    height: 'auto',
+    marginBottom: 50,
+    marginTop: 50
+  }}
+>
+  <Video
+    poster="/img/homepage/video-poster.png"
+    src="https://dl.h8r.io/Heighliner-Introduction-English.mp4"
+  ></Video>
+</div>
+
 ## Create your application
 
 Create your application interactively:
