@@ -24,6 +24,21 @@ import { Video } from '@site/src/components/Video';
   ></Video>
 </div>
 
+import AsciinemaPlayer from '@site/src/components/Asciinema';
+
+<div
+  style={{
+    maxWidth: 800,
+    height: 'auto',
+    marginBottom: 50,
+    marginTop: 50
+  }}
+>
+  <AsciinemaPlayer
+    asciiData="https://asciinema.org/a/492361.cast"
+  />
+</div>
+
 ## Why Heighliner
 
 - **Smart platform**:

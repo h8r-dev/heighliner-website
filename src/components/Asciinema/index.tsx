@@ -20,7 +20,9 @@ export default function AsciinemaPlayer({ asciiData, className = '' }: Asciinema
   useEffect(() => {
     if (ExecutionEnvironment.canUseDOM) {
       import('asciinema-player').then(player => {
-        player.create(`data:text/plain;base64,${asciiData}`, asciinemaRef.current, {
+        const isBase64Data: boolean = !asciiData.startsWith('http')
+        const source: string = isBase64Data ? `data:text/plain;base64,${asciiData}` : asciiData
+        player.create(source, asciinemaRef.current, {
           loop: true,
           autoPlay: true,
           terminalFontSize: '14px',
