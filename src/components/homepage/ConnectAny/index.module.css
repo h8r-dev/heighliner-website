@@ -16,10 +16,9 @@
 
 .titleWrapper .any {
   font-weight: 800;
-  background: linear-gradient(90.1deg, #74A3FF 0%, #ABFED5 100%);
+  background: linear-gradient(90.1deg, #8965F6 41.71%, #A6AEEE 54.08%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* todo */
   background-clip: text;
   text-fill-color: transparent;
 }

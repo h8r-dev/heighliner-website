@@ -1,5 +1,6 @@
 .title {
-  font-weight: 300;
+  font-weight: 300 !important;
+  font-size: 48px;
   line-height: 1.5;
   text-align: center;
   color: #000;

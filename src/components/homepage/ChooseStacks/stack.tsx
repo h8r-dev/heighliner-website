@@ -30,8 +30,8 @@ export default function Stack(props: Props): React.ReactElement {
       <a href={props.link} className={styles.link}>
         <span>
           Read the document
-          <LinkSVG style={{ marginLeft: 5 }} />
         </span>
+        <img src={require('/static/img/homepage/choosestacks/link@3x.webp').default} />
       </a>
     </div>
   );

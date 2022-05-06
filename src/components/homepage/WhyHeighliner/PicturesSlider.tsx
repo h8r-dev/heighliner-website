@@ -76,8 +76,6 @@ export default function PicturesSlider(): React.ReactElement {
       poleLeftRef.current = poleMovement;
       upperLayerWidthRef.current = upperLayerMovement;
 
-      event.stopImmediatePropagation();
-
       return false;
     }
   }

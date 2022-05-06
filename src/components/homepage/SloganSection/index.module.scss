@@ -84,7 +84,6 @@
 }
 
 .autoDownCounterText {
-  width: 130px;
   display: inline-block;
 }
 
@@ -101,7 +100,8 @@
 }
 
 .zeroEffect{
-  animation: zoominout 1s infinite;
+  // animation: zoominout 1s infinite;
+  color: #b794f6;
 }
 
 .requestAccess {
@@ -127,7 +127,7 @@
 
 .quickstart {
   border-radius: 0;
-  background-color: #a9f7df !important;
+  background-color: #b794f6 !important;
   color: #080930 !important;
   width: 233px;
   height: 60px;

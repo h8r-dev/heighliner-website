@@ -12,12 +12,11 @@
 .caption {
   font-size: 18px;
   letter-spacing: -0.24px;
-  max-width: 1083px;
+  max-width: 1127px;
   margin: 0 auto;
-  line-height: 37px;
+  line-height: 2.06;
   color: #fff;
   font-weight: 300 !important;
-  padding: 0 30px;
 }
 
 .compare {
@@ -50,15 +49,11 @@
 }
 
 .layerContain {
-  /* margin: 14px auto; */
-  /* width: 100vw; */
-  // height: 702px;
   position: relative;
   overflow-x: hidden;
   overflow-y: hidden;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  box-shadow: 2px 2px 50px 40px rgba(46, 89, 224, 0.3);
+  box-shadow: 2px 2px 50px 25px rgba(145, 98, 228, 0.17);
+  border: solid 1px #000;
 
 
   & > img {
@@ -110,40 +105,6 @@
   }
 }
 
-
-// .pole {
-//   position: absolute;
-//   top: 50%;
-//   /* z-index: 1; */
-//   width: 44px;
-//   height: 44px;
-//   cursor: ew-resize;
-//   border-radius: 50%;
-//   background-image: linear-gradient(115deg, #dccbda -12%, #debcda 89%, #eee 116%);
-//   transform: translate(-50%, -50%);
-// }
-
-// .pole:after, .pole:before {
-//   content: '';
-//   position: absolute;
-//   width: 10px;
-//   height: 10px;
-//   top: 50%;
-//   border-top: solid 2px #4c3761;
-//   border-left: solid 2px #4c3761;
-//   transform-origin: 0 0;
-// }
-
-// .pole:before {
-//   left: 8px;
-//   transform: rotate(-45deg);
-// }
-
-// .pole:after {
-//   left: 38px;
-//   transform: rotate(135deg);
-// }
-
 .featuresContain {
   display: flex;
   justify-content: space-around;
@@ -181,6 +142,13 @@
 .wavePic{
   width: 100%;
 }
+
+@media screen and (max-width: 1200px) {
+  .caption {
+    padding: 0 10px;
+  }
+}
+
 
 @media screen and (max-width: 1100px) {
 

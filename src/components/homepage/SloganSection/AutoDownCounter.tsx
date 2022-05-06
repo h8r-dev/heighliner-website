@@ -43,7 +43,8 @@ export default function AutoDownCounter({
       ) : ( */}
         <div className={styles.zeroEffect}>
           {/*<ZeroSVG />*/}
-          <img src={require('@site/static/img/zero.webp').default} alt="zero"/>
+          {/* <img src={require('@site/static/img/zero.webp').default} alt="zero"/> */}
+          Zero
         </div>
       {/* )} */}
     </span>

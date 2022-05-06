@@ -3,8 +3,9 @@
  */
 import React from 'react';
 
+import QuoteSVG from '@site/static/img/homepage/community/quote.svg'
+
 import styles from "./index.module.css";
-import clsx from "clsx";
 
 export function Community() {
   return (
@@ -19,10 +20,15 @@ export function Community() {
               className={styles.leftLogo}
             />
           </div>
+          <div className={styles.quoteIcon}>
+            <QuoteSVG />
+          </div>
           <div className={styles.desc}>
-            <div>“Cloud native stack</div>
-            <div>Heighliner Could amaze me</div>
-            <div>everyday”</div>
+            We have significantly increased our development speed by using
+            Dagger. It is modern, simple, and developer friendly! More
+            important, we believe in the long term value that open source
+            brings us: building interesting things together even across
+            continents and borders.
           </div>
           <div className={styles.introduce}>
             <img
@@ -44,10 +50,15 @@ export function Community() {
               className={styles.rightLogo}
             />
           </div>
+          <div className={styles.quoteIcon}>
+            <QuoteSVG />
+          </div>
           <div className={styles.desc}>
-            <div>“Cloud native stack</div>
-            <div>Heighliner Could amaze me</div>
-            <div>everyday”</div>
+            We have significantly increased our development speed by using
+            Dagger. It is modern, simple, and developer friendly! More
+            important, we believe in the long term value that open source
+            brings us: building interesting things together even across
+            continents and borders.
           </div>
           <div className={styles.introduce}>
             <img
