@@ -1,9 +1,10 @@
 import React from "react";
+import Link from "@docusaurus/Link";
+import clsx from "clsx";
 
 import LinkSVG from "/static/img/homepage/choosestacks/link.svg";
 
 import styles from "./index.module.scss";
-import clsx from "clsx";
 
 interface Props {
   name: string;
@@ -27,12 +28,14 @@ export default function Stack(props: Props): React.ReactElement {
           <img src={props.secondIcon}></img>
         </div>
       )}
-      <a href={props.link} className={styles.link}>
-        <span>
-          Read the document
-        </span>
-        <img src={require('/static/img/homepage/choosestacks/link@3x.webp').default} />
-      </a>
+      <Link to={props.link} className={styles.link}>
+        <span>Read the document</span>
+        <img
+          src={
+            require("/static/img/homepage/choosestacks/link@3x.webp").default
+          }
+        />
+      </Link>
     </div>
   );
 }
