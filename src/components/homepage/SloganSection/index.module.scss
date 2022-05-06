@@ -6,14 +6,30 @@
 
   background-image: url('/static/img/homepage/slogan-bg.webp');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: -1000px center;
+
+  & {
+    @media screen and (min-width: 996px) {
+      background-position: -800px center;
+    }
+    @media screen and (min-width: 1500px) {
+      background-position: -600px center;
+    }
+    @media screen and (min-width: 2000px) {
+      background-position: -400px center;
+    }
+    @media screen and (min-width: 2700px) {
+      background-position: center;
+    }
+  }
 
   h1, h2, h3 {
     color: #fff;
   }
 }
 
-.contentWrap{
+
+.contentWrap {
   display: flex;
   width: 100%;
   padding-top: 160px;
@@ -99,7 +115,7 @@
   }
 }
 
-.zeroEffect{
+.zeroEffect {
   // animation: zoominout 1s infinite;
   color: #b794f6;
 }
@@ -203,14 +219,14 @@
     justify-content: center;
   }
 
-  .video{
+  .video {
     display: none;
   }
 }
 
 @media screen and (max-width: 600px) {
 
-  .contentWrap{
+  .contentWrap {
     justify-content: center;
     margin-left: 0;
   }
@@ -240,15 +256,15 @@
     width: 100%;
   }
 
-  .requestAccess{
+  .requestAccess {
     margin-left: 0px;
   }
 
-  .sloganTextWrap h1{
+  .sloganTextWrap h1 {
     font-size: 30px;
   }
 
-  .wrap{
+  .wrap {
     width: 100%;
   }
 }
