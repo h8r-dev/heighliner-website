@@ -1,59 +1,71 @@
-.wrapper {
-  padding-top: 129px;
-  position: relative;
-  background-color: #f3f3f3;
-
-  display: flex;
-  justify-content: center;
-}
-
-.content {
-  position: absolute;
-  bottom: 223px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.content > img {
-  width: 89px;
-}
-
 .title {
-  color: #061596;
-  font-size: 22px;
-  font-weight: 800;
-  line-height: 33px;
-
-  margin-bottom: 26px;
-  margin-top: 160px;
+  font-weight: 300 !important;
+  font-size: 48px;
+  line-height: 1.5;
+  text-align: center;
+  color: #000;
+  margin-top: 155px;
 }
 
-.btn {
-  width: 233px;
-  height: 60px;
-  background-color: #061596;
-  color: #fff !important;
-  line-height: 40px;
-  border-radius: 0;
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  padding-bottom: 216px;
 }
 
-.bg {
+.icon:hover{
+  box-shadow: 0px 0px 15px rgba(66, 26, 86, 0.24);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 16px;
+  margin: 0 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.icon > img {
+  width: 40px;
+}
+
+.icon:hover {
+  overflow: visible;
+}
+
+.qrcodeWrapper {
+  position: absolute;
+  top: 80px;
+  padding: 5px;
+  box-shadow: 0 5px 20px 0 rgb(0 0 0 / 10%);
+  border-radius: 2px;
+  width: 150px;
+  background-color: #fff;
+}
+
+/* the triangle */
+.qrcodeWrapper:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  border-top: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #fff;
+}
+
+.icon > .qrcodeWrapper > img {
   width: 100%;
-}
-
-@media screen and (max-width: 996px) {
-  .title {
-    font-size: 15px;
-  }
-
-  .btn {
-    width: 173px;
-    height: 45px;
-    font-size: 15px;
-    line-height: 1.5;
-  }
+  display: block;
 }

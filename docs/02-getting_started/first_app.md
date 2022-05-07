@@ -3,17 +3,32 @@ title: Your First App
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 :::info
 
-Make sure you have followed the [Installation guide](installation.md) before you run this example.
+Make sure you have followed [the installation guide](/docs/getting_started/installation) before continuing.
 
 :::
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eHcGZYJEqfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div
+  style={{
+    marginBottom: 50,
+    marginTop: 50,
+  }}
+>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Kat7GEfWXwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
-## Choose a stack
+Ever want to have a Vercel-style experience when creating your nextjs app?
+But without the limitation to a specific vendor?
+In this doc, we will show you how to create a nextjs app in Vercel style with an open source, cloud native stack.
 
-List all heighliner stacks:
+## List all stacks
+
+List all default stacks:
 
 ```shell
 hln list stacks
@@ -23,74 +38,154 @@ Output:
 
 ```shell
 NAME      VERSION  DESCRIPTION
-gin-vue   latest
-gin-next  latest
+sample    0.0.1
+gin-next  0.0.1
+gin-vue   0.0.1
 ```
 
-You can choose the stack that fits your language and framework.
-In the following example, we will use `gin-vue`.
+<div
+  style={{
+    maxWidth: 800,
+    height: 'auto',
+    marginBottom: 50,
+    marginTop: 50
+  }}
+>
+  <Video
+    poster="/img/homepage/video-poster.png"
+    src="https://dl.h8r.io/Heighliner-Introduction-English.mp4"
+  ></Video>
+</div>
 
 ## Create your application
-
-Check and download dependencies:
-
-```shell
-hln check
-```
 
 Create your application interactively:
 
 ```shell
-hln up -s gin-vue -i
+hln up -s sample -i
 ```
 
-Input the values one by one according to the promt and your application will be set up automatically.
+Input the values one by one according to the promt:
 
-> If it failed due to unexpected network problems, feel free to **rerun** the `hln up -i` command.
-
-The output will look like the following:
-
-![alt](/img/docs/dagger_output.png)
+> Note: APP_NAME should obey the rules in [DNS1123](https://datatracker.ietf.org/doc/html/rfc1123)
 
 ```shell
-application:
-  domain: production.xxxxx.go-gin.h8r.app
-  ingress: 101.32.16.242
-repository:
-  backend: |
-    https://github.com/h8r-dev/docs2.git
-  frontend: |
-    https://github.com/h8r-dev/docs2-front.git
-  deploy: |
-    https://github.com/h8r-dev/docs2.git
-infra:
-  - type: prometheus
-    url: xxxxx.prom.stack.h8r.io
-  - type: grafana
-    url: xxxxx.grafana.stack.h8r.io
-    username: admin
-    password: |
-      prom-operator
-  - type: alertManager
-    url: xxxxx.alert.stack.h8r.io
-  - type: argoCD
-    url: xxxxx.argocd.stack.h8r.io
-    username: admin
-    password: |
-      LTXbYLAVFkPQ-Z9o
-  - type: nocalhost
-    url: xxxxx.nocalhost.stack.h8r.io
-    username: admin@admin.com
-    password: "123456"
+Name of your application (required):
 
+> hello-world
+
+Path to your kubeconfig file (required):
+
+> ~/.kube/config
+
+Which github organization do you want to use? (required):
+
+> [organization name or github id, e.g. hongchao-org]
 ```
 
-Check the status of your application:
+Then it will start executing the setup instructions. Output looks like:
+
+![alt](/img/docs/getting-started/stack_output.png)
+
+:::tip
+
+If `hln up` command failed due to unexpected network problems, feel free to **rerun** it again.
+
+:::
+
+Get application status:
 
 ```shell
 hln status
 ```
 
-Congrats! You have initialized your application with `hln` successfully. Click the github url to start developing your new application. All of the Cloud-Native infrastructure and CI/CD pipelines have been set up properly. Feel free to click these links and input the account and password of each component to see its dashboard.
+Output looks like:
+
+![alt](/img/docs/getting-started/hln_status_output.png)
+
+Congrats! You have created your first application with `hln` successfully. All of the cloud-native architecture have been set up properly.
+Click the GitHub url and dashboard links to see the effects.
+
+## See the effects
+
+Get your ingress IP:
+
+<Tabs
+className="unique-tabs"
+defaultValue="local"
+values={[
+{label: 'Kind/Minikube', value: 'local'},
+{label: 'Cloud', value: 'cloud'},
+]}>
+
+<TabItem value="local">
+
+```shell
+127.0.0.1
+```
+
+</TabItem>
+
+<TabItem value="cloud">
+
+```shell
+kubectl -n ingress-nginx get svc ingress-nginx-controller -o=jsonpath='{.status.loadBalancer.ingress[0].ip}'
+```
+
+</TabItem>
+
+</Tabs>
+
+Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
+
+```txt
+<ingress-ip> argocd.h8r.site
+<ingress-ip> hello-world-frontend.h8r.site
+```
+
+### ArgoCD
+
+Check your **ArgoCD** dashboard at [argocd.h8r.site](http://argocd.h8r.site):
+> Note: get argocd credentials with `hln status` command
+
+<div
+  style={{
+    maxWidth: 800,
+    height: 'auto',
+    marginBottom: 30,
+    marginTop: 30,
+  }}
+>
+  <img src={useBaseUrl('/img/docs/getting-started/argocd-home.png')} />
+</div>
+
+You can check the k8s resources for the application:
+
+![alt](/img/docs/getting-started/argocd-details.png)
+
+### Nextjs app
+
+View you nextjs app at [hello-world-frontend.h8r.site](http://hello-world-frontend.h8r.site):
+
+![alt](/img/docs/getting-started/sample-application.png)
+
+### GitHub repos
+
+You can also check your repos on **GitHub**:
+
+<div
+  style={{
+    maxWidth: 800,
+    height: 'auto',
+    marginBottom: 30,
+    marginTop: 30,
+  }}
+>
+  <img src={useBaseUrl('/img/docs/getting-started/github_repos.png')} />
+</div>
 
 ## Clean up
+
+```shell
+hln down
+```

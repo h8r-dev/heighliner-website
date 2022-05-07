@@ -1,22 +1,5 @@
 ---
-title: Remix Stack
-sidebar_position: 2
+title: Remix App
+sidebar_position: 4
 ---
 
-## Setup
-
-## Up
-
-## Status
-
-## Web
-
-## Logs
-
-## Metrics
-
-## Scale
-
-## Remote Development
-
-## Down

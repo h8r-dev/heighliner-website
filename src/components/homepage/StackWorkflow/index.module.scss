@@ -1,0 +1,147 @@
+.wrapper {
+  position: relative;
+}
+
+.wavePic{
+  width: 100%;
+  margin-bottom: 126px;
+  margin-top: -1px;
+}
+
+.title {
+  margin-bottom: 51px;
+  color: #080930;
+}
+
+.workflowImage {
+  margin-top: 9px;
+}
+
+.workflowImage img {
+  width: 405px;
+  margin-left: 10px;
+  margin-top: -3px;
+}
+
+.workflow {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.separator {
+  margin-top: 10px;
+  margin-left: 157px;
+  margin-right: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  justify-content: flex-start;
+}
+
+
+.workflowSteps {
+  padding: 0;
+  padding-top: 40px;
+}
+
+.step {
+  display: flex;
+  width: 540px;
+}
+
+.stepIcon img {
+  width: 40px;
+}
+
+.stepText {
+  flex: 1;
+  margin-left: 3px;
+}
+
+.stepDesc {
+  color: #535353;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.line {
+  margin-top: -1px;
+  width: 0px;
+  height: 506px;
+  border-style: solid;
+  border-color: #b794f6;
+  border-width: 1px;
+}
+
+.stepsWrap {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.stepTitle {
+  font-size: 27px;
+  color: #6002ee;
+  width: 100px;
+  border-bottom: 2px solid #9a66f5;
+  margin-bottom: 10px;
+}
+
+.terminal {
+  width: 540px;
+  height: 384px;
+  background-color: #000;
+  margin-bottom: 78px;
+}
+
+.stepWrap .terminal{
+  :global(.asciinema-terminal *){
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  .workflow{
+    display: none;
+  }
+
+  .title{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .separator {
+    margin-left: 87px;
+    margin-right: 70px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .separator {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.workflow li {
+  list-style: none;
+}
+
+@media screen and (max-width: 996px) {
+  .stepsWrap {
+    display: none;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .workflow {
+    padding: 0 var(--ifm-spacing-horizontal);
+  }
+}

@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Heighliner is a modern app development platform.
 It aims to help developers to build apps easily and quickly using state-of-the-art cloud native stacks.
-You can use Heighliner to spin up the development environment, and then can focus on writing the business code without worrying build and deploy.
+Your development environment can be spinned up in one click, and then you can focus on building your apps.g
 
 import { Video } from '@site/src/components/Video';
 
@@ -14,8 +14,8 @@ import { Video } from '@site/src/components/Video';
   style={{
     maxWidth: 800,
     height: 'auto',
-    marginBottom: 100,
-    marginTop: 100
+    marginBottom: 50,
+    marginTop: 50
   }}
 >
   <Video
@@ -53,8 +53,8 @@ import { Video } from '@site/src/components/Video';
 ## Features
 
 - Popular languages and frameworks support: Go-Gin, Spring, Express, Django, Rails, React, Vue.
-- Automated setup of Github repositories and scaffolds for app, deploy, and infra code.
-- Automated setup of CI pipelines on Github Action.
+- Automated setup of GitHub repositories and scaffolds for app, deploy, and infra code.
+- Automated setup of CI pipelines on GitHub Action.
 - Automated setup of Dockerfiles for container builds.
 - AUtomated setup of ArgoCD pipelines to deploy application and its infra dependencies.
 - Automated setup of Helm charts for Kubernetes ingress, services, and workloads, RBAC roles, etc.
@@ -62,7 +62,7 @@ import { Video } from '@site/src/components/Video';
 - Automated setup of remote development environment with Nocalhost.
 - Automated setup of middleware services (e.g. MySQL, Redis, Kafka).
 - Public DNS names to access your app, logging/monitoring dashboards, Nocalhost services, etc.
-- Health status analysis of your app.
+- Health checking and analysis of your app.
 - SSO integration (OIDC, OAuth2, LDAP, GitHub, Google).
 - CLI for interactive control and CI automation.
 - Dashboard UI which provides real-time view and interactive experience managing your stacks and apps.
@@ -79,7 +79,7 @@ import { Video } from '@site/src/components/Video';
 ## Community
 
 - Start [contributing code](/docs/development/contributing)
-- [Join the community](/contact-us)
+- [Join community channels](/contact-us)
 
 ## Development Status
 
@@ -95,5 +95,5 @@ export const Highlight = ({children, color}) => (
   </span>
 );
 
-Heighliner is <Highlight color="#eb34ba">Pre-Alpha</Highlight> and being actively developed by the community.
+Heighliner is in <Highlight color="#eb34ba">Alpha</Highlight> stage and being actively developed.
 Our releases can be found [here](https://github.com/h8r-dev/heighliner/releases).

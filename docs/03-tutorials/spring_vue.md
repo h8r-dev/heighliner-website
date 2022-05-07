@@ -1,22 +1,6 @@
 ---
-title: Spring+Vue Stack
-sidebar_position: 2
+title: Spring+Vue App
+sidebar_position: 3
 ---
 
-## Setup
-
-## Up
-
-## Status
-
-## Web
-
-## Logs
-
-## Metrics
-
-## Scale
-
-## Remote Development
-
-## Down
+![alt](/img/docs/spring.png)

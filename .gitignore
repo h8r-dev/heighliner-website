@@ -19,5 +19,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+<<<<<<< HEAD
 .vscode/settings.json
 deploy.js
+=======
+# idea
+.idea
+>>>>>>> origin

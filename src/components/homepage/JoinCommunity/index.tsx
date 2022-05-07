@@ -1,28 +1,66 @@
 /**
- * Show `join the community` content
+ * Create by ze.zhang on 2022.4.27
  */
-
-import clsx from "clsx";
 import React from "react";
-import Link from "@docusaurus/Link";
-import { customFields } from "@site/docusaurus.config";
+import clsx from "clsx";
 
-import JoinCommunityBgSvg from '@site/static/img/homepage/join-community-bg.svg'
-import styles from './index.module.css'
+import {customFields} from "@site/docusaurus.config";
+import styles from './index.module.css';
+
+interface IconType {
+  src: string,
+  alt: string,
+  link?: string,
+  qrCode?: string
+}
+
+const iconList: IconType[] = [
+  {
+    src: require('@site/static/img/homepage/joincommunity/github.webp').default,
+    alt: 'github',
+    link: customFields.githubUrl as string
+  },
+  {
+    src: require('@site/static/img/homepage/joincommunity/discourd.webp').default,
+    alt: 'discord',
+    link: customFields.discordUrl as string
+  },
+  {
+    src: require('@site/static/img/homepage/joincommunity/wechat.webp').default,
+    alt: 'wechat',
+    qrCode: require('@site/static/img/heighliner-wechat-channel.jpeg').default,
+  },
+]
 
 export function JoinCommunity() {
+
+  function hendleClick(link: (string | undefined)) {
+    link && window.open(link)
+  }
+
   return (
-    <div className={styles.wrapper}>
-      <JoinCommunityBgSvg className={styles.bg} />
-      <div className={styles.content}>
-        <img src={require('@site/static/img/homepage/join-community-logo-img.png').default} alt="xxx" />
-        <div className={styles.title}>Join the community</div>
-        <Link
-          className={clsx('button button--lg button--secondary', styles.btn)}
-          to={customFields.quickStartUrl as string}
-        >
-          Quick Start
-        </Link>
+    <div>
+      <div className={styles.title}>
+        Join the community
+      </div>
+      <div className={styles.iconWrapper}>
+        {
+          iconList.map((item: IconType) => {
+            let {src, alt, link, qrCode} = item;
+            return (
+              <div className={styles.icon} key={alt}>
+                <img src={src} alt={alt} onClick={() => hendleClick(link)}/>
+                {
+                  qrCode && (
+                    <div className={styles.qrcodeWrapper}>
+                      <img src={qrCode}/>
+                    </div>
+                  )
+                }
+              </div>
+            )
+          })
+        }
       </div>
     </div>
   )

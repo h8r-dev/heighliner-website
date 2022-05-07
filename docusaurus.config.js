@@ -1,10 +1,10 @@
-// @ts-check
+// @ts-nocheck
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 // const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
-const mainGithubUrl = "https://github.com/h8r-dev/heighliner-website";
+const mainGithubUrl = "https://github.com/h8r-dev/heighliner";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -14,26 +14,34 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/apple-touch-icon.png",
+  favicon: "img/website.ico",
   organizationName: "h8r-dev", // Usually your GitHub org/user name.
-  projectName: "heighliner-website", // Usually your repo name.
+  projectName: "heighliner", // Usually your repo name.
+
+  staticDirectories: ['static'],
 
   customFields: {
     quickStartUrl: "/docs/getting_started/installation",
     docsUrl: "/docs/overview/intro",
     blogUrl: "/blog",
     githubUrl: mainGithubUrl,
+    discordUrl: 'https://discord.gg/WphTbdVHFA',
+    ginNextStackUrl: '/docs/tutorials/gin_nextjs',
+    ginVueStackUrl: '/docs/tutorials/gin_vue',
+    remixStackUrl: '/docs/tutorials/remix',
+    sprintVueStackUrl: '/docs/tutorials/spring_vue',
+    newsletterUrl: 'https://h8r.hedwig.pub/',
   },
 
   presets: [
     [
-      "classic",
+      "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl: "https://github.com/h8r-dev/heighliner-website",
+          editUrl: "https://github.com/h8r-dev/heighliner-website/blob/main/",
+          docLayoutComponent: require.resolve('./src/themes/DocPage'),
         },
         blog: {
           showReadingTime: true,
@@ -41,7 +49,7 @@ const config = {
           editUrl: "https://github.com/h8r-dev/heighliner-website",
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: require.resolve("./src/css/custom.scss"),
         },
       }),
     ],
@@ -51,10 +59,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Heighliner",
         logo: {
-          alt: "Heighliner Logo",
-          src: "img/logo.svg",
+          alt: "navbar-logo",
+          src: "/img/homepage/slogansection/purple-logo@3x.webp",
         },
         items: [
           {
@@ -63,7 +70,15 @@ const config = {
             position: "left",
             label: "Docs",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          {
+            to: "/blog",
+            label: "Blog",
+            position: "left",
+          },
+          {
+            type: "search",
+            position: "right",
+          },
           {
             href: "https://github.com/h8r-dev/heighliner-website",
             position: 'right',
@@ -71,6 +86,7 @@ const config = {
             'aria-label': 'GitHub repository',
           },
         ],
+        hideOnScroll: true,
       },
       footer: {
         style: "dark",
@@ -80,7 +96,7 @@ const config = {
             items: [
               {
                 label: "Tutorial",
-                to: "/docs/overview/intro",
+                to: "/docs/getting_started/installation",
               },
             ],
           },
@@ -128,18 +144,23 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Heighliner, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Heighliner, Inc.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        // darkTheme: darkCodeTheme,
+        theme: require('prism-react-renderer/themes/dracula'),
       },
       algolia: {
         appId: 'U4KQYASQJZ',
         apiKey: '232ec1aa85b14f42f196b5dea41fbac8',
         indexName: 'heighliner-docs',
       },
+      colorMode: {
+        defaultMode: "dark",
+      },
     }),
+  plugins: [
+    "docusaurus-plugin-sass",
+  ],
 };
 
 module.exports = config;
