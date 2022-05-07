@@ -21,3 +21,5 @@ yarn-error.log*
 
 # idea
 .idea
+deploy.js
+.vscode/settings.json

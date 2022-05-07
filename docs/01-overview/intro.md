@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Heighliner is a modern app development platform.
 It aims to help developers to build apps easily and quickly using state-of-the-art cloud native stacks.
-You can use Heighliner to spin up the development environment, and then can focus on writing the business code without worrying build and deploy.
+Your development environment can be spinned up in one click, and then you can focus on building your apps.g
 
 import { Video } from '@site/src/components/Video';
 
@@ -62,7 +62,7 @@ import { Video } from '@site/src/components/Video';
 - Automated setup of remote development environment with Nocalhost.
 - Automated setup of middleware services (e.g. MySQL, Redis, Kafka).
 - Public DNS names to access your app, logging/monitoring dashboards, Nocalhost services, etc.
-- Health status analysis of your app.
+- Health checking and analysis of your app.
 - SSO integration (OIDC, OAuth2, LDAP, GitHub, Google).
 - CLI for interactive control and CI automation.
 - Dashboard UI which provides real-time view and interactive experience managing your stacks and apps.
