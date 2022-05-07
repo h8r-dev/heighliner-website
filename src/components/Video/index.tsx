@@ -22,7 +22,7 @@ export function Video({
   let player = useRef(null);
   return (
     // use id becase add the weight
-    <div id={styles.vidioWrapper}>
+    <div id={styles.videoWrapper}>
       <Player
         playsInline
         poster={poster}
