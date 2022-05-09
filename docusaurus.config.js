@@ -160,6 +160,7 @@ const config = {
     }),
   plugins: [
     "docusaurus-plugin-sass",
+    require("./plugins/ConsoleBuildInfo.bak")
   ],
 };
 

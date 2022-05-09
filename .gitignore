@@ -23,3 +23,6 @@ yarn-error.log*
 
 # idea
 .idea
+
+# 
+plugins/*.bak.js
