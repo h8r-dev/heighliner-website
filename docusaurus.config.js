@@ -160,8 +160,13 @@ const config = {
     }),
   plugins: [
     "docusaurus-plugin-sass",
-    require("./plugins/ConsoleBuildInfo.bak")
   ],
 };
 
-module.exports = config;
+async function createConfig() {
+  const buildInfoPlugin = (await import('./plugins/ConsoleBuildInfo.bak.mjs')).default
+  config.plugins?.push(buildInfoPlugin)
+  return config
+}
+
+module.exports = createConfig;

@@ -1,22 +1,20 @@
+/**
+ * Show build info for current release.
+ */
+
 import React, { useEffect } from "react";
 import { usePluginData } from "@docusaurus/useGlobalData";
 
-export default function FriendsComponent() {
+export default function VersionInfo() {
   const { CommitHash, BuildTime } = usePluginData(
     "store-git-commit-info-plugin"
   ) as { [index: string]: string };
 
-  useEffect(() => {
-    console.group("Version Information");
-    console.log("Commit Hash: " + CommitHash);
-    console.log("Build time: " + BuildTime);
-    console.groupEnd();
-  }, []);
-
   return (
-    <>
-      <div>CommitHash: {CommitHash}</div>
-      <div>BuildTime: {BuildTime}</div>
-    </>
-  );
+    <div>
+      <h1>Commit Hash: {CommitHash}</h1>
+      <hr />
+      <h1>Build Time: {BuildTime}</h1>
+    </div>
+  )
 }

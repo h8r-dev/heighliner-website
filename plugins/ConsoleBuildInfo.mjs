@@ -1,16 +1,17 @@
-// const webpack = require("webpack");
+/**
+ * A docusaurus plugin to store release info and generate `/version` route.
+ */
 
 const CommitHash = COMMIT_HASH;
 const BuildTime = BUILD_TIME;
 
-async function storeGitCommitInfoPlugin(context, opts) {
-  console.log(context, opts);
+export default function storeGitCommitInfoPlugin(context, opts) {
   return {
     name: "store-git-commit-info-plugin",
     async contentLoaded({content, actions}) {
-      const {setGlobalData, addRoute} = actions;
-      // Create commit global data
-      setGlobalData({CommitHash, BuildTime})
+      const { setGlobalData, addRoute } = actions;
+      // Create commit hash and build time as global data
+      setGlobalData({ CommitHash, BuildTime })
 
       // Add the '/version' routes
       addRoute({
@@ -21,5 +22,3 @@ async function storeGitCommitInfoPlugin(context, opts) {
     },
   }
 }
-
-module.exports = storeGitCommitInfoPlugin;
