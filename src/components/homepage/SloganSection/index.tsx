@@ -77,7 +77,7 @@ export function SloganSection(): React.ReactElement {
             </main>
             <div className={styles.video}>
               <Video
-                poster="/img/video-photo.webp"
+                poster="/img/video/white-border@3x.webp"
                 src="https://dl.h8r.io/Heighliner-Introduction-English.mp4"
               />
             </div>

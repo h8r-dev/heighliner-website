@@ -1,5 +1,5 @@
 #videoWrapper {
-  filter: drop-shadow(2px 2px 15px rgba(130, 91, 199, 0.5));
+  box-shadow: 2px 2px 15px 0 rgba(130, 91, 199, 0.5);
 
   :global(.video-react-big-play-button:before) {
     content: "";
