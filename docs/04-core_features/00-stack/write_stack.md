@@ -199,6 +199,7 @@ Vendor dependencies:
 
 ```shell
 cd $STACKS_REPO
+# This will install all dependencies for each stack under the official-stack folder
 make vendor
 ```
 
