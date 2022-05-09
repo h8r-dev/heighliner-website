@@ -5,7 +5,7 @@
 import React from "react";
 import Link from "@docusaurus/Link";
 import clsx from "clsx";
-import { customFields } from "@site/docusaurus.config";
+import siteConfig from "@generated/docusaurus.config";
 
 import styles from "./index.module.scss";
 
@@ -34,13 +34,13 @@ export function SloganSection(): React.ReactElement {
               </div>
               <ul className={styles.navItems}>
                 <li>
-                  <Link to={customFields.docsUrl as string}>Docs</Link>
+                  <Link to={siteConfig.customFields.docsUrl as string}>Docs</Link>
                 </li>
                 <li>
-                  <Link to={customFields.blogUrl as string}>Blog</Link>
+                  <Link to={siteConfig.customFields.blogUrl as string}>Blog</Link>
                 </li>
                 <li>
-                  <Link to={customFields.githubUrl as string}>GitHub</Link>
+                  <Link to={siteConfig.customFields.githubUrl as string}>GitHub</Link>
                 </li>
               </ul>
             </nav>
@@ -63,13 +63,13 @@ export function SloganSection(): React.ReactElement {
               <div className={styles.actionsGroup}>
                 <Link
                   className={clsx("button button--lg", styles.requestAccess)}
-                  to={customFields.newsletterUrl as string}
+                  to={siteConfig.customFields.newsletterUrl as string}
                 >
                   Request Early Access
                 </Link>
                 <Link
                   className={clsx("button button--lg button--secondary", styles.quickstart)}
-                  to={customFields.quickStartUrl as string}
+                  to={siteConfig.customFields.quickStartUrl as string}
                 >
                   Quick Start
                 </Link>

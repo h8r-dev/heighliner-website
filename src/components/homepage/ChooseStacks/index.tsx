@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React from "react";
 
-import { customFields } from "@site/docusaurus.config";
+import siteConfig from "@generated/docusaurus.config";
 
 import styles from "./index.module.scss";
 import Stack from "./stack";
@@ -12,27 +12,27 @@ const stacks = [
     decoratedIcon: require("/static/img/homepage/choosestacks/pink@3x.webp").default,
     firstIcon: require("/static/img/homepage/choosestacks/Gin@3x.webp").default,
     secondIcon: require("/static/img/homepage/choosestacks/Nextjs@3x.webp").default,
-    link: customFields.ginNextStackUrl as string,
+    link: siteConfig.customFields.ginNextStackUrl as string,
   },
   {
     name: "Spring-Vue",
     decoratedIcon: require("/static/img/homepage/choosestacks/green@3x.webp").default,
     firstIcon: require("/static/img/homepage/choosestacks/Spring@3x.webp").default,
     secondIcon: require("/static/img/homepage/choosestacks/Vue@3x.webp").default,
-    link: customFields.sprintVueStackUrl as string,
+    link: siteConfig.customFields.sprintVueStackUrl as string,
   },
   {
     name: "Gin-Vue",
     decoratedIcon: require("/static/img/homepage/choosestacks/blue@3x.webp").default,
     firstIcon: require("/static/img/homepage/choosestacks/Gin@3x.webp").default,
     secondIcon: require("/static/img/homepage/choosestacks/Vue@3x.webp").default,
-    link: customFields.ginVueStackUrl as string,
+    link: siteConfig.customFields.ginVueStackUrl as string,
   },
   {
     name: "Remix",
     decoratedIcon: require("/static/img/homepage/choosestacks/red@3x.webp").default,
     firstIcon: require("/static/img/homepage/choosestacks/Remix@3x.webp").default,
-    link: customFields.remixStackUrl as string,
+    link: siteConfig.customFields.remixStackUrl as string,
   },
 ];
 
