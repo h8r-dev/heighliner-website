@@ -20,10 +20,10 @@ export function Community() {
               className={styles.leftLogo}
             />
           </div>
-          <div className={styles.quoteIcon}>
-            <QuoteSVG />
-          </div>
           <div className={styles.desc}>
+            <div className={styles.quoteIcon}>
+              <QuoteSVG/>
+            </div>
             We have significantly increased our development speed by using
             Dagger. It is modern, simple, and developer friendly! More
             important, we believe in the long term value that open source
@@ -31,11 +31,15 @@ export function Community() {
             continents and borders.
           </div>
           <div className={styles.introduce}>
-            <img
-              src={require('@site/static/img/homepage/community/hongchao-photo.webp').default}
-              alt="Hongchao Deng"
+            <div
               className={styles.personPhoto}
-            />
+            >
+              <img
+                src={require('@site/static/img/homepage/community/hongchao-photo.webp').default}
+                alt="Hongchao Deng"
+              />
+            </div>
+
             <div className={styles.personDesc}>
               <div className={styles.personName}>Hongchao Deng</div>
               <div className={styles.personTitle}>CTO, Heighliner</div>
@@ -51,22 +55,22 @@ export function Community() {
               className={styles.rightLogo}
             />
           </div>
-          <div className={styles.quoteIcon}>
-            <QuoteSVG />
-          </div>
           <div className={styles.desc}>
-            We have significantly increased our development speed by using
-            Dagger. It is modern, simple, and developer friendly! More
-            important, we believe in the long term value that open source
-            brings us: building interesting things together even across
-            continents and borders.
+            <div className={styles.quoteIcon}>
+              <QuoteSVG/>
+            </div>
+            Heighliner is a great project that produces modern stacks for developers.
+            I'm inspired to see the community thriving around Dagger and containers.
           </div>
           <div className={styles.introduce}>
-            <img
-              src={require('@site/static/img/homepage/community/solomon-photo.webp').default}
-              alt="Solomon Hykes"
+            <div
               className={styles.personPhoto}
-            />
+            >
+              <img
+                src={require('@site/static/img/homepage/community/solomon-photo.webp').default}
+                alt="Solomon Hykes"
+              />
+            </div>
             <div className={styles.personDesc}>
               <div className={styles.personName}>Solomon Hykes</div>
               <div className={styles.personTitle}>Founder, Dagger</div>
