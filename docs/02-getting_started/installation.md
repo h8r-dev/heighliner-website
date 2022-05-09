@@ -101,15 +101,10 @@ nodes:
         protocol: TCP
 ```
 
-Create a kind cluster from the config:
+Create a kind cluster from the config and install ingress controller:
 
 ```shell
 kind create cluster --image=kindest/node:v1.23.5 --config=kind.yaml
-```
-
-Install ingress controller on the cluster:
-
-```shell
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
 ```
 
@@ -134,19 +129,14 @@ Install _minikube_ command-line tool by following [the minikube installation gui
   </div>
 </details>
 
-Then create a cluster (we recommend using 4 cores and 8Gb memory):
+Create a cluster and install ingress controller:
 
 ```shell
 minikube start --cpus=4 --memory=8g --kubernetes-version=v1.23.5
+minikube addons enable ingress
 ```
 
 > If command returns: The "docker" driver should not be used with root privileges. You can add `--force` flag.
-
-Install ingress controller on the cluster:
-
-```shell
-minikube addons enable ingress
-```
 
 Expose ingress port using minikube tunnel:
 
@@ -172,6 +162,12 @@ Once a cluster is created, you can check if the ingress controller is installed 
 kubectl wait --namespace ingress-nginx --for=condition=ready pod --selector=app.kubernetes.io/component=controller --timeout=90s
 ```
 
+If it is OK, the output should look like:
+
+```shell
+pod/ingress-nginx-controller-55c69f5f55-vzcqp condition met
+```
+
 If it is not, you can install it by running the following command:
 
 ```shell
@@ -192,7 +188,7 @@ hln provides a command to install dependent tools and services:
 hln init
 ```
 
-This command will install the following tools and services:
+This command will install the following tools and resources:
 
 - _dagger_, _nhctl_, _terraform_ CLI tools under ~/.hln/bin/
 - _heighliner_ namespace

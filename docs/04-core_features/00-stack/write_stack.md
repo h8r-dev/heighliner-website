@@ -1,5 +1,5 @@
 ---
-title: Writing Stack Guide
+title: How to Create A New Stack
 sidebar_position: 3
 ---
 
