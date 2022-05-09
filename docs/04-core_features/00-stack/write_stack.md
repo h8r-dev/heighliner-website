@@ -206,7 +206,7 @@ That's it！Now you have a spring-vue2 stack.
 
 ## Run your stack
 
-Follow [installation guide](/docs/getting_started/installation) to install tools and cluster.
+Follow [installation guide](/docs/getting_started/installation) to install the tools and cluster.
 
 Then run your stack:
 
