@@ -25,4 +25,4 @@ yarn-error.log*
 .idea
 
 # 
-plugins/*.bak.js
+plugins/*.bak.mjs
