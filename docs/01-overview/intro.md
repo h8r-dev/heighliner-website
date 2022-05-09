@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Heighliner is a modern app development platform.
 It aims to help developers to build apps easily and quickly using state-of-the-art cloud native stacks.
-Your development environment can be spinned up in one click, and then you can focus on building your apps.g
+Your development environment can be spinned up in one click, and then you can focus on building your apps.
 
 import { Video } from '@site/src/components/Video';
 
@@ -35,24 +35,21 @@ import { Video } from '@site/src/components/Video';
     It fragments their development time and makes them painful to connect the dots.
     With Heighliner, you can enjoy the seamless workflow for developing your apps, integrated with open source tooling.
     You can do everything on a single platform: writing code, building and testing, managing CI/CD pipelines, viewing logs and metrics.
-    All you need is an IDE (e.g. VSCode) to write code and a browser to interact with.
 - **Declarative setup**:
     Traditional tools ask you to define workflow step by step.
     [This method doesn't work at scale](https://www.usenix.org/publications/loginonline/prodspec-and-annealing-intent-based-actuation-google-production).
-    People often get overwhelmed and lost with too many complex details.
-    We need a new solution to meet the growing business requirements and complexities.
-    Thus, we designed a declarative system to replace procedural workflow.
-    You define the desired goals and Heighliner will make it to the end.
-    You can enjoy the simplicity while Heighliner handles the heavy-lifting.
+    Developers often get lost with complex, overwhelming details.
+    We need a new solution to meet the growing business requirements -- a declarative system to describe the desired goals.
+    You can just compose the application architecture in high level and Heighliner will handle the heavy-lifting.
 - **Multi-cloud and no vendor lock-in**:
     Heighliner is open source, vendor neutral, cloud agnostic.
-    With a multi-cloud, pluggable architecture, Heighliner can adapt your apps to major cloud platforms.
-    Your code remains the same across multiple cloud providers while Heighliner adapts to them intelligently.
+    With a multi-cloud, pluggable architecture, Heighliner can adapt your apps to any cloud platforms.
+    Your code remains the same across cloud providers (AWS, Azure, etc.) while Heighliner integrates with them intelligently.
     You can truly build once and run anywhere.
 
 ## Features
 
-- Popular languages and frameworks support: Go-Gin, Spring, Express, Django, Rails, React, Vue.
+- Popular languages and frameworks support: Go-Gin, Spring, Remix, Nextjs, Vue.
 - Automated setup of GitHub repositories and scaffolds for app, deploy, and infra code.
 - Automated setup of CI pipelines on GitHub Action.
 - Automated setup of Dockerfiles for container builds.
@@ -71,9 +68,9 @@ import { Video } from '@site/src/components/Video';
 
 ## What's Next
 
-- Learn about Heighliner [concepts](./concepts.md) and [platform architecture](./arch.md).
+- Learn about Heighliner [concepts](/docs/overview/concepts) and [platform architecture](./arch.md).
 - [Install and setup Heighliner](/docs/getting_started/installation).
-- Explore use cases with [hands-on tutorials](/docs/tutorials/gin_vue).
+- Get hands-on with [the quickstart tutorials](/docs/getting_started/first_app).
 - Learn about [how Heighliner compares to other tools and services](./comparison.md).
 
 ## Community
