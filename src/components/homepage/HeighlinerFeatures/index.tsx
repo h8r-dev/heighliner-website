@@ -30,7 +30,7 @@ const allFeatures: any[][] = [
     {
       title: 'Extensible',
       imgSrc: require('@site/static/img/feature-extensible.png').default,
-      description: 'Based on a open core, everyone can build mod/stack upon Heighliner',
+      description: 'Based on a open core, everyone can build custom stacks on Heighliner',
     },
   ],
 ]
