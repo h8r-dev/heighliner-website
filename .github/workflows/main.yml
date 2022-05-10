@@ -43,4 +43,12 @@ jobs:
           tccli cdn PurgePathCache \
           --cli-unfold-argument \
           --FlushType flush \
-          --Paths https://heighliner.dev/ https://heighliner.dev/docs/ https://heighliner.dev/about-us/ https://heighliner.dev/blog/ https://heighliner.dev/contact-us/ https://heighliner.dev/join-us/ https://heighliner.dev/resources/ https://heighliner.dev/search/ https://heighliner.dev/version/
+          --Paths https://heighliner.dev/ \
+          https://heighliner.dev/about-us/ \
+          https://heighliner.dev/blog/ \
+          https://heighliner.dev/contact-us/ \
+          https://heighliner.dev/docs/ \
+          https://heighliner.dev/join-us/ \
+          https://heighliner.dev/resources/ \
+          https://heighliner.dev/search/ \
+          https://heighliner.dev/version/
