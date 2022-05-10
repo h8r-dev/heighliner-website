@@ -97,7 +97,16 @@ hln status hello-world
 
 Output looks like:
 
-![alt](/img/docs/getting-started/hln_status_output2.jpg)
+```
+> hln status hello-world
+Heighliner application hello-world is ready!
+You can access argocd on argocd.h8r.site [Username: admin Password: SgpJjagudoG2ckCO]
+
+There are 1 application(s) deployed by argocd:
+1: hello-world-frontend
+   hello-world-frontend has been deployed to k8s cluster, you can access it by k8s Service url: hello-world-frontend.h8r.site
+   hello-world-frontend's source code resides on github repository: https://github.com/coding-org03/hello-world-frontend
+```
 
 Congrats! You have created your first application with `hln` successfully. All of the cloud-native architecture have been set up properly.
 Click the GitHub url and dashboard links to see the effects.
