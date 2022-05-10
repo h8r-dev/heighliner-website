@@ -12,6 +12,7 @@ import styles from "./index.module.scss";
 import WhiteHeighlinerSvg from "@site/static/img/homepage/white-heighliner.svg";
 import { Video } from "@site/src/components/Video";
 import AutoDownCounter from "./AutoDownCounter";
+import NavItems from "./NavItems";
 
 export function SloganSection(): React.ReactElement {
   return (
@@ -32,17 +33,7 @@ export function SloganSection(): React.ReactElement {
                 />
                 <WhiteHeighlinerSvg />
               </div>
-              <ul className={styles.navItems}>
-                <li>
-                  <Link to={customFields.docsUrl as string}>Docs</Link>
-                </li>
-                <li>
-                  <Link to={customFields.blogUrl as string}>Blog</Link>
-                </li>
-                <li>
-                  <Link to={customFields.githubUrl as string}>GitHub</Link>
-                </li>
-              </ul>
+              <NavItems />
             </nav>
           </header>
           <div className={styles.contentWrap}>
@@ -68,7 +59,10 @@ export function SloganSection(): React.ReactElement {
                   Request Early Access
                 </Link>
                 <Link
-                  className={clsx("button button--lg button--secondary", styles.quickstart)}
+                  className={clsx(
+                    "button button--lg button--secondary",
+                    styles.quickstart
+                  )}
                   to={customFields.quickStartUrl as string}
                 >
                   Quick Start
