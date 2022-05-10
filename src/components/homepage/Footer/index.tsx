@@ -5,14 +5,14 @@
 import React from "react";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
-import { themeConfig } from "@site/docusaurus.config";
+import siteConfig from "@generated/docusaurus.config";
 
 import WhiteHeighlinerSvg from "@site/static/img/homepage/white-heighliner.svg";
 
 import styles from './index.module.css'
 
 export function Footer() {
-  const footer: any = themeConfig.footer
+  const footer: any = siteConfig.themeConfig.footer
   return (
     <div className={styles.outerWrap}>
       <div className={clsx('container', styles.wrapper)}>

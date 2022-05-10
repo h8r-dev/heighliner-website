@@ -4,7 +4,7 @@ sidebar_position: 1
 ---
 
 A stack follows specific format to interact with Heighliner platform.
-You can take a look at the [gin-vue stack](https://github.com/h8r-dev/stacks/tree/main/gin-vue) to see how it works.
+You can take a look at the [stacks repo](https://github.com/h8r-dev/stacks/) to see how it works.
 In the following we will explain the format in details.
 
 ## metadata.yaml
@@ -24,9 +24,27 @@ This file defines the metadata of the stack. It contains the following informati
 
 This directory contains the schemas exposed to users. It can be used to render input forms and validate user inputs.
 
+Here is an example:
+
+```yaml
+parameters:
+  - title: kubeconfig
+    description: Path to your kubeconfig file
+    key: KUBECONFIG
+    type: "path"
+    default: ~/.kube/config
+    required: true
+  - title: github personal access token
+    description: Your github access token
+    key: GITHUB_TOKEN
+    type: "secret"
+    required: true
+```
+
 ## plans/
 
-This directory contains the execution plans to setup the development environment. We will run `dagger` on this folder.
+This directory contains the execution plans to setup the development environment.
+hln will run the `up` action on this folder.
 
 ## test/
 

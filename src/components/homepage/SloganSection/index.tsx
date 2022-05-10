@@ -5,7 +5,7 @@
 import React from "react";
 import Link from "@docusaurus/Link";
 import clsx from "clsx";
-import { customFields } from "@site/docusaurus.config";
+import siteConfig from "@generated/docusaurus.config";
 
 import styles from "./index.module.scss";
 
@@ -54,16 +54,13 @@ export function SloganSection(): React.ReactElement {
               <div className={styles.actionsGroup}>
                 <Link
                   className={clsx("button button--lg", styles.requestAccess)}
-                  to={customFields.newsletterUrl as string}
+                  to={siteConfig.customFields.newsletterUrl as string}
                 >
                   Request Early Access
                 </Link>
                 <Link
-                  className={clsx(
-                    "button button--lg button--secondary",
-                    styles.quickstart
-                  )}
-                  to={customFields.quickStartUrl as string}
+                  className={clsx("button button--lg button--secondary", styles.quickstart)}
+                  to={siteConfig.customFields.quickStartUrl as string}
                 >
                   Quick Start
                 </Link>
@@ -71,7 +68,7 @@ export function SloganSection(): React.ReactElement {
             </main>
             <div className={styles.video}>
               <Video
-                poster="/img/video-photo.webp"
+                poster="/img/video/white-border@3x.webp"
                 src="https://dl.h8r.io/Heighliner-Introduction-English.mp4"
               />
             </div>

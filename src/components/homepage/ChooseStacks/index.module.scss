@@ -4,7 +4,7 @@
 
 .wrapper {
   position: relative;
-  margin-top: 22px;
+  margin-top: 62px;
 }
 
 .topRightCubes {
@@ -28,7 +28,7 @@
   justify-content: center;
   position: relative;
   max-width: 1110px;
-  margin: 48px auto  auto;
+  margin: 48px auto auto;
 }
 
 .middleCubes {
@@ -46,7 +46,7 @@
   opacity: 0.82;
   background-color: #fff;
   position: relative;
-  border-left: 3px solid #9a66f5; 
+  border-left: 3px solid #9a66f5;
 }
 
 .decoratedIcon {
@@ -87,20 +87,41 @@
 .link {
   font-size: 22px;
   position: absolute;
-  left: 248px;
+  left: 272px;
   top: 265px;
-  
-  & > span {
-    font-weight: 500 !important;
-    color: #6002ee;
+
+  & span::before {
+    transform-origin: center bottom;
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0px;
+    background-color: #6002ee;
+    pointer-events: none;
+    transform: scaleY(0.1);
+    transition: transform 120ms cubic-bezier(0.23, 1, 0.32, 1) 0s,
+      background 120ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
   }
 
-  &:hover{
+  & span:hover::before {
+    transform: scaleY(1);
+    z-index: -1;
+  }
+
+  &:hover {
     text-decoration: none;
   }
 
-  & span:hover {
-    border-bottom: 1px solid #7a2cee;
+  & > span {
+    font-weight: 500 !important;
+    color: #6002ee;
+    transition: color 120ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
+    position: relative;
+  }
+
+  & > span:hover {
+    text-decoration: none;
+    color: #fff;
   }
 
   & img {
@@ -110,10 +131,10 @@
 }
 
 @media screen and (max-width: 600px) {
-  .link{
+  .link {
     font-size: 14px;
     top: 240px;
     left: 220px;
-    width: 100px;
+    width: 120px;
   }
 }

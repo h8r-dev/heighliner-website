@@ -28,7 +28,6 @@ export default function Stack(props: Props): React.ReactElement {
       )}
       <Link to={props.link} className={styles.link}>
         <span>Read the document</span>
-        <img src={require("/img/homepage/choosestacks/link@3x.webp").default} />
       </Link>
     </div>
   );

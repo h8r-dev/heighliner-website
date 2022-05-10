@@ -4,8 +4,8 @@ sidebar_position: 3
 ---
 
 Before effectively using Heighliner, it is necessary to understand the overall architecture.
-It is also necessary to understand the components being provided to you and how to use them.
-The section below provides some useful description and links to build up this understanding.
+That is to understand the components being provided to you and how to use them.
+This page provides useful description and links to build up this understanding.
 
 From a high-level view, Heighliner contains the following components:
 
@@ -25,10 +25,10 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 ## Heighliner CLI
 
 Heighliner CLI provides the best local experience to work with Heighliner [stacks](/docs/overview/concepts#stack).
-It walks users through the process of using Heighliner Stacks to setup environments for their apps.
-It can be used to search and download stacks, manages secrets, provide interactive input based on stack schema.
+It walks users through the process of using Heighliner Stacks to setup their application environments.
+It can also be used to search and download stacks, manages environments, provide user interaction based on stack input.
 
-With Heighliner CI, you can also do IaC style GitOps workflow.
+With Heighliner CLI, you can also do IaC style GitOps workflow.
 
 For more details and examples, please refer to the [hln CLI](/docs/cli/hln/) page.
 
@@ -46,12 +46,12 @@ When you use the CLI/UI it will use the default one.
 
 We have built necessary Heighliner services to help streamline development workflow.
 There are necessary services that cannot be achieved at the client side.
-For example, when you need to allocate sub-domains for your apps, you can use Heighliner services via HTTP APIs or CUE libraries.
+For example, you can use Heighliner services via HTTP APIs or CUE libraries when you need to allocate sub-domains for your apps.
 
 ## Dagger
 
 [Dagger](https://docs.dagger.io/) is a portable devkit for CICD.
-We use it orchestrate infra tools and services. It is the execution engine of Heighliner stacks.
+We use it to orchestrate infra tools and services. It is the execution engine of Heighliner stacks.
 While having contributed some of the libraries to Dagger upstream, We have extend it with our own CUE modules to compose cloud-native tooling and infrastructure.
 
 ## Kubernetes

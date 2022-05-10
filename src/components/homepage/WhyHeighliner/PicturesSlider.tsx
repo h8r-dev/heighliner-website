@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 import { limitInRange } from "@site/src/utils/MathPlus";
 import { isMobile, isTablet } from "react-device-detect";

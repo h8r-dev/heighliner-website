@@ -2,7 +2,6 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
-// const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 const mainGithubUrl = "https://github.com/h8r-dev/heighliner";
 
@@ -163,4 +162,14 @@ const config = {
   ],
 };
 
-module.exports = config;
+async function createConfig() {
+  // Add buildInfoPlugin
+  if (process.env.NODE_ENV === 'production') {
+    const buildInfoPlugin = (await import('./plugins/ConsoleBuildInfo.bak.mjs')).default
+    config.plugins?.push(buildInfoPlugin)
+  }
+
+  return config
+}
+
+module.exports = createConfig;

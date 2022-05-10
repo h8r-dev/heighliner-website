@@ -14,27 +14,31 @@ Helm is a CLI tool to manage Kubernetes resources and provides Golang-based temp
 Compared to Helm, Heighliner has a more robust templating engine and a more robust CLI:
 
 - Heighliner uses CUE for templating which can provide typed schema that Golang template can not.
-- Heighliner manages more than Kubernetes resources, e.g. CI/CD pipelines, secrets, etc.
+- Heighliner manages more than Kubernetes resources, e.g. CI/CD pipelines, framework scaffolds, Grafana dashboards, etc.
 
-Besides, Heighliner has best practices built-in to bootstrap app development which Helm doesn't have.
+Besides, Heighliner has built-in stacks that provide end-to-end app development best practice.
+In comparison, most Helm charts are just single-component things.
 
 ## Infrastructure as Code Tools (Terraform, Pulumi, CDK)
 
 IaC tools focus on generality and flexiblity. It tries to adapt to all cloud providers and all tooling.
 
-Compared to IaC tools, Heighliner focuses on cloud-native developer experience and has many out-of-the-box features.
-You can use Heighliner to bootstrap app development. Heighliner will select the infra tools and services based on best practices.
-Under the hood, Heighliner uses Terraform to provision infrastructure resources.
+Compared to IaC tools, Heighliner focuses on developer experience and application architecture.
+Heighliner stacks cover the entire app development lifecycle and provide end-to-end best practice.
+You can use Heighliner to bootstrap app development naturally.
+
+But they are not in conflict either.
+Under the hood, Heighliner uses Terraform to provision infrastructure resources as well.
 
 ## Heroku
 
 Heroku is a cloud-based platform for deploying and managing applications.
 It also has built-in support for languages like Node.js, Ruby, Python, Go, Java, etc.
 
-Compared to Heroku, Heighliner is more customizable and open:
+Compared to Heroku:
 
-- You can easily extend Heighliner platform features using Dagger and Terraform.
-- Heighliner focus on using open-source, cloud-native projects. Heroku is a closed-source platform.
+- Heighliner is customizable: You can easily extend platform features by codifying stacks.
+- Heighliner is open-source and integrates cloud-native tools and service. Heroku is a closed-source platform.
 
 ## Nocalhost
 
@@ -51,6 +55,6 @@ This is simple and effective, but it is not scalable and flexible.
 As the number of application and infrastructure stack increases, the cost of maintaining these platforms becomes expensive, error-prone, and unmanageable.
 
 Heighliner can replace in-house development platforms with many benefits: more features, more reliable, more flexible, and easier to maintain.
-Heighliner has built-in support for poular languages and frameworks.
+Heighliner has official stacks for poular languages and frameworks.
 You can also extend your languages or infra stacks with Heighliner.
 It's an open source and community driven project that can be used by any organization.

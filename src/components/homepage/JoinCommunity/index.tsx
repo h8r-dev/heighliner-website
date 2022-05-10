@@ -4,7 +4,7 @@
 import React from "react";
 import clsx from "clsx";
 
-import {customFields} from "@site/docusaurus.config";
+import siteConfig from "@generated/docusaurus.config";
 import styles from './index.module.css';
 
 interface IconType {
@@ -18,12 +18,12 @@ const iconList: IconType[] = [
   {
     src: require('@site/static/img/homepage/joincommunity/github.webp').default,
     alt: 'github',
-    link: customFields.githubUrl as string
+    link: siteConfig.customFields.githubUrl as string
   },
   {
     src: require('@site/static/img/homepage/joincommunity/discourd.webp').default,
     alt: 'discord',
-    link: customFields.discordUrl as string
+    link: siteConfig.customFields.discordUrl as string
   },
   {
     src: require('@site/static/img/homepage/joincommunity/wechat.webp').default,

@@ -7,7 +7,7 @@
 }
 
 .titleWrapper .titleConnectAny {
-  width: 602px;
+  max-width: 640px;
   line-height: 1.48;
   text-align: left;
   color: #080930;
@@ -54,9 +54,10 @@
   margin: 0 auto;
   align-items: center;
   text-align: center;
+  padding: 0 30px;
 }
 
-.titleCommunity{
+.titleCommunity {
   margin-top: 100px;
   line-height: 1.4;
   letter-spacing: normal;
@@ -66,19 +67,13 @@
   background: linear-gradient(0deg, #f5f3f8 0%, #a6aeee00 100%);
 }
 
-@media screen and (max-width: 996px) {
-
-  .titleWrapper .titleConnectAny {
-    width: 500px;
+@media screen and (max-width: 750px) {
+  .titleCommunity {
+    margin-bottom: 20px;
   }
 }
 
-@media screen and (max-width: 600px) {
 
-  .titleWrapper .titleConnectAny {
-    width: 300px;
-  }
-}
 
 
 
