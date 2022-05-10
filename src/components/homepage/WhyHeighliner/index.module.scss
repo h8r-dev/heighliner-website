@@ -238,6 +238,13 @@
   .layerWrap {
     display: none;
   }
+
+  .caption {
+    line-height: 2;
+    font-size: 4.5vw;
+    padding: 0;
+    margin-bottom: 50px;
+  }
 }
 
 @media screen and (max-width: 600px) {
