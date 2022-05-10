@@ -71,6 +71,10 @@
   .titleCommunity {
     margin-bottom: 20px;
   }
+
+  .titleWrapper .titleConnectAny {
+    text-align: center;
+  }
 }
 
 

@@ -163,12 +163,15 @@ const config = {
 };
 
 async function createConfig() {
-  // Add buildInfoPlugin
   if (process.env.NODE_ENV === 'production') {
+    // Add buildInfoPlugin
     const buildInfoPlugin = (await import('./plugins/ConsoleBuildInfo.bak.mjs')).default
     config.plugins?.push(buildInfoPlugin)
+    // Add Google Analytics
+    config.presets[0][1].gtag = {
+      trackingID: "G-S5552XPQDK",
+    }
   }
-
   return config
 }
 

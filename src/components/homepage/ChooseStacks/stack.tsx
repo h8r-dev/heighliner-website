@@ -18,17 +18,21 @@ export default function Stack(props: Props): React.ReactElement {
     <div className={styles.stackWrap}>
       <img className={styles.decoratedIcon} src={props.decoratedIcon}></img>
       <div className={styles.stackName}>{props.name}</div>
-      <div className={clsx(styles.frameworkIcon, styles.firstIcon)}>
-        <img src={props.firstIcon}></img>
-      </div>
-      {props.secondIcon && (
-        <div className={clsx(styles.frameworkIcon, styles.secondIcon)}>
-          <img src={props.secondIcon}></img>
+      <div className={styles.iconAndLink}>
+        <div className={styles.iconWrapper}>
+          <div className={clsx(styles.frameworkIcon, styles.firstIcon)}>
+            <img src={props.firstIcon}></img>
+          </div>
+          {props.secondIcon && (
+            <div className={clsx(styles.frameworkIcon, styles.secondIcon)}>
+              <img src={props.secondIcon}></img>
+            </div>
+          )}
         </div>
-      )}
-      <Link to={props.link} className={styles.link}>
-        <span>Read the document</span>
-      </Link>
+        <Link to={props.link} className={styles.link}>
+          <span>Read the document</span>
+        </Link>
+      </div>
     </div>
   );
 }
