@@ -20,6 +20,5 @@ All configmaps storing state will be tagged a label `heighliner.dev/config-type=
 ### How does hln work with the state?
 
 - When running `hln up` to deploy a heighliner application, information about the application, namely state, will be saved to a configmap of K8s cluster.
-- When running `hln status`, hln will present the state as a human-readable from.
+- When running `hln status`, hln will present the state in a human-readable from.
 - When running `hln down`, hln will use information provided by the state to delete the application resources.
-
