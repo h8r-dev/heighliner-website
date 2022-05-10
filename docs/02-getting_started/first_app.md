@@ -62,18 +62,14 @@ gin-vue   0.0.1
 Create your application interactively:
 
 ```shell
-hln up -s sample -i
+hln up hello-world -s sample -i
 ```
+
+> Note: `hello-world` is what we call application name.It should obey the rules in [DNS1123](https://datatracker.ietf.org/doc/html/rfc1123)
 
 Input the values one by one according to the promt:
 
-> Note: APP_NAME should obey the rules in [DNS1123](https://datatracker.ietf.org/doc/html/rfc1123)
-
 ```shell
-Name of your application (required):
-
-> hello-world
-
 Path to your kubeconfig file (required):
 
 > ~/.kube/config
@@ -96,12 +92,21 @@ If `hln up` command failed due to unexpected network problems, feel free to **re
 Get application status:
 
 ```shell
-hln status
+hln status hello-world
 ```
 
 Output looks like:
 
-![alt](/img/docs/getting-started/hln_status_output.png)
+```
+> hln status hello-world
+Heighliner application hello-world is ready!
+You can access argocd on argocd.h8r.site [Username: admin Password: SgpJjagudoG2ckCO]
+
+There are 1 application(s) deployed by argocd:
+1: hello-world-frontend
+   hello-world-frontend has been deployed to k8s cluster, you can access it by k8s Service url: hello-world-frontend.h8r.site
+   hello-world-frontend's source code resides on github repository: https://github.com/coding-org03/hello-world-frontend
+```
 
 Congrats! You have created your first application with `hln` successfully. All of the cloud-native architecture have been set up properly.
 Click the GitHub url and dashboard links to see the effects.
@@ -187,5 +192,5 @@ You can also check your repos on **GitHub**:
 ## Clean up
 
 ```shell
-hln down
+hln down hello-world
 ```

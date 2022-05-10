@@ -3,7 +3,7 @@ title: Usage
 sidebar_position: 2
 ---
 
-Overall, hln has two aspects of ability, namely stack management and application management. Most commands of hln are related to stack or application.
+hln has two categories of capabilities: stack management and application management.
 
 ## Manage stacks
 
