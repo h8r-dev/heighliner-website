@@ -40,9 +40,11 @@
 }
 
 .stackWrap {
-  margin: 30.5px;
-  width: 494px;
-  height: 333px;
+  width: calc(40vw);
+  height: calc(40vw);
+  max-width: 494px;
+  max-height: 333px;
+  margin: 30px;
   opacity: 0.82;
   background-color: #fff;
   position: relative;
@@ -69,26 +71,36 @@
 .frameworkIcon {
   width: 67px;
   height: 67px;
-  // padding: 13px 17px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  position: absolute;
   top: 224px;
 }
 
-.firstIcon {
-  left: 28px;
+.iconAndLink {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  padding: 0 20px;
+  padding: 0 20px;
 }
 
-.secondIcon {
-  left: 121px;
+.iconWrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 20px;
+
+}
+
+.firstIcon {
+  margin-right: 20px;
 }
 
 .link {
   font-size: 22px;
-  position: absolute;
-  left: 272px;
-  top: 265px;
+  white-space: nowrap;
 
   & span::before {
     transform-origin: center bottom;
@@ -100,7 +112,7 @@
     pointer-events: none;
     transform: scaleY(0.1);
     transition: transform 120ms cubic-bezier(0.23, 1, 0.32, 1) 0s,
-      background 120ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
+    background 120ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
   }
 
   & span:hover::before {
@@ -130,11 +142,63 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
+  .stackWrap {
+    margin: 10px;
+    max-width: 1000px;
+    width: calc(46vw);
+  }
+
   .link {
-    font-size: 14px;
-    top: 240px;
-    left: 220px;
-    width: 120px;
+    font-size: 16px;
+  }
+
+  .frameworkIcon {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .stackName {
+    font-size: 6vw;
+  }
+
+  .iconWrapper {
+    margin-right: 10px;
+  }
+
+  .link {
+    font-size: 2.3vw;
+  }
+
+  .firstIcon {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .stackWrap {
+    width: 100%;
+    height: 110px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  .stackName {
+    top: 20px;
+    left: 20px;
+  }
+
+  .decoratedIcon {
+    top: 20px;
+    left: 20px;
+  }
+
+  .frameworkIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .iconAndLink {
+    bottom: 10px;
   }
 }
