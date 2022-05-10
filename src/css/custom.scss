@@ -23,6 +23,11 @@
   --ifm-h2-font-size: 2rem;
 }
 
+:root {
+  // Global custom z-index value to void the magic number
+  --z-uppermost: 99999;
+}
+
 @font-face {
   font-family: 'Jost';
   src: url("/static/fonts/Jost-Light.ttf");

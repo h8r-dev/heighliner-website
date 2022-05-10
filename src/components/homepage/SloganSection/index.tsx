@@ -12,6 +12,7 @@ import styles from "./index.module.scss";
 import WhiteHeighlinerSvg from "@site/static/img/homepage/white-heighliner.svg";
 import { Video } from "@site/src/components/Video";
 import AutoDownCounter from "./AutoDownCounter";
+import NavItems from "./NavItems";
 
 export function SloganSection(): React.ReactElement {
   return (
@@ -32,17 +33,7 @@ export function SloganSection(): React.ReactElement {
                 />
                 <WhiteHeighlinerSvg />
               </div>
-              <ul className={styles.navItems}>
-                <li>
-                  <Link to={siteConfig.customFields.docsUrl as string}>Docs</Link>
-                </li>
-                <li>
-                  <Link to={siteConfig.customFields.blogUrl as string}>Blog</Link>
-                </li>
-                <li>
-                  <Link to={siteConfig.customFields.githubUrl as string}>GitHub</Link>
-                </li>
-              </ul>
+              <NavItems />
             </nav>
           </header>
           <div className={styles.contentWrap}>
