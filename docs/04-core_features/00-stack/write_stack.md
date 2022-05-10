@@ -261,3 +261,7 @@ Then run your stack:
 ```shell
 hln up -i --dir $STACKS_REPO/official-stack/spring-vue2
 ```
+
+## More libraries
+
+
