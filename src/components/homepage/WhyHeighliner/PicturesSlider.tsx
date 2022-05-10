@@ -4,15 +4,16 @@ import { limitInRange } from "@site/src/utils/MathPlus";
 import { isMobile, isTablet } from "react-device-detect";
 import styles from "./index.module.scss";
 
-const poleAxisLeft = -22;
-const poleAxisRight = 24;
-const prePlace = 465;
+const prePlace = 0;
 
 export default function PicturesSlider(): React.ReactElement {
   const [isDown, setIsDown] = useState(false);
   const isDownRef = useRef(isDown);
 
-  const [poleLeft, setPoleLeft] = useState<number>(poleAxisLeft + prePlace);
+  const [poleAxisLeft, setPoleAxisLeft] = useState<number>(0);
+  const [poleAxisRight, setPoleAxisRight] = useState<number>(0);
+
+  const [poleLeft, setPoleLeft] = useState<number>(0);
   const poleLeftRef = useRef(poleLeft);
 
   const [upperLayerWidth, setUpperLayerStyle] = useState<number>(prePlace);
@@ -24,8 +25,19 @@ export default function PicturesSlider(): React.ReactElement {
   const imgEl = useRef(null);
   const upperLayerRef = useRef(null);
 
+  function handlePoleImgLoad(event) {
+    const offset = event.target.width / 2;
+    setPoleAxisLeft(-offset + 2);
+    setPoleAxisRight(offset + 5);
+    setPoleLeft(-offset + 2);
+    poleLeftRef.current = -offset + 2;
+    console.log(offset);
+  }
+
   function handleMouseDown(event) {
-    event.preventDefault();
+    if (event.type === "mousedown") {
+      event.preventDefault();
+    }
 
     isDownRef.current = true;
     setIsDown(true);
@@ -136,6 +148,7 @@ export default function PicturesSlider(): React.ReactElement {
           onTouchStart={handleMouseDown}
           style={{ left: poleLeft }}
           className={styles.pole}
+          onLoad={handlePoleImgLoad}
         />
       </div>
     </div>
