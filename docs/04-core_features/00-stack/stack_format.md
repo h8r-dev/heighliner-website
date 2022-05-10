@@ -43,8 +43,8 @@ parameters:
 
 ## plans/
 
-This directory contains the execution plans to setup the development environment.
-hln will run the `up` action on this folder.
+This directory contains the execution plans.
+hln will run the `up` action against this folder.
 
 ## test/
 
@@ -53,6 +53,5 @@ See [this guide](/docs/core_features/stack/stack_testing) for more details.
 
 ## cue.mods
 
-Each stack can be used as a CUE module for other stacks. You can compose stacks together to create a higher-level stack.
-So each stack can define the CUE modules it depends on. Some can be other stacks, and others can be pure CUE libraries.
+This file defines the cue modules that it depends on.
 Heighliner will automatically fetch the CUE modules before executing the plans.
