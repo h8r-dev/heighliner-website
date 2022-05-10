@@ -163,12 +163,22 @@ const config = {
 };
 
 async function createConfig() {
-  // Add buildInfoPlugin
   if (process.env.NODE_ENV === 'production') {
+    // Add buildInfoPlugin
     const buildInfoPlugin = (await import('./plugins/ConsoleBuildInfo.bak.mjs')).default
     config.plugins?.push(buildInfoPlugin)
+    // Add Google Analytics
+    config.scripts = [
+      {
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-S5552XPQDK',
+        defer: true,
+      },
+      {
+        src: '/js/GoogleAnalytics.js',
+        defer: true,
+      }
+    ]
   }
-
   return config
 }
 
