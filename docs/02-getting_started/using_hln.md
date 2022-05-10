@@ -17,6 +17,11 @@ Under the hood, _hln_ relies on two core concepts, [stack](/docs/core_features/s
 
 ## Stack input from hln
 
+### 1. Input from Env
+
+Inputs can be directly set via environment variables.
+hln will pass the inputs to the stack execution.
+
 hln will set two env by default:
 
 - KUBECONFIG:
@@ -24,12 +29,7 @@ hln will set two env by default:
 - APP_NAME:
     This is automaticaly set to the `<app>` from the arguments. For example, `hln up my-app`, `APP_NAME=my-app`.
 
-### Input from Env
-
-Inputs can be directly set via environment variables.
-hln will pass the inputs to the stack execution.
-
-### Interactive input
+### 2. Interactive input
 
 `hln up -i` will parse stack input schema and prompt for interactive input.
 The inputs will be set as env to pass to the stack execution.
