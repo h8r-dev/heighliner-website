@@ -6,12 +6,10 @@ sidebar_position: 2
 Stack testing is based on [ginkgo framework](https://onsi.github.io/ginkgo/).
 Each test is an e2e test that verifies the given stack is running correctly.
 
-## Test Folder In Stack
-
 Each stack has a `test/` folder that contains the testing code to verify the current stack.
-You can take a look at [gin-vue test](https://github.com/h8r-dev/stacks/tree/main/gin-vue/test) to learn more details of how to test.
+You can take a look at [sample stack](https://github.com/h8r-dev/stacks/tree/main/official-stack/sample) to see the code in details.
 
-### Pre-requisites
+## Install ginkgo
 
 Install ginkgo:
 
@@ -22,12 +20,23 @@ go get github.com/onsi/gomega/...
 
 This fetches Ginkgo and installs the ginkgo executable under `$GOBIN` - you'll want that on your `$PATH`. It also fetches the core Gomega matcher library and its set of supporting libraries.
 
+## Install hln
+
 Install hln by following [the previous instructions](/docs/getting_started/installation).
+
+## Setup repo
+
+In this example, we will use the stacks repo:
+
+```shell
+git clone https://github.com/h8r-dev/stacks.git
+export STACK_REPO=$PWD/stacks
+```
 
 ## Set up the environment variables
 
-Before running the tests, you need to run the stack, which requires some arguments passed by environment variables.
-For example, if you are tesing gin-vue stack, according to `client.filesystem.env` in the stack, you should set:
+Before testing the stack, you need to specify the inputs for the stack.
+For example, if you are tesing sample stack, you should set the following environment variables:
 
 ```shell
 export KUBECONFIG=~/.kube/config
@@ -38,10 +47,10 @@ export GITHUB_TOKEN=<your-github-token>
 
 ## Run
 
-Then you can run the stack:
+First create an appl from the stack:
 
 ```shell
-cd $STACK_DIR # Go to the gin-vue stack directory
+cd $STACK_REPO/official-stack/sample
 hln up
 ```
 
