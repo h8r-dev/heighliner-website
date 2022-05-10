@@ -101,7 +101,7 @@ mkdir $STACKS_REPO/official-stack/spring-vue2
 Save the following file as `$STACKS_REPO/official-stack/spring-vue2/cue.mods`:
 
 ```go
-module github.com/h8r-dev/stacks/offcial-stacks/spring-vue
+module github.com/h8r-dev/stacks/offcial-stacks/spring-vue2
 
 cue 0.4.0
 
@@ -188,7 +188,7 @@ dagger.#Plan & {
           {
             name:      client.env.APP_NAME + "-backend"
             type:      "backend"
-            framework: "spring"
+            framework: "spring2"
             ci:        "github"
             registry:  "github"
             deployTemplate: helmStarter: "spring-boot"
