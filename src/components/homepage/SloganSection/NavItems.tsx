@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { customFields } from "@site/docusaurus.config";
+import siteConfig from "@generated/docusaurus.config";
 import Link from "@docusaurus/Link";
 
 import HamburgerSVG from "/img/homepage/slogansection/hamburger.svg";
@@ -41,25 +41,25 @@ export default function NavItems(): React.ReactElement {
       </button>
       <ul className={styles.navItems}>
         <li>
-          <Link to={customFields.docsUrl as string}>Docs</Link>
+          <Link to={siteConfig.customFields.docsUrl as string}>Docs</Link>
         </li>
         <li>
-          <Link to={customFields.blogUrl as string}>Blog</Link>
+          <Link to={siteConfig.customFields.blogUrl as string}>Blog</Link>
         </li>
         <li>
-          <Link to={customFields.githubUrl as string}>GitHub</Link>
+          <Link to={siteConfig.customFields.githubUrl as string}>GitHub</Link>
         </li>
       </ul>
       <div className={styles.toggleNavItems}>
         <ul className={slideClass}>
           <li>
-            <Link to={customFields.docsUrl as string}>Docs</Link>
+            <Link to={siteConfig.customFields.docsUrl as string}>Docs</Link>
           </li>
           <li>
-            <Link to={customFields.blogUrl as string}>Blog</Link>
+            <Link to={siteConfig.customFields.blogUrl as string}>Blog</Link>
           </li>
           <li>
-            <Link to={customFields.githubUrl as string}>GitHub</Link>
+            <Link to={siteConfig.customFields.githubUrl as string}>GitHub</Link>
           </li>
         </ul>
       </div>
