@@ -168,16 +168,9 @@ async function createConfig() {
     const buildInfoPlugin = (await import('./plugins/ConsoleBuildInfo.bak.mjs')).default
     config.plugins?.push(buildInfoPlugin)
     // Add Google Analytics
-    config.scripts = [
-      {
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-S5552XPQDK',
-        defer: true,
-      },
-      {
-        src: '/js/GoogleAnalytics.js',
-        defer: true,
-      }
-    ]
+    config.presets[0][1].gtag = {
+      trackingID: "G-S5552XPQDK",
+    }
   }
   return config
 }
