@@ -5,7 +5,7 @@ sidebar_position: 6
 
 :::info
 
-Make sure you have followed [configure hosts](/docs/tutorials/gin-next/create_application#configure-hosts) before continuing.
+Make sure you have followed [configure hosts](/docs/tutorials/gin_nextjs/create_application#configure-hosts) before continuing.
 
 :::
 
