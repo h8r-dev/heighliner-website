@@ -7,9 +7,8 @@
 }
 
 .titleWrapper .titleConnectAny {
-  max-width: 640px;
   line-height: 1.48;
-  text-align: left;
+  text-align: center;
   color: #080930;
   padding: 15px 0px;
 }
@@ -70,10 +69,6 @@
 @media screen and (max-width: 750px) {
   .titleCommunity {
     margin-bottom: 20px;
-  }
-
-  .titleWrapper .titleConnectAny {
-    text-align: center;
   }
 }
 

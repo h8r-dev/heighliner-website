@@ -47,16 +47,20 @@ export function SloganSection(): React.ReactElement {
             <main className={styles.wrap}>
               <div className={styles.sloganTextWrap}>
                 <h1>
-                  <AutoDownCounter
-                    startPoint={3000}
-                    endPoint={0}
-                    interval={1}
-                    minuend={5}
-                  />{" "}
-                  configuration to{" "}
+                  {/*<AutoDownCounter*/}
+                  {/*  startPoint={3000}*/}
+                  {/*  endPoint={0}*/}
+                  {/*  interval={1}*/}
+                  {/*  minuend={5}*/}
+                  {/*/>{" "}*/}
+                  {/*configuration to{" "}*/}
+                  Automate Application
                 </h1>
-                <h1>build modern Cloud</h1>
-                <h1>App</h1>
+                <h1>
+                  Stack On Any Cloud
+                  {/*build modern Cloud*/}
+                </h1>
+                {/*<h1>App</h1>*/}
               </div>
               <div className={styles.actionsGroup}>
                 <Link

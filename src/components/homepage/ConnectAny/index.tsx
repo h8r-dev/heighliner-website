@@ -13,7 +13,7 @@ export function ConnectAny() {
         <div
              className={clsx("homepage-section-title", styles.titleConnectAny)}
         >
-          Connect <span className={styles.any}>any</span> preferred tools and platform
+          Built to power an open ecosystem
         </div>
       </div>
       <div className={styles.imgWrapper}>
