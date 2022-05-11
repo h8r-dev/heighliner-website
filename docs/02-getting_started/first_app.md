@@ -37,10 +37,11 @@ hln list stacks
 Output:
 
 ```shell
-NAME      VERSION  DESCRIPTION
-sample    0.0.1
-gin-next  0.0.1
-gin-vue   0.0.1
+NAME        VERSION  DESCRIPTION
+sample      0.0.1
+gin-next    0.0.1
+spring-vue  0.0.1
+gin-vue     0.0.1
 ```
 
 <div
@@ -74,9 +75,13 @@ Path to your kubeconfig file (required):
 
 > ~/.kube/config
 
-Which github organization do you want to use? (required):
+Which github organization do you want to use(Can be set as personal github id)? (required):
 
-> [organization name or github id, e.g. hongchao-org]
+> [organization name or github id]
+
+Which domain do you want to use?:
+
+> h8r.site
 ```
 
 Then it will start executing the setup instructions. Output looks like:
@@ -97,21 +102,27 @@ hln status hello-world
 
 Output looks like:
 
-```
-> hln status hello-world
+```shell
 Heighliner application hello-world is ready!
-You can access argocd on argocd.h8r.site [Username: admin Password: SgpJjagudoG2ckCO]
+You can access argocd on argocd.h8r.site [Username: admin Password: vGByPtC9gsTdZogT]
 
-There are 1 application(s) deployed by argocd:
+There are 1 applications deployed by argocd:
 1: hello-world-frontend
    hello-world-frontend has been deployed to k8s cluster, you can access it by k8s Service url: hello-world-frontend.h8r.site
-   hello-world-frontend's source code resides on github repository: https://github.com/coding-org03/hello-world-frontend
+   hello-world-frontend's source code resides on github repository: https://github.com/hongchao-org/hello-world-frontend
 ```
 
 Congrats! You have created your first application with `hln` successfully. All of the cloud-native architecture have been set up properly.
 Click the GitHub url and dashboard links to see the effects.
 
-## See the effects
+## Set Domain Routing
+
+:::info
+
+Below is assuming you don't own a real domain name and use `h8r.site` as your domain name.
+In production, we recommend setting your DNS record to the public ingress IP.
+
+:::
 
 Get your ingress IP:
 
@@ -148,7 +159,7 @@ Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above
 <ingress-ip> hello-world-frontend.h8r.site
 ```
 
-### ArgoCD
+## ArgoCD
 
 Check your **ArgoCD** dashboard at [argocd.h8r.site](http://argocd.h8r.site):
 > Note: get argocd credentials with `hln status` command
@@ -168,13 +179,13 @@ You can check the k8s resources for the application:
 
 ![alt](/img/docs/getting-started/argocd-details.png)
 
-### Nextjs app
+## Nextjs app
 
 View you nextjs app at [hello-world-frontend.h8r.site](http://hello-world-frontend.h8r.site):
 
 ![alt](/img/docs/getting-started/sample-application.png)
 
-### GitHub repos
+## GitHub repos
 
 You can also check your repos on **GitHub**:
 
