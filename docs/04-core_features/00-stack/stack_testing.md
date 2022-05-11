@@ -51,7 +51,7 @@ First create an appl from the stack:
 
 ```shell
 cd $STACK_REPO/official-stack/sample
-hln up
+hln up my-app
 ```
 
 Then run the e2e tests:
@@ -65,5 +65,5 @@ Clean up your app
 
 ```shell
 cd .. # Go to the gin-vue stack directory
-hln down
+hln down my-app
 ```

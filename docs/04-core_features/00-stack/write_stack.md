@@ -259,9 +259,9 @@ Follow [installation guide](/docs/getting_started/installation) to install the t
 Then run your stack:
 
 ```shell
-hln up -i --dir $STACKS_REPO/official-stack/spring-vue2
+hln up my-app -i --dir $STACKS_REPO/official-stack/spring-vue2
 ```
 
 ## More libraries
 
-
+You can find more libaries at the [chain modules](https://github.com/h8r-dev/stacks/tree/main/chain) and [dagger core actions](https://docs.dagger.io/1222/core-actions-reference).
