@@ -6,7 +6,7 @@ import styles from "./index.module.scss";
 
 const features = [
   {
-    title: "nautral",
+    title: "neutral",
     img: require("/static/img/homepage/whyheighliner/neutral@3x.webp").default,
     description:
       "No vendor lock-in. Heighliner is suitable for all Cloud Provider",

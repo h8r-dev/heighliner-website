@@ -1,8 +1,10 @@
 import React, { useRef, useState } from "react";
+import { isMobile, isTablet } from "react-device-detect";
 
 import { limitInRange } from "@site/src/utils/MathPlus";
-import { isMobile, isTablet } from "react-device-detect";
+
 import styles from "./index.module.scss";
+import Rail from "./Rail";
 
 const prePlace = 0;
 
@@ -128,18 +130,8 @@ export default function PicturesSlider(): React.ReactElement {
             ref={imgEl}
           />
         </div>
-        <img
-          src={
-            require("/static/img/homepage/whyheighliner/rail@3x.webp").default
-          }
-          className={styles.above}
-        />
-        <img
-          src={
-            require("/static/img/homepage/whyheighliner/rail@3x.webp").default
-          }
-          className={styles.below}
-        />
+        <Rail classObject={styles.above}/>
+        <Rail classObject={styles.below}/>
         <img
           src={
             require("/static/img/homepage/whyheighliner/pole@3x.webp").default
