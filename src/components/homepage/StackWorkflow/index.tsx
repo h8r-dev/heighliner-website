@@ -16,7 +16,7 @@ export function StackWorkflow(): React.ReactElement {
       <img src={require("@site/static/img/homepage/whyheighliner/slogan-wave-3.webp").default} alt="wave"
            className={styles.wavePic}/>
       <h1 className={clsx("homepage-section-title", styles.title)}>
-        How stack works?
+        Developer-First Experience
       </h1>
       <ul className={clsx(styles.workflow)}>
         <li className={styles.workflowImage}>

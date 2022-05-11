@@ -15,14 +15,14 @@ export function WhyHeighliner(): React.ReactElement {
       <div className={styles.wrapper}>
         <div className={clsx(styles.content)}>
           <h1 className={clsx("homepage-section-title", styles.title)}>
-            Why Heighliner stack?
+            Deliver Stack-as-Code
           </h1>
           <p className={styles.caption}>
-            A Heighliner stack is a pre-configured portfolio of cloud-native
-            tools. It makes sure cloud native applications are developed and
-            deployed with best practices. Based on convention over configuration,
-            it significantly reduces the overhead of building cloud-native
-            applications.
+            Heighliner is a modern developer tool that deliver your application stack as code.
+            It codifies the best practices of developing and deploying cloud native applications.
+            Based on convention over configuration, Heighliner stacks significantly reduce the overhead of building cloud-native applications.
+            With Heighliner, you can version, reuse, and share your app stacks.
+            You can even compose existing stacks to build more advanced stacks.
           </p>
           <main className={styles.main}>
             <PicturesSlider/>
