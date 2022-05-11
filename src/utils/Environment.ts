@@ -17,3 +17,9 @@ export const getDeviceType = () => {
   }
   return DeviceType.Desktop;
 };
+
+export function isWeixin(): boolean {
+  const ua: string = navigator.userAgent.toLowerCase();
+  // @ts-ignore
+  return (ua.match(/MicroMessenger/i) == "micromessenger")
+}

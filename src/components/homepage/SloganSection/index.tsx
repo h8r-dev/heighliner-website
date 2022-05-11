@@ -55,9 +55,9 @@ export function SloganSection(): React.ReactElement {
                   />{" "}
                 </h1>
                 <h1>
-                  APPLICATION STACK
+                  Application Stack
                 </h1>
-                <h1>ON ANY CLOUD</h1>
+                <h1>On Any Cloud</h1>
               </div>
               <div className={styles.actionsGroup}>
                 <Link
