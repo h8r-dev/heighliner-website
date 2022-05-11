@@ -149,10 +149,10 @@
   margin-right: 79.8px;
   line-height: 2;
 
-  padding: calc(
-      var(--ifm-button-padding-vertical) * var(--ifm-button-size-multiplier)
-    )
-    0;
+  $buttonVerticalPadding: calc(
+    var(--ifm-button-padding-vertical) * var(--ifm-button-size-multiplier)
+  );
+  padding: $buttonVerticalPadding 0;
 
   &:hover {
     background-color: #191e2a;
@@ -298,7 +298,6 @@
       flex-direction: column;
       align-items: center;
       padding: 0 4.27vw;
-
       border-top: 1px solid #bebebe;
 
       li {
