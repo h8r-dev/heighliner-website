@@ -9,7 +9,7 @@ import siteConfig from "@generated/docusaurus.config";
 
 
 import WhiteHeighlinerSvg from "@site/static/img/homepage/white-heighliner.svg";
-import PurpleHeighlinerSVG from "/img/homepage/slogansection/purple-heighliner.svg"
+import PurpleHeighlinerSVG from "@site/static/img/homepage/slogansection/purple-heighliner.svg"
 import { Video } from "@site/src/components/Video";
 
 
