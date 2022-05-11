@@ -3,6 +3,7 @@
   background-color: #000;
   padding-top: 116px;
   padding-bottom: 71px;
+  overflow: hidden;
 }
 
 .title {
@@ -183,9 +184,6 @@
 @media screen and (max-width: 750px) {
   $slidePictureWidth: 521.2px;
   $slidePictureHeight: 276.7px;
-  h1.title {
-    font-size: 37px;
-  }
 
   .caption {
     font-size: 28px;

@@ -40,7 +40,7 @@ export default function AutoDownCounter({
         counter
       ) : ( */}
         <div className={styles.zeroEffect}>
-          Zero
+          AUTOMATE
         </div>
       {/* )} */}
     </span>

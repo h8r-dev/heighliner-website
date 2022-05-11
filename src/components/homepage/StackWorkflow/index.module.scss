@@ -2,9 +2,8 @@
   position: relative;
 }
 
-.wavePic{
+.wavePic {
   width: 100%;
-  margin-bottom: 126px;
   margin-top: -1px;
 }
 
@@ -96,20 +95,9 @@
   margin-bottom: 78px;
 }
 
-.stepWrap .terminal{
-  :global(.asciinema-terminal *){
+.stepWrap .terminal {
+  :global(.asciinema-terminal *) {
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-  }
-}
-
-@media screen and (max-width: 900px) {
-
-  .workflow{
-    display: none;
-  }
-
-  .title{
-    display: none;
   }
 }
 
@@ -142,5 +130,11 @@
 
   .workflow {
     padding: 0 var(--ifm-spacing-horizontal);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .wavePic {
+    margin-bottom: 50px;
   }
 }

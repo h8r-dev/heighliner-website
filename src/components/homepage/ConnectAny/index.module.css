@@ -3,14 +3,13 @@
   align-items: center;
   justify-content: center;
   user-select: none;
-  margin-top: 70px;
 }
 
 .titleWrapper .titleConnectAny {
   line-height: 1.48;
   text-align: center;
   color: #080930;
-  padding: 15px 0px;
+  margin-bottom: 30px;
 }
 
 .titleWrapper .any {
@@ -53,7 +52,7 @@
   margin: 0 auto;
   align-items: center;
   text-align: center;
-  padding: 0 30px;
+  padding: 0 10px;
 }
 
 .titleCommunity {
