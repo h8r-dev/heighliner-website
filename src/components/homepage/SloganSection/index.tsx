@@ -2,25 +2,31 @@
  * Slogan section of homepage
  */
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "@docusaurus/Link";
 import clsx from "clsx";
 import siteConfig from "@generated/docusaurus.config";
 
-import styles from "./index.module.scss";
 
 import WhiteHeighlinerSvg from "@site/static/img/homepage/white-heighliner.svg";
+import PurpleHeighlinerSVG from "@site/static/img/homepage/slogansection/purple-heighliner.svg"
 import { Video } from "@site/src/components/Video";
+
+
+import styles from "./index.module.scss";
 import AutoDownCounter from "./AutoDownCounter";
 import NavItems from "./NavItems";
 
 export function SloganSection(): React.ReactElement {
+  const [whiteHeader, setWhiteHeader] = useState<typeof styles>({});
+
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.backgroundMask} />
       <div className={styles.container}>
         <div className="slogan-section container">
-          <header>
+          <header className={whiteHeader}>
             <nav className={styles.navbar}>
               <div className={styles.logoWrap}>
                 <img
@@ -31,9 +37,10 @@ export function SloganSection(): React.ReactElement {
                   style={{ marginRight: 18, width: 51, height: 33 }}
                   alt="with heighliner"
                 />
-                <WhiteHeighlinerSvg />
+                <WhiteHeighlinerSvg className={styles.whiteHeighliner} />
+                <PurpleHeighlinerSVG className={styles.purpleHeighliner} />
               </div>
-              <NavItems />
+              <NavItems setWhiteHeader={setWhiteHeader} />
             </nav>
           </header>
           <div className={styles.contentWrap}>

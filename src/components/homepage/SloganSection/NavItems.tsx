@@ -8,7 +8,28 @@ import { ToggleStatus } from "@site/src/utils/CommonEnum";
 
 import styles from "./index.module.scss";
 
-export default function NavItems(): React.ReactElement {
+interface Props {
+  setWhiteHeader: React.Dispatch<any>;
+}
+
+const NavLinks: { readonly name: string; readonly link: string }[] = [
+  {
+    name: "Docs",
+    link: siteConfig.customFields.docsUrl as string,
+  },
+  {
+    name: "Blog",
+    link: siteConfig.customFields.blogUrl as string,
+  },
+  {
+    name: "GitHub",
+    link: siteConfig.customFields.githubUrl as string,
+  },
+];
+
+export default function NavItems({
+  setWhiteHeader,
+}: Props): React.ReactElement {
   const [toggle, setToggle] = useState(ToggleStatus.Closed);
   const [slideClass, setSlideClass] = useState<typeof styles>({});
 
@@ -17,10 +38,12 @@ export default function NavItems(): React.ReactElement {
       case ToggleStatus.Closed:
         setToggle(ToggleStatus.Opening);
         setSlideClass(styles.slideIn);
+        setWhiteHeader(styles.whiteHeader);
         break;
       case ToggleStatus.Opening:
         setToggle(ToggleStatus.Closed);
         setSlideClass(styles.slideOut);
+        setWhiteHeader({});
         break;
     }
   }
@@ -40,27 +63,22 @@ export default function NavItems(): React.ReactElement {
         />
       </button>
       <ul className={styles.navItems}>
-        <li>
-          <Link to={siteConfig.customFields.docsUrl as string}>Docs</Link>
-        </li>
-        <li>
-          <Link to={siteConfig.customFields.blogUrl as string}>Blog</Link>
-        </li>
-        <li>
-          <Link to={siteConfig.customFields.githubUrl as string}>GitHub</Link>
-        </li>
+        {NavLinks.map(({ name, link }) => (
+          <li key={name}>
+            <Link to={link}>{name}</Link>
+          </li>
+        ))}
       </ul>
       <div className={styles.toggleNavItems}>
         <ul className={slideClass}>
-          <li>
-            <Link to={siteConfig.customFields.docsUrl as string}>Docs</Link>
-          </li>
-          <li>
-            <Link to={siteConfig.customFields.blogUrl as string}>Blog</Link>
-          </li>
-          <li>
-            <Link to={siteConfig.customFields.githubUrl as string}>GitHub</Link>
-          </li>
+          {NavLinks.map(({ name, link }) => (
+            <li key={name}>
+              <Link to={link}>
+                {name}
+                <div className={styles.arrow}></div>
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
