@@ -130,8 +130,11 @@
 }
 
 .zeroEffect {
-  // animation: zoominout 1s infinite;
-  color: #b794f6;
+  background: linear-gradient(207deg, #b794f6 1%, #CE5BA9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .requestAccess {

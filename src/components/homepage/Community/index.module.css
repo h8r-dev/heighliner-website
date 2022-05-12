@@ -110,9 +110,10 @@
 }
 
 @media screen and (max-width: 750px) {
-  .cardWrapper{
+  .cardWrapper {
     margin-top: 10px;
   }
+
   .card .logoWrapper {
     display: none;
   }
@@ -196,7 +197,15 @@
     margin-right: 10px;
   }
 
+  .card .introduce .personDesc .personTitle:nth-child(2) {
+    margin-top: 6px;
+  }
+
   .card .introduce .personDesc .personTitle {
     margin-top: 0px;
+    font-size: 12px;
+    line-height: 1.3;
+    transform: scale(0.8, 0.8);
+    transform-origin: 0px 0px;
   }
 }
