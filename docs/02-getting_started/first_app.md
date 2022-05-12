@@ -124,7 +124,7 @@ Click the GitHub url and dashboard links to see the effects.
 
 :::tip
 
-You can skip this step except for the case that you are using hosted cloud cluster without a domain.
+You can skip this step except for the case that you are using hosted cloud cluster with `h8r.site`.
 
 :::
 
