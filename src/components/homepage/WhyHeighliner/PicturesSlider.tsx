@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { isDesktop, isMobile } from "react-device-detect";
+import { isMobile } from "react-device-detect";
 
 import { limitInRange } from "@site/src/utils/MathPlus";
 
