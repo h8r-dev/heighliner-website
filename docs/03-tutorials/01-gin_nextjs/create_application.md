@@ -57,11 +57,11 @@ hln status gin-next-app
 
 Output looks like:
 
-```
+```shell
 Heighliner application gin-next-app is ready!
 You can access argocd on argocd.h8r.site [Username: admin Password: MWE2mQdeGVJq8XMC]
 
-There are 5 applications deployed by argocd:
+There are 5 services deployed by argocd:
 1: gin-next-app-backend
    gin-next-app-backend has been deployed to k8s cluster, you can access it by k8s Service url: gin-next-app-backend.h8r.site
    gin-next-app-backend's source code resides on github repository: https://github.com/lyzhang1999/gin-next-app-backend

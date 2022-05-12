@@ -106,7 +106,7 @@ Output looks like:
 Heighliner application hello-world is ready!
 You can access argocd on argocd.h8r.site [Username: admin Password: vGByPtC9gsTdZogT]
 
-There are 1 applications deployed by argocd:
+There are 1 services deployed by argocd:
 1: hello-world-frontend
    hello-world-frontend has been deployed to k8s cluster, you can access it by k8s Service url: hello-world-frontend.h8r.site
    hello-world-frontend's source code resides on github repository: https://github.com/hongchao-org/hello-world-frontend
