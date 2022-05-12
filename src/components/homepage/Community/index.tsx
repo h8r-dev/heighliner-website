@@ -59,8 +59,11 @@ export function Community() {
             <div className={styles.quoteIcon}>
               <QuoteSVG/>
             </div>
-            Heighliner is a great project that produces modern stacks for developers.
-            I'm inspired to see the community thriving around Dagger and containers.
+            <div style={{visibility: 'hidden'}}> 
+              {/** Waiting for Solomon */}
+              Heighliner is a great project that produces modern stacks for developers.
+              I'm inspired to see the community thriving around Dagger and containers.
+            </div>
           </div>
           <div className={styles.introduce}>
             <div

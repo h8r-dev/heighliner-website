@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { isMobile, isTablet } from "react-device-detect";
 
 import { limitInRange } from "@site/src/utils/MathPlus";
@@ -6,34 +6,99 @@ import { limitInRange } from "@site/src/utils/MathPlus";
 import styles from "./index.module.scss";
 import Rail from "./Rail";
 
-const prePlace = 0;
+interface SlideStyle {
+  left?: number;
+  width?: number;
+  transition?: string;
+}
 
 export default function PicturesSlider(): React.ReactElement {
-  const [isDown, setIsDown] = useState(false);
-  const isDownRef = useRef(isDown);
+  const layerContain = useRef(null);
 
-  const [poleAxisLeft, setPoleAxisLeft] = useState<number>(0);
-  const [poleAxisRight, setPoleAxisRight] = useState<number>(0);
+  const [hasTriggerScrollSlide, setHasTriggerScrollSlide] =
+    useState<boolean>(false);
+  const hasTriggerScrollSlideRef = useRef(hasTriggerScrollSlide);
 
-  const [poleLeft, setPoleLeft] = useState<number>(0);
-  const poleLeftRef = useRef(poleLeft);
+  const [polePivotStyles, setPolePivotStyles] = useState<SlideStyle>({});
+  const polePivotStylesRef = useRef(polePivotStyles);
 
-  const [upperLayerWidth, setUpperLayerStyle] = useState<number>(prePlace);
-  const upperLayerWidthRef = useRef(upperLayerWidth);
+  const [upperLayerStyles, setUpperLayerStyles] = useState<SlideStyle>({});
+  const upperLayerStylesRef = useRef(upperLayerStyles);
+
+  // The number to width from pole pivot to the left edge.
+  const [polePivotLeft, setPolePivotLeft] = useState<number>(0);
+  const polePivotLeftRef = useRef(polePivotLeft);
+
+  const [isPress, setIsPress] = useState(false);
+  const isPressRef = useRef(isPress);
 
   const [startPosX, setStartPosX] = useState(0);
   const startPosXRef = useRef(startPosX);
 
-  const imgEl = useRef(null);
+  const upperLayerImgEl = useRef(null);
   const upperLayerRef = useRef(null);
 
+  // Sliding pole during page scroll
+  useEffect(() => {
+    const GoldenSectionRatio = 0.618;
+    const options: IntersectionObserverInit = {
+      root: null,
+      rootMargin: "0px",
+      threshold: [0, 0.3, 0.5, GoldenSectionRatio],
+    };
+
+    const scrollSlidePole: IntersectionObserverCallback = (entries) => {
+      if (hasTriggerScrollSlideRef.current) return;
+
+      const [entry] = entries;
+      const intersectionRatio = entry.intersectionRatio;
+
+      // Set the picture slide width according to intersectionRatio
+      const slideWidth = upperLayerImgEl.current.width * intersectionRatio;
+      const _polePivotStyles = {
+        left: slideWidth - polePivotLeftRef.current,
+        transition: "left 2s ease-in-out",
+      };
+      setPolePivotStyles(_polePivotStyles);
+      polePivotStylesRef.current = _polePivotStyles;
+
+      const _upperLayerStyles = {
+        width: slideWidth,
+        transition: "width 2s ease-in-out",
+      };
+      setUpperLayerStyles(_upperLayerStyles);
+      upperLayerStylesRef.current = _upperLayerStyles;
+
+      // Cancel the scroll slide
+      if (intersectionRatio >= GoldenSectionRatio) {
+        setHasTriggerScrollSlide(true);
+        hasTriggerScrollSlideRef.current = true;
+      }
+    };
+
+    const observer = new IntersectionObserver(scrollSlidePole, options);
+    if (layerContain.current) {
+      observer.observe(layerContain.current);
+    }
+
+    // Relieve the IntersectionObserver
+    return () => {
+      if (layerContain.current) {
+        observer.unobserve(layerContain.current);
+      }
+    };
+  }, [layerContain]);
+
   function handlePoleImgLoad(event) {
-    const offset = event.target.width / 2;
-    setPoleAxisLeft(-offset + 2);
-    setPoleAxisRight(offset + 5);
-    setPoleLeft(-offset + 2);
-    poleLeftRef.current = -offset + 2;
-    console.log(offset);
+    const offset = event.target.width >> 1;
+    setPolePivotLeft(offset);
+    polePivotLeftRef.current = offset;
+
+    const _polePivotStyles = {
+      left: -offset,
+    };
+    setPolePivotStyles(_polePivotStyles);
+    polePivotStylesRef.current = _polePivotStyles;
   }
 
   function handleMouseDown(event) {
@@ -41,8 +106,8 @@ export default function PicturesSlider(): React.ReactElement {
       event.preventDefault();
     }
 
-    isDownRef.current = true;
-    setIsDown(true);
+    isPressRef.current = true;
+    setIsPress(true);
 
     // Get the starting position of cursor
     if (isMobile) {
@@ -53,42 +118,48 @@ export default function PicturesSlider(): React.ReactElement {
   }
 
   function handleMouseUpOrLeave() {
-    isDownRef.current = false;
-    setIsDown(false);
+    isPressRef.current = false;
+    setIsPress(false);
   }
 
   function handleMouseMove(event) {
-    const imgWidth = imgEl.current.width;
-    if (
-      isDownRef.current &&
-      upperLayerWidthRef.current >= 0 &&
-      upperLayerWidthRef.current <= imgWidth
-    ) {
-      // Calculate the movement of pole and upperLayer
+    const imgWidth = upperLayerImgEl.current.width;
+    if (isPressRef.current) {
+      // Compatibility with mobile environment.
       if (isMobile) {
         event.clientX = event.touches[0].clientX;
       }
+      // Calculate the movement of pole and upperLayer
       const deltaX = startPosXRef.current - event.clientX;
       const poleMovement = limitInRange(
-        poleAxisLeft,
-        imgWidth - poleAxisRight,
-        poleLeftRef.current - deltaX
+        -polePivotLeftRef.current,
+        imgWidth - polePivotLeftRef.current,
+        polePivotStylesRef.current.left - deltaX
       );
       const upperLayerMovement = limitInRange(
         0,
         imgWidth,
-        upperLayerWidthRef.current - deltaX
+        upperLayerStylesRef.current.width - deltaX
       );
 
-      // Set the element's new position
-      setPoleLeft(poleMovement);
-      setUpperLayerStyle(upperLayerMovement);
-      setStartPosX(event.clientX);
-
       // Update position
+      setStartPosX(event.clientX);
       startPosXRef.current = event.clientX;
-      poleLeftRef.current = poleMovement;
-      upperLayerWidthRef.current = upperLayerMovement;
+
+      // Update the element's new position
+      const _polePivotStyles = {
+        left: poleMovement,
+        transition: "none",
+      };
+      setPolePivotStyles(_polePivotStyles);
+      polePivotStylesRef.current = _polePivotStyles;
+
+      const _upperLayerStyles = {
+        width: upperLayerMovement,
+        transition: "none",
+      };
+      setUpperLayerStyles(_upperLayerStyles);
+      upperLayerStylesRef.current = _upperLayerStyles;
 
       return false;
     }
@@ -104,7 +175,7 @@ export default function PicturesSlider(): React.ReactElement {
       onTouchCancel={handleMouseUpOrLeave}
       onTouchMove={handleMouseMove}
     >
-      <div className={styles.layerContain}>
+      <div className={styles.layerContain} ref={layerContain}>
         <div className={styles.underLayer}>
           <img
             src={
@@ -117,7 +188,7 @@ export default function PicturesSlider(): React.ReactElement {
         </div>
         <div
           className={styles.upperLayer}
-          style={{ width: upperLayerWidth }}
+          style={upperLayerStyles}
           ref={upperLayerRef}
         >
           <img
@@ -127,18 +198,18 @@ export default function PicturesSlider(): React.ReactElement {
             }
             className={styles.layerImg}
             alt="with heighliner"
-            ref={imgEl}
+            ref={upperLayerImgEl}
           />
         </div>
-        <Rail classObject={styles.above}/>
-        <Rail classObject={styles.below}/>
+        <Rail classObject={styles.above} />
+        <Rail classObject={styles.below} />
         <img
           src={
             require("/static/img/homepage/whyheighliner/pole@3x.webp").default
           }
           onMouseDown={handleMouseDown}
           onTouchStart={handleMouseDown}
-          style={{ left: poleLeft }}
+          style={polePivotStyles}
           className={styles.pole}
           onLoad={handlePoleImgLoad}
         />
