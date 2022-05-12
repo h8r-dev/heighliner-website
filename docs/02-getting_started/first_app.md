@@ -66,9 +66,14 @@ Create your application interactively:
 hln up hello-world -s sample -i
 ```
 
-> Note: `hello-world` is what we call application name.It should obey the rules in [DNS1123](https://datatracker.ietf.org/doc/html/rfc1123)
+> Note: `hello-world` is what we call application name. It should obey the [RFC1123](https://datatracker.ietf.org/doc/html/rfc1123) rules.
 
 Input the values one by one according to the promt:
+
+:::info
+
+Change the `h8r.site` to your own domain name if you have one.
+:::
 
 ```shell
 Path to your kubeconfig file (required):
@@ -115,42 +120,19 @@ There are 1 services deployed by argocd:
 Congrats! You have created your first application with `hln` successfully. All of the cloud-native architecture have been set up properly.
 Click the GitHub url and dashboard links to see the effects.
 
-## Set Domain Routing
+## (Optional) Set Domain Routing
 
-:::info
+:::tip
 
-Below is assuming you don't own a real domain name and use `h8r.site` as your domain name.
-In production, we recommend setting your DNS record to the public ingress IP.
+You can skip this step except for the case that you are using hosted cloud cluster with `h8r.site`.
 
 :::
 
 Get your ingress IP:
 
-<Tabs
-className="unique-tabs"
-defaultValue="local"
-values={[
-{label: 'Kind/Minikube', value: 'local'},
-{label: 'Cloud', value: 'cloud'},
-]}>
-
-<TabItem value="local">
-
-```shell
-127.0.0.1
-```
-
-</TabItem>
-
-<TabItem value="cloud">
-
 ```shell
 kubectl -n ingress-nginx get svc ingress-nginx-controller -o=jsonpath='{.status.loadBalancer.ingress[0].ip}'
 ```
-
-</TabItem>
-
-</Tabs>
 
 Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
 
@@ -201,6 +183,12 @@ You can also check your repos on **GitHub**:
 </div>
 
 ## Clean up
+
+:::tip
+
+If you want to delete created github packages at the same time, use `hln down hello-world --delete-packages` instead.
+
+:::
 
 ```shell
 hln down hello-world
