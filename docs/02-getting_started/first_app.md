@@ -37,7 +37,7 @@ hln list stacks
 Output:
 
 ```shell
-NAME        VERSION  DESCRIPTION
+NAME        VERSION
 sample      0.0.1
 gin-next    0.0.1
 spring-vue  0.0.1
