@@ -60,7 +60,6 @@
 
   & > img {
     width: 753px;
-    height: 3px;
   }
 
   .above {
@@ -144,6 +143,10 @@
   width: 100%;
 }
 
+.pictureSliderInMobile {
+  display: none;
+}
+
 @media screen and (max-width: 1200px) {
   .caption {
     padding: 0 28px;
@@ -158,6 +161,14 @@
 }
 
 @media screen and (max-width: 996px) {
+  .pictureSliderInMobile {
+    display: block;
+  }
+
+  .pictureSlider{
+    display: none;
+  }
+
   .compare {
     flex-direction: column;
   }

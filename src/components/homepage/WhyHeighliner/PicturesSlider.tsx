@@ -13,17 +13,9 @@ interface SlideStyle {
 }
 
 export default function PicturesSlider(): React.ReactElement {
-  const [removeStyleInMobile, setRemoveStyleInMobile] = useState<{display?: 'none'}>({});
-  useEffect(() => {
-    if(!isDesktop) {
-      setRemoveStyleInMobile({display: 'none'});
-    }
-  },[])
-
   const layerContain = useRef(null);
 
-  const [hasTriggerScrollSlide, setHasTriggerScrollSlide] = 
-  useState<boolean>(false);
+  const [hasTriggerScrollSlide, setHasTriggerScrollSlide] = useState<boolean>(false);
   const hasTriggerScrollSlideRef = useRef(hasTriggerScrollSlide);
 
   const [polePivotStyles, setPolePivotStyles] = useState<SlideStyle>({});
@@ -55,13 +47,6 @@ export default function PicturesSlider(): React.ReactElement {
     };
 
     const scrollSlidePole: IntersectionObserverCallback = (entries) => {
-      if(!isDesktop) {
-        setUpperLayerStyles({
-          width: '100%'
-        })
-        return;
-      }
-
       if (hasTriggerScrollSlideRef.current) return;
 
       const [entry] = entries;
@@ -167,7 +152,7 @@ export default function PicturesSlider(): React.ReactElement {
       const upperLayerMovement = limitInRange(
         0,
         imgWidth,
-        upperLayerStylesRef.current.width as number - deltaX
+        (upperLayerStylesRef.current.width as number) - deltaX
       );
 
       // Update position
@@ -232,8 +217,8 @@ export default function PicturesSlider(): React.ReactElement {
             ref={upperLayerImgEl}
           />
         </div>
-        <Rail classObject={styles.above} style={removeStyleInMobile} />
-        <Rail classObject={styles.below} style={removeStyleInMobile}/>
+        <Rail classObject={styles.above} />
+        <Rail classObject={styles.below} />
         <img
           ref={poleImgRef}
           src={
@@ -241,7 +226,7 @@ export default function PicturesSlider(): React.ReactElement {
           }
           onMouseDown={handleMouseDown}
           onTouchStart={handleMouseDown}
-          style={{...removeStyleInMobile ,...polePivotStyles}}
+          style={polePivotStyles}
           className={styles.pole}
           onLoad={handlePoleImgLoad}
         />
