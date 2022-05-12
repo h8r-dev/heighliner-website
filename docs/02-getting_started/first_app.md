@@ -120,26 +120,49 @@ There are 1 services deployed by argocd:
 Congrats! You have created your first application with `hln` successfully. All of the cloud-native architecture have been set up properly.
 Click the GitHub url and dashboard links to see the effects.
 
-## (Optional) Set Domain Routing
+## Set Domain Routing
 
-:::tip
+<Tabs
+className="unique-tabs"
+defaultValue="cloud"
+values={[
+{label: 'Kind/Minikube', value: 'local'},
+{label: 'Cloud', value: 'cloud'},
+]}>
 
-You can skip this step except for the case that you are using hosted cloud cluster with `h8r.site`.
+<TabItem value="local">
 
-:::
+- If you are using `h8r.site`, you need to do nothing.
+- If you are using your own domain name, you need to set the domain name to `127.0.0.1`:
 
-Get your ingress IP:
+    ```txt
+    127.0.0.1 argocd.<your-domain>
+    127.0.0.1 hello-world-frontend.<your-domain>
+    ```
+
+</TabItem>
+
+<TabItem value="cloud">
+
+Get your public ingress IP:
 
 ```shell
 kubectl -n ingress-nginx get svc ingress-nginx-controller -o=jsonpath='{.status.loadBalancer.ingress[0].ip}'
 ```
 
-Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
+Set domain routing:
 
-```txt
-<ingress-ip> argocd.h8r.site
-<ingress-ip> hello-world-frontend.h8r.site
-```
+- If you are using `h8r.site`, Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
+
+  ```txt
+  <ingress-ip> argocd.h8r.site
+  <ingress-ip> hello-world-frontend.h8r.site
+  ```
+
+- If you are using your own domain name, set your DNS record to the above ingress IP.
+
+</TabItem>
+</Tabs>
 
 ## ArgoCD
 
