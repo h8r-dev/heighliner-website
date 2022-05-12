@@ -94,12 +94,19 @@ It will automatically optimize for your apps with cloud native best practice.
 
 For more details and examples, please refer to the [Stack page](/docs/core_features/stack/).
 
-## Project
-
-A project is a collection of development resources for an application.
-It includes the Heighliner specific config, imported stacks, user inputs and secrets, application resources.
-
 ## Application
 
-An application is a group of services that are deployed together.
-User creates an application from stacks using Heighliner CLI/UI.
+An application is a collection of services, secrets, and resources that are instantiated by a stack.
+It includes things like Github repos, CI/CD pipelines, deployments, ingress routing, monitoring dashboards, middlewares, etc.
+These are all encoded in stacks and orchestrated by Heighliner.
+
+## Service
+
+A service is a tightly-coupled component unit that serves for a single purpose.
+For example, frontend service, backend service, database service, prometheus service, etc.
+
+## Component
+
+A component is a definition unit that defines a series of behaviors to achieve a single purpose.
+For example, a spring framework component, a prometheus component.
+It will be used to create a service.
