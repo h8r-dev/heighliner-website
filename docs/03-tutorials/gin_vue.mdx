@@ -1,6 +1,6 @@
 ---
-title: Spring+Vue App
-sidebar_position: 3
+title: Gin+Vue App
+sidebar_position: 2
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -9,14 +9,14 @@ import TabItem from '@theme/TabItem';
 Make sure you have followed [the installation guide](/docs/getting_started/installation) before continuing.
 :::
 
-## Create a Spring+Vue App
+## Create a Gin+Vue App
 ```shell
-hln up java-hello-world -s spring-vue -i
+hln up gin-hello-world -s gin-vue -i
 ```
-![create-application](/img/docs/tutorial/spring-vue/create-application.png)
+![create-application](/img/docs/tutorial/gin-vue/create-application.png)
 
 Output looks like this:
-![output](/img/docs/tutorial/spring-vue/create-output.png)
+![output](/img/docs/tutorial/gin-vue/create-output.png)
 
 ## Setting hosts
 :::info
@@ -52,8 +52,8 @@ Add hosts to your localhost(replace `<ingress-ip>` with above result):
 <ingress-ip> alert.h8r.site
 <ingress-ip> prometheus.h8r.site
 <ingress-ip> nocalhost.h8r.site
-<ingress-ip> java-hello-world-backend.h8r.site
-<ingress-ip> java-hello-world-frontend.h8r.site
+<ingress-ip> gin-hello-world-backend.h8r.site
+<ingress-ip> gin-hello-world-frontend.h8r.site
 ```
 
 :::tip
@@ -61,26 +61,16 @@ if you are using vpn(eg: clashX\Shadowsocks), you need to close the vpn.
 :::
 
 ## Vue App
-View your vue app site [java-hello-world-frontend.h8r.site](http://java-hello-world-frontend.h8r.site)
+View your vue app site [gin-hello-world-frontend.h8r.site](http://gin-hello-world-frontend.h8r.site)
 
-![vue-app](/img/docs/tutorial/spring-vue/vue-app.png)
-
-## SpringBoot App
-View your springBoot app Swagger UI [java-hello-world-backend.h8r.site/swagger-ui/index.html#](http://java-hello-world-backend.h8r.site/swagger-ui/index.html#)
-
-![springboot-app](/img/docs/tutorial/spring-vue/springboot-app.png)
-
-## ArgoCD App
-View your ArgoCD dashboard [argocd.h8r.site](http://argocd.h8r.site/)
-
-![argo-cd](/img/docs/tutorial/spring-vue/argocd-app.png)
+![vue-app](/img/docs/tutorial/gin-vue/vue-app.png)
 
 ## Git Repository
 View your git repository in GitHub
 
-![git-repo](/img/docs/tutorial/spring-vue/git-repository.png)
+![git-repo](/img/docs/tutorial/gin-vue/git-repository.png)
 
 ## Cleanup
 ```shell
-hln down java-hello-world
+hln down gin-hello-world
 ```
