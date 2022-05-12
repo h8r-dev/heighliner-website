@@ -1,0 +1,153 @@
+.headerWrapper {
+  overflow: hidden;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  background-image: url("/static/img/about-us/header-background.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.head {
+  font-size: 77px;
+  margin-top: 80px;
+  margin-left: 100px;
+  margin-bottom: 150px;
+}
+
+.contentWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pageTitle {
+  font-size: 81px;
+  font-weight: 500;
+  line-height: 1;
+  line-height: 64px;
+  color: #6002ee;
+  padding-left: 15px;
+  border-left: 7px solid #9a66f5;
+}
+
+.pageDesc {
+  font-size: 16px;
+  line-height: 1.45;
+  color: #000;
+  margin: 30px 0 100px 20px;
+  max-width: 600px;
+}
+
+.flexWrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  .itemWrapper {
+    width: 33.3%;
+    padding: 0 15px;
+    margin-bottom: 100px;
+
+    .itemTitle {
+      font-size: 40px;
+      line-height: 1.24;
+      color: #000;
+    }
+
+    .itemContent {
+      font-size: 14px;
+      line-height: 1.45;
+      margin-top: 20px;
+    }
+  }
+}
+
+.imageAndDesc {
+  display: flex;
+  justify-content: space-between;
+
+  .imgWrapper {
+    width: 45%;
+
+    img {
+      width: 100%;
+    }
+
+    .imgTitle {
+      margin-top: 20px;
+    }
+
+    .imgContent {
+      margin-left: 0px;
+    }
+  }
+}
+
+@media screen and(max-width: 1200px) {
+  .contentWrapper {
+    margin: 0 18px;
+  }
+}
+
+@media screen and(max-width: 750px) {
+  .pageTitle {
+    font-size: 40px;
+  }
+
+  .pageDesc {
+    margin-bottom: 40px;
+  }
+
+  .flexWrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .imgWrapper {
+      width: 50%;
+      padding: 0 15px;
+      margin-bottom: 50px;
+
+      .imgTitle {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 500px) {
+  .contentWrapper {
+    margin: 0 6px;
+  }
+  .pageTitle {
+    font-size: 30px;
+    line-height: 1;
+  }
+
+  .pageDesc {
+    margin-bottom: 20px;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .flexWrapper {
+    .itemWrapper {
+      width: 100%;
+      margin-bottom: 20px;
+
+      .itemTitle {
+        font-size: 24px;
+        color: #b794f6;
+      }
+
+      .itemContent {
+        margin-top: 6px;
+      }
+    }
+  }
+
+  .imageAndDesc {
+    .imgWrapper {
+      width: 48%;
+    }
+  }
+}
