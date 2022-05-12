@@ -124,7 +124,7 @@ Click the GitHub url and dashboard links to see the effects.
 
 <Tabs
 className="unique-tabs"
-defaultValue="cloud"
+defaultValue="local"
 values={[
 {label: 'Kind/Minikube', value: 'local'},
 {label: 'Cloud', value: 'cloud'},
@@ -159,7 +159,7 @@ Set domain routing:
   <ingress-ip> hello-world-frontend.h8r.site
   ```
 
-- If you are using your own domain name, set your DNS record to the above ingress IP.
+- If you are using your own domain name, set your domain DNS record to the above ingress IP.
 
 </TabItem>
 </Tabs>
