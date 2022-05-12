@@ -9,7 +9,7 @@ Make sure you have followed [configure hosts](/docs/tutorials/gin_nextjs/create_
 
 :::
 
-`Gin-Nextjs` stack uses `Prometheus` to collect monitoring metrics and `Grafana` to visualize them, After creating your application, you can use `hln metrics [appName]` command to see the dashboards of your application.
+`Gin-Nextjs` stack uses `Prometheus` to collect monitoring metrics and `Grafana` to visualize them. After creating your application, you can use `hln metrics [appName]` command to see the dashboards of your application.
 
 ```shell
 hln metrics gin-next-app
