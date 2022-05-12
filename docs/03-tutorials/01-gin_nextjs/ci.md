@@ -5,7 +5,7 @@ sidebar_position: 3
 
 `Gin-Nextjs` stack using `GitHub Action` to build docker image, each frontend and backend repository has its own Dockerfile and GitHub workflows.
 
-Let's take frontend repository as example, the Dockerfile look like:
+Let's take frontend repository as example, the Dockerfile looks like:
 
 ```
 # Install dependencies only when needed
@@ -27,6 +27,8 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ......
 ```
+
+This Dockerfile describes how we build the front-end image. Please do not modify it unless you know what will be changed.
 
 `GitHub Workflows` are stored in each backend and frontend repository, `.github/workflows/docker-publish.yml` file looks like:
 
@@ -62,3 +64,5 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 ......
 ```
+
+These files tells github actions to build image for your frtontend and backend services and push them to github packages each time you push commits or tags to these repositories.

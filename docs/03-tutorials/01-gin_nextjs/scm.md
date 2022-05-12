@@ -12,7 +12,7 @@ Gin framework and Nextjs framework repository is business code, helm chart repos
 
 ### Gin framework repository
 
-Gin framework repository layout is look like: 
+Gin framework repository layout looks like: 
 
 ![alt](/img/tutorial/01-gin-next/gin-layout.png)
 
