@@ -73,7 +73,7 @@
 
   .below {
     position: absolute;
-    top: 370px;
+    bottom: 0;
   }
 
   .pole {
@@ -98,7 +98,7 @@
     position: absolute;
     top: 0;
     overflow: hidden;
-    width: 61.8%;
+    // width: 61.8%;
     line-height: 0;
   }
 }
@@ -180,7 +180,9 @@
   $slidePictureWidth: 521.2px;
   $slidePictureHeight: 276.7px;
 
-  .layerWrap {}
+  .layerWrap {
+    height: 78.34vw;
+  }
 
   .layerContain {
     height: $slidePictureHeight;
@@ -197,10 +199,6 @@
     .pole {
       height: $slidePictureHeight;
       width: 34px;
-    }
-    .below {
-      position: absolute;
-      top: $slidePictureHeight - 5px;
     }
   }
 
@@ -260,9 +258,8 @@
 }
 
 @media screen and (max-width: 550px) {
-  .layerWrap {
-    display: none;
-  }
+  $slidePictureWidth: 94.763vw;
+  $slidePictureHeight: 50.3vw;
 
   .caption {
     line-height: 1.5;
@@ -270,6 +267,25 @@
     margin-bottom: 50px;
     font-size: 18px;
   }
+
+  .layerContain {
+    height: $slidePictureHeight;
+    width: $slidePictureWidth;
+
+    .layerImg {
+      max-width: $slidePictureWidth;
+    }
+
+    .underLayer {
+      height: $slidePictureHeight;
+    }
+
+    .pole {
+      height: $slidePictureHeight;
+      width: initial;
+    }
+  }
+
 }
 
 @media screen and (max-width: 400px) {

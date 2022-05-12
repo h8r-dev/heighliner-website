@@ -41,5 +41,8 @@ Each repo will have a corresponding ArgoCD Application setup.
 
 You can get the ArgoCD dashboard url via `hln status <app>`. Then you can check the ArgoCD applications like below:
 
-
 ![alt](/img/docs/getting-started/argocd-details.png)
+
+The ArgoCD Application is created under namespace `<app>-deploy-production`.
+
+The ArgoCD components are managed under namespace `argocd`.
