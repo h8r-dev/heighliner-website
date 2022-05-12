@@ -72,8 +72,7 @@ Input the values one by one according to the promt:
 
 :::info
 
-The domain name `h8r.site` is resolved to `127.0.0.1`. If you are using local kind or minikube cluster, just use the default `h8r.site` domain name. But if you are using hosted cloud cluster, this should be changed to your own domain name. If you don't have a domain name, you can also use the default domain name and [set the domain routing](#optional-set-domain-routing) to your ingress ip manually.
-
+Change the `h8r.site` to your own domain name if you have one.
 :::
 
 ```shell
@@ -125,7 +124,7 @@ Click the GitHub url and dashboard links to see the effects.
 
 :::tip
 
-If you are using local kind or minikube cluster and default domain name, or if you are using hosted cloud cluster and have your own domain, please skip this step.
+You can skip this step except for the case that you are using hosted cloud cluster without a domain.
 
 :::
 
