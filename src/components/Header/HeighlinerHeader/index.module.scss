@@ -1,0 +1,62 @@
+.navbar {
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+
+  .logoWrap {
+    display: flex;
+    align-items: center;
+
+    & > img{
+      margin-right: 18px;
+      width: 51px;
+    }
+
+    .purpleHeighliner {
+      display: none;
+    }
+  }
+}
+
+@media screen and(max-width: 750px) {
+  .navbar {
+    padding-top: 5.6vw;
+
+    .logoWrap {
+      & > img {
+        width: 6.8vw;
+      }
+
+      .whiteHeighliner, .purpleHeighliner {
+        width: 11.48vw;
+      }
+    }
+  }
+
+
+  .headerBg {
+    height: 14vh;
+    animation: white-header-gradient 500ms forwards;
+
+    .navbar {
+      .logoWrap {
+        .whiteHeighliner {
+          display: none;
+        }
+
+        .purpleHeighliner {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@keyframes white-header-gradient {
+  0% {
+    background-color: linear-gradient(#fff, #000);
+  }
+  100% {
+    background-color: #fff;
+  }
+}
