@@ -1,0 +1,86 @@
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.pageTitle {
+  font-size: 43px;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.43px;
+  color: #6002ee;
+  padding-left: 20px;
+  border-left: 7px solid #9a66f5;
+  line-height: 34px;
+}
+
+.pageTitleSecond {
+  font-size: 29px;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.29px;
+  color: #000;
+  margin-top: 30px;
+}
+
+.pageDesc {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.72px;
+  text-align: left;
+  color: #000;
+}
+
+
+.hc {
+  margin-left: 36px;
+
+  .hcTitle {
+    font-size: 43px;
+    font-weight: 500;
+    line-height: 1.45;
+    letter-spacing: 0.43px;
+    color: #6002ee;
+    margin-top: 100px;
+  }
+
+  .hcDesc {
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.72px;
+    text-align: left;
+    color: #000;
+    margin-top: 16px;
+  }
+
+  .hcItemTitle {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.45;
+    letter-spacing: 0.54px;
+    color: #000;
+    margin-top: 33px;
+  }
+
+  .hcItemDesc {
+    font-size: 18px;
+    line-height: 1.45;
+    color: #000;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+
+  .hcEmail {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.45;
+    letter-spacing: 0.66px;
+    color: #000;
+  }
+}
+
+
+

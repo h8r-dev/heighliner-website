@@ -30,6 +30,7 @@ const config = {
     remixStackUrl: '/docs/tutorials/remix',
     sprintVueStackUrl: '/docs/tutorials/spring_vue',
     newsletterUrl: 'https://h8r.hedwig.pub/',
+    email: "hr@h8r.io",
   },
 
   presets: [
