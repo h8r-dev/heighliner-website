@@ -34,11 +34,14 @@ Through this tutorial, you will experience all above exciting features in a Remi
 
 What's more, the whole stack will be spinned up in just **few minutes**.
 
-## Create a Spring+Vue App
+Let's begin traveling!
+
+## Create a new Remix App
+
 ```shell
-hln up java-hello-world -s spring-vue -i
+hln up remix-note-app -s remix -i
 ```
-![create-application](/img/docs/tutorial/spring-vue/create-application.png)
+![remix-hln-up](/img/docs/tutorial/remix/remix-hln-up.png)
 
 Output looks like this:
 ![output](/img/docs/tutorial/spring-vue/create-output.png)
@@ -77,23 +80,17 @@ Add hosts to your localhost(replace `<ingress-ip>` with above result):
 <ingress-ip> alert.h8r.site
 <ingress-ip> prometheus.h8r.site
 <ingress-ip> nocalhost.h8r.site
-<ingress-ip> java-hello-world-backend.h8r.site
-<ingress-ip> java-hello-world-frontend.h8r.site
+<ingress-ip> remix-note-app.h8r.site
 ```
 
 :::tip
 if you are using vpn(eg: clashX\Shadowsocks), you need to close the vpn.
 :::
 
-## Vue App
-View your vue app site [java-hello-world-frontend.h8r.site](http://java-hello-world-frontend.h8r.site)
+## Remix App
+View your remix app site [remix-note-app.h8r.site](http://remix-note-app.h8r.site)
 
 ![vue-app](/img/docs/tutorial/spring-vue/vue-app.png)
-
-## SpringBoot App
-View your springBoot app Swagger UI [java-hello-world-backend.h8r.site/swagger-ui/index.html#](http://java-hello-world-backend.h8r.site/swagger-ui/index.html#)
-
-![springboot-app](/img/docs/tutorial/spring-vue/springboot-app.png)
 
 ## ArgoCD App
 View your ArgoCD dashboard [argocd.h8r.site](http://argocd.h8r.site/)
@@ -107,5 +104,5 @@ View your git repository in GitHub
 
 ## Cleanup
 ```shell
-hln down java-hello-world
+hln down remix-note-app
 ```
