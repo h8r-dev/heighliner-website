@@ -1,3 +1,5 @@
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+
 export enum DeviceType {
   Tablet,
   Mobile,
@@ -17,3 +19,13 @@ export const getDeviceType = () => {
   }
   return DeviceType.Desktop;
 };
+
+export function isWeixin(): boolean {
+  if (ExecutionEnvironment.canUseDOM) {
+    const ua: string = navigator.userAgent.toLowerCase();
+    // @ts-ignore
+    return (ua.match(/MicroMessenger/i) == "micromessenger")
+  } else {
+    return false;
+  }
+}

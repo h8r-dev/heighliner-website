@@ -37,10 +37,20 @@
 :global(.homepage-section-title) {
   font-size: 61px;
   text-align: center;
+  margin-top: 150px;
 }
 
 @media screen and(max-width: 600px) {
   :global(.homepage-section-title) {
     font-size: 45px;
+    margin-top: 100px;
+  }
+}
+
+@media screen and(max-width: 450px) {
+  :global(.homepage-section-title) {
+    font-size: 36px;
+    font-weight: 400;
+    margin-top: 50px;
   }
 }
