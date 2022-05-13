@@ -1,6 +1,5 @@
 import React from "react";
 
-import styles from "./index.module.scss";
 import Entry from "./Entry";
 
 interface Props {
@@ -13,7 +12,7 @@ interface Props {
 
 export default function Entries({ entries }: Props): React.ReactElement {
   return (
-    <div className={styles.entries}>
+    <div>
       {entries.map((entry) => (
         <div key={entry.title}>
           <Entry entry={entry} />
