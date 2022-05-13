@@ -1,0 +1,32 @@
+.entry {
+  margin-bottom: 69px;
+  margin-left: 8.7vw;
+
+  .title::before {
+    display: inline-block;
+    content: "";
+    width: 7px;
+    height: 36px;
+    background-color: #9a66f5;
+    margin-right: 14px;
+  }
+
+  .title {
+    font-size: 37px;
+    line-height: 1.24;
+    margin-bottom: 9px;
+  }
+
+  .content {
+    font-size: 18px;
+    line-height: 1.45;
+
+    strong {
+      color: #6002ee;
+    }
+  }
+
+  & > img {
+    max-width: 258px;
+  }
+}
