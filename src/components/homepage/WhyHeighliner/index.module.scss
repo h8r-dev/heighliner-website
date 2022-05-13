@@ -3,6 +3,7 @@
   background-color: #000;
   padding-top: 116px;
   padding-bottom: 71px;
+  overflow: hidden;
 }
 
 .title {
@@ -11,13 +12,14 @@
 }
 
 .caption {
-  font-size: 18px;
+  font-size: 22px;
   letter-spacing: -0.24px;
   max-width: 1127px;
   margin: 0 auto;
-  line-height: 2.06;
+  line-height: 1.5;
   color: #fff;
   font-weight: 300 !important;
+  padding: 0 28px;
 }
 
 .compare {
@@ -194,13 +196,6 @@
 @media screen and (max-width: 750px) {
   $slidePictureWidth: 521.2px;
   $slidePictureHeight: 276.7px;
-  h1.title {
-    font-size: 37px;
-  }
-
-  .caption {
-    font-size: 28px;
-  }
 
   .layerWrap {
     height: 78.34vw;
@@ -248,7 +243,7 @@
         width: 46.26vw;
 
         .featureTitle {
-          width: 22.86vw;
+          width: 24vw;
           font-size: 4.26vw;
         }
 
@@ -274,10 +269,6 @@
     margin-bottom: 20px;
   }
 
-  .caption {
-    margin: 0 20px;
-  }
-
   .wrapper {
     padding-bottom: 100px;
   }
@@ -288,10 +279,10 @@
   $slidePictureHeight: 50.3vw;
 
   .caption {
-    line-height: 2;
-    font-size: 4.5vw;
-    padding: 0;
+    line-height: 1.5;
+    padding: 16px;
     margin-bottom: 50px;
+    font-size: 18px;
   }
 
   .layerContain {

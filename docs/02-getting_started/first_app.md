@@ -19,12 +19,14 @@ Make sure you have followed [the installation guide](/docs/getting_started/insta
     marginTop: 50,
   }}
 >
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/Kat7GEfWXwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/e64HegGHPJQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 </div>
 
 Ever want to have a Vercel-style experience when creating your nextjs app?
 But without the limitation to a specific vendor?
-In this doc, we will show you how to create a nextjs app in Vercel style with an open source, cloud native stack.
+In this doc, we will show you how you can go from nothing to a full stack app in an instant.
 
 ## List all stacks
 
@@ -66,9 +68,14 @@ Create your application interactively:
 hln up hello-world -s sample -i
 ```
 
-> Note: `hello-world` is what we call application name.It should obey the rules in [DNS1123](https://datatracker.ietf.org/doc/html/rfc1123)
+> Note: `hello-world` is what we call application name. It should obey the [RFC1123](https://datatracker.ietf.org/doc/html/rfc1123) rules.
 
 Input the values one by one according to the promt:
+
+:::info
+
+Change the `h8r.site` to your own domain name if you have one.
+:::
 
 ```shell
 Path to your kubeconfig file (required):
@@ -94,7 +101,7 @@ If `hln up` command failed due to unexpected network problems, feel free to **re
 
 :::
 
-Get application status:
+## Get application status
 
 ```shell
 hln status hello-world
@@ -117,15 +124,6 @@ Click the GitHub url and dashboard links to see the effects.
 
 ## Set Domain Routing
 
-:::info
-
-Below is assuming you don't own a real domain name and use `h8r.site` as your domain name.
-In production, we recommend setting your DNS record to the public ingress IP.
-
-:::
-
-Get your ingress IP:
-
 <Tabs
 className="unique-tabs"
 defaultValue="local"
@@ -136,28 +134,37 @@ values={[
 
 <TabItem value="local">
 
-```shell
-127.0.0.1
-```
+- If you are using `h8r.site`, you need to do nothing.
+- If you are using your own domain name, you need to set the domain name to `127.0.0.1`:
+
+    ```txt
+    127.0.0.1 argocd.<your-domain>
+    127.0.0.1 hello-world-frontend.<your-domain>
+    ```
 
 </TabItem>
 
 <TabItem value="cloud">
 
+Get your public ingress IP:
+
 ```shell
 kubectl -n ingress-nginx get svc ingress-nginx-controller -o=jsonpath='{.status.loadBalancer.ingress[0].ip}'
 ```
 
+Set domain routing:
+
+- If you are using `h8r.site`, Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
+
+  ```txt
+  <ingress-ip> argocd.h8r.site
+  <ingress-ip> hello-world-frontend.h8r.site
+  ```
+
+- If you are using your own domain name, set your domain DNS record to the above ingress IP.
+
 </TabItem>
-
 </Tabs>
-
-Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
-
-```txt
-<ingress-ip> argocd.h8r.site
-<ingress-ip> hello-world-frontend.h8r.site
-```
 
 ## ArgoCD
 
@@ -201,6 +208,12 @@ You can also check your repos on **GitHub**:
 </div>
 
 ## Clean up
+
+:::tip
+
+If you want to delete created github packages at the same time, use `hln down hello-world --delete-packages` instead.
+
+:::
 
 ```shell
 hln down hello-world
