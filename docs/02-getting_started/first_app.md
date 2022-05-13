@@ -72,11 +72,6 @@ hln up hello-world -s sample -i
 
 Input the values one by one according to the promt:
 
-:::info
-
-Change the `h8r.site` to your own domain name if you have one.
-:::
-
 ```shell
 Path to your kubeconfig file (required):
 
