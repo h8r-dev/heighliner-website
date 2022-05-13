@@ -82,33 +82,49 @@ There are 5 services deployed by argocd:
 Congrats! You have created your first application with `hln` successfully. All of the cloud-native architecture have been set up properly.
 Click the GitHub url and dashboard links to see the effects.
 
-## (Optional) Configure hosts
+## Set Domain Routing
 
-:::tip
+<Tabs
+className="unique-tabs"
+defaultValue="local"
+values={[
+{label: 'Kind/Minikube', value: 'local'},
+{label: 'Cloud', value: 'cloud'},
+]}>
 
-You can skip this step except for the case that you are using hosted cloud cluster with `h8r.site` domain.
+<TabItem value="local">
 
-:::
+- If you are using `h8r.site`, you need to do nothing.
+- If you are using your own domain name, you need to set the domain name to `127.0.0.1`:
 
-Get your ingress IP:
+    ```txt
+    127.0.0.1 argocd.<your-domain>
+    127.0.0.1 hello-world-frontend.<your-domain>
+    ```
+
+</TabItem>
+
+<TabItem value="cloud">
+
+Get your public ingress IP:
 
 ```shell
 kubectl -n ingress-nginx get svc ingress-nginx-controller -o=jsonpath='{.status.loadBalancer.ingress[0].ip}'
 ```
 
-Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
+Set domain routing:
 
-```txt
-<ingress-ip> argocd.h8r.site
-<ingress-ip> gin-next-app-frontend.h8r.site
-<ingress-ip> gin-next-app-backend.h8r.site
-<ingress-ip> nocalhost.h8r.site
-<ingress-ip> grafana.h8r.site
-<ingress-ip> alert.h8r.site
-<ingress-ip> prometheus.h8r.site
-```
+- If you are using `h8r.site`, Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
 
-> If you are using custom domain, please add the above domain name to the DNS
+  ```txt
+  <ingress-ip> argocd.h8r.site
+  <ingress-ip> hello-world-frontend.h8r.site
+  ```
+
+- If you are using your own domain name, set your domain DNS record to the above ingress IP.
+
+</TabItem>
+</Tabs>
 
 ## Access application
 
