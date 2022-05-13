@@ -3,12 +3,14 @@
  */
 import React from "react";
 import Head from "@docusaurus/Head";
-import siteConfig from "@generated/docusaurus.config";
+import Link from "@docusaurus/Link";
 
-import styles from "../css/join-us.module.scss";
+import siteConfig from "@generated/docusaurus.config";
 import {Footer} from "../components/homepage/Footer";
 
-const list = [
+import styles from "../css/join-us.module.scss";
+
+export const list = [
   {
     title: 'Sr. Manager, Developer Relations(Remote, United States)',
     desc: 'We are seeking a manager based in the Americas to build and lead the team of Developer Advocates.',
@@ -75,7 +77,9 @@ export default function AboutUs(): JSX.Element {
           and then can focus on writing the business code without worrying build and deploy.
         </div>
         <div className={styles.pageDesc}>
-          The core team of Heighliner comes from https://nocalhost.dev https://kubevela.io .
+          The core team of Heighliner comes from
+          &nbsp;<a href="https://nocalhost.dev" target="_blank">https://nocalhost.dev</a>
+          &nbsp;<a href="https://kubevela.io" target="_blank">https://kubevela.io</a> .
         </div>
         <div className={styles.pageDesc}>
           We are a young team, advocating freedom and openness,
@@ -86,8 +90,6 @@ export default function AboutUs(): JSX.Element {
           get a better development experience and the advantages of multi-cloud delivery,
           cost reduction and efficiency improvement.
         </div>
-
-
         {
           list.map(i => {
             let {title, desc, item} = i;
@@ -114,6 +116,22 @@ export default function AboutUs(): JSX.Element {
               </div>
             )
           })}
+        {
+          list.map((i, index) => {
+            let {title} = i;
+            return (
+              <div className={styles.hcBox}>
+                <div className={styles.hcBoxTitle}>{title}</div>
+                <Link to={`./hc-detail?index=${index}`}>
+                  <div className={styles.hcBoxApply}>
+                    <img src={require('@site/static/img/join-us/apply.webp').default} alt=""/>
+                    <span>Apply here</span>
+                  </div>
+                </Link>
+              </div>
+            )
+          })
+        }
       </div>
       <Footer/>
     </main>

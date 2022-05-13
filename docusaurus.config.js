@@ -31,6 +31,7 @@ const config = {
     sprintVueStackUrl: '/docs/tutorials/spring_vue',
     newsletterUrl: 'https://h8r.hedwig.pub/',
     email: "hr@h8r.io",
+    wechat: "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzkzMTM1MDEyOA==&scene=124#wechat_redirect",
   },
 
   presets: [

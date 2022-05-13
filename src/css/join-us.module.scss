@@ -82,5 +82,40 @@
   }
 }
 
+.hcBox {
+  box-shadow: 1px 1px 5px 0 #c6bdd4;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 54px;
+  overflow: hidden;
+
+  .hcBoxTitle {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 2;
+    background-image: linear-gradient(to right, #5139c9 3%, #7f3dca 97%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 1px solid #9a66f5;
+    padding-bottom: 13px;
+    margin: 16px 23px 0 23px;
+  }
+
+  .hcBoxApply {
+    margin: 20px 23px;
+
+    img {
+      width: 14px;
+      margin-right: 16px;
+    }
+
+    span {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 2;
+    }
+  }
+}
 
 
