@@ -64,7 +64,7 @@ export function Community() {
               and Heighliner can make it easier. 
               And because it uses Dagger under the hood, 
               developers can customize every aspect of their stack. 
-              It's the best of both worlds
+              It's the best of both worlds.
           </div>
           <div className={styles.introduce}>
             <div
