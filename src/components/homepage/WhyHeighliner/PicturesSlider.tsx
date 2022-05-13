@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { isMobile, isTablet } from "react-device-detect";
+import { isMobile } from "react-device-detect";
 
 import { limitInRange } from "@site/src/utils/MathPlus";
 
@@ -8,15 +8,14 @@ import Rail from "./Rail";
 
 interface SlideStyle {
   left?: number;
-  width?: number;
+  width?: number | string;
   transition?: string;
 }
 
 export default function PicturesSlider(): React.ReactElement {
   const layerContain = useRef(null);
 
-  const [hasTriggerScrollSlide, setHasTriggerScrollSlide] =
-    useState<boolean>(false);
+  const [hasTriggerScrollSlide, setHasTriggerScrollSlide] = useState<boolean>(false);
   const hasTriggerScrollSlideRef = useRef(hasTriggerScrollSlide);
 
   const [polePivotStyles, setPolePivotStyles] = useState<SlideStyle>({});
@@ -44,17 +43,23 @@ export default function PicturesSlider(): React.ReactElement {
     const options: IntersectionObserverInit = {
       root: null,
       rootMargin: "0px",
-      threshold: [0, 0.3, 0.5, GoldenSectionRatio],
+      threshold: [0, 0.3, 0.5, GoldenSectionRatio, 1],
     };
 
     const scrollSlidePole: IntersectionObserverCallback = (entries) => {
       if (hasTriggerScrollSlideRef.current) return;
 
       const [entry] = entries;
-      const intersectionRatio = entry.intersectionRatio;
+      const intersectionRatio = limitInRange(
+        0,
+        GoldenSectionRatio,
+        entry.intersectionRatio
+      );
+      entry.intersectionRatio;
 
       // Set the picture slide width according to intersectionRatio
       const slideWidth = upperLayerImgEl.current.width * intersectionRatio;
+
       const _polePivotStyles = {
         left: slideWidth - polePivotLeftRef.current,
         transition: "left 2s ease-in-out",
@@ -88,6 +93,14 @@ export default function PicturesSlider(): React.ReactElement {
       }
     };
   }, [layerContain]);
+
+  // Solved onLoad event didn't trigger
+  const poleImgRef = useRef<HTMLImageElement>();
+  useEffect(() => {
+    if (poleImgRef.current && poleImgRef.current.complete) {
+      handlePoleImgLoad({ target: poleImgRef.current });
+    }
+  }, []);
 
   function handlePoleImgLoad(event) {
     const offset = event.target.width >> 1;
@@ -139,7 +152,7 @@ export default function PicturesSlider(): React.ReactElement {
       const upperLayerMovement = limitInRange(
         0,
         imgWidth,
-        upperLayerStylesRef.current.width - deltaX
+        (upperLayerStylesRef.current.width as number) - deltaX
       );
 
       // Update position
@@ -161,7 +174,10 @@ export default function PicturesSlider(): React.ReactElement {
       setUpperLayerStyles(_upperLayerStyles);
       upperLayerStylesRef.current = _upperLayerStyles;
 
-      return false;
+      // Prevent picture be selected
+      if (isMobile) {
+        event.stopPropagation();
+      }
     }
   }
 
@@ -204,6 +220,7 @@ export default function PicturesSlider(): React.ReactElement {
         <Rail classObject={styles.above} />
         <Rail classObject={styles.below} />
         <img
+          ref={poleImgRef}
           src={
             require("/static/img/homepage/whyheighliner/pole@3x.webp").default
           }

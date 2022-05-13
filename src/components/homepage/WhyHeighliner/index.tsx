@@ -8,6 +8,7 @@ import clsx from "clsx";
 import styles from "./index.module.scss";
 import PicturesSlider from "./PicturesSlider";
 import Features from "./Features";
+import PicturesSliderInMobile from "./PicturesSliderInMobile";
 
 export function WhyHeighliner(): React.ReactElement {
   return (
@@ -25,7 +26,12 @@ export function WhyHeighliner(): React.ReactElement {
             You can even compose existing stacks to build more advanced stacks.
           </p>
           <main className={styles.main}>
-            <PicturesSlider/>
+            <div className={styles.pictureSliderInMobile}>
+              <PicturesSliderInMobile />
+            </div>
+            <div className={styles.pictureSlider}>
+              <PicturesSlider/>
+            </div>
             <Features/>
           </main>
         </div>
