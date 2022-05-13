@@ -35,7 +35,7 @@
   width: 100%;
   padding-top: 160px;
   top: 100px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -49,6 +49,7 @@
   height: 300px;
   position: relative;
   margin-left: 50px;
+  margin-top: 28px;
 }
 
 .navbar {
@@ -98,14 +99,18 @@
 
 .sloganTextWrap {
   color: #fff;
-  margin-bottom: 88px;
+  margin-bottom: 70px;
 }
 
 .sloganTextWrap > h1 {
-  font-size: 60px;
+  font-size: 54px;
   line-height: 140%;
   margin-bottom: 0;
   white-space: nowrap;
+}
+
+.sloganTextWrap > h1:nth-child(1) {
+  font-size: 60px;
 }
 
 .sloganTextWrap > h1 > em {
@@ -223,6 +228,7 @@
   .contentWrap {
     flex-direction: column;
     gap: 105.2px;
+    align-items: center;
   }
 
   .quickstart,
@@ -238,6 +244,10 @@
 
   .sloganTextWrap > h1 {
     font-size: 45px;
+  }
+
+  .sloganTextWrap > h1:nth-child(1) {
+    font-size: 54px;
   }
 
   .quickstart {
@@ -382,10 +392,6 @@
     margin-right: 15px;
   }
 
-  .sloganTextWrap > h1 {
-    font-size: 40px;
-  }
-
   .actionsGroup {
     flex-direction: column;
     justify-content: center;
@@ -410,6 +416,10 @@
 
   .sloganTextWrap h1 {
     font-size: 30px;
+  }
+
+  .sloganTextWrap > h1:nth-child(1) {
+    font-size: 36px;
   }
 
   .wrap {

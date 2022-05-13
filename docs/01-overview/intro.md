@@ -4,7 +4,7 @@ title: Introduction
 sidebar_position: 1
 ---
 
-Heighliner is a modern developer tool that deliver your application stack as code.
+Heighliner(/’haɪlaɪnər/) is a modern developer tool that deliver your application stack as code.
 You can codify low level details into human-readable configuration files that you can version, reuse, and share.
 You can even import existing stacks to build more advanced stacks.
 
