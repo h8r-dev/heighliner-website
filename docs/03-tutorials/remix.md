@@ -44,7 +44,29 @@ hln up remix-note-app -s remix -i
 ![remix-hln-up](/img/docs/tutorial/remix/remix-hln-up.png)
 
 Output looks like this:
-![output](/img/docs/tutorial/spring-vue/create-output.png)
+![output](/img/docs/tutorial/remix/remix-note-app-output.png)
+
+## What happend just now?
+
+The Heighliner stack engine helps us spin up all infrastructure components and set up a Remix application, and connect them together very well.
+
+Lets's see what components we have now:
+
+#### A Remix App
+Your can view your remix app site at [remix-note-app.h8r.site](http://remix-note-app.h8r.site)
+
+![remix-app](/img/docs/tutorial/remix/remix-note-app-app.png)
+
+#### A ArgoCD App
+View your ArgoCD dashboard [argocd.h8r.site](http://argocd.h8r.site/)
+
+![argo-cd](/img/docs/tutorial/remix/remix-note-app-argocd.png)
+
+#### Git Repository
+View your git repository in GitHub
+
+![git-repo](/img/docs/tutorial/remix/remix-note-app-repos.png)
+
 
 ## Setting hosts
 :::info
@@ -87,20 +109,7 @@ Add hosts to your localhost(replace `<ingress-ip>` with above result):
 if you are using vpn(eg: clashX\Shadowsocks), you need to close the vpn.
 :::
 
-## Remix App
-View your remix app site [remix-note-app.h8r.site](http://remix-note-app.h8r.site)
-
-![vue-app](/img/docs/tutorial/spring-vue/vue-app.png)
-
-## ArgoCD App
-View your ArgoCD dashboard [argocd.h8r.site](http://argocd.h8r.site/)
-
-![argo-cd](/img/docs/tutorial/spring-vue/argocd-app.png)
-
-## Git Repository
-View your git repository in GitHub
-
-![git-repo](/img/docs/tutorial/spring-vue/git-repository.png)
+## Make some change to application
 
 ## Cleanup
 ```shell
