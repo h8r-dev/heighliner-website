@@ -155,6 +155,7 @@ You can also choose one of the following cloud providers for hosted k8s services
 - [Google GKE](https://cloud.google.com/kubernetes-engine)
 - [Alibaba ACK](https://www.aliyun.com/product/kubernetes)
 - [Tencent TKE](https://cloud.tencent.com/product/tke)
+- [DigitalOcean Kubernetes](https://www.digitalocean.com/products/kubernetes)
 
 Once a cluster is created, you can check if the ingress controller is installed by running the following command:
 
