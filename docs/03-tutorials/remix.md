@@ -14,9 +14,12 @@ Make sure you have followed [the installation guide](/docs/getting_started/insta
 
 This stack is based on [Remix Indie Stack](https://github.com/remix-run/indie-stack) and optimized by Heighliner core team. Currently the stack includes below core features:
 
-- **Integrated infrastructure features:**
+- **Integrated infrastructure level features:**
   - [GitHub Actions](https://github.com/features/actions) for deploy on merge to production and staging environments
   - Deploy to Kubernetes cluster with [ArgoCD](https://argoproj.github.io/cd/) and scale up effort-less
+  - Monitor your application with [Prometheus](https://prometheus.io/)
+  - Visualize collected **metrics** and **logs** of your application with [Grafana](https://grafana.com/)
+  - Develop in cloud-native environment with [Nocalhost](https://nocalhost.dev/)
 
 - **Application level features:**
   - Production-ready [SQLite Database](https://sqlite.org)
@@ -30,45 +33,74 @@ This stack is based on [Remix Indie Stack](https://github.com/remix-run/indie-st
   - Linting with [ESLint](https://eslint.org)
   - Static Types with [TypeScript](https://typescriptlang.org)
 
-Through this tutorial, you will experience all above exciting features in a Remix app.
+Through this tutorial, you will experience all above exciting features in a Remix app with just **one command**.
 
 What's more, the whole stack will be spinned up in just **few minutes**.
 
 Let's begin traveling!
 
-## Create a new Remix App
+## Create A New Remix Application
 
 ```shell
 hln up remix-note-app -s remix -i
 ```
+
+The command `hln up` is the **only command** that will be typed by your, which means it will do all of the things.
+
+Option `-s` specify the chosen stack, here it's remix, option `-i` will enter interactive mode, you need to input several required parameters step by step, for more details about
+parameters or error printed, you could view [Installation Guide](/docs/getting_started/installation)
+
 ![remix-hln-up](/img/docs/tutorial/remix/remix-hln-up.png)
 
-Output looks like this:
+When `hln up` command completed successfully, the output should be like this:
+
 ![output](/img/docs/tutorial/remix/remix-note-app-output.png)
 
-## What happend just now?
+If you don't get output like this or some error printed on screen, feel free to give us a feed back at [Heighliner Issue](https://github.com/h8r-dev/stacks/issues), thanks.
 
-The Heighliner stack engine helps us spin up all infrastructure components and set up a Remix application, and connect them together very well.
+## What Happend Just Now?
 
-Lets's see what components we have now:
+The `hln up` command will set up a several of components that preconfigured in [remix stack](https://github.com/h8r-dev/stacks/blob/main/official-stack/remix/plans/plan.cue). Range from infrastructure level to application level, below is a full list:
 
-#### A Remix App
-Your can view your remix app site at [remix-note-app.h8r.site](http://remix-note-app.h8r.site)
+:::tip
+To be able to access your applications created by Heighliner, make sure you have set your local hosts, or you could follow instructions from [Setting Local Hosts](#setting-local-hosts)
+:::
 
-![remix-app](/img/docs/tutorial/remix/remix-note-app-app.png)
+#### 1. Two Git Repositories
 
-#### A ArgoCD App
-View your ArgoCD dashboard [argocd.h8r.site](http://argocd.h8r.site/)
-
-![argo-cd](/img/docs/tutorial/remix/remix-note-app-argocd.png)
-
-#### Git Repository
-View your git repository in GitHub
+Firstly, two Git repositories are created on your GitHub organization, one repository contains whole [Remix Indie Stack](https://github.com/remix-run/indie-stack) source code and another repository contains [Helm](https://helm.sh/) charts source code which will be pulled and deployed by ArgoCD. For more Helm details, you can view [Helm docs](https://helm.sh/docs/).
 
 ![git-repo](/img/docs/tutorial/remix/remix-note-app-repos.png)
 
+You could view `.github/workflows/docker-publish.yml` file from your remix source code repository, which is added by Heighliner stacks engine to set up a **CI** pipeline.
 
-## Setting hosts
+#### 2. A Online Running Remix Application
+
+You could view your remix application site at [remix-note-app.h8r.site](https://remix-note-app.h8r.site)
+
+![remix-app](/img/docs/tutorial/remix/remix-note-app-app.png)
+
+#### 3. A ArgoCD Application
+
+ArgoCD is responsible for deploying new releases of your remix application, Heighliner stacks engine connects them together automatically, it handles all tough configuration tasks.
+
+You could view your ArgoCD dashboard at [argocd.h8r.site](http://argocd.h8r.site/)
+
+![argo-cd](/img/docs/tutorial/remix/remix-note-app-argocd.png)
+
+#### 4. A Prometheus Application
+
+  TODO
+
+#### 5. A Grafana Application
+
+  TODO
+
+#### 5. A Nocalhost Application
+
+  TODO
+
+## Setting Local Hosts
 :::info
 Below is assuming you don't own a real domain name and use `h8r.site` as your domain name.
 In production, we recommend setting your DNS record to the public ingress IP.
@@ -109,9 +141,12 @@ Add hosts to your localhost(replace `<ingress-ip>` with above result):
 if you are using vpn(eg: clashX\Shadowsocks), you need to close the vpn.
 :::
 
-## Make some change to application
+## Make Some Changes To Application
 
 ## Cleanup
+
 ```shell
 hln down remix-note-app
 ```
+
+The `hln down` command will delete all resources created by `hln up`, such as Git repositories, Kubernetes deployments, databases.
