@@ -29,7 +29,7 @@ const config = {
     ginVueStackUrl: '/docs/tutorials/gin_vue',
     remixStackUrl: '/docs/tutorials/remix',
     sprintVueStackUrl: '/docs/tutorials/spring_vue',
-    newsletterUrl: 'https://h8r.hedwig.pub/',
+    newsletterUrl: 'https://heighliner.substack.com/',
   },
 
   presets: [
@@ -51,7 +51,7 @@ const config = {
           customCss: require.resolve("./src/css/custom.scss"),
         },
       }),
-    ],
+    ]
   ],
 
   themeConfig:
@@ -163,6 +163,9 @@ const config = {
 };
 
 async function createConfig() {
+  const urlLoader =(await import ('./plugins/UrlLoader.mjs')).default;
+  config.plugins?.push(urlLoader);
+
   if (process.env.NODE_ENV === 'production') {
     // Add buildInfoPlugin
     const buildInfoPlugin = (await import('./plugins/ConsoleBuildInfo.bak.mjs')).default
