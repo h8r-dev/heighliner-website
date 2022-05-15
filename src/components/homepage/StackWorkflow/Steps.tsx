@@ -1,38 +1,37 @@
 import React from "react";
 
+import hlnListStacksCast from "/static/cast/hlnListStacks.cast";
+import hlnSpinUpCast from "/static/cast/hlnSpinUp.cast";
+import hlnStatusCast from "/static/cast/hlnStatus.cast";
+
 import styles from "./index.module.scss";
 import Step, { StepProps } from "./Step";
-import {
-  hlnListStacks,
-  hlnSpinUp,
-  hlnStatus,
-} from './asciiData'
 
 const terminals: StepProps[] = [
   {
-    title: 'Select',
-    asciiData: hlnListStacks,
+    title: "Select",
+    castFileUrl: hlnListStacksCast,
   },
   {
-    title: 'Spin Up',
-    asciiData: hlnSpinUp,
+    title: "Spin Up",
+    castFileUrl: hlnSpinUpCast,
   },
   {
-    title: 'Enjoy',
-    asciiData: hlnStatus,
+    title: "Enjoy",
+    castFileUrl: hlnStatusCast,
   },
 ];
 
 export default function Steps(): React.ReactElement {
   return (
     <div className={styles.stepsWrap}>
-      {terminals.map((terminal) =>
+      {terminals.map((terminal) => (
         <Step
           key={terminal.title}
           title={terminal.title}
-          asciiData={terminal.asciiData}
+          castFileUrl={terminal.castFileUrl}
         />
-      )}
+      ))}
     </div>
-  )
+  );
 }
