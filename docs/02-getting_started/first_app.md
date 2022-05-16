@@ -28,24 +28,6 @@ Ever want to have a Vercel-style experience when creating your nextjs app?
 But without the limitation to a specific vendor?
 In this doc, we will show you how you can go from nothing to a full stack app in an instant.
 
-## List all stacks
-
-List all default stacks:
-
-```shell
-hln list stacks
-```
-
-Output:
-
-```shell
-NAME        VERSION
-sample      0.0.1
-gin-next    0.0.1
-spring-vue  0.0.1
-gin-vue     0.0.1
-```
-
 <div
   style={{
     maxWidth: 800,
