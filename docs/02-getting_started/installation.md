@@ -56,7 +56,6 @@ className="unique-tabs"
 defaultValue="kind"
 values={[
 {label: 'Kind', value: 'kind'},
-{label: 'Minikube', value: 'minikube'},
 {label: 'Hosted Cloud K8s', value: 'cloud'},
 ]}>
 
@@ -101,6 +100,11 @@ nodes:
         protocol: TCP
 ```
 
+
+:::tip
+Ports 80 and 443 may not be exposed under ubuntu. Please change ports 80 and 443 and specify the port number when accessing the application URL.
+:::
+
 Create a kind cluster from the config and install ingress controller:
 
 ```shell
@@ -110,7 +114,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main
 
 </TabItem>
 
-<TabItem value="minikube">
+<!-- <TabItem value="minikube">
 
 Install _minikube_ command-line tool by following [the minikube installation guide](https://minikube.sigs.k8s.io/docs/start/).
 
@@ -144,7 +148,7 @@ Expose ingress port using minikube tunnel:
 sudo minikube tunnel
 ```
 
-</TabItem>
+</TabItem> -->
 
 <TabItem value="cloud">
 
