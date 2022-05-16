@@ -1,0 +1,13 @@
+.title {
+  margin-top: 3.29vw;
+  margin-left: 8.75vw;
+  font-size: 5.347vw;
+  color: #faf5fa;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    margin-top: 2vw;
+  }
+}
