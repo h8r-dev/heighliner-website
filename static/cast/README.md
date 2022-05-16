@@ -1,5 +1,10 @@
 ## Cast file
 
+The file ended with `.cast` is to display terminal sessions by 
+[Asciinema](https://asciinema.org/), which also provide `asciinema` 
+software convenient for the developer to record terminal session into
+a cast file.
+
 The file ended with `.cast` comes from [Asciinema](https://asciinema.org/) library which records and displays terminal sessions. 
 
 ## Usage
