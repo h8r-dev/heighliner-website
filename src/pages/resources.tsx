@@ -1,11 +1,8 @@
 import React from "react";
 
 import Entries, { EntriesType } from "../components/Entries";
-import HeighlinerHeader from "../components/Header/HeighlinerHeader";
-import HeighlinerHeaderBg from "../components/Header/HeighlinerHeaderBg";
-import HeighlinerHeaderTitle from "../components/Header/HeighlinerHeaderTitle";
-import { Footer } from "../components/homepage/Footer";
 import List from "../components/List";
+import PageWrapper from "../components/PageWrapper";
 
 const items = [
   (<span>
@@ -29,13 +26,13 @@ const entries: EntriesType = [
 
 export default function (): React.ReactElement {
   return (
-    <>
-      <HeighlinerHeaderBg>
+    <PageWrapper title="Resources">
+      {/* <HeighlinerHeaderBg>
         <HeighlinerHeader />
         <HeighlinerHeaderTitle title="Resources"/>
-      </HeighlinerHeaderBg>
+      </HeighlinerHeaderBg> */}
       <Entries entries={entries} />
-      <Footer />
-    </>
+      {/* <Footer /> */}
+    </PageWrapper>
   );
 }
