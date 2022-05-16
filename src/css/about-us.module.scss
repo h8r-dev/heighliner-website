@@ -34,6 +34,9 @@
       font-size: 40px;
       line-height: 1.24;
       color: #000;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .itemContent {
@@ -41,6 +44,26 @@
       line-height: 1.45;
       margin-top: 20px;
       color: #000;
+    }
+
+    &:nth-child(1) .itemTitle {
+      background-image: linear-gradient(to right, #5139c9 3%, #7f3dca 97%);;
+    }
+
+    &:nth-child(2) .itemTitle {
+      background-image: linear-gradient(to right, #8441c8 4%, #cf5ba9 100%);
+    }
+
+    &:nth-child(3) .itemTitle {
+      background-image: linear-gradient(to right, #cf5aa8 3%, #da627e 100%);
+    }
+
+    &:nth-child(4) .itemTitle {
+      background-image: linear-gradient(92deg, #db64d6 2%, #e58a5f 100%);
+    }
+
+    &:nth-child(5) .itemTitle {
+      background-image: linear-gradient(to right, #c23cd8 0%, #6a02ee 100%, #8031e4 100%);
     }
   }
 }
@@ -119,34 +142,10 @@
 
       .itemTitle {
         font-size: 24px;
-        //color: #b794f6;
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
       }
 
       .itemContent {
         margin-top: 6px;
-      }
-
-      &:nth-child(1) .itemTitle {
-        background-image: linear-gradient(to right, #5139c9 3%, #7f3dca 97%);;
-      }
-
-      &:nth-child(2) .itemTitle {
-        background-image: linear-gradient(to right, #8441c8 4%, #cf5ba9 100%);
-      }
-
-      &:nth-child(3) .itemTitle {
-        background-image: linear-gradient(to right, #cf5aa8 3%, #da627e 100%);
-      }
-
-      &:nth-child(4) .itemTitle {
-        background-image: linear-gradient(92deg, #db64d6 2%, #e58a5f 100%);
-      }
-
-      &:nth-child(5) .itemTitle {
-        background-image: linear-gradient(to right, #c23cd8 0%, #6a02ee 100%, #8031e4 100%);
       }
     }
   }
