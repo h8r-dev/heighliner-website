@@ -33,9 +33,20 @@
   color: #000;
 }
 
-
 .hc {
   margin-left: 36px;
+  position: relative;
+
+  .hcIcon {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border: 1px solid black;
+    top: -12px;
+    left: -30px;
+    opacity: 1;
+    z-index: 10;
+  }
 
   .hcTitle {
     font-size: 43px;
@@ -44,6 +55,24 @@
     letter-spacing: 0.43px;
     color: #6002ee;
     margin-top: 100px;
+    z-index: 10;
+    background-color: #fff;
+  }
+
+  .hcTitle:before {
+    display: block;
+    content: " ";
+    position: absolute;
+    width: 150px;
+    height: 160px;
+    top: -59px;
+    top: -59px;
+    left: -75px;
+    transform: scale(0.33);
+  }
+
+  .hcTitle:before {
+    background: url("/static/img/join-us/icon1.webp");
   }
 
   .hcDesc {

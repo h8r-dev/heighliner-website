@@ -14,6 +14,7 @@ export const list = [
   {
     title: 'Sr. Manager, Developer Relations(Remote, United States)',
     desc: 'We are seeking a manager based in the Americas to build and lead the team of Developer Advocates.',
+    icon: require("@site/static/img/join-us/icon1.webp").default,
     item: [
       {
         itemTitle: "As the leader of Developer Relations team, you will:",
@@ -29,6 +30,7 @@ export const list = [
   {
     title: 'Sr. Manager, Developer Relations(Remote, United States)',
     desc: 'We are seeking a manager based in the Americas to build and lead the team of Developer Advocates.',
+    icon: require("@site/static/img/join-us/icon2.webp").default,
     item: [
       {
         itemTitle: "As the leader of Developer Relations team, you will:",
@@ -44,6 +46,7 @@ export const list = [
   {
     title: 'Sr. Manager, Developer Relations(Remote, United States)',
     desc: 'We are seeking a manager based in the Americas to build and lead the team of Developer Advocates.',
+    icon: "/static/img/join-us/icon2.webp",
     item: [
       {
         itemTitle: "As the leader of Developer Relations team, you will:",
@@ -91,11 +94,16 @@ export default function AboutUs(): JSX.Element {
           cost reduction and efficiency improvement.
         </div>
         {
-          list.map(i => {
-            let {title, desc, item} = i;
+          list.map((i, index) => {
+            let {title, desc, item, icon} = i;
             return (
               <div className={styles.hc}>
                 <div className={styles.hcTitle}>{title}</div>
+                {/*<div*/}
+                {/*  // src={icon}*/}
+                {/*   className={styles.hcIcon}*/}
+                {/*   // style={{"background": `url(${icon})`}}*/}
+                {/*/>*/}
                 <div className={styles.hcDesc}>{desc}</div>
                 {
                   item.map(j => {
