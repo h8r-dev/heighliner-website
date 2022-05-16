@@ -1,6 +1,6 @@
 ## Cast file
 
-The file ended with `.cast` come from [Asciinema](https://asciinema.org/) library which records and display terminal sessions. 
+The file ended with `.cast` comes from [Asciinema](https://asciinema.org/) library which records and displays terminal sessions. 
 
 ## Usage
 
