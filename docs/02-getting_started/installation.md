@@ -7,7 +7,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-## 1. Install hln CLI
+## Step 1. Install hln CLI
 
 <Tabs>
   <TabItem value="macos" label="MacOS" default>
@@ -45,7 +45,7 @@ Or download binaries: [GitHub Release](https://github.com/h8r-dev/heighliner/rel
   </TabItem>
 </Tabs>
 
-## 2. Install Kubernetes
+## Step 2. Install Kubernetes
 
 Install _kubectl_ first by following [the Kubernetes documentation](https://kubernetes.io/docs/tasks/tools/).
 
@@ -185,7 +185,7 @@ For more info about installing the ingress controller, see [the ingress-nginx in
 
 </Tabs>
 
-## 3. Install Heighliner dependencies
+## Step 3. Install Heighliner dependencies
 
 hln provides a command to install dependent tools and services:
 
@@ -207,7 +207,7 @@ Waiting buildkitd to be ready...
 buildkitd is ready!
 ```
 
-## 4. Create GitHub Token
+## Step 4. Create GitHub Token
 
 Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with these scopes selected:
 `repo`, `workflow`, `write:packages`, `delete:packages`, `admin:org`, `user`, `delete_repo`.
