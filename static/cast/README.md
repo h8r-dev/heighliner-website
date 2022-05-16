@@ -2,8 +2,8 @@
 
 The file ended with `.cast` is to display terminal sessions by 
 [Asciinema](https://asciinema.org/), which also provides `asciinema` 
-software convenient for the developer to record terminal session into
-a cast file.
+software that it's convenient for developers to record terminal sessions into a cast file.
+
 ## Usage
 
 1. Every cast file can be imported as a module: 
