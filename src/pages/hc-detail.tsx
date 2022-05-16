@@ -3,9 +3,7 @@
  */
 import React, {useEffect, useState} from "react";
 
-import {Footer} from "../components/homepage/Footer";
-import HeighlinerHeader from "../components/Header/HeighlinerHeader";
-import HeighlinerHeaderBg from "../components/Header/HeighlinerHeaderBg";
+import PageWrapper from "../components/PageWrapper/index";
 
 import siteConfig from "@generated/docusaurus.config";
 import styles from "../css/hc-detail.module.scss";
@@ -20,38 +18,32 @@ export default function HcDetail(): JSX.Element {
   }, [])
 
   return (
-    <div className={styles.hcDetail}>
-      <HeighlinerHeaderBg>
-        <HeighlinerHeader/>
-      </HeighlinerHeaderBg>
-      <div>
-        <div className={styles.wrapper}>
-          {
-            index &&
-            <div className={styles.hc}>
-              <div className={styles.hcTitle}>{list[index].title}</div>
-              <div className={styles.hcDesc}>{list[index].desc}</div>
-              {
-                list[index].item.map((j, i) => {
-                  let {itemTitle, itemList} = j;
-                  return (
-                    <div key={i}>
-                      <div className={styles.hcItemTitle}>{itemTitle}</div>
-                      {
-                        itemList.map((h, i) => <div key={i} className={styles.hcItemDesc}>· {h}</div>)
-                      }
-                    </div>
-                  )
-                })
-              }
-              <div className={styles.hcEmail}>Send us an email to apply this position:
-                <a href={"mailto:" + siteConfig.customFields.email}> {siteConfig.customFields.email}</a>
-              </div>
+    <PageWrapper title="Join us">
+      <div className={styles.wrapper}>
+        {
+          index &&
+          <div className={styles.hc}>
+            <div className={styles.hcTitle}>{list[index].title}</div>
+            <div className={styles.hcDesc}>{list[index].desc}</div>
+            {
+              list[index].item.map((j, i) => {
+                let {itemTitle, itemList} = j;
+                return (
+                  <div key={i}>
+                    <div className={styles.hcItemTitle}>{itemTitle}</div>
+                    {
+                      itemList.map((h, i) => <div key={i} className={styles.hcItemDesc}>· {h}</div>)
+                    }
+                  </div>
+                )
+              })
+            }
+            <div className={styles.hcEmail}>Send us an email to apply this position:
+              <a href={"mailto:" + siteConfig.customFields.email}> {siteConfig.customFields.email}</a>
             </div>
-          }
-        </div>
+          </div>
+        }
       </div>
-      <Footer/>
-    </div>
+    </PageWrapper>
   );
 }

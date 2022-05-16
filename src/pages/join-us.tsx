@@ -4,9 +4,7 @@
 import React from "react";
 import Link from "@docusaurus/Link";
 
-import {Footer} from "../components/homepage/Footer";
-import HeighlinerHeader from "../components/Header/HeighlinerHeader";
-import HeighlinerHeaderBg from "../components/Header/HeighlinerHeaderBg";
+import PageWrapper from "../components/PageWrapper/index";
 
 import siteConfig from "@generated/docusaurus.config";
 import styles from "../css/join-us.module.scss";
@@ -99,11 +97,7 @@ export const list = [
 
 export default function AboutUs(): JSX.Element {
   return (
-    <div className={styles.joinUs}>
-      <HeighlinerHeaderBg>
-        <HeighlinerHeader/>
-      </HeighlinerHeaderBg>
-      <div>
+    <PageWrapper title="Join us">
         <div className={styles.wrapper}>
           <div className={styles.pageTitle}>Join Heighliner and build the future of Cloud Native</div>
           <div className={styles.pageTitleSecond}>About Heighliner</div>
@@ -172,8 +166,6 @@ export default function AboutUs(): JSX.Element {
             })
           }
         </div>
-      </div>
-      <Footer/>
-    </div>
+    </PageWrapper>
   );
 }

@@ -4,9 +4,7 @@
 import React from "react";
 import clsx from "clsx";
 
-import {Footer} from "../components/homepage/Footer";
-import HeighlinerHeader from "../components/Header/HeighlinerHeader";
-import HeighlinerHeaderBg from "../components/Header/HeighlinerHeaderBg";
+import PageWrapper from "../components/PageWrapper/index";
 import styles from "../css/about-us.module.scss";
 
 interface Item {
@@ -53,56 +51,50 @@ const imglist: Item[] = [
 
 export default function AboutUs(): JSX.Element {
   return (
-    <div className={styles.aboutUs}>
-      <HeighlinerHeaderBg>
-        <HeighlinerHeader/>
-      </HeighlinerHeaderBg>
-      <div >
-        <div className={styles.contentWrapper}>
-          <div className={styles.pageTitle}>
-            About Heighliner
-          </div>
-          <div className={styles.pageDesc}>
-            Heighliner is The cloud-native application development platform that empowers organizations and
-            developers to minimize the complexity of building up delivery flow for cloud-native applications.
-          </div>
-          <div className={styles.pageTitle}>
-            Who are we?
-          </div>
-          <div className={styles.pageDesc}>
-            Heighliner is The cloud-native application development platform that empowers organizations and
-            developers to minimize the complexity of building up delivery flow for cloud-native applications.
-          </div>
-          <div className={styles.flexWrapper}>
-            {
-              list.map(item => {
-                let {title, content} = item;
-                return (
-                  <div className={styles.itemWrapper} key={title}>
-                    <span className={styles.itemTitle}>{title}</span>
-                    <div className={styles.itemContent}>{content}</div>
-                  </div>
-                )
-              })
-            }
-          </div>
-          <div className={styles.imageAndDesc}>
-            {
-              imglist.map(item => {
-                let {url, title, content} = item;
-                return (
-                  <div className={styles.imgWrapper} key={title}>
-                    <img src={url} alt={styles.itemTitle}/>
-                    <div className={clsx(styles.imgTitle, styles.pageTitle)}>{title}</div>
-                    <div className={clsx(styles.imgContent, styles.pageDesc)}>{content}</div>
-                  </div>
-                )
-              })
-            }
-          </div>
+    <PageWrapper title="About us" tableMask>
+      <div className={styles.contentWrapper}>
+        <div className={styles.pageTitle}>
+          About Heighliner
+        </div>
+        <div className={styles.pageDesc}>
+          Heighliner is The cloud-native application development platform that empowers organizations and
+          developers to minimize the complexity of building up delivery flow for cloud-native applications.
+        </div>
+        <div className={styles.pageTitle}>
+          Who are we?
+        </div>
+        <div className={styles.pageDesc}>
+          Heighliner is The cloud-native application development platform that empowers organizations and
+          developers to minimize the complexity of building up delivery flow for cloud-native applications.
+        </div>
+        <div className={styles.flexWrapper}>
+          {
+            list.map(item => {
+              let {title, content} = item;
+              return (
+                <div className={styles.itemWrapper} key={title}>
+                  <span className={styles.itemTitle}>{title}</span>
+                  <div className={styles.itemContent}>{content}</div>
+                </div>
+              )
+            })
+          }
+        </div>
+        <div className={styles.imageAndDesc}>
+          {
+            imglist.map(item => {
+              let {url, title, content} = item;
+              return (
+                <div className={styles.imgWrapper} key={title}>
+                  <img src={url} alt={styles.itemTitle}/>
+                  <div className={clsx(styles.imgTitle, styles.pageTitle)}>{title}</div>
+                  <div className={clsx(styles.imgContent, styles.pageDesc)}>{content}</div>
+                </div>
+              )
+            })
+          }
         </div>
       </div>
-      <Footer/>
-    </div>
+    </PageWrapper>
   );
 }

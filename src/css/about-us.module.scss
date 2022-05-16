@@ -1,11 +1,3 @@
-.aboutUs {
-  background: linear-gradient(90deg, rgba(234, 227, 236, 0.3) 1px, transparent 0),
-  linear-gradient(rgba(234, 227, 236, 0.3) 1px, transparent 0);
-  background-size: 30px 30px;
-  background-color: rgba(243, 242, 235, 0.1);
-  background: #fff;
-}
-
 .contentWrapper {
   max-width: 1200px;
   margin: 50px auto;
@@ -48,6 +40,7 @@
       font-size: 14px;
       line-height: 1.45;
       margin-top: 20px;
+      color: #000;
     }
   }
 }
