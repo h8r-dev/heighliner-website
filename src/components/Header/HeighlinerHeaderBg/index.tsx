@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./index.module.scss";
 
 interface Props {
-  children?: React.ReactElement
+  children?: React.ReactElement | React.ReactElement[]
 }
 
 export default function HeighlinerHeader({ children }: Props): React.ReactElement {
