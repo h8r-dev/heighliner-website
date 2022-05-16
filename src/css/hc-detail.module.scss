@@ -1,0 +1,46 @@
+.wrapper {
+  margin: 50px 27px;
+}
+
+.hc {
+  .hcTitle {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.24;
+    color: #6002ee;
+  }
+
+  .hcDesc {
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: 0.52px;
+    color: #000;
+    margin-top: 30px;
+  }
+
+  .hcItemTitle {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.52px;
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .hcItemDesc {
+    font-size: 13px;
+    margin-top: 10px;
+    line-height: 20px;
+    color: #000;
+  }
+
+  .hcEmail {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.52px;
+    color: #000;
+    margin-top: 20px;
+  }
+}
