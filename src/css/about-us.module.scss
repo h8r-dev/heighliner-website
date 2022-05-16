@@ -1,24 +1,13 @@
-.headerWrapper {
-  overflow: hidden;
-  width: 100%;
-  text-align: left;
-  position: relative;
-  background-image: url("/static/img/about-us/header-background.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;
-}
-
-.head {
-  font-size: 77px;
-  margin-top: 80px;
-  margin-left: 100px;
-  margin-bottom: 150px;
+.aboutUs {
+  background: linear-gradient(90deg, rgba(234, 227, 236, 0.3) 1px, transparent 0),
+  linear-gradient(rgba(234, 227, 236, 0.3) 1px, transparent 0);
+  background-size: 30px 30px;
+  background-color: rgba(243, 242, 235, 0.1);
 }
 
 .contentWrapper {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 .pageTitle {
@@ -136,11 +125,34 @@
 
       .itemTitle {
         font-size: 24px;
-        color: #b794f6;
+        //color: #b794f6;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
 
       .itemContent {
         margin-top: 6px;
+      }
+
+      &:nth-child(1) .itemTitle {
+        background-image: linear-gradient(to right, #5139c9 3%, #7f3dca 97%);;
+      }
+
+      &:nth-child(2) .itemTitle {
+        background-image: linear-gradient(to right, #8441c8 4%, #cf5ba9 100%);
+      }
+
+      &:nth-child(3) .itemTitle {
+        background-image: linear-gradient(to right, #cf5aa8 3%, #da627e 100%);
+      }
+
+      &:nth-child(4) .itemTitle {
+        background-image: linear-gradient(92deg, #db64d6 2%, #e58a5f 100%);
+      }
+
+      &:nth-child(5) .itemTitle {
+        background-image: linear-gradient(to right, #c23cd8 0%, #6a02ee 100%, #8031e4 100%);
       }
     }
   }
