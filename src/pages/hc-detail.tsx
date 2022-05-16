@@ -20,11 +20,11 @@ export default function HcDetail(): JSX.Element {
   }, [])
 
   return (
-    <>
+    <div className={styles.hcDetail}>
       <HeighlinerHeaderBg>
         <HeighlinerHeader/>
       </HeighlinerHeaderBg>
-      <div className={styles.joinUs}>
+      <div>
         <div className={styles.wrapper}>
           {
             index &&
@@ -52,6 +52,6 @@ export default function HcDetail(): JSX.Element {
         </div>
       </div>
       <Footer/>
-    </>
+    </div>
   );
 }

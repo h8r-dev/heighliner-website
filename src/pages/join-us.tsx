@@ -99,11 +99,11 @@ export const list = [
 
 export default function AboutUs(): JSX.Element {
   return (
-    <>
+    <div className={styles.joinUs}>
       <HeighlinerHeaderBg>
         <HeighlinerHeader/>
       </HeighlinerHeaderBg>
-      <div className={styles.joinUs}>
+      <div>
         <div className={styles.wrapper}>
           <div className={styles.pageTitle}>Join Heighliner and build the future of Cloud Native</div>
           <div className={styles.pageTitleSecond}>About Heighliner</div>
@@ -174,6 +174,6 @@ export default function AboutUs(): JSX.Element {
         </div>
       </div>
       <Footer/>
-    </>
+    </div>
   );
 }
