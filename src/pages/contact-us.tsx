@@ -32,10 +32,10 @@ const entries: {
   },
   {
     title: "Join Heighliner User Group on WeChat",
-    imgPath: require("/img/page/contact-us/WeChatOfficeAccount.png").default,
+    imgPath: require("/img/page/contact-us/HeightLinerWeChat.jpg").default,
   },
   {
-    title: "Follow Heighliner's WeChat Channel",
+    title: "Follow Heighliner's WeChat Official Afccount",
     imgPath: require('/img/page/contact-us/WeChatChannel.png').default,
   },
   {
