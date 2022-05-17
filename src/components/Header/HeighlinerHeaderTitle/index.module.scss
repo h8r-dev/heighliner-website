@@ -1,15 +1,14 @@
 .title {
+  margin-top:3.29vw;
+  margin-left: 1vw;
   font-size: 5.347vw;
   color: #faf5fa;
-  font-weight: normal;
-  padding: 18px;
-  max-width: 1200px;
-  margin: 3.29vw auto 0;
+  font-weight: normal;  
 }
 
 @media screen and (max-width: 576px) {
   .title {
-    margin-top: 2vw;
     padding: 0px 28px;
+    margin-top: 1vw;  
   }
 }
