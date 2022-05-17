@@ -45,7 +45,7 @@ Let's begin traveling!
 hln up remix-note-app -s remix -i
 ```
 
-The command `hln up` is the **only command** that will be typed by your, which means it will do all of the things.
+The command `hln up` is the **only command** that will be typed by you, which means the command will do all of the things.
 
 Option `-s` specify the chosen stack, here it's remix, option `-i` will enter interactive mode, you need to input several required parameters step by step, for more details about
 parameters or error printed, you could view [Installation Guide](/docs/getting_started/installation)
@@ -72,33 +72,43 @@ Firstly, two Git repositories are created on your GitHub organization, one repos
 
 ![git-repo](/img/docs/tutorial/remix/remix-note-app-repos.png)
 
-You could view `.github/workflows/docker-publish.yml` file from your remix source code repository, which is added by Heighliner stacks engine to set up a **CI** pipeline.
+You could view `.github/workflows/docker-publish.yml` file from your `remix-note-app` repository, which is added by Heighliner stacks engine to set up a **CI** pipeline.
 
 #### 2. A Online Running Remix Application
 
-You could view your remix application site at [remix-note-app.h8r.site](https://remix-note-app.h8r.site)
+You could view your remix application site at [remix-note-app.h8r.site](https://remix-note-app.h8r.site) like this:
 
 ![remix-app](/img/docs/tutorial/remix/remix-note-app-app.png)
 
 #### 3. A ArgoCD Application
 
-ArgoCD is responsible for deploying new releases of your remix application, Heighliner stacks engine connects them together automatically, it handles all tough configuration tasks.
+[ArgoCD](https://argoproj.github.io/cd/) is a declarative, GitOps continuous delivery tool for Kubernetes. The remix stack uses ArgoCD to deploy new releases of your remix application, Heighliner stacks engine connects them together automatically and handles all tough configuration tasks.
 
-You could view your ArgoCD dashboard at [argocd.h8r.site](http://argocd.h8r.site/)
+You could view your ArgoCD dashboard at [argocd.h8r.site](http://argocd.h8r.site/) like this:
 
 ![argo-cd](/img/docs/tutorial/remix/remix-note-app-argocd.png)
 
 #### 4. A Prometheus Application
 
-  TODO
+[Prometheus](https://prometheus.io/) is an open-source monitoring framework, it provides out-of-the-box monitoring capabilities for the Kubernetes. The remix stack uses Prometheus to collect monitoring metrics.
+
+You could view your Prometheus dashboard at [prometheus.h8r.site](http://prometheus.h8r.site) like this:
+
+![prometheus-dashboard](/img/tutorial/01-gin-next/prometheus.png)
 
 #### 5. A Grafana Application
 
-  TODO
+[Grafana](https://grafana.com/) is a multi-platform open source analytics and interactive visualization web application. The remix stack heavily uses Grafana to visualize all collected metrics and logs from infrastructure and your own applications.
 
-#### 5. A Nocalhost Application
+You could view your Grafana dashboard at [grafana.h8r.site](http://grafana.h8r.site) like this:
 
-  TODO
+![grafana-dashboard](/img/tutorial/01-gin-next/application-monitoring.png)
+
+#### 6. A Nocalhost Application
+
+[Nocalhost](https://nocalhost.dev/) is an open-source **IDE plugin** for cloud-native applications development. The remix stack uses Nocalhost to make **Develop In Cloud** come true. Underneath, Nocalhost will set up an isolated development space in Kubernetes for every developer.
+
+![nocalhost-dashboard](/img/tutorial/01-gin-next/nocalhost.png)
 
 ## Setting Local Hosts
 :::info
