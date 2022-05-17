@@ -209,7 +209,7 @@ export default function PicturesSlider(): React.ReactElement {
         >
           <img
             src={
-              require("@site/static/img/homepage/whyheighliner/chip@3x.webp")
+              require("@site/static/img/homepage/whyheighliner/chip@2x.webp")
                 .default
             }
             className={styles.layerImg}
