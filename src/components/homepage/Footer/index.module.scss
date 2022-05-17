@@ -1,3 +1,5 @@
+@import "../../../css/globalVar.scss";
+
 .outerWrap {
   padding-top: 35px;
   background-color: #000;
@@ -10,6 +12,7 @@
   justify-content: space-between;
   position: relative;
   z-index: 100;
+  max-width: $max-width;
 }
 
 .wrapper a {
@@ -49,7 +52,7 @@
 
 .linksWrap li {
   list-style: none;
-  width: 205px;
+  width: 180px;
   color: #FFFFFF;
   font-size: 12px;
 }
