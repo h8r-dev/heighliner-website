@@ -63,8 +63,11 @@ export function Footer() {
       </div>
       <div className={styles.copyright}>
         <span>{footer.copyright}</span>
-        <span style={{ marginLeft: 10, display: showBeianInfo ? 'inline-block': 'none' }}>
-          <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer">粤ICP备2022019117号</a>
+        <span style={{
+          marginLeft: 10,
+          display: showBeianInfo ? 'inline-block' : 'none',
+        }}>
+          <a style={{ color: '#fff' }} href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer">粤ICP备2022019117号</a>
         </span>
       </div>
     </div>
