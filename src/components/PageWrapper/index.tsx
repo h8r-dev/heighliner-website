@@ -20,7 +20,7 @@ interface Props {
   tableMask?: boolean
 }
 
-export default function PageWrapper({children, title, tableMask}: Props): JSX.Element {
+export default function PageWrapper({children, title, tableMask = true}: Props): JSX.Element {
   return (
     <div className={styles.pageWrapper} style={tableMask && tableMaskStyle}>
       <meta

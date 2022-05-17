@@ -87,6 +87,10 @@
     line-height: 1.45;
     letter-spacing: 0.54px;
     color: #000;
+    margin-top: 23px;
+  }
+
+  .hcItemTitle[count='0']{
     margin-top: 33px;
   }
 
@@ -125,6 +129,7 @@
   margin-top: 54px;
   overflow: hidden;
   display: none;
+  background-color: #ffffff99;
 
   .hcBoxTitle {
     font-size: 18px;

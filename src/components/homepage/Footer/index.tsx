@@ -9,7 +9,7 @@ import siteConfig from "@generated/docusaurus.config";
 
 import WhiteHeighlinerSvg from "@site/static/img/homepage/white-heighliner.svg";
 
-import styles from './index.module.css'
+import styles from './index.module.scss'
 
 export function Footer() {
   const [showBeianInfo, setShowBeianInfo] = useState(false)

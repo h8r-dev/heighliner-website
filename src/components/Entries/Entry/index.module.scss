@@ -1,5 +1,5 @@
 .entry {
-  margin-bottom: 4.79vw;
+  margin-bottom: 80px;
   color: #6002ee;
 
   .title {
@@ -23,6 +23,7 @@
 
   & > img {
     max-width: 258px;
+    margin-left: -16px;
   }
 }
 
@@ -35,6 +36,11 @@
       border-left-width: 0px;
       padding-left: 0px;
       line-height: 1.2;
+    }
+
+    & > img {
+      max-width: 130px;
+      margin-left: -10px;
     }
   }
 }

@@ -51,7 +51,7 @@ const imglist: Item[] = [
 
 export default function AboutUs(): JSX.Element {
   return (
-    <PageWrapper title="About us" tableMask>
+    <PageWrapper title="About us">
       <div className={styles.contentWrapper}>
         <div className={styles.pageTitle}>
           About Heighliner
