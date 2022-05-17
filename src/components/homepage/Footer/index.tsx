@@ -16,7 +16,7 @@ export function Footer() {
   const footer: any = siteConfig.themeConfig.footer
 
   useEffect(() => {
-    if (window.location.host === 'heighliner.cn') {
+    if (window.location.host.endsWith('heighliner.cn')) {
       setShowBeianInfo(true)
     }
   }, [])

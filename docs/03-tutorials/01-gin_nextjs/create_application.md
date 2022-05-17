@@ -19,10 +19,7 @@ Create your application interactively:
 ```shell
 hln up gin-next-app -s gin-next -i
 ```
-
-> Note: gin-next-app is what we call application name.It should obey the rules in [DNS1123](https://datatracker.ietf.org/doc/html/rfc1123)
-
-Input the values one by one according to the promt:
+Input the values one by one according to the prompt:
 
 ```
 Path to your kubeconfig file (required):

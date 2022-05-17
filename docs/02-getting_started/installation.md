@@ -63,6 +63,8 @@ values={[
 
 Install _kind_ command-line tool by following [the kind installation guide](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
 
+Requirements: Docker Desktop V4.5.0+
+
 (Optional) We recommend setting Docker Resources to 4 cores and 8Gb mem:
 <details>
   <summary>Docker Desktop Settings</summary>
@@ -110,6 +112,13 @@ Create a kind cluster from the config and install ingress controller:
 ```shell
 kind create cluster --image=kindest/node:v1.23.5 --config=kind.yaml
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
+```
+
+(Optional) If you can't access the Google Container Registry, create kind cluster and ingrss-nginx using:
+
+```shell
+kind create cluster --image=kindest/node:v1.23.5 --config=kind.yaml
+kubectl apply -f https://raw.githubusercontent.com/h8r-dev/stacks/main/scripts/internal/ingress-nginx/deploy.yaml
 ```
 
 </TabItem>

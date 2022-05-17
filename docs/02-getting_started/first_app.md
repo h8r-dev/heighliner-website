@@ -42,6 +42,14 @@ In this doc, we will show you how you can go from nothing to a full stack app in
   ></Video>
 </div>
 
+## (Optional) Chinese users
+
+Chinese users may have network access problems, please run first:
+
+```shell
+export NETWORK_TYPE=internal
+```
+
 ## Step 1. Create your application
 
 Create your application interactively:
@@ -105,7 +113,7 @@ Click the GitHub url and dashboard links to see the effects.
 className="unique-tabs"
 defaultValue="local"
 values={[
-{label: 'Kind/Minikube', value: 'local'},
+{label: 'Kind', value: 'local'},
 {label: 'Cloud', value: 'cloud'},
 ]}>
 
@@ -135,7 +143,7 @@ Set domain routing:
 
   ```txt
   <ingress-ip> argocd.h8r.site
-  <ingress-ip> hello-world-frontend.h8r.site
+  <ingress-ip> hello-world.h8r.site
   ```
 
 - If you are using your own domain name, set your domain DNS record to the above ingress IP.
@@ -166,7 +174,7 @@ You can check the k8s resources for the application:
 
 ### Nextjs app
 
-View you nextjs app at [hello-world-frontend.h8r.site](http://hello-world-frontend.h8r.site):
+View you nextjs app at [hello-world.h8r.site](http://hello-world-frontend.h8r.site):
 
 ![alt](/img/docs/getting-started/sample-application.png)
 
