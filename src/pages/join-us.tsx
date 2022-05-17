@@ -127,6 +127,7 @@ export default function AboutUs(): JSX.Element {
           list.map((i, index) => {
             let {title, desc, item, icon} = i;
             return (
+              // @ts-ignore
               <div className={styles.hc} key={title} index={index}>
                 <img src={icon} alt="" className={styles.hcIcon}/>
                 <div className={styles.hcTitle}>{title}</div>
@@ -136,6 +137,7 @@ export default function AboutUs(): JSX.Element {
                     let {itemTitle, itemList} = j;
                     return (
                       <div key={itemTitle}>
+                         {/*@ts-ignore*/}
                         <div className={styles.hcItemTitle} count={count}>{itemTitle}</div>
                         {
                           itemList.map(h => <div className={styles.hcItemDesc} key={h}>· {h}</div>)

@@ -20,7 +20,7 @@ const entries: {
     title: "Commit an issue on GitHub",
     content: (
       <>
-        Create an issue on our <a href={siteConfig.customFields.githubUrl} target="_blank">Github repo</a>.
+        Create an issue on our <a href={siteConfig.customFields.githubUrl as string} target="_blank">Github repo</a>.
       </>
     ),
   },
@@ -28,7 +28,7 @@ const entries: {
     title: "Join Heighliner User Group on Discord",
     content: (
       <>
-        Join our <a href={siteConfig.customFields.discordUrl} target="_blank">Discord channel</a>
+        Join our <a href={siteConfig.customFields.discordUrl as string} target="_blank">Discord channel</a>
       </>
     ),
   },
