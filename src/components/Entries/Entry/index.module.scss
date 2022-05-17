@@ -1,6 +1,7 @@
 .entry {
   margin-bottom: 69px;
   margin-left: 8.7vw;
+  margin-right: 14.6vw;
 
   .title::before {
     display: inline-block;
@@ -12,6 +13,7 @@
   }
 
   .title {
+    font-weight: 500;
     font-size: 37px;
     line-height: 1.24;
     margin-bottom: 9px;
@@ -28,5 +30,20 @@
 
   & > img {
     max-width: 258px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .entry {
+    margin-left: 7.2vw;
+    
+    .title::before {
+      display: none;
+    }
+    
+    .title {
+      font-size: 23px;
+      color: #6002ee;
+    }
   }
 }

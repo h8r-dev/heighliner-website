@@ -1,13 +1,11 @@
 import React from "react";
 
-import Entry from "./Entry";
+import Entry, { EntryType } from "./Entry";
+
+type EntriesType = EntryType[];
 
 interface Props {
-  entries: {
-    title: string;
-    content?: string | React.ReactElement;
-    imgPath?: string;
-  }[];
+  entries: EntriesType;
 }
 
 export default function Entries({ entries }: Props): React.ReactElement {
@@ -21,3 +19,5 @@ export default function Entries({ entries }: Props): React.ReactElement {
     </div>
   );
 }
+
+export { EntriesType };

@@ -28,24 +28,6 @@ Ever want to have a Vercel-style experience when creating your nextjs app?
 But without the limitation to a specific vendor?
 In this doc, we will show you how you can go from nothing to a full stack app in an instant.
 
-## List all stacks
-
-List all default stacks:
-
-```shell
-hln list stacks
-```
-
-Output:
-
-```shell
-NAME        VERSION
-sample      0.0.1
-gin-next    0.0.1
-spring-vue  0.0.1
-gin-vue     0.0.1
-```
-
 <div
   style={{
     maxWidth: 800,
@@ -60,7 +42,7 @@ gin-vue     0.0.1
   ></Video>
 </div>
 
-## Create your application
+## Step 1. Create your application
 
 Create your application interactively:
 
@@ -96,7 +78,7 @@ If `hln up` command failed due to unexpected network problems, feel free to **re
 
 :::
 
-## Get application status
+## Step 2. Get application status
 
 ```shell
 hln status hello-world
@@ -117,7 +99,7 @@ There are 1 services deployed by argocd:
 Congrats! You have created your first application with `hln` successfully. All of the cloud-native architecture have been set up properly.
 Click the GitHub url and dashboard links to see the effects.
 
-## Set Domain Routing
+## Step 3. Set Domain Routing
 
 <Tabs
 className="unique-tabs"
@@ -161,7 +143,8 @@ Set domain routing:
 </TabItem>
 </Tabs>
 
-## ArgoCD
+## Step 4. See the results
+### ArgoCD
 
 Check your **ArgoCD** dashboard at [argocd.h8r.site](http://argocd.h8r.site):
 > Note: get argocd credentials with `hln status` command
@@ -181,13 +164,13 @@ You can check the k8s resources for the application:
 
 ![alt](/img/docs/getting-started/argocd-details.png)
 
-## Nextjs app
+### Nextjs app
 
 View you nextjs app at [hello-world-frontend.h8r.site](http://hello-world-frontend.h8r.site):
 
 ![alt](/img/docs/getting-started/sample-application.png)
 
-## GitHub repos
+### GitHub repos
 
 You can also check your repos on **GitHub**:
 
@@ -202,7 +185,7 @@ You can also check your repos on **GitHub**:
   <img src={useBaseUrl('/img/docs/getting-started/github_repos.png')} />
 </div>
 
-## Clean up
+### Clean up
 
 :::tip
 

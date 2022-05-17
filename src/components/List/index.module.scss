@@ -1,0 +1,15 @@
+.list {
+  list-style-type: none;
+
+  li::before {
+    content: "·";
+    display: inline-block;
+    margin-left: -20px;
+    margin-right: 12px;
+  }
+
+  li {
+    font-size: 18px;
+    font-weight: 300;
+  }
+}

@@ -3,6 +3,7 @@ import Entries from "../components/Entries";
 
 import HeighlinerHeader from "../components/Header/HeighlinerHeader";
 import HeighlinerHeaderBg from "../components/Header/HeighlinerHeaderBg";
+import HeighlinerHeaderTitle from "../components/Header/HeighlinerHeaderTitle";
 import { Footer } from "../components/homepage/Footer";
 
 const entries: {
@@ -52,6 +53,7 @@ export default function ContactUs(): React.ReactElement {
     <>
       <HeighlinerHeaderBg>
         <HeighlinerHeader />
+        <HeighlinerHeaderTitle title="Contact us"/>
       </HeighlinerHeaderBg>
       <Entries entries={entries} />
       <Footer />

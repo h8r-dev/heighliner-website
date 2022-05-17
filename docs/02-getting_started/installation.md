@@ -7,7 +7,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-## 1. Install hln CLI
+## Step 1. Install hln CLI
 
 <Tabs>
   <TabItem value="macos" label="MacOS" default>
@@ -45,7 +45,7 @@ Or download binaries: [GitHub Release](https://github.com/h8r-dev/heighliner/rel
   </TabItem>
 </Tabs>
 
-## 2. Install Kubernetes
+## Step 2. Install Kubernetes
 
 Install _kubectl_ first by following [the Kubernetes documentation](https://kubernetes.io/docs/tasks/tools/).
 
@@ -56,7 +56,6 @@ className="unique-tabs"
 defaultValue="kind"
 values={[
 {label: 'Kind', value: 'kind'},
-{label: 'Minikube', value: 'minikube'},
 {label: 'Hosted Cloud K8s', value: 'cloud'},
 ]}>
 
@@ -101,6 +100,11 @@ nodes:
         protocol: TCP
 ```
 
+
+:::tip
+Ports 80 and 443 may not be exposed under ubuntu. Please change ports 80 and 443 and specify the port number when accessing the application URL.
+:::
+
 Create a kind cluster from the config and install ingress controller:
 
 ```shell
@@ -110,7 +114,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main
 
 </TabItem>
 
-<TabItem value="minikube">
+<!-- <TabItem value="minikube">
 
 Install _minikube_ command-line tool by following [the minikube installation guide](https://minikube.sigs.k8s.io/docs/start/).
 
@@ -144,7 +148,7 @@ Expose ingress port using minikube tunnel:
 sudo minikube tunnel
 ```
 
-</TabItem>
+</TabItem> -->
 
 <TabItem value="cloud">
 
@@ -155,6 +159,7 @@ You can also choose one of the following cloud providers for hosted k8s services
 - [Google GKE](https://cloud.google.com/kubernetes-engine)
 - [Alibaba ACK](https://www.aliyun.com/product/kubernetes)
 - [Tencent TKE](https://cloud.tencent.com/product/tke)
+- [DigitalOcean Kubernetes](https://www.digitalocean.com/products/kubernetes)
 
 Once a cluster is created, you can check if the ingress controller is installed by running the following command:
 
@@ -180,7 +185,7 @@ For more info about installing the ingress controller, see [the ingress-nginx in
 
 </Tabs>
 
-## 3. Install Heighliner dependencies
+## Step 3. Install Heighliner dependencies
 
 hln provides a command to install dependent tools and services:
 
@@ -202,7 +207,7 @@ Waiting buildkitd to be ready...
 buildkitd is ready!
 ```
 
-## 4. Create GitHub Token
+## Step 4. Create GitHub Token
 
 Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with these scopes selected:
 `repo`, `workflow`, `write:packages`, `delete:packages`, `admin:org`, `user`, `delete_repo`.
