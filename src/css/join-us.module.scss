@@ -1,5 +1,7 @@
+@import "./globalVar.scss";
+
 .wrapper {
-  max-width: 1200px;
+  max-width:  $max-width;
   margin: 50px auto;
   padding: 0 18px;
 

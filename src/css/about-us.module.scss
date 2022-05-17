@@ -1,5 +1,7 @@
+@import "./globalVar.scss";
+
 .contentWrapper {
-  max-width: 1200px;
+  max-width: $max-width;
   margin: 50px auto;
 }
 
