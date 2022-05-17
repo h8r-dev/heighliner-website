@@ -157,7 +157,7 @@ export default function AboutUs(): JSX.Element {
             return (
               <div className={styles.hcBox} key={index}>
                 <div className={styles.hcBoxTitle}>{title}</div>
-                <Link to={`./hc-detail?index=${index}`}>
+                <Link to={`/hc-detail?index=${index}`}>
                   <div className={styles.hcBoxApply}>
                     <img src={require('@site/static/img/join-us/apply.webp').default} alt=""/>
                     <span>Apply here</span>
