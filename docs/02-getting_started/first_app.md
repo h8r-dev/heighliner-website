@@ -143,7 +143,7 @@ Set domain routing:
 
   ```txt
   <ingress-ip> argocd.h8r.site
-  <ingress-ip> hello-world-frontend.h8r.site
+  <ingress-ip> hello-world.h8r.site
   ```
 
 - If you are using your own domain name, set your domain DNS record to the above ingress IP.
@@ -174,7 +174,7 @@ You can check the k8s resources for the application:
 
 ### Nextjs app
 
-View you nextjs app at [hello-world-frontend.h8r.site](http://hello-world-frontend.h8r.site):
+View you nextjs app at [hello-world.h8r.site](http://hello-world-frontend.h8r.site):
 
 ![alt](/img/docs/getting-started/sample-application.png)
 
