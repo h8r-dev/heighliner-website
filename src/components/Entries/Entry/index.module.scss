@@ -1,7 +1,6 @@
 .entry {
-  margin-bottom: 69px;
-  margin-left: 8.7vw;
-  margin-right: 14.6vw;
+  margin-bottom: 4.79vw;
+  // margin-left: 8.7vw;
   color: #000;
 
   .title::before {
@@ -34,13 +33,14 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 769px) {
   .entry {
-    margin-left: 7.2vw;
+    margin-bottom: 10vw;
+    // margin-left: 7.2vw;
     
     .title::before {
       display: none;
-    }
+    } 
     
     .title {
       font-size: 23px;
