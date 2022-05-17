@@ -8,7 +8,7 @@ export default function PicturesSliderInMobile(): React.ReactElement {
       <div className={styles.layerContain}>
         <img
           src={
-            require("@site/static/img/homepage/whyheighliner/chip@3x.webp")
+            require("@site/static/img/homepage/whyheighliner/chip@2x.webp")
               .default
           }
           className={styles.layerImg}
