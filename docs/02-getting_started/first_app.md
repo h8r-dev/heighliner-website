@@ -42,6 +42,14 @@ In this doc, we will show you how you can go from nothing to a full stack app in
   ></Video>
 </div>
 
+## (Optional) Chinese users
+
+Chinese users may have network access problems, please run first:
+
+```shell
+export NETWORK_TYPE=internal
+```
+
 ## Step 1. Create your application
 
 Create your application interactively:
