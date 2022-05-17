@@ -148,7 +148,7 @@ export default function AboutUs(): JSX.Element {
               </div>
             )
           })}
-        <div className={styles.positionTitle}>Our Opening Positions</div>
+        <div className={styles.positionTitle}>OUR OPENING POSITIONS</div>
         {
           list.map((i, index) => {
             let {title} = i;
