@@ -20,7 +20,7 @@ const list: Item[] = [
   },
   {
     title: "Engineer culture",
-    content: "engineer culture drives everyone thinking technically, caring about quality of product, keeping to polish user experience."
+    content: "Engineer culture drives everyone thinking technically, caring about quality of product, keeping to polish user experience."
   },
   {
     title: "Improving Experience",
@@ -32,7 +32,7 @@ const list: Item[] = [
   },
   {
     title: "Open source",
-    content: "engineer culture drives everyone thinking technically, caring about quality of product, keep"
+    content: "Engineer culture drives everyone thinking technically, caring about quality of product, keep"
   },
 ]
 
