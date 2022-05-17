@@ -1,5 +1,10 @@
 .list {
   list-style-type: none;
+  color: #000;
+
+  a {
+    color: #6002ee;
+  }
 
   li::before {
     content: "·";

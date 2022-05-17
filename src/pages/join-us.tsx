@@ -110,8 +110,7 @@ export default function AboutUs(): JSX.Element {
           and then can focus on writing the business code without worrying build and deploy.
         </div>
         <div className={styles.pageDesc}>
-          The core team of Heighliner comes from
-          &nbsp;<a href="https://nocalhost.dev" target="_blank">https://nocalhost.dev</a>
+          The core team of Heighliner comes from <a href="https://nocalhost.dev" target="_blank">https://nocalhost.dev</a>
           &nbsp;<a href="https://kubevela.io" target="_blank">https://kubevela.io</a>.
         </div>
         <div className={styles.pageDesc}>
