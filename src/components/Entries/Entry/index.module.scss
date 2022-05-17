@@ -30,12 +30,11 @@
   .entry {
     margin-bottom: 10vw;
 
-    .title::before {
-      display: none;
-    }
-
     .title {
       font-size: 23px;
+      border-left-width: 0px;
+      padding-left: 0px;
+      line-height: 1.2;
     }
   }
 }

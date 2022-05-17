@@ -98,7 +98,7 @@ export const list = [
 
 export default function AboutUs(): JSX.Element {
   return (
-    <PageWrapper title="Join us at Heighliner">
+    <PageWrapper title="Join us at Heighliner" tableMask>
       <div className={styles.wrapper}>
         <div className={clsx(styles.pageTitle, styles.pcTitle)}>Join Heighliner and build the future of Cloud Native</div>
         <div className={clsx(styles.pageTitle, styles.mobileTitle)}>Join Us</div>
@@ -122,7 +122,6 @@ export default function AboutUs(): JSX.Element {
           get a better development experience and the advantages of multi-cloud delivery,
           cost reduction and efficiency improvement.
         </div>
-
         <div className={clsx(styles.pageTitle, styles.pcTitle, styles.pcPositionTitle)}>Opening Position:</div>
         {
           list.map((i, index) => {
@@ -136,7 +135,7 @@ export default function AboutUs(): JSX.Element {
                   item.map(j => {
                     let {itemTitle, itemList} = j;
                     return (
-                      <div key={itemTitle}>
+                      <div key={itemTitle} color={styles.itemWrapper}>
                         <div className={styles.hcItemTitle}>{itemTitle}</div>
                         {
                           itemList.map(h => <div className={styles.hcItemDesc} key={h}>· {h}</div>)

@@ -1,7 +1,7 @@
 @import "./globalVar.scss";
 
 .wrapper {
-  max-width:  $max-width;
+  max-width: $max-width;
   margin: 50px auto;
 
   a {
@@ -16,7 +16,7 @@
   color: #6002ee;
   padding-left: 20px;
   border-left: 7px solid #9a66f5;
-  line-height: 43px;
+  line-height: 1.2;
 }
 
 .mobileTitle {
@@ -24,7 +24,7 @@
 }
 
 .pcPositionTitle {
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 .pageTitleSecond {
@@ -45,7 +45,7 @@
   color: #000;
 }
 
-.hc[index="0"] .hcTitle{
+.hc[index="0"] .hcTitle {
   margin-top: 30px;
 }
 
@@ -57,7 +57,7 @@
     position: absolute;
     width: 56px;
     height: 56px;
-    top: -12px;
+    top: -9px;
     left: -30px;
     opacity: 1;
   }
@@ -78,7 +78,7 @@
     letter-spacing: 0.72px;
     text-align: left;
     color: #000;
-    margin-top: 10px;
+    margin-top: 4px;
   }
 
   .hcItemTitle {
@@ -94,7 +94,7 @@
     font-size: 18px;
     line-height: 1.45;
     color: #000;
-    margin-top: 10px;
+    margin-top: 17px;
     margin-left: 10px;
   }
 
@@ -124,6 +124,7 @@
   margin: 0 auto;
   margin-top: 54px;
   overflow: hidden;
+  display: none;
 
   .hcBoxTitle {
     font-size: 18px;
@@ -160,16 +161,11 @@
   }
 }
 
-@media screen and(min-width: 750px) {
-  .hcBox {
-    display: none;
-  }
-  .positionTitle {
-    display: none;
-  }
-}
-
 @media screen and(max-width: 750px) {
+
+  .hcBox {
+    display: block;
+  }
 
   .mobileTitle {
     display: block;
@@ -195,7 +191,7 @@
     margin-top: 10px;
   }
   .pageDesc {
-    font-size: 14px;
+    font-size: 18px;
     margin-top: 10px;
   }
 }
