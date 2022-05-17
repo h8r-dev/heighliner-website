@@ -45,7 +45,7 @@ hln up [appName] [flags]
 ```
       --dir string        Path to your local stack
   -h, --help              help for up
-  -i, --interactive       If this flag is set, heighliner will promt dialog when necessary.
+  -i, --interactive       If this flag is set, heighliner will prompt dialog when necessary.
       --no-cache          Disable caching
       --set stringArray   The input values of your project
   -s, --stack string      Name of your stack
