@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import siteConfig from "@generated/docusaurus.config";
 
@@ -14,7 +13,7 @@ export default function HeighlinerHeader(): React.ReactElement {
 
   return (
     <header className={styles[headerBg]}>
-      <nav className={clsx(styles.navbar, "container")}>
+      <nav className={styles.navbar}>
         <div className={styles.logoWrap}>
           <Link to={siteConfig.baseUrl}>
             <img
