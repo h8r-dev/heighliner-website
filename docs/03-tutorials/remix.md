@@ -151,8 +151,6 @@ Add hosts to your localhost(replace `<ingress-ip>` with above result):
 if you are using vpn(eg: clashX\Shadowsocks), you need to close the vpn.
 :::
 
-## Make Some Changes To Application
-
 ## Cleanup
 
 ```shell
