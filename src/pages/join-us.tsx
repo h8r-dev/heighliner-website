@@ -132,11 +132,11 @@ export default function AboutUs(): JSX.Element {
                 <div className={styles.hcTitle}>{title}</div>
                 <div className={styles.hcDesc}>{desc}</div>
                 {
-                  item.map(j => {
+                  item.map((j, count) => {
                     let {itemTitle, itemList} = j;
                     return (
-                      <div key={itemTitle} color={styles.itemWrapper}>
-                        <div className={styles.hcItemTitle}>{itemTitle}</div>
+                      <div key={itemTitle}>
+                        <div className={styles.hcItemTitle} count={count}>{itemTitle}</div>
                         {
                           itemList.map(h => <div className={styles.hcItemDesc} key={h}>· {h}</div>)
                         }
