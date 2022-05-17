@@ -113,7 +113,7 @@ Click the GitHub url and dashboard links to see the effects.
 className="unique-tabs"
 defaultValue="local"
 values={[
-{label: 'Kind/Minikube', value: 'local'},
+{label: 'Kind', value: 'local'},
 {label: 'Cloud', value: 'cloud'},
 ]}>
 
