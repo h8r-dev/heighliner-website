@@ -27,12 +27,7 @@ const entries: EntriesType = [
 export default function (): React.ReactElement {
   return (
     <PageWrapper title="Resources">
-      {/* <HeighlinerHeaderBg>
-        <HeighlinerHeader />
-        <HeighlinerHeaderTitle title="Resources"/>
-      </HeighlinerHeaderBg> */}
       <Entries entries={entries} />
-      {/* <Footer /> */}
     </PageWrapper>
   );
 }
