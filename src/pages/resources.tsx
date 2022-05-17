@@ -1,21 +1,18 @@
 import React from "react";
 
 import Entries, { EntriesType } from "../components/Entries";
-import HeighlinerHeader from "../components/Header/HeighlinerHeader";
-import HeighlinerHeaderBg from "../components/Header/HeighlinerHeaderBg";
-import HeighlinerHeaderTitle from "../components/Header/HeighlinerHeaderTitle";
-import { Footer } from "../components/homepage/Footer";
 import List from "../components/List";
+import PageWrapper from "../components/PageWrapper";
+
+import styles from "../css/resources.module.scss";
 
 const items = [
   (<span>
-    Heighliner Introduction Sliders:
-    <a href="https://dl.h8r.io/heighliner-introduction-slides.pdf">View</a>
+    Heighliner Introduction Sliders: <a href="https://dl.h8r.io/heighliner-introduction-slides.pdf">View</a>
   </span>),
   (
     <span>
-      Brand &#38; Design:
-      <a href="https://dl.h8r.io/brand.zip" download="Brand">Download</a>
+      Brand &#38; Design: <a href="https://dl.h8r.io/brand.zip" download="Brand">Download</a>
     </span>
   )
 ]
@@ -29,13 +26,10 @@ const entries: EntriesType = [
 
 export default function (): React.ReactElement {
   return (
-    <>
-      <HeighlinerHeaderBg>
-        <HeighlinerHeader />
-        <HeighlinerHeaderTitle title="Resources"/>
-      </HeighlinerHeaderBg>
-      <Entries entries={entries} />
-      <Footer />
-    </>
+    <PageWrapper title="Resources">
+      <div className={styles.resources}>
+        <Entries entries={entries} />
+      </div>
+    </PageWrapper>
   );
 }

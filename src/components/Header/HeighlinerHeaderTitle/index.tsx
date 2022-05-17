@@ -7,5 +7,9 @@ interface Props {
 }
 
 export default function ({ title }: Props): React.ReactElement {
-  return <h1 className={styles.title}>{title}</h1>;
+  return (
+    <div>
+      <h1 className={styles.title}>{title}</h1>
+    </div>
+  );
 }

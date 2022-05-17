@@ -1,7 +1,10 @@
+@import "@site/src/css/globalVar.scss";
+
 .navbar {
-  padding-top: 32px;
   display: flex;
   justify-content: space-between;
+  @include container;
+  padding-top: 32px;
 
   .logoWrap {
     display: flex;
@@ -18,7 +21,7 @@
   }
 }
 
-@media screen and(max-width: 750px) {
+@media screen and(max-width: 768px) {
   .navbar {
     padding-top: 5.6vw;
 
@@ -28,14 +31,14 @@
       }
 
       .whiteHeighliner, .purpleHeighliner {
-        width: 11.48vw;
+        width: 21.76vw;
       }
     }
   }
 
 
   .headerBg {
-    height: 14vh;
+    height: 18vw;
     animation: white-header-gradient 500ms forwards;
 
     .navbar {
