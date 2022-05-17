@@ -30,11 +30,6 @@
   }
 }
 
-.verticallyFullOfScreen {
-  width: 100vw;
-  margin-left: calc(var(--ifm-spacing-horizontal) * -1);
-}
-
 .contentWrap {
   display: flex;
   width: 100%;
