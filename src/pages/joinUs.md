@@ -8,13 +8,13 @@ title: Join us
 
 Heighliner is a modern app development platform. It aims to help developers to build apps easily and quickly using state-of-the-art cloud native stacks. You can use Heighliner to spin up the development environment, and then can focus on writing the business code without worrying build and deploy.
 
-The core team of Heighliner comes from  [https://nocalhost.dev](https://nocalhost.dev) [https://kubevela.io](https://kubevela.io) . 
+The core team of Heighliner comes from  [https://nocalhost.dev](https://nocalhost.dev) [https://kubevela.io](https://kubevela.io) .
 
 We are a young team, advocating freedom and openness, and have gathered a group of small partners who are full of curiosity, love open source, and dream of using technology to change the world. We aim to use the most advanced cloud-native open source technology, so that users don't need to care about infrastructure, get a better development experience and the advantages of multi-cloud delivery, cost reduction and efficiency improvement.
 
 ## Openning Position: Sr. Manager, Developer Relations(Remote, United States)
 
-We are seeking a manager based in the Americas to build and lead the team of Developer Advocates. 
+We are seeking a manager based in the Americas to build and lead the team of Developer Advocates.
 
 As the leader of Developer Relations team, you will:
 

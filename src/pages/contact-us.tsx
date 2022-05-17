@@ -1,10 +1,7 @@
 import React from "react";
 import Entries from "../components/Entries";
 
-import HeighlinerHeader from "../components/Header/HeighlinerHeader";
-import HeighlinerHeaderBg from "../components/Header/HeighlinerHeaderBg";
-import HeighlinerHeaderTitle from "../components/Header/HeighlinerHeaderTitle";
-import { Footer } from "../components/homepage/Footer";
+import PageWrapper from "../components/PageWrapper";
 
 const entries: {
   title: string;
@@ -35,10 +32,10 @@ const entries: {
   },
   {
     title: "Join Heighliner User Group on WeChat",
-    imgPath: require("/img/page/contact-us/WeChatOfficeAccount.png").default,
+    imgPath: require("/img/page/contact-us/HeightLinerWeChat.jpg").default,
   },
   {
-    title: "Follow Heighliner's WeChat Channel",
+    title: "Follow Heighliner's WeChat Official Afccount",
     imgPath: require('/img/page/contact-us/WeChatChannel.png').default,
   },
   {
@@ -50,13 +47,8 @@ const entries: {
 
 export default function ContactUs(): React.ReactElement {
   return (
-    <>
-      <HeighlinerHeaderBg>
-        <HeighlinerHeader />
-        <HeighlinerHeaderTitle title="Contact us"/>
-      </HeighlinerHeaderBg>
+    <PageWrapper title="Contact us">
       <Entries entries={entries} />
-      <Footer />
-    </>
+    </PageWrapper>
   );
 }

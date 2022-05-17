@@ -37,17 +37,14 @@ const iconList: IconType[] = [
     src: require('@site/static/img/homepage/joincommunity/wechat.webp').default,
     alt: JoinCommunityMethod.WECHAT,
     qrCode: require('@site/static/img/heighliner-wechat-channel.jpeg').default,
+    link: siteConfig.customFields.wechat as string
   },
 ]
 
 export function JoinCommunity() {
   function hendleClick(item: IconType) {
     let {alt, link} = item;
-    if (alt === JoinCommunityMethod.WECHAT) {
-      if (isWeixin()) {
-        window.open("https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzkzMTM1MDEyOA==&scene=124#wechat_redirect")
-      }
-    } else {
+    if ((alt !== JoinCommunityMethod.WECHAT) || isWeixin()) {
       link && window.open(link)
     }
   }
