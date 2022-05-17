@@ -33,7 +33,9 @@ export default function PageWrapper({children, title, tableMask}: Props): JSX.El
           title && <HeighlinerHeaderTitle title={title}/>
         }
       </HeighlinerHeaderBg>
-      {children}
+      <div className={styles.children}>
+        {children}
+      </div>
       <Footer/>
     </div>
   );

@@ -1,3 +1,4 @@
+@import "../../css/globalVar.scss";
 
 .pageWrapper {
   background: #fff;
@@ -7,4 +8,10 @@
     font-style: normal;
     font-weight: 400;
   }
+}
+
+.children{
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 20px;
 }

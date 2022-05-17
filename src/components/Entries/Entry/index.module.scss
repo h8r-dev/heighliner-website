@@ -34,9 +34,9 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .entry {
-    margin-left: 7.2vw;
+    margin: 0 20px 30px 20px;
     
     .title::before {
       display: none;
