@@ -1,6 +1,7 @@
 .list {
   list-style-type: none;
   color: #000;
+  padding-left: 20px;
 
   a {
     color: #6002ee;
@@ -9,8 +10,8 @@
   li::before {
     content: "·";
     display: inline-block;
-    margin-left: -20px;
-    margin-right: 12px;
+    margin-left: -10px;
+    margin-right: 10px;
   }
 
   li {

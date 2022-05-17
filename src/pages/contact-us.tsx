@@ -3,6 +3,8 @@ import Entries from "../components/Entries";
 
 import PageWrapper from "../components/PageWrapper";
 
+import siteConfig from "@generated/docusaurus.config";
+
 const entries: {
   title: string;
   content?: string | React.ReactElement;
@@ -18,7 +20,7 @@ const entries: {
     title: "Commit an issue on GitHub",
     content: (
       <>
-        Create an issue on our <strong>Github repo</strong>.
+        Create an issue on our <a href={siteConfig.customFields.githubUrl} target="_blank">Github repo</a>.
       </>
     ),
   },
@@ -26,7 +28,7 @@ const entries: {
     title: "Join Heighliner User Group on Discord",
     content: (
       <>
-        Join our <strong>Discord channel</strong>
+        Join our <a href={siteConfig.customFields.discordUrl} target="_blank">Discord channel</a>
       </>
     ),
   },
@@ -35,13 +37,17 @@ const entries: {
     imgPath: require("/img/page/contact-us/HeightLinerWeChat.jpg").default,
   },
   {
-    title: "Follow Heighliner's WeChat Official Afccount",
+    title: "Follow Heighliner's WeChat Official Account",
     imgPath: require('/img/page/contact-us/WeChatChannel.png').default,
   },
   {
     title: "Email",
     content:
-      "If you have any questions, don't hesitate to contact us at contact@h8r.io",
+      (
+        <>
+          If you have any questions, don't hesitate to contact us at contact <a href={"mailto:" + siteConfig.customFields.email}>{siteConfig.customFields.email}</a>
+        </>
+      )
   },
 ];
 

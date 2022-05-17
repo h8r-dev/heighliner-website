@@ -4,15 +4,15 @@ import Entries, { EntriesType } from "../components/Entries";
 import List from "../components/List";
 import PageWrapper from "../components/PageWrapper";
 
+import styles from "../css/resources.module.scss";
+
 const items = [
   (<span>
-    Heighliner Introduction Sliders:
-    <a href="https://dl.h8r.io/heighliner-introduction-slides.pdf">View</a>
+    Heighliner Introduction Sliders: <a href="https://dl.h8r.io/heighliner-introduction-slides.pdf">View</a>
   </span>),
   (
     <span>
-      Brand &#38; Design:
-      <a href="https://dl.h8r.io/brand.zip" download="Brand">Download</a>
+      Brand &#38; Design: <a href="https://dl.h8r.io/brand.zip" download="Brand">Download</a>
     </span>
   )
 ]
@@ -27,7 +27,9 @@ const entries: EntriesType = [
 export default function (): React.ReactElement {
   return (
     <PageWrapper title="Resources">
-      <Entries entries={entries} />
+      <div className={styles.resources}>
+        <Entries entries={entries} />
+      </div>
     </PageWrapper>
   );
 }

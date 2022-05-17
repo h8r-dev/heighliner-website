@@ -98,7 +98,7 @@ export const list = [
 
 export default function AboutUs(): JSX.Element {
   return (
-    <PageWrapper title="Join us at Heighliner" tableMask>
+    <PageWrapper title="Join us at Heighliner">
       <div className={styles.wrapper}>
         <div className={clsx(styles.pageTitle, styles.pcTitle)}>Join Heighliner and build the future of Cloud Native</div>
         <div className={clsx(styles.pageTitle, styles.mobileTitle)}>Join Us</div>
