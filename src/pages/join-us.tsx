@@ -3,6 +3,7 @@
  */
 import React from "react";
 import Link from "@docusaurus/Link";
+import clsx from "clsx";
 
 import PageWrapper from "../components/PageWrapper/index";
 
@@ -97,9 +98,10 @@ export const list = [
 
 export default function AboutUs(): JSX.Element {
   return (
-    <PageWrapper title="Join us">
+    <PageWrapper title="Join us at Heighliner">
       <div className={styles.wrapper}>
-        <div className={styles.pageTitle}>Join Heighliner and build the future of Cloud Native</div>
+        <div className={clsx(styles.pageTitle, styles.pcTitle)}>Join Heighliner and build the future of Cloud Native</div>
+        <div className={clsx(styles.pageTitle, styles.mobileTitle)}>Join Us</div>
         <div className={styles.pageTitleSecond}>About Heighliner</div>
         <div className={styles.pageDesc}>
           Heighliner is a modern app development platform.
@@ -110,7 +112,7 @@ export default function AboutUs(): JSX.Element {
         <div className={styles.pageDesc}>
           The core team of Heighliner comes from
           &nbsp;<a href="https://nocalhost.dev" target="_blank">https://nocalhost.dev</a>
-          &nbsp;<a href="https://kubevela.io" target="_blank">https://kubevela.io</a> .
+          &nbsp;<a href="https://kubevela.io" target="_blank">https://kubevela.io</a>.
         </div>
         <div className={styles.pageDesc}>
           We are a young team, advocating freedom and openness,
@@ -121,11 +123,13 @@ export default function AboutUs(): JSX.Element {
           get a better development experience and the advantages of multi-cloud delivery,
           cost reduction and efficiency improvement.
         </div>
+
+        <div className={clsx(styles.pageTitle, styles.pcTitle, styles.pcPositionTitle)}>Opening Position:</div>
         {
-          list.map((i) => {
+          list.map((i, index) => {
             let {title, desc, item, icon} = i;
             return (
-              <div className={styles.hc} key={title}>
+              <div className={styles.hc} key={title} index={index}>
                 <img src={icon} alt="" className={styles.hcIcon}/>
                 <div className={styles.hcTitle}>{title}</div>
                 <div className={styles.hcDesc}>{desc}</div>
@@ -148,7 +152,7 @@ export default function AboutUs(): JSX.Element {
               </div>
             )
           })}
-        <div className={styles.positionTitle}>OUR OPENING POSITIONS</div>
+        <div className={clsx(styles.positionTitle, styles.mobileTitle)}>OUR OPENING POSITIONS</div>
         {
           list.map((i, index) => {
             let {title} = i;

@@ -5,7 +5,7 @@ import HeighlinerHeader from "../Header/HeighlinerHeader";
 import HeighlinerHeaderBg from "../Header/HeighlinerHeaderBg";
 import HeighlinerHeaderTitle from "../Header/HeighlinerHeaderTitle";
 
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 
 let tableMaskStyle = {
   "background": `linear-gradient(90deg, rgba(234, 227, 236, 0.3) 1px, transparent 0),
@@ -23,6 +23,10 @@ interface Props {
 export default function PageWrapper({children, title, tableMask}: Props): JSX.Element {
   return (
     <div className={styles.pageWrapper} style={tableMask && tableMaskStyle}>
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      />
       <HeighlinerHeaderBg>
         <HeighlinerHeader/>
         {

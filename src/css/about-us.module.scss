@@ -122,7 +122,7 @@
 
 @media screen and(max-width: 500px) {
   .contentWrapper {
-    margin: 0 6px;
+    margin: 0;
   }
 
   .pageTitle {
@@ -153,8 +153,19 @@
   }
 
   .imageAndDesc {
+    display: block;
+
     .imgWrapper {
-      width: 48%;
+      width: 100%;
+
+      img {
+        display: none;
+      }
+
+      .imgContent {
+        padding: 0 15px;
+        font-size: 14px;
+      }
     }
   }
 }

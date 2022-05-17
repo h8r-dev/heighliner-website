@@ -1,11 +1,11 @@
-.joinUs{
-  background-color: #fff;
-}
-
 .wrapper {
   max-width: 1200px;
   margin: 50px auto;
   padding: 0 18px;
+
+  a {
+    color: #6002ee;
+  }
 }
 
 .pageTitle {
@@ -15,7 +15,15 @@
   color: #6002ee;
   padding-left: 20px;
   border-left: 7px solid #9a66f5;
-  line-height: 34px;
+  line-height: 43px;
+}
+
+.mobileTitle {
+  display: none;
+}
+
+.pcPositionTitle {
+  margin-top: 100px;
 }
 
 .pageTitleSecond {
@@ -28,12 +36,16 @@
 }
 
 .pageDesc {
-  margin-top: 20px;
+  margin-top: 14px;
   font-size: 18px;
   line-height: 1.5;
   letter-spacing: 0.72px;
   text-align: left;
   color: #000;
+}
+
+.hc[index="0"] .hcTitle{
+  margin-top: 30px;
 }
 
 .hc {
@@ -47,7 +59,6 @@
     top: -12px;
     left: -30px;
     opacity: 1;
-    z-index: -1;
   }
 
   .hcTitle {
@@ -57,7 +68,7 @@
     letter-spacing: 0.43px;
     color: #6002ee;
     margin-top: 100px;
-    z-index: 10;
+    position: relative;
   }
 
   .hcDesc {
@@ -66,7 +77,7 @@
     letter-spacing: 0.72px;
     text-align: left;
     color: #000;
-    margin-top: 16px;
+    margin-top: 10px;
   }
 
   .hcItemTitle {
@@ -96,10 +107,10 @@
   }
 }
 
-.positionTitle{
+.positionTitle {
   margin: 45px 63px 45px 41px;
   font-family: Jost;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 500;
   line-height: 1;
   text-align: center;
@@ -128,6 +139,8 @@
 
   .hcBoxApply {
     margin: 20px 23px;
+    display: flex;
+    align-items: center;
 
     img {
       width: 14px;
@@ -136,8 +149,12 @@
 
     span {
       font-size: 18px;
-      font-weight: 600;
       line-height: 2;
+      background: linear-gradient(90deg, #C13CD9 1.76%, #6C03EE 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
     }
   }
 }
@@ -146,17 +163,26 @@
   .hcBox {
     display: none;
   }
-  .positionTitle{
+  .positionTitle {
     display: none;
   }
 }
 
 @media screen and(max-width: 750px) {
+
+  .mobileTitle {
+    display: block;
+  }
+
+  .pcTitle {
+    display: none;
+  }
+
   .hc {
     display: none;
   }
   .wrapper {
-    margin-top: 50px;
+    margin-top: 0px;
     padding: 0 28px;
   }
   .pageTitle {
