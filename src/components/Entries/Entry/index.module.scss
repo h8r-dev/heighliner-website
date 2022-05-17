@@ -1,6 +1,5 @@
 .entry {
   margin-bottom: 4.79vw;
-  // margin-left: 8.7vw;
   color: #000;
 
   .title::before {
@@ -33,17 +32,10 @@
   }
 }
 
-<<<<<<< HEAD
-@media screen and (max-width: 500px) {
-  .entry {
-    margin: 0 20px 30px 20px;
-=======
 @media screen and (max-width: 769px) {
   .entry {
     margin-bottom: 10vw;
-    // margin-left: 7.2vw;
->>>>>>> 77405a73df7c5eefa47de2d0240f32a30b9e5ae0
-    
+
     .title::before {
       display: none;
     } 

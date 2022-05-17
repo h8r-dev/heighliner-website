@@ -8,7 +8,7 @@ interface Props {
 
 export default function ({ title }: Props): React.ReactElement {
   return (
-    <div className="container">
+    <div>
       <h1 className={styles.title}>{title}</h1>
     </div>
   );

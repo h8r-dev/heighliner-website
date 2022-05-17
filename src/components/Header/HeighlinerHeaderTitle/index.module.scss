@@ -1,14 +1,17 @@
+@import "../../../css/globalVar.scss";
+
 .title {
-  margin-top:3.29vw;
-  margin-left: 1vw;
+  margin:3.5vw auto 0;
+  //margin-left: 1vw;
   font-size: 5.347vw;
+  padding: 0 20px;
   color: #faf5fa;
-  font-weight: normal;  
+  font-weight: normal;
+  max-width: $max-width;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 500px) {
   .title {
-    padding: 0px 28px;
-    margin-top: 1vw;  
+    margin-top: 1.5vw;
   }
 }

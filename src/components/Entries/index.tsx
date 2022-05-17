@@ -10,7 +10,7 @@ interface Props {
 
 export default function Entries({ entries }: Props): React.ReactElement {
   return (
-    <div className="container">
+    <div>
       {entries.map((entry) => (
         <div key={entry.title}>
           <Entry entry={entry} />
