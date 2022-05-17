@@ -2,7 +2,7 @@
  * Footer of homepage.
  */
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import siteConfig from "@generated/docusaurus.config";
@@ -12,7 +12,15 @@ import WhiteHeighlinerSvg from "@site/static/img/homepage/white-heighliner.svg";
 import styles from './index.module.css'
 
 export function Footer() {
+  const [showBeianInfo, setShowBeianInfo] = useState(false)
   const footer: any = siteConfig.themeConfig.footer
+
+  useEffect(() => {
+    if (window.location.host === 'heighliner.cn') {
+      setShowBeianInfo(true)
+    }
+  }, [])
+
   return (
     <div className={styles.outerWrap}>
       <div className={clsx('container', styles.wrapper)}>
@@ -53,7 +61,10 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className={styles.copyright}>{footer.copyright}</div>
+      <div className={styles.copyright}>
+        <span>{footer.copyright}</span>
+        <span style={{ marginLeft: 10, display: showBeianInfo ? 'inline-block': 'none' }}>粤ICP备2022019117号</span>
+      </div>
     </div>
   )
 }
