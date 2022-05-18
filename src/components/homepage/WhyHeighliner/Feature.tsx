@@ -16,7 +16,7 @@ export default function Feature({
 }: Props): React.ReactElement {
   return (
     <>
-      <div className={styles.featureContain}>
+      <div className={clsx(styles.featureContain, styles.lg)}>
         <div className={styles.featureTitle}>{title}</div>
         <img
           src={imgPath}
