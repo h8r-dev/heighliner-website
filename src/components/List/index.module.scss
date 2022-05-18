@@ -1,3 +1,5 @@
+@import "../../css/globalVar";
+
 .listWrap {
   display: flow-root;
   color: #000;
@@ -14,7 +16,6 @@
     font-weight: normal;
   }
 }
-@import "../../css/globalVar";
 
 .list {
   list-style-type: none;
