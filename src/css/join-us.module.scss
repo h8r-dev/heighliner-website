@@ -33,7 +33,7 @@
   line-height: 1.45;
   letter-spacing: 0.29px;
   color: #000;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .pageDesc {
@@ -68,6 +68,10 @@
     position: relative;
   }
 
+  .hcTitle[index="0"] {
+    margin-top: 30px;
+  }
+
   .hcDesc {
     font-size: 18px;
     line-height: 1.5;
@@ -99,7 +103,7 @@
   }
 
   .hcEmail {
-    margin-top: 10px;
+    margin-top: 23px;
     font-size: 22px;
     font-weight: 500;
     line-height: 1.45;

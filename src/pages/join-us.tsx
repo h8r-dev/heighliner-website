@@ -125,12 +125,12 @@ export default function AboutUs(): JSX.Element {
         </div>
         <div className={clsx(styles.pageTitle, styles.pcTitle, styles.pcPositionTitle)}>Opening Position:</div>
         {
-          list.map(i => {
+          list.map((i, index) => {
             let {title, desc, item, icon} = i;
             return (
               <div className={styles.hc} key={title}>
                 <img src={icon} alt="" className={styles.hcIcon}/>
-                <div className={styles.hcTitle}>{title}</div>
+                <div className={styles.hcTitle} index={index}>{title}</div>
                 <div className={styles.hcDesc}>{desc}</div>
                 {
                   item.map(j => {
