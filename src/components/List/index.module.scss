@@ -1,3 +1,19 @@
+.listWrap {
+  display: flow-root;
+  color: #000;
+  margin-top: 18px;
+  font-size: 22px;
+}
+
+.title {
+  margin-bottom: 0px;
+}
+
+.title + .list{
+  li {
+    font-weight: normal;
+  }
+}
 @import "../../css/globalVar";
 
 .list {
