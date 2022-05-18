@@ -6,7 +6,7 @@
 }
 
 .pageTitle {
-  font-size: 81px;
+  font-size: 60px;
   font-weight: 500;
   line-height: 1;
   line-height: 64px;
@@ -16,10 +16,10 @@
 }
 
 .pageDesc {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   color: #000;
-  margin: 30px 0 100px 20px;
+  margin: 20px 0 100px 20px;
   max-width: 600px;
 }
 
@@ -30,7 +30,7 @@
   .itemWrapper {
     width: 33.3%;
     padding: 0 15px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 
     .itemTitle {
       font-size: 40px;
@@ -82,11 +82,12 @@
     }
 
     .imgTitle {
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
     .imgContent {
       margin-left: 0px;
+      margin-top: 20px;
     }
   }
 }
@@ -144,7 +145,7 @@
       padding: 0px;
 
       &:last-child {
-        margin-bottom: 16px;
+        margin-bottom: 26px;
       }
 
       .itemTitle {
@@ -170,6 +171,7 @@
 
       .imgContent {
         font-size: 14px;
+        margin-top: 10px;
       }
     }
   }

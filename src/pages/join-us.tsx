@@ -100,7 +100,8 @@ export default function AboutUs(): JSX.Element {
   return (
     <PageWrapper title="Join us at Heighliner">
       <div className={styles.wrapper}>
-        <div className={clsx(styles.pageTitle, styles.pcTitle)}>Join Heighliner and build the future of Cloud Native</div>
+        <div className={clsx(styles.pageTitle, styles.pcTitle)}>Join Heighliner and build the future of Cloud Native
+        </div>
         <div className={clsx(styles.pageTitle, styles.mobileTitle)}>Join Us</div>
         <div className={styles.pageTitleSecond}>About Heighliner</div>
         <div className={styles.pageDesc}>
@@ -110,7 +111,8 @@ export default function AboutUs(): JSX.Element {
           and then can focus on writing the business code without worrying build and deploy.
         </div>
         <div className={styles.pageDesc}>
-          The core team of Heighliner comes from <a href="https://nocalhost.dev" target="_blank">https://nocalhost.dev</a>
+          The core team of Heighliner comes from <a href="https://nocalhost.dev"
+                                                    target="_blank">https://nocalhost.dev</a>
           &nbsp;<a href="https://kubevela.io" target="_blank">https://kubevela.io</a>.
         </div>
         <div className={styles.pageDesc}>
@@ -124,21 +126,19 @@ export default function AboutUs(): JSX.Element {
         </div>
         <div className={clsx(styles.pageTitle, styles.pcTitle, styles.pcPositionTitle)}>Opening Position:</div>
         {
-          list.map((i, index) => {
+          list.map(i => {
             let {title, desc, item, icon} = i;
             return (
-              // @ts-ignore
-              <div className={styles.hc} key={title} index={index}>
+              <div className={styles.hc} key={title}>
                 <img src={icon} alt="" className={styles.hcIcon}/>
                 <div className={styles.hcTitle}>{title}</div>
                 <div className={styles.hcDesc}>{desc}</div>
                 {
-                  item.map((j, count) => {
+                  item.map(j => {
                     let {itemTitle, itemList} = j;
                     return (
-                      <div key={itemTitle}>
-                         {/*@ts-ignore*/}
-                        <div className={styles.hcItemTitle} count={count}>{itemTitle}</div>
+                      <div key={itemTitle} className={styles.itemWrapper}>
+                        <div className={styles.hcItemTitle}>{itemTitle}</div>
                         {
                           itemList.map(h => <div className={styles.hcItemDesc} key={h}>· {h}</div>)
                         }
