@@ -1,6 +1,7 @@
 import React from "react";
 
 import styles from "./index.module.scss";
+import DownLoadLink from "@site/src/components/Link/DownLoadLink";
 
 interface DownloadList {
   icon: string,
@@ -10,15 +11,15 @@ interface DownloadList {
 const downloadList: DownloadList[] = [
   {
     icon: require('@site/static/resources/downloadIcon1.webp').default,
-    downloadUrl: '/resources/primayLogo.zip'
+    downloadUrl: require('/static/resources/primayLogo.zip').default,
   },
   {
     icon: require('@site/static/resources/downloadIcon2.webp').default,
-    downloadUrl: '/resources/verticalLogo.zip'
+    downloadUrl: require('/static/resources/verticalLogo.zip').default,
   },
   {
     icon: require('@site/static/resources/downloadIcon3.webp').default,
-    downloadUrl: '/resources/logo.zip'
+    downloadUrl: require('/static/resources/logo.zip').default,
   },
 ]
 
@@ -31,7 +32,9 @@ export default function LogoDownload(): JSX.Element {
           return (
             <div className={styles.itemWrapper} key={index}>
               <img src={icon} alt=""/>
-              <a href={downloadUrl} target="_blank">Download</a>
+              <DownLoadLink
+                path={downloadUrl}
+              />
             </div>
           )
         })

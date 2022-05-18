@@ -4,6 +4,7 @@ import Entries, { EntriesType } from "../components/Entries";
 import List from "../components/List";
 import PageWrapper from "../components/PageWrapper";
 import LogoDownload from "@site/src/components/LogoDownload";
+import Link from "@docusaurus/Link";
 
 import styles from "../css/resources.module.scss";
 
@@ -14,9 +15,9 @@ const items = [
   </span>,
   <span>
     Brand &#38; Design:{" "}
-    <a href="https://dl.h8r.io/brand.zip" download="Brand">
+    <Link to="/heighliner-brand">
       Download
-    </a>
+    </Link>
   </span>,
 ];
 
