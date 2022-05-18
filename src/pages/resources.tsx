@@ -3,6 +3,7 @@ import React from "react";
 import Entries, { EntriesType } from "../components/Entries";
 import List from "../components/List";
 import PageWrapper from "../components/PageWrapper";
+import LogoDownload from "@site/src/components/LogoDownload";
 
 import styles from "../css/resources.module.scss";
 
@@ -22,8 +23,12 @@ const items = [
 const entries: EntriesType = [
   {
     title: "Resources Download Center",
-    customComponent: <List items={items} />,
+    customComponent: <List items={items}/>
   },
+  {
+    title: "LOGO Download",
+    customComponent: <LogoDownload/>
+  }
 ];
 
 export default function (): React.ReactElement {

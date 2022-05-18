@@ -8,7 +8,7 @@ const mainGithubUrl = "https://github.com/h8r-dev/heighliner";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Heighliner",
-  tagline: "Speed up Cloud Native Application Development",
+  tagline: "Speed Up Cloud Native Application Development",
   url: "https://heighliner.dev",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -32,6 +32,7 @@ const config = {
     sprintVueStackUrl: '/docs/tutorials/spring_vue',
     newsletterUrl: 'https://heighliner.substack.com/',
     email: "hr@h8r.io",
+    contactEmail: "contact@h8r.io",
     wechat: "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzkzMTM1MDEyOA==&scene=124#wechat_redirect",
   },
 

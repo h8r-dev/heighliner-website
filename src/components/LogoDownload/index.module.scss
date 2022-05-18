@@ -1,0 +1,30 @@
+@import "../../css/globalVar.scss";
+
+.itemWrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border: solid 1px #fff;
+  margin-top: 10px;
+
+  img {
+    width: 211px;
+  }
+
+  a {
+    font-size: $pc-general-font-size;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .itemWrapper {
+    a {
+      font-size: $mobile-general-font-size;
+    }
+  }
+}
+
+
+
