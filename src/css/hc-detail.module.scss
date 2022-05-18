@@ -1,3 +1,5 @@
+@import "../css/globalVar.scss";
+
 .wrapper {
   margin-bottom: 50px;
 }
@@ -11,7 +13,7 @@
   }
 
   .hcDesc {
-    font-size: 13px;
+    font-size: $mobile-general-font-size;
     line-height: 1.5;
     letter-spacing: 0.52px;
     color: #000;
@@ -19,7 +21,7 @@
   }
 
   .hcItemTitle {
-    font-size: 13px;
+    font-size: $mobile-general-font-size;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.52px;
@@ -29,14 +31,15 @@
   }
 
   .hcItemDesc {
-    font-size: 13px;
-    line-height: 20px;
+    font-size: $mobile-general-font-size;
+    line-height: 1.5;
     color: #000;
     margin-left: 10px;
+    margin-top: 6px;
   }
 
   .hcEmail {
-    font-size: 13px;
+    font-size: $mobile-general-font-size;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.52px;

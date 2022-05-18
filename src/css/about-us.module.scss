@@ -16,7 +16,7 @@
 }
 
 .pageDesc {
-  font-size: 20px;
+  font-size: $pc-general-font-size;
   line-height: 1.5;
   color: #000;
   margin: 20px 0 100px 20px;
@@ -131,10 +131,9 @@
   }
 
   .pageDesc {
-    font-size: 16px;
+    font-size: $mobile-general-font-size;
     margin-top: 10px;
     margin-left: 0px;
-    line-height: 1.5;
     margin-bottom: 36px;
   }
 

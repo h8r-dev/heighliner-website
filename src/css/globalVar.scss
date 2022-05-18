@@ -1,6 +1,10 @@
 
 $max-width: 1288px;
 
+$pc-general-font-size: 22px;
+
+$mobile-general-font-size: 18px;
+
 @mixin container {
   max-width: $max-width;
   margin-inline: auto;

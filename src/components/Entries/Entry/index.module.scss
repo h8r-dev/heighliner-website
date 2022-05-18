@@ -1,3 +1,5 @@
+@import "../../../css/globalVar";
+
 .entry {
   margin-bottom: 80px;
   color: #6002ee;
@@ -12,7 +14,7 @@
   }
 
   .content {
-    font-size: 22px;
+    font-size: $pc-general-font-size;
     line-height: 1.45;
     color: #000;
   }
@@ -27,7 +29,7 @@
   }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 750px) {
   .entry {
     margin-bottom: 10vw;
 
@@ -36,6 +38,10 @@
       border-left-width: 0px;
       padding-left: 0px;
       line-height: 1.2;
+    }
+
+    .content{
+      font-size: $mobile-general-font-size;
     }
 
     & > img {
