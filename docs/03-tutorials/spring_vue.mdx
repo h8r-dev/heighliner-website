@@ -10,13 +10,57 @@ Make sure you have followed [the installation guide](/docs/getting_started/insta
 :::
 
 ## Create a Spring+Vue App
+
+Create your application interactively:
+
 ```shell
-hln up java-hello-world -s spring-vue -i
+hln up spring-vue-hello-world -s spring-vue -i
 ```
+
+Input the values one by one according to the prompt:
+
+```
+Which github organization do you want to use(Can be set as personal github id)? (required):
+
+> [organization name or github id, e.g. yni9ht]
+
+Which domain do you want to use?:
+
+> [default: h8r.site]
+```
+
+Then it will start executing the setup instructions. Output looks like:
+
 ![create-application](/img/docs/tutorial/spring-vue/create-application.png)
 
-Output looks like this:
-![output](/img/docs/tutorial/spring-vue/create-output.png)
+Finally, Output looks like:
+
+```
+Heighliner application spring-vue-hello-world is ready! access URL: spring-vue-hello-world.h8r.site
+
+There are 2 services have been deployed:
+● spring-vue-hello-world-frontend
+  ● access URL: spring-vue-hello-world.h8r.site
+  ● resource code: https://github.com/ni9ht-org/spring-vue-hello-world-frontend
+
+● spring-vue-hello-world-backend
+  ● access URL: spring-vue-hello-world.h8r.site/api
+  ● resource code: https://github.com/ni9ht-org/spring-vue-hello-world-backend
+
+There are 3 addons have been deployed:
+● argocd
+  ● access URL: argocd.h8r.site
+  ● credential: [Username: admin Password: xCb2E0XJ9Frl3D1A]
+
+● prometheus-stack
+  ● access URL: grafana.h8r.site
+  ● credential: [Username: admin Password: prom-operator]
+  ● prometheus URL: prometheus.h8r.site [Username: admin Password: heighliner123!], alertManager URL: alert.h8r.site [Username: admin Password: heighliner123!]
+
+● loki
+
+Congrats! Application is ready!
+```
 
 ## Setting hosts
 :::info
@@ -32,6 +76,7 @@ Get your ingress ip:
   <TabItem value="localhost" label="Kind/Minikube" default>
 
   ```shell
+  # <ingress-ip>
   127.0.0.1
   ```
 
@@ -46,14 +91,11 @@ Get your ingress ip:
 </Tabs>
 
 Add hosts to your localhost(replace `<ingress-ip>` with above result):
+
 ```
 <ingress-ip> argocd.h8r.site
 <ingress-ip> grafana.h8r.site
-<ingress-ip> alert.h8r.site
-<ingress-ip> prometheus.h8r.site
-<ingress-ip> nocalhost.h8r.site
-<ingress-ip> java-hello-world-backend.h8r.site
-<ingress-ip> java-hello-world-frontend.h8r.site
+<ingress-ip> spring-vue-hello-world.h8r.site
 ```
 
 :::tip
@@ -61,12 +103,12 @@ if you are using vpn(eg: clashX\Shadowsocks), you need to close the vpn.
 :::
 
 ## Vue App
-View your vue app site [java-hello-world-frontend.h8r.site](http://java-hello-world-frontend.h8r.site)
+View your vue app site [spring-vue-hello-world.h8r.site](http://spring-vue-hello-world.h8r.site)
 
 ![vue-app](/img/docs/tutorial/spring-vue/vue-app.png)
 
 ## SpringBoot App
-View your springBoot app Swagger UI [java-hello-world-backend.h8r.site/swagger-ui/index.html#](http://java-hello-world-backend.h8r.site/swagger-ui/index.html#)
+View your springBoot app Swagger UI [spring-vue-hello-world.h8r.site/api/swagger-ui/index.html#](http://spring-vue-hello-world.h8r.site/api/swagger-ui/index.html#)
 
 ![springboot-app](/img/docs/tutorial/spring-vue/springboot-app.png)
 
@@ -80,7 +122,28 @@ View your git repository in GitHub
 
 ![git-repo](/img/docs/tutorial/spring-vue/git-repository.png)
 
+## Monitoring
+View your monitoring dashboard [grafana.h8r.site/d/o6mCW9_7k/spring-boot-statistics](http://grafana.h8r.site/d/o6mCW9_7k/spring-boot-statistics)
+
+Login account in Output:
+```
+  ● prometheus-stack
+  ● access URL: grafana.h8r.site
+  ● credential: [Username: admin Password: prom-operator]
+```
+![grafana-dashboard](/img/docs/tutorial/spring-vue/grafana-dashboard.png)
+
 ## Cleanup
 ```shell
-hln down java-hello-world
+hln down spring-vue-hello-world
+```
+
+```
+  20:02:08	INFO	cmd/down.go:128	delete app spring-vue-hello-world...
+  20:02:08	INFO	cmd/down.go:128	delete app loki...
+  20:02:08	INFO	cmd/down.go:128	delete app prometheus-stack...
+  20:02:08	INFO	cmd/down.go:145	delete repo spring-vue-hello-world-backend...
+  20:03:56	INFO	cmd/down.go:145	delete repo spring-vue-hello-world-backend...
+  20:04:01	INFO	cmd/down.go:145	delete repo spring-vue-hello-world-deploy...
+  20:04:08	INFO	cmd/down.go:145	delete repo spring-vue-hello-world-frontend...
 ```
