@@ -98,14 +98,14 @@ import (
 	"github.com/h8r-dev/stacks/chain/components/framework/gin"
 	// Add this line
 	"github.com/h8r-dev/stacks/chain/components/framework/spring2"
-  ……
+	……
 )
 
 framework: {
   "gin":    gin
 	// Add this line
   "spring2": spring2
-  ……
+	……
 }
 ```
 
