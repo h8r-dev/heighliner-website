@@ -20,7 +20,7 @@ Chinese users may have network access problems, please run first:
 export NETWORK_TYPE=internal
 ```
 
-## Step1. Create your application
+## Step1. Create Gin+Nextjs application
 
 Create your application interactively:
 

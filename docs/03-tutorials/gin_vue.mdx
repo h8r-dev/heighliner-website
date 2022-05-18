@@ -9,7 +9,15 @@ import TabItem from '@theme/TabItem';
 Make sure you have followed [the installation guide](/docs/getting_started/installation) before continuing.
 :::
 
-## Create a Gin+Vue App
+## (Optional) Chinese users
+
+Chinese users may have network access problems, please run first:
+
+```shell
+export NETWORK_TYPE=internal
+```
+
+## Step1. Create a Gin+Vue App
 ```shell
 hln up gin-hello-world -s gin-vue -i
 ```
@@ -51,54 +59,65 @@ There are 4 addons have been deployed:
 ● loki
 ```
 
-## Setting hosts
-:::info
-Below is assuming you don't own a real domain name and use `h8r.site` as your domain name.
-In production, we recommend setting your DNS record to the public ingress IP.
-:::
-:::tip
-if you are using `h8r.site` as your host, you can skip this step. because it is dns resolvable to 127.0.0.1.
-:::
+## Step2. (Optional) Set Domain Routing
 
-Get your ingress ip:
-<Tabs>
-  <TabItem value="localhost" label="Kind/Minikube" default>
+<Tabs
+className="unique-tabs"
+defaultValue="local"
+values={[
+{label: 'Kind', value: 'local'},
+{label: 'Cloud', value: 'cloud'},
+]}>
 
-  ```shell
-  127.0.0.1
+<TabItem value="local">
+
+- If you are using `h8r.site`, you don't have to do anything.
+- If you are using your own domain name, put the following lines into your `/etc/hosts`:
+
+    ```txt
+    127.0.0.1 gin-hello-world.<your-domain>
+    127.0.0.1 argocd.<your-domain>
+    127.0.0.1 nocalhost.<your-domain>
+    127.0.0.1 grafana.<your-domain>
+    127.0.0.1 prometheus.<your-domain>
+    127.0.0.1 alert.<your-domain>
+    ```
+
+</TabItem>
+
+<TabItem value="cloud">
+
+Get your public ingress IP:
+
+```shell
+kubectl -n ingress-nginx get svc ingress-nginx-controller -o=jsonpath='{.status.loadBalancer.ingress[0].ip}'
+```
+
+Step2. Set domain routing:
+
+- If you are using `h8r.site`, Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
+
+  ```txt
+  <ingress-ip> gin-hello-world.<your-domain>
+  <ingress-ip> argocd.<your-domain>
+  <ingress-ip> nocalhost.<your-domain>
+  <ingress-ip> grafana.<your-domain>
+  <ingress-ip> prometheus.<your-domain>
+  <ingress-ip> alert.<your-domain>
   ```
 
-  </TabItem>
-  <TabItem value="cloud" label="Cloud" >
+- If you are using your own domain name, set your domain DNS record to the above ingress IP.
 
-  ```shell
-  kubectl -n ingress-nginx get svc ingress-nginx-controller -o=jsonpath='{.status.loadBalancer.ingress[0].ip}'
-  ```
-
-  </TabItem>
+</TabItem>
 </Tabs>
 
-Add hosts to your localhost(replace `<ingress-ip>` with above result):
-```
-<ingress-ip> argocd.h8r.site
-<ingress-ip> grafana.h8r.site
-<ingress-ip> alert.h8r.site
-<ingress-ip> prometheus.h8r.site
-<ingress-ip> nocalhost.h8r.site
-<ingress-ip> gin-hello-world-backend.h8r.site
-<ingress-ip> gin-hello-world-frontend.h8r.site
-```
+## Step3. Access application
+### Vue App
+View your vue app site [gin-hello-world.h8r.site](http://gin-hello-world.h8r.site)
 
-:::tip
-if you are using vpn(eg: clashX\Shadowsocks), you need to close the vpn.
-:::
+![vue-app](/img/docs/tutorial/spring-vue/vue-app.png)
 
-## Vue App
-View your vue app site [gin-hello-world-frontend.h8r.site](http://gin-hello-world-frontend.h8r.site)
-
-![vue-app](/img/docs/tutorial/gin-vue/vue-app.png)
-
-## Git Repository
+### Git Repository
 View your git repository in GitHub
 
 ![git-repo](/img/docs/tutorial/gin-vue/git-repository.png)
