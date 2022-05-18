@@ -6,18 +6,18 @@ import PageWrapper from "../components/PageWrapper";
 import siteConfig from "@generated/docusaurus.config";
 
 const entries: {
-  title: string;
+  title?: string;
   content?: string | React.ReactElement;
   imgPath?: string;
 }[] = [
   {
-    title: "Contact us",
+    // title: "Contact us",
     content:
       "Got questions? Have feedback? " +
       "Here are a couple of official channels to get in touch with us.",
   },
   {
-    title: "Commit an issue on GitHub",
+    title: "Open an issue on GitHub",
     content: (
       <>
         Create an issue on our <a href={siteConfig.customFields.githubUrl as string} target="_blank">Github repo</a>.

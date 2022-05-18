@@ -24,6 +24,10 @@ const NavLinks: { readonly name: string; readonly link: string }[] = [
     link: siteConfig.customFields.blogUrl as string,
   },
   {
+    name: "Contact Us",
+    link: siteConfig.customFields.contactUs as string,
+  },
+  {
     name: "GitHub",
     link: siteConfig.customFields.githubUrl as string,
   },

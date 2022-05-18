@@ -23,6 +23,7 @@ const config = {
     quickStartUrl: "/docs/getting_started/installation",
     docsUrl: "/docs/overview/intro",
     blogUrl: "/blog",
+    contactUs: "/contact-us",
     githubUrl: mainGithubUrl,
     discordUrl: 'https://discord.gg/WphTbdVHFA',
     ginNextStackUrl: '/docs/tutorials/gin_nextjs',
