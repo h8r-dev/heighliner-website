@@ -68,10 +68,6 @@ Path to your kubeconfig file (required):
 Which github organization do you want to use(Can be set as personal github id)? (required):
 
 > [organization name or github id]
-
-Which domain do you want to use?:
-
-> h8r.site
 ```
 
 Then it will start executing the setup instructions. Output looks like:
