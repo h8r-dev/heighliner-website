@@ -96,7 +96,7 @@ Import `spring2` package and add to framework struct in `$STACKS_REPO/chain/fact
 import (
 	// Framework
 	"github.com/h8r-dev/stacks/chain/components/framework/gin"
-  // Add this line
+	// Add this line
 	"github.com/h8r-dev/stacks/chain/components/framework/spring2"
 )
 
