@@ -12,7 +12,15 @@ Make sure you have followed [the installation guide](/docs/getting_started/insta
 
 :::
 
-## Create your application
+## (Optional) Chinese users
+
+Chinese users may have network access problems, please run first:
+
+```shell
+export NETWORK_TYPE=internal
+```
+
+## Step1. Create your application
 
 Create your application interactively:
 
@@ -55,25 +63,31 @@ hln status gin-next-app
 Output looks like:
 
 ```shell
-Heighliner application gin-next-app is ready!
-You can access argocd on argocd.h8r.site [Username: admin Password: MWE2mQdeGVJq8XMC]
+Heighliner application gin-next-app is ready! access URL: gin-next-app.h8r.site
 
-There are 5 services deployed by argocd:
-1: gin-next-app-backend
-   gin-next-app-backend has been deployed to k8s cluster, you can access it by k8s Service url: gin-next-app-backend.h8r.site
-   gin-next-app-backend's source code resides on github repository: https://github.com/lyzhang1999/gin-next-app-backend
+There are 2 services have been deployed:
+● gin-next-app-frontend
+   ● access URL: gin-next-app.h8r.site
+   ● source code: https://github.com/lyzhang1999/gin-next-app-frontend
 
-2: gin-next-app-frontend
-   gin-next-app-frontend has been deployed to k8s cluster, you can access it by k8s Service url: gin-next-app-frontend.h8r.site
-   gin-next-app-frontend's source code resides on github repository: https://github.com/lyzhang1999/gin-next-app-frontend
+● gin-next-app-backend
+   ● access URL: gin-next-app.h8r.site/api
+   ● source code: https://github.com/lyzhang1999/gin-next-app-frontend
 
-3: loki
+There are 4 addons have been deployed:
+● argocd
+   ● access URL: argocd.h8r.site
+   ● credential: [Username: admin Password: N0KXEibv1iNeYALy]
 
-4: nocalhost
-   credential: [Username: admin Password: 123456]
+● prometheus-stack
+   ● access URL: grafana.h8r.site
+   ● credential: [Username: admin Password: prom-operator]
 
-5: prometheus
-   credential: [Username: admin Password: prom-operator]
+● nocalhost
+   ● access URL: nocalhost.h8r.site
+   ● credential: [Username: admin@admin.com Password: 123456]
+
+● loki
 ```
 
 Congrats! You have created your first application with `hln` successfully. All of the cloud-native architecture have been set up properly.
@@ -91,12 +105,12 @@ values={[
 
 <TabItem value="local">
 
-- If you are using `h8r.site`, you need to do nothing.
-- If you are using your own domain name, you need to set the domain name to `127.0.0.1`:
+- If you are using `h8r.site`, you don't have to do anything.
+- If you are using your own domain name, put the following lines into your `/etc/hosts`:
 
     ```txt
     127.0.0.1 argocd.<your-domain>
-    127.0.0.1 hello-world-frontend.<your-domain>
+    127.0.0.1 gin-next-app.<your-domain>
     ```
 
 </TabItem>
@@ -115,7 +129,7 @@ Set domain routing:
 
   ```txt
   <ingress-ip> argocd.h8r.site
-  <ingress-ip> hello-world-frontend.h8r.site
+  <ingress-ip> gin-next-app.h8r.site
   ```
 
 - If you are using your own domain name, set your domain DNS record to the above ingress IP.
@@ -127,13 +141,13 @@ Set domain routing:
 
 ### Nextjs app
 
-View you nextjs app at [gin-next-app-frontend.h8r.site](http://gin-next-app-frontend.h8r.site):
+View you nextjs app at [gin-next-app.h8r.site](http://gin-next-app.h8r.site):
 
 ![alt](/img/docs/getting-started/sample-application.png)
 
 ### Gin app
 
-View you Gin app at [gin-next-app-backend.h8r.site](http://gin-next-app-backend.h8r.site):
+View you Gin app at [gin-next-app.h8r.site/api](http://gin-next-app.h8r.site/api):
 
 ![alt](/img/tutorial/01-gin-next/gin-application.png)
 

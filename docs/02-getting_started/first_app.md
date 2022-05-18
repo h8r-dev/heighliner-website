@@ -58,9 +58,7 @@ Create your application interactively:
 hln up hello-world -s sample -i
 ```
 
-> Note: `hello-world` is what we call application name. It should obey the [RFC1123](https://datatracker.ietf.org/doc/html/rfc1123) rules.
-
-Input the values one by one according to the promt:
+Input the values one by one according to the prompt:
 
 ```shell
 Path to your kubeconfig file (required):
@@ -95,13 +93,17 @@ hln status hello-world
 Output looks like:
 
 ```shell
-Heighliner application hello-world is ready!
-You can access argocd on argocd.h8r.site [Username: admin Password: vGByPtC9gsTdZogT]
+Heighliner application hello-world is ready! access URL: hello-world.h8r.site
 
-There are 1 services deployed by argocd:
-1: hello-world-frontend
-   hello-world-frontend has been deployed to k8s cluster, you can access it by k8s Service url: hello-world-frontend.h8r.site
-   hello-world-frontend's source code resides on github repository: https://github.com/hongchao-org/hello-world-frontend
+There are 1 services have been deployed:
+● hello-world-frontend
+   ● access URL: hello-world.h8r.site
+   ● source code: https://github.com/lyzhang1999/hello-world-frontend
+
+There are 1 addons have been deployed:
+● argocd
+   ● access URL: argocd.h8r.site
+   ● credential: [Username: admin Password: N0KXEibv1iNeYALy]
 ```
 
 Congrats! You have created your first application with `hln` successfully. All of the cloud-native architecture have been set up properly.
@@ -119,12 +121,12 @@ values={[
 
 <TabItem value="local">
 
-- If you are using `h8r.site`, you need to do nothing.
-- If you are using your own domain name, you need to set the domain name to `127.0.0.1`:
+- If you are using `h8r.site`, you don't have to do anything.
+- If you are using your own domain name, put the following lines into your `/etc/hosts`:
 
     ```txt
     127.0.0.1 argocd.<your-domain>
-    127.0.0.1 hello-world-frontend.<your-domain>
+    127.0.0.1 hello-world.<your-domain>
     ```
 
 </TabItem>
@@ -174,7 +176,7 @@ You can check the k8s resources for the application:
 
 ### Nextjs app
 
-View you nextjs app at [hello-world.h8r.site](http://hello-world-frontend.h8r.site):
+View you nextjs app at [hello-world.h8r.site](http://hello-world.h8r.site):
 
 ![alt](/img/docs/getting-started/sample-application.png)
 
