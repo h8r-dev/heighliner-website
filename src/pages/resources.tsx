@@ -7,21 +7,23 @@ import PageWrapper from "../components/PageWrapper";
 import styles from "../css/resources.module.scss";
 
 const items = [
-  (<span>
-    Heighliner Introduction Sliders: <a href="https://dl.h8r.io/heighliner-introduction-slides.pdf">View</a>
-  </span>),
-  (
-    <span>
-      Brand &#38; Design: <a href="https://dl.h8r.io/brand.zip" download="Brand">Download</a>
-    </span>
-  )
-]
+  <span>
+    Heighliner Introduction Sliders:{" "}
+    <a href="https://dl.h8r.io/heighliner-introduction-slides.pdf">View</a>
+  </span>,
+  <span>
+    Brand &#38; Design:{" "}
+    <a href="https://dl.h8r.io/brand.zip" download="Brand">
+      Download
+    </a>
+  </span>,
+];
 
 const entries: EntriesType = [
   {
     title: "Resources Download Center",
-    customComponent: <List items={items}/>
-  }
+    customComponent: <List items={items} />,
+  },
 ];
 
 export default function (): React.ReactElement {
