@@ -15,24 +15,24 @@ interface Item {
 
 const list: Item[] = [
   {
-    title: "Software engineers",
-    content: "Heighliner is a company mainly composed of software engineers. "
+    title: "Open Source",
+    content: "We build and use open source projects that help build the best practices and standards.",
   },
   {
-    title: "Engineer culture",
-    content: "Engineer culture drives everyone thinking technically, caring about quality of product, keeping to polish user experience."
+    title: "Engineer Culture",
+    content: "We think systematically, care about the quality of projects, keep polishing user experience."
   },
   {
-    title: "Improving Experience",
-    content: "We are dedicated to improving the developer experience for the cloud native community."
+    title: "Innovation",
+    content: "We are always looking for new ideas and break the rules to create better products.",
   },
   {
-    title: "Core members",
-    content: "Our core members come from Nocalhost(CNCF Sandbox Project) and KubeVela(CNCF Sandbox Project). "
+    title: "Embrace Community",
+    content: "We embrace community collaboration and contribute to projects like Nocalhost, Dagger, and more.",
   },
   {
-    title: "Open source",
-    content: "Engineer culture drives everyone thinking technically, caring about quality of product, keep"
+    title: "Improve Experience",
+    content: "We care about developer experience and improve it by using best practices.",
   },
 ]
 
@@ -40,12 +40,12 @@ const imglist: Item[] = [
   {
     url: require("@site/static/img/about-us/image-left.webp").default,
     title: "What we do",
-    content: "We innovatively introduced the new concept: Stack. With a stack, every tech team can build up a comprehensive and efficient workflow by pre-configured toolkit for the full life cycle of cloud-native applications. What is Heighliner Stack"
+    content: "We build Heighliner, a developer tool that let you build application stack as code."
   },
   {
     url: require("@site/static/img/about-us/image-right.webp").default,
     title: "Vision",
-    content: "The vision of Heighliner is that leveraging cloud power, everyone can build future applications."
+    content: "The vision of Heighliner is to leverage the cloud and make it for every developer!"
   }
 ]
 
@@ -54,18 +54,23 @@ export default function AboutUs(): JSX.Element {
     <PageWrapper title="About us">
       <div className={styles.contentWrapper}>
         <div className={styles.pageTitle}>
-          About Heighliner
+        A Cloud For Developers
         </div>
         <div className={styles.pageDesc}>
-          Heighliner is The cloud-native application development platform that empowers organizations and
-          developers to minimize the complexity of building up delivery flow for cloud-native applications.
+        Develoeprs have to face the complex large clouds that impose steep learning curves and massive operations.
+        This is because major cloud providers are focused on enterprises.
+        We believe the cloud should be made for developers.
+        Therefore we build Heighliner, a cloud-native developer tool that let you build application stack as code.
+        We want to empower developers to build apps quickly in a way similar to what LAMP stack does.
         </div>
         <div className={styles.pageTitle}>
           Who are we?
         </div>
         <div className={styles.pageDesc}>
-          Heighliner is The cloud-native application development platform that empowers organizations and
-          developers to minimize the complexity of building up delivery flow for cloud-native applications.
+          We are a group of software engineers who are passionate about cloud native app development.
+          We believe in the value that open source community brings.
+          In the past we have been working on open source projects like KubeVela and Nocalhost (both are CNCF projects).
+          Now we want to take the cloud to the next step and make it a platform for developers.
         </div>
         <div className={styles.flexWrapper}>
           {
