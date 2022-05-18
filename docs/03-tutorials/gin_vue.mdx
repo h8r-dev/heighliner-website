@@ -15,8 +15,41 @@ hln up gin-hello-world -s gin-vue -i
 ```
 ![create-application](/img/docs/tutorial/gin-vue/create-application.png)
 
+Get application status:
+
+```shell
+hln status gin-hello-world
+```
+
 Output looks like this:
-![output](/img/docs/tutorial/gin-vue/create-output.png)
+```shell
+🎉 Heighliner application gin-hello-world is ready! access URL: http://gin-hello-world.h8r.site
+
+There are 2 services have been deployed:
+● gin-hello-world-frontend
+  ● access URL: http://gin-hello-world.h8r.site
+  ● resource code: https://github.com/coding-org03/gin-hello-world-frontend
+
+● gin-hello-world-backend
+  ● access URL: http://gin-hello-world.h8r.site/api
+  ● resource code: https://github.com/coding-org03/gin-hello-world-backend
+
+There are 4 addons have been deployed:
+● argocd
+  ● access URL: http://argocd.h8r.site
+  ● credential: [Username: admin Password: bsj1O-Eg9iJM7fCq]
+
+● nocalhost
+  ● access URL: http://nocalhost.h8r.site
+  ● credential: [Username: admin@admin.com Password: 123456]
+
+● prometheus-stack
+  ● access URL: http://grafana.h8r.site
+  ● credential: [Username: admin Password: prom-operator]
+  ● prometheus URL: http://prometheus.h8r.site [Username: admin Password: heighliner123!], alertManager URL: http://alert.h8r.site [Username: admin Password: heighliner123!]
+
+● loki
+```
 
 ## Setting hosts
 :::info
