@@ -63,21 +63,21 @@ hln status gin-next-app
 Output looks like:
 
 ```shell
-Heighliner application gin-next-app is ready! access URL: http://gin-next-app.h8r.site
+🎉 Heighliner application gin-next-app is ready! access URL: http://gin-next-app.h8r.site
 
 There are 2 services have been deployed:
 ● gin-next-app-frontend
   ● access URL: http://gin-next-app.h8r.site
-  ● resource code: https://github.com/lyzhang1999/gin-next-app-frontend
+  ● resource code: https://github.com/coding-org03/gin-next-app-frontend
 
 ● gin-next-app-backend
   ● access URL: http://gin-next-app.h8r.site/api
-  ● resource code: https://github.com/lyzhang1999/gin-next-app-backend
+  ● resource code: https://github.com/coding-org03/gin-next-app-backend
 
 There are 4 addons have been deployed:
 ● argocd
   ● access URL: http://argocd.h8r.site
-  ● credential: [Username: admin Password: V2xBRAcQ3RxgKoB2]
+  ● credential: [Username: admin Password: 22ecFIk7Qm5sciM-]
 
 ● nocalhost
   ● access URL: http://nocalhost.h8r.site
