@@ -42,7 +42,8 @@ export function Video({
         !play &&
         <div className={styles.startVideo}
              onClick={() => {
-               player.current.play()
+               player.current.play();
+               setPlay(true);
              }}
         />
       }
