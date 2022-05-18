@@ -45,7 +45,7 @@ const entries: {
     content:
       (
         <>
-          If you have any questions, don't hesitate to contact us at contact <a href={"mailto:" + siteConfig.customFields.email}>{siteConfig.customFields.email}</a>
+          If you have any questions, don't hesitate to contact us at contact <a href={"mailto:" + siteConfig.customFields.contactEmail}>{siteConfig.customFields.contactEmail}</a>
         </>
       )
   },
