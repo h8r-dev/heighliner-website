@@ -61,7 +61,7 @@ export default function AboutUs(): JSX.Element {
         This is because major cloud providers are focused on enterprises.
         We believe the cloud should be made for developers.
         Therefore we build Heighliner, a cloud-native developer tool that let you build application stack as code.
-        We want to empower developers to build apps quickly in a way similar to what LAMP stack does.
+        We want to empower developers to build apps quickly in a similar way to what LAMP stack achieves.
         </div>
         <div className={styles.pageTitle}>
           Who are we?

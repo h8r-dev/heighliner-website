@@ -8,7 +8,7 @@ const mainGithubUrl = "https://github.com/h8r-dev/heighliner";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Heighliner",
-  tagline: "Speed up Cloud Native Application Development",
+  tagline: "Speed Up Cloud Native Application Development",
   url: "https://heighliner.dev",
   baseUrl: "/",
   onBrokenLinks: "throw",
