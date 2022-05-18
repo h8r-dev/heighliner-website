@@ -43,13 +43,13 @@ export function SloganSection(): React.ReactElement {
                   className={clsx("button button--lg", styles.requestAccess)}
                   to={siteConfig.customFields.newsletterUrl as string}
                 >
-                  Request Early Access
+                  Heighliner Newsletter
                 </Link>
                 <Link
                   className={clsx("button button--lg button--secondary", styles.quickstart)}
                   to={siteConfig.customFields.quickStartUrl as string}
                 >
-                  Quick Start
+                  Quickstart
                 </Link>
               </div>
             </main>
