@@ -18,11 +18,9 @@
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 500px) {
   .itemWrapper {
-    a {
-      font-size: $mobile-general-font-size;
-    }
+    padding: 10px;
   }
 }
 
