@@ -90,6 +90,23 @@ import (
 }
 ```
 
+Import `spring2` package and add to framework struct in `$STACKS_REPO/chain/factory/scaffoldfactory/scaffold.cue` file:
+
+```cue
+import (
+	// Framework
+	"github.com/h8r-dev/stacks/chain/components/framework/gin"
+  // Add this line
+	"github.com/h8r-dev/stacks/chain/components/framework/spring2"
+)
+
+framework: {
+  "gin":    gin
+  // Add this line
+  "spring2": spring2
+}
+```
+
 ## Create a new stack
 
 create spring-vue2 stack
