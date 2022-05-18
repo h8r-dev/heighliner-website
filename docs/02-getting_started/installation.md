@@ -114,7 +114,7 @@ kind create cluster --image=kindest/node:v1.23.5 --config=kind.yaml
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
 ```
 
-(Optional) If you can't access the Google Container Registry, create kind cluster and ingrss-nginx using:
+(Optional) If you can't access the Google Container Registry, create kind cluster and ingress-nginx using:
 
 ```shell
 kind create cluster --image=kindest/node:v1.23.5 --config=kind.yaml
