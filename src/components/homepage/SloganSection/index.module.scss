@@ -206,6 +206,10 @@
     font-size: 45px;
   }
 
+  .video {
+    margin-left: 0;
+  }
+
   .sloganTextWrap > h1:nth-child(1) {
     font-size: 54px;
   }
@@ -224,10 +228,6 @@
 @media screen and(max-width: 750px) {
   .contentWrap {
     justify-content: center;
-  }
-
-  .video {
-    margin-left: 0;
   }
 }
 
