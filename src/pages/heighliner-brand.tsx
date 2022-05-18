@@ -1,11 +1,11 @@
 import React from "react";
-import CardLayout from "../components/Card/CardLayout";
-import ImageCard from "../components/Card/ImageCard";
 
+import CardLayout from "../components/Card/CardLayout";
 import Entries, { EntriesType } from "../components/Entries";
 import DownLoadLink from "../components/Link/DownLoadLink";
 import List from "../components/List";
 import PageWrapper from "../components/PageWrapper";
+import styles from "../css/heighliner-brand.module.scss";
 
 const items = [
   "Primary logo: for a majority of application",
@@ -37,7 +37,7 @@ const entries: EntriesType = [
       "used in any other confusing way, including suggesting endorsement by Heighliner.",
     customComponent: (
       <>
-        <div style={{ marginTop: 51 }}>
+        <div style={{ marginTop: '3.5vw' }}>
           <DownLoadLink
             path={require("/static/resources/Heighliner-logo.zip").default}
           />
@@ -46,9 +46,10 @@ const entries: EntriesType = [
         <CardLayout>
           {logoImgPaths.map((logoImgPath) => {
             return (
-              <ImageCard
-                path={logoImgPath}
+              <img
+                src={logoImgPath}
                 style={{ width: 284, height: 226 }}
+                alt="with heighliner"
               />
             );
           })}
@@ -65,9 +66,11 @@ const entries: EntriesType = [
       <CardLayout>
         {colorImgPaths.map((colorImgPath) => {
           return (
-            <ImageCard
-              path={colorImgPath}
-              style={{ width: 284, height: 226, marginTop: 51 }}
+            <img
+              src={colorImgPath}
+              style={{ width: 284, height: 226 }}
+              alt="with heighliner"
+              className={styles.colorImg}
             />
           );
         })}
