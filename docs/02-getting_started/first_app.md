@@ -44,7 +44,7 @@ In this doc, we will show you how you can go from nothing to a full stack app in
 
 ## (Optional) Chinese users
 
-Chinese users may have network access problems, please run first:
+For Chinese users who may have network access problems, please run this:
 
 ```shell
 export NETWORK_TYPE=internal
@@ -109,7 +109,7 @@ There are 1 addons have been deployed:
 Congrats! You have created your first application with `hln` successfully. All of the cloud-native architecture have been set up properly.
 Click the GitHub url and dashboard links to see the effects.
 
-## Step 3. Set Domain Routing
+## Step 3. Set domain routing
 
 <Tabs
 className="unique-tabs"
@@ -153,7 +153,8 @@ Set domain routing:
 </TabItem>
 </Tabs>
 
-## Step 4. See the results
+## Step 4. See your app in action
+
 ### ArgoCD
 
 Check your **ArgoCD** dashboard at [argocd.h8r.site](http://argocd.h8r.site):
