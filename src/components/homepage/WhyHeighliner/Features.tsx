@@ -26,7 +26,7 @@ const features = [
     title: "extensible",
     img: require("/static/img/homepage/whyheighliner/extensible@3x.webp").default,
     description:
-      "Based on a open core, everyone can build custom stacks on Heighliner",
+      "Based on an open core, everyone can build custom stacks on Heighliner",
   },
 ];
 
