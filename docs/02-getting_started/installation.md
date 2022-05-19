@@ -47,7 +47,11 @@ Or download binaries: [GitHub Release](https://github.com/h8r-dev/heighliner/rel
 
 ## Step 2. Install Kubernetes
 
-Install _kubectl_ first by following [the Kubernetes documentation](https://kubernetes.io/docs/tasks/tools/).
+**Preconditions: **
+
+1. Install _kubectl_ first by following [the Kubernetes documentation](https://kubernetes.io/docs/tasks/tools/).
+2. Install _kind_ (v0.12.0+) command-line tool by following [the kind installation guide](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
+3. Install _Docker Desktop_ (v4.5.0+) or _Docker_ by following [the docker installation guide](https://docs.docker.com/desktop/#download-and-install)
 
 Then choose one of the following methods to install a Kubernetes cluster:
 
@@ -56,14 +60,10 @@ className="unique-tabs"
 defaultValue="kind"
 values={[
 {label: 'Kind', value: 'kind'},
-{label: 'Hosted Cloud K8s', value: 'cloud'},
+{label: 'Cloud', value: 'cloud'},
 ]}>
 
 <TabItem value="kind">
-
-Install _kind_ command-line tool by following [the kind installation guide](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
-
-Requirements: Docker Desktop V4.5.0+
 
 (Optional) We recommend setting Docker Resources to 4 cores and 8Gb mem:
 <details>
@@ -218,7 +218,7 @@ buildkitd is ready!
 
 ## Step 4. Create GitHub Token
 
-Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with these scopes selected:
+Create a [GitHub personal access token](https://github.com/settings/tokens) with these scopes selected:
 `repo`, `workflow`, `write:packages`, `delete:packages`, `admin:org`, `user`, `delete_repo`.
 
 <div
