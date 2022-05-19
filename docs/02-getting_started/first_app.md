@@ -64,10 +64,6 @@ Input the values one by one according to the prompt:
 Path to your kubeconfig file (required):
 
 > ~/.kube/config
-
-Which github organization do you want to use(Can be set as personal github id)? (required):
-
-> [organization name or github id]
 ```
 
 Then it will start executing the setup instructions. Output looks like:
