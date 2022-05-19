@@ -16,7 +16,7 @@ export default function storeGitCommitInfoPlugin(context, opts) {
       // Add the '/version' routes
       addRoute({
         path: '/version',
-        component: '@site/src/components/Version.tsx',
+        component: '@site/src/components/version',
         exact: true,
       });
     },
