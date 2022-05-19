@@ -13,7 +13,7 @@ export function ConnectAny() {
         <div
              className={clsx("homepage-section-title", styles.titleConnectAny)}
         >
-          Built to power an open ecosystem
+          Built to <span className={styles.power}>power</span> an open ecosystem
         </div>
       </div>
       <div className={styles.imgWrapper}>
