@@ -86,7 +86,7 @@ values={[
 - If you are using your own domain name, put the following lines into your `/etc/hosts`:
 
     ```txt
-    127.0.0.1 gin-hello-world.<your-domain>
+    127.0.0.1 spring-vue-hello-world.<your-domain>
     127.0.0.1 argocd.<your-domain>
     127.0.0.1 nocalhost.<your-domain>
     127.0.0.1 grafana.<your-domain>
@@ -109,7 +109,7 @@ Step2. Set domain routing:
 - If you are using `h8r.site`, Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
 
   ```txt
-  <ingress-ip> gin-hello-world.<your-domain>
+  <ingress-ip> spring-vue-hello-world.<your-domain>
   <ingress-ip> argocd.<your-domain>
   <ingress-ip> nocalhost.<your-domain>
   <ingress-ip> grafana.<your-domain>
@@ -164,7 +164,6 @@ hln down spring-vue-hello-world
   20:02:08	INFO	cmd/down.go:128	delete app loki...
   20:02:08	INFO	cmd/down.go:128	delete app prometheus-stack...
   20:02:08	INFO	cmd/down.go:145	delete repo spring-vue-hello-world-backend...
-  20:03:56	INFO	cmd/down.go:145	delete repo spring-vue-hello-world-backend...
   20:04:01	INFO	cmd/down.go:145	delete repo spring-vue-hello-world-deploy...
   20:04:08	INFO	cmd/down.go:145	delete repo spring-vue-hello-world-frontend...
 ```
