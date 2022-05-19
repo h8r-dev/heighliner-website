@@ -11,6 +11,7 @@ BUILD_TIME=$(date)
 
 echo "Commit hash: $COMMIT_HASH"
 echo "Build time: $BUILD_TIME \n"
+echo $(git show)
 
 sed -e "s/COMMIT_HASH/\"$COMMIT_HASH\"/" \
   -e "s/BUILD_TIME/\"$BUILD_TIME\"/" \
