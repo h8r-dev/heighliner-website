@@ -61,7 +61,7 @@ const entries: EntriesType = [
     title: "Colors",
     content:
       "Our color palette consists of purple, white, " +
-      "black and colors representing of our products.",
+      "black and colors representing our products.",
     customComponent: (
       <CardLayout>
         {colorImgPaths.map((colorImgPath) => {
