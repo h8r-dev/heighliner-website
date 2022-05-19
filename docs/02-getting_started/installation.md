@@ -104,7 +104,11 @@ nodes:
 
 
 :::tip
-Ports 80 and 443 may not be exposed under ubuntu. Please change ports 80 and 443 and specify the port number when accessing the application URL.
+
+Linux users: 
+
+1. Ports 80 and 443 may not be exposed under Ubuntu. Please change ports 80 and 443,then specify the port number when accessing the application URL.
+2. It is recommended to use the `root` user
 :::
 
 Create a kind cluster from the config and install ingress controller:
@@ -114,7 +118,7 @@ kind create cluster --image=kindest/node:v1.23.5 --config=kind.yaml
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
 ```
 
-(Optional) If you can't access the Google Container Registry, create kind cluster and ingress-nginx using:
+(Optional) For Chinese users, create kind cluster and ingress-nginx using:
 
 ```shell
 kind create cluster --image=kindest/node:v1.23.5 --config=kind.yaml
