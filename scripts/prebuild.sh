@@ -10,7 +10,7 @@ COMMIT_HASH=$(git rev-parse --short HEAD)
 BUILD_TIME=$(date)
 
 BUILD_TIME_IN_UTC=$(TZ=UTC date)
-BUILD_TIME_IN_ASIA_SHANGHAI=$(TZ=Asia/Shanghai= date)
+BUILD_TIME_IN_ASIA_SHANGHAI=$(TZ=Asia/Shanghai date)
 BUILD_TIME_IN_NEW_YORK=$(TZ=America/New_York date)
 BUILD_TIME_IN_LOG_ANGELES=$(TZ=America/Los_Angeles date)
 

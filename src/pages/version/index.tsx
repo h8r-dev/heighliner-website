@@ -5,6 +5,7 @@ import React from "react";
 import { usePluginData } from "@docusaurus/useGlobalData";
 
 import styles from "./index.module.scss";
+import PageWrapper from "@site/src/components/PageWrapper";
 
 interface Version {
   CommitHash: string;
