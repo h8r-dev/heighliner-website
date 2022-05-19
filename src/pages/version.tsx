@@ -1,9 +1,6 @@
 import React from "react";
+import Version from "../components/Version";
 
-import Version from "../components/version";
-
-export default function (): React.ReactElement{
-return (
-  <Version />
-  )
+export default function (): React.ReactElement {
+  return <Version />;
 }
