@@ -3,25 +3,34 @@ title: Your First App
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 :::info
 Make sure you have followed [the installation guide](/docs/getting_started/installation) before continuing.
 :::
 
-This tutorial will guide you through to create a [Remix](https://remix.run/) application in 2 minutes.
+Ever want to enjoy the simple experience of hosted app platform like [Vercel](https://vercel.com/)?
+But without the limitation to specific vendors?
 
-## 1. Create your application
+In this tutorial you will to create a [Remix](https://remix.run/) app in Vercel style in 2 minutes using Heighliner.
 
-`hln up` is the only command you will execute,  it will handle all tough create, configuration and connect tasks:
+## Create Your App
+
+You only need to run this single command:
 
 ````mdx-code-block
 <details>
-  <summary>Mirror for Chinese users.</summary>
+  <summary>Network speedup for users in China</summary>
 
-  For Chinese users who may have network access problems, please run below command to tell us that you want to fetch resources from China mirror:
+  For users in China, run the following command:
 
   ```shell
-  export NETWORK_TYPE=internal
+  export NETWORK_TYPE=china_network
   ```
+
+  This will tell Heighliner to fetch resources from mirrors in China.
 </details>
 ````
 
@@ -29,9 +38,20 @@ This tutorial will guide you through to create a [Remix](https://remix.run/) app
 hln up hello-world -s sample -i
 ```
 
-You will be prompted to input your `kubeconfig` file path and `GitHub personal access token`, which generated from earlier installation process.
+It will prompt you to input config values interactively:
 
-Let it running and wait for about 2 minutes, your screen should display below output content:
+<div
+  style={{
+    maxWidth: 600,
+    height: 'auto',
+    marginBottom: 20,
+    marginTop: 20,
+  }}
+>
+<img src={useBaseUrl('/img/docs/getting-started/hln_input.png')} />
+</div>
+
+After you completed the input, it will run for about 2 minutes. If it is successful, the output will look like:
 
 ````mdx-code-block
 <details>
@@ -63,37 +83,27 @@ Let it running and wait for about 2 minutes, your screen should display below ou
 </details>
 ````
 
-That's all! You just deployed **5** applications, let's try to access them.
+Congrats! You have created your first app using Heighliner.
 
-## 2. Enable Access
+## See Your App In Action
 
-To be enable to access your deployed applications, you must set domain routing rules firstly, you could follow [Set Domain Routing](/docs/getting_started/set_domain_routing) guide to config.
+Your app is live at [hello-world.h8r.site](http://hello-world.h8r.site):
 
-Congratulations, your application is now available at: [hello-world.h8r.site](http://hello-world.h8r.site).
+<div
+  style={{
+    maxWidth: 800,
+    height: 'auto',
+    marginBottom: 20,
+    marginTop: 20,
+  }}
+>
+<img src={useBaseUrl('/img/docs/getting-started/sample-application.png')} />
+</div>
 
-For more internal details, you could open:
+The sample stack of Heighliner automatically creates a full set of tools and services for your app:
+Github repos, Helm charts, CI/CD pipelines, domain routing, monitoring and alerting rules, etc.
 
-````mdx-code-block
-<details>
-  <summary>More internal details</summary>
+## What's Next
 
-  There are 5 applications deployed:
-
-  1. A remix application based on [Remix Indie Stack](https://github.com/remix-run/indie-stack).
-  2. A ArgoCD application to do continuous deployment.
-  3. A Prometheus application will collect metrics and monitor your remix application.
-  5. A Loki application to collect logs from whole stack.
-  4. A Grafana application to visualize collected metrics and logs from whole stack.
-
-
-  Besides, two extra repositories should have created under your GitHub account:
-
-  1. A repository named `hello-world`, which contains your remix application source code, you could develop
-  further to meet your own needs.
-  2. A repository named `hello-world-deploy`, which contains source code for deployment, you should not modify it manually,
-  and always keep it **private**.
-
-</details>
-````
-
-Next, let's explore our applications.
+- Discover how to [continuously deliver your app](/docs/getting_started/cicd)
+- Discover how to [monitor your app](/docs/getting_started/monitoring)

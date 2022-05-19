@@ -1,9 +1,10 @@
 ---
-title: CI/CD
-sidebar_position: 11
+title: CI/CD and GitOps
+sidebar_position: 3
 ---
 
 ## View Your GitHub Repos
+
 Once your application is ready, two repositories are created under your GitHub account:
 
 ![repos-cd](/img/docs/getting-started/sample-repos.png)
@@ -14,7 +15,13 @@ Besides, Heighliner set up a GitHub Action to your remix application code to han
 
 [ArgoCD](https://argoproj.github.io/cd/) is a declarative, GitOps continuous delivery tool for Kubernetes. The remix stack uses ArgoCD to deploy new releases of your remix application.
 
-You could view your ArgoCD dashboard at [argocd.h8r.site](http://argocd.h8r.site/) like this:
+Get your ArgoCD credentials:
+
+```shell
+hln status
+```
+
+Visit your ArgoCD dashboard at [argocd.h8r.site](http://argocd.h8r.site/):
 
 ![argo-cd](/img/docs/getting-started/sample-argocd.png)
 
