@@ -1,12 +1,12 @@
 import React from "react";
 
-import Entries, { EntriesType } from "../components/Entries";
-import List from "../components/List";
-import PageWrapper from "../components/PageWrapper";
+import Entries, { EntriesType } from "../../components/Entries";
+import List from "../../components/List";
+import PageWrapper from "../../components/PageWrapper";
 import LogoDownload from "@site/src/components/LogoDownload";
 import Link from "@docusaurus/Link";
 
-import styles from "../css/resources.module.scss";
+import styles from "./index.module.scss";
 
 const items = [
   <span>

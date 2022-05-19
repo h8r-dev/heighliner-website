@@ -15,7 +15,7 @@ import { ConnectAny } from "../components/homepage/ConnectAny";
 import { Community } from "@site/src/components/homepage/Community";
 import { Footer } from "../components/homepage/Footer";
 
-import styles from "../css/index.module.scss";
+import styles from "./index.module.scss";
 
 export default function Home(): JSX.Element {
   return (

@@ -3,13 +3,13 @@
  */
 import React, {useEffect, useState} from "react";
 
-import PageWrapper from "../components/PageWrapper/index";
+import PageWrapper from "../../components/PageWrapper";
 
 import siteConfig from "@generated/docusaurus.config";
-import styles from "../css/hc-detail.module.scss";
-import {hcList} from "@site/src/pages/join-us";
+import styles from "./index.module.scss";
+import {hcList} from "@site/src/pages/join-us/index";
 
-export default function HcDetail(): JSX.Element {
+export default function Index(): JSX.Element {
   let [index, setIndex] = useState<string>('');
 
   useEffect(() => {

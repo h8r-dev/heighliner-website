@@ -1,11 +1,11 @@
 import React from "react";
 
-import CardLayout from "../components/Card/CardLayout";
-import Entries, { EntriesType } from "../components/Entries";
-import DownLoadLink from "../components/Link/DownLoadLink";
-import List from "../components/List";
-import PageWrapper from "../components/PageWrapper";
-import styles from "../css/heighliner-brand.module.scss";
+import CardLayout from "../../components/Card/CardLayout";
+import Entries, { EntriesType } from "../../components/Entries";
+import DownLoadLink from "../../components/Link/DownLoadLink";
+import List from "../../components/List";
+import PageWrapper from "../../components/PageWrapper";
+import styles from "./index.module.scss";
 
 const items = [
   "Primary logo: for a majority of application",
@@ -79,7 +79,7 @@ const entries: EntriesType = [
   },
 ];
 
-export default function HeighlinerBrand(): React.ReactElement {
+export default function Index(): React.ReactElement {
   return (
     <PageWrapper title="Heighliner Brand">
       <Entries entries={entries} />

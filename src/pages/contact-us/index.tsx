@@ -1,7 +1,7 @@
 import React from "react";
-import Entries, { EntriesType } from "../components/Entries";
+import Entries, { EntriesType } from "../../components/Entries";
 
-import PageWrapper from "../components/PageWrapper";
+import PageWrapper from "../../components/PageWrapper";
 
 import siteConfig from "@generated/docusaurus.config";
 
@@ -46,7 +46,7 @@ const entries: EntriesType = [
   },
 ];
 
-export default function ContactUs(): React.ReactElement {
+export default function Index(): React.ReactElement {
   return (
     <PageWrapper title="Contact us">
       <Entries entries={entries} />
