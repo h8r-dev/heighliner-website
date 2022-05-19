@@ -18,7 +18,7 @@ Besides, Heighliner set up a GitHub Action to your remix application code to han
 Get your ArgoCD credentials:
 
 ```shell
-hln status
+hln status hello-world
 ```
 
 Visit your ArgoCD dashboard at [argocd.h8r.site](http://argocd.h8r.site/):
