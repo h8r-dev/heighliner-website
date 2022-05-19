@@ -26,7 +26,7 @@ This tutorial will guide you through to create a [Remix](https://remix.run/) app
 ````
 
 ```shell
-hln up hello-world-app -s sample -i
+hln up hello-world -s sample -i
 ```
 
 You will be prompted to input your `kubeconfig` file path and `GitHub personal access token`, which generated from earlier installation process.
@@ -38,12 +38,12 @@ Let it running and wait for about 2 minutes, your screen should display below ou
   <summary>Successfull Output</summary>
 
   ```shell
-  Heighliner application hello-world-app is ready! access URL: http://hello-world-app.h8r.site
+  Heighliner application hello-world is ready! access URL: http://hello-world.h8r.site
 
   There are 1 services have been deployed:
-  ● hello-world-app
-    ● access URL: http://hello-world-app.h8r.site
-    ● resource code: https://github.com/<your-github-account>/hello-world-app
+  ● hello-world
+    ● access URL: http://hello-world.h8r.site
+    ● resource code: https://github.com/<your-github-account>/hello-world
 
   There are 3 addons have been deployed:
   ● argocd
@@ -69,7 +69,7 @@ That's all! You just deployed **5** applications, let's try to access them.
 
 To be enable to access your deployed applications, you must set domain routing rules firstly, you could follow [Set Domain Routing](/docs/getting_started/set_domain_routing) guide to config.
 
-Congratulations, your application is now available at: [hello-world-app.h8r.site](http://hello-world-app.h8r.site).
+Congratulations, your application is now available at: [hello-world.h8r.site](http://hello-world.h8r.site).
 
 For more internal details, you could open:
 
@@ -88,9 +88,9 @@ For more internal details, you could open:
 
   Besides, two extra repositories should have created under your GitHub account:
 
-  1. A repository named `hello-world-app`, which contains your remix application source code, you could develop
+  1. A repository named `hello-world`, which contains your remix application source code, you could develop
   further to meet your own needs.
-  2. A repository named `hello-world-app-deploy`, which contains source code for deployment, you should not modify it manually,
+  2. A repository named `hello-world-deploy`, which contains source code for deployment, you should not modify it manually,
   and always keep it **private**.
 
 </details>
