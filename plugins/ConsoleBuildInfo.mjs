@@ -22,7 +22,7 @@ export default function storeGitCommitInfoPlugin(context, opts) {
       // Add the '/version' routes
       addRoute({
         path: "/version",
-        component: "@site/src/components/Version",
+        component: "@site/src/pages/version",
         exact: true,
       });
     },
