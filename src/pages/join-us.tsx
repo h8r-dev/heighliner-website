@@ -10,7 +10,7 @@ import PageWrapper from "../components/PageWrapper/index";
 import siteConfig from "@generated/docusaurus.config";
 import styles from "../css/join-us.module.scss";
 
-export const list = [
+export const hcList = [
   {
     title: 'Sr. Manager, Developer Relations (Remote, United States)',
     desc: 'We are seeking a manager based in the Americas to build and lead the team of Developer Advocates.',
@@ -21,7 +21,7 @@ export const list = [
         itemList: [
           "Recruit, hire, develop and retain Developer Advocates based in the North America",
           "Collaborate to improve the relations between developers, industry partners and Heighliner",
-          "Share our approach to community and advocacy with others in the industry through content like blogs, videos and presentations at summits.",
+          "Share our approach to community and advocacy with others in the industry through content like blogs, videos and presentations at summits",
           "Identify and advance community collaboration opportunities"
         ]
       },
@@ -48,7 +48,7 @@ export const list = [
         itemTitle: "As a Developer Advocate, you will:",
         itemList: [
           "Collaborate to improve the relations between developers, industry partners and Heighliner",
-          "Share our approach to community and advocacy with others in the industry through content like blogs, videos and presentations at summits.",
+          "Share our approach to community and advocacy with others in the industry through content like blogs, videos and presentations at summits",
           "Identify and advance community collaboration opportunities",
           "Operate our Twitter, Discord, YouTube accounts",
           "Organize community meetups",
@@ -125,11 +125,12 @@ export default function AboutUs(): JSX.Element {
         </div>
         <div className={clsx(styles.pageTitle, styles.pcTitle, styles.pcPositionTitle)}>Opening Position:</div>
         {
-          list.map((i, index) => {
+          hcList.map((i, index) => {
             let {title, desc, item, icon} = i;
             return (
               <div className={styles.hc} key={title}>
                 <img src={icon} alt="" className={styles.hcIcon}/>
+                {/*@ts-ignore*/}
                 <div className={styles.hcTitle} index={index}>{title}</div>
                 <div className={styles.hcDesc}>{desc}</div>
                 {
@@ -153,7 +154,7 @@ export default function AboutUs(): JSX.Element {
           })}
         <div className={clsx(styles.positionTitle, styles.mobileTitle)}>OUR OPENING POSITIONS</div>
         {
-          list.map((i, index) => {
+          hcList.map((i, index) => {
             let {title} = i;
             return (
               <div className={styles.hcBox} key={index}>

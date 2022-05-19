@@ -68,10 +68,6 @@ Path to your kubeconfig file (required):
 Which github organization do you want to use(Can be set as personal github id)? (required):
 
 > [organization name or github id]
-
-Which domain do you want to use?:
-
-> h8r.site
 ```
 
 Then it will start executing the setup instructions. Output looks like:
@@ -93,17 +89,26 @@ hln status hello-world
 Output looks like:
 
 ```shell
-Heighliner application hello-world is ready! access URL: hello-world.h8r.site
+Heighliner application hello-world is ready! access URL: http://hello-world.h8r.site
 
 There are 1 services have been deployed:
-● hello-world-frontend
-   ● access URL: hello-world.h8r.site
-   ● source code: https://github.com/lyzhang1999/hello-world-frontend
+● hello-world
+  ● access URL: http://hello-world.h8r.site
+  ● resource code: https://github.com/lyzhang1999/hello-world
 
-There are 1 addons have been deployed:
+There are 3 addons have been deployed:
 ● argocd
-   ● access URL: argocd.h8r.site
-   ● credential: [Username: admin Password: N0KXEibv1iNeYALy]
+  ● access URL: http://argocd.h8r.site
+  ● credential: [Username: admin Password: -S2Jp0Ya2XJd8khM]
+
+● prometheus-stack
+  ● access URL: http://grafana.h8r.site
+  ● credential: [Username: admin Password: prom-operator]
+  ● prometheus URL: http://prometheus.h8r.site [Username: admin Password: heighliner123!], alertManager URL: http://alert.h8r.site [Username: admin Password: heighliner123!]
+
+● loki
+
+Congrats! Application is ready!
 ```
 
 Congrats! You have created your first application with `hln` successfully. All of the cloud-native architecture have been set up properly.
@@ -125,8 +130,11 @@ values={[
 - If you are using your own domain name, put the following lines into your `/etc/hosts`:
 
     ```txt
-    127.0.0.1 argocd.<your-domain>
     127.0.0.1 hello-world.<your-domain>
+    127.0.0.1 argocd.<your-domain>
+    127.0.0.1 prometheus.<your-domain>
+    127.0.0.1 grafana.<your-domain>
+    127.0.0.1 alert.<your-domain>
     ```
 
 </TabItem>
@@ -144,8 +152,11 @@ Set domain routing:
 - If you are using `h8r.site`, Put the following lines into your `/etc/hosts` (replace <ingress-ip\> with above result):
 
   ```txt
-  <ingress-ip> argocd.h8r.site
   <ingress-ip> hello-world.h8r.site
+  <ingress-ip> argocd.h8r.site
+  <ingress-ip> prometheus.h8r.site
+  <ingress-ip> grafana.h8r.site
+  <ingress-ip> alert.h8r.site
   ```
 
 - If you are using your own domain name, set your domain DNS record to the above ingress IP.
@@ -160,7 +171,7 @@ Set domain routing:
 Check your **ArgoCD** dashboard at [argocd.h8r.site](http://argocd.h8r.site):
 > Note: get argocd credentials with `hln status` command
 
-<div
+<!-- <div
   style={{
     maxWidth: 800,
     height: 'auto',
@@ -169,7 +180,9 @@ Check your **ArgoCD** dashboard at [argocd.h8r.site](http://argocd.h8r.site):
   }}
 >
   <img src={useBaseUrl('/img/docs/getting-started/argocd-home.png')} />
-</div>
+</div> -->
+![alt](/img/docs/getting-started/argocd-home.png)
+
 
 You can check the k8s resources for the application:
 

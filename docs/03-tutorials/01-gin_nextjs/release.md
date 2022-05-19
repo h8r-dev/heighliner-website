@@ -15,7 +15,7 @@ After that, it will trigger `GitHub Action` to build a new docker image and modi
 
 Finally, `Argo CD` will deploy new version of application automatically.
 
-![alt](/img/tutorial/01-gin-next/github-action-release-argocd.png)
+![alt](/img/tutorial/01-gin-next/login-argocd.png)
 
 Now, you can access new release of application at: [gin-next-app-frontend.h8r.site](http://gin-next-app-frontend.h8r.site)
 
