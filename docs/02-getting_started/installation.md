@@ -7,12 +7,18 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+There are mainly three objects to be installed or created:
+
+1. Heighliner command line tool: `hln`, the main tool to handle all tasks for us.
+2. A Kubernetes cluster, which will be used to deploy all stack applications.
+3. An access token of your GitHub account, Heighliner will create all code repositories under your GitHub account.
+
 ## Step 1. Install hln CLI
 
 <Tabs>
   <TabItem value="macos" label="MacOS" default>
 
-[HomeBrew](https://brew.sh):
+Install `hln` with [HomeBrew](https://brew.sh):
 
 ```bash
 brew install h8r-dev/tap/heighliner
@@ -47,7 +53,7 @@ Or download binaries: [GitHub Release](https://github.com/h8r-dev/heighliner/rel
 
 ## Step 2. Install Kubernetes
 
-Install _kubectl_ first by following [the Kubernetes documentation](https://kubernetes.io/docs/tasks/tools/).
+Install _kubectl_ firstly by following [Kubernetes documentation](https://kubernetes.io/docs/tasks/tools/).
 
 Then choose one of the following methods to install a Kubernetes cluster:
 
@@ -218,7 +224,7 @@ buildkitd is ready!
 
 ## Step 4. Create GitHub Token
 
-Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with these scopes selected:
+Heighliner will create source code repositories on GitHub, so you need to create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) and with these scopes selected:
 `repo`, `workflow`, `write:packages`, `delete:packages`, `admin:org`, `user`, `delete_repo`.
 
 <div
