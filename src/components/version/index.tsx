@@ -4,14 +4,17 @@
 import React from "react";
 import { usePluginData } from "@docusaurus/useGlobalData";
 
-import clsx from "clsx";
 import styles from "./index.module.scss";
 
+interface Version {
+  CommitHash: string;
+  BuildTime: { [index: string]: string };
+}
 
-export default function VersionInfo() {
+export default function Version() {
   const { CommitHash, BuildTime } = usePluginData(
     "store-git-commit-info-plugin"
-  ) as { [index: string]: string };
+  ) as Version;
 
   return (
     <div className={styles.versionWrapper}>
@@ -21,7 +24,13 @@ export default function VersionInfo() {
         </div>
         <div className="card__body">
           <p>Commit Hash: {CommitHash}</p>
-          <p>Build Time: {BuildTime}</p>
+          <p>Build Time:</p>
+          <ul>
+            <li>UTC: {BuildTime.UTC}</li>
+            <li>Shanghai: {BuildTime.AsiaShanghai}</li>
+            <li>NewYork: {BuildTime.NewYork}</li>
+            <li>Log Angeles: {BuildTime.LogAngeles}</li>
+          </ul>
         </div>
       </div>
     </div>
