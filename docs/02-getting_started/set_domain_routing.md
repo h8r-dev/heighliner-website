@@ -34,11 +34,14 @@ kubectl -n ingress-nginx get svc ingress-nginx-controller -o=jsonpath='{.status.
 
 Then you get the ingress ip, you can set domain routing as below:
 
-- If you are using `h8r.site`, put the following lines into your `/etc/hosts` (replace <ingress-ip\> with your ingress ip):
+- If you are using `h8r.site`, append following lines to your `/etc/hosts` file (replace <ingress-ip\> with your ingress ip):
 
   ```txt
+  <ingress-ip> hello-world-app.h8r.site
   <ingress-ip> argocd.h8r.site
-  <ingress-ip> hello-world.h8r.site
+  <ingress-ip> grafana.h8r.site
+  <ingress-ip> prometheus.h8r.site
+  <ingress-ip> alert.h8r.site
   ```
 
 - If you are using your own domain name, set your domain DNS record to the above ingress IP.
