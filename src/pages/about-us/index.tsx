@@ -4,8 +4,8 @@
 import React from "react";
 import clsx from "clsx";
 
-import PageWrapper from "../components/PageWrapper/index";
-import styles from "../css/about-us.module.scss";
+import PageWrapper from "../../components/PageWrapper";
+import styles from "./index.module.scss";
 
 interface Item {
   title: string,
@@ -49,7 +49,7 @@ const imglist: Item[] = [
   }
 ]
 
-export default function AboutUs(): JSX.Element {
+export default function Index(): JSX.Element {
   return (
     <PageWrapper title="About us">
       <div className={styles.contentWrapper}>

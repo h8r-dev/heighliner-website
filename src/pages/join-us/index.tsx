@@ -5,10 +5,10 @@ import React from "react";
 import Link from "@docusaurus/Link";
 import clsx from "clsx";
 
-import PageWrapper from "../components/PageWrapper/index";
+import PageWrapper from "../../components/PageWrapper";
 
 import siteConfig from "@generated/docusaurus.config";
-import styles from "../css/join-us.module.scss";
+import styles from "./index.module.scss";
 
 export const hcList = [
   {

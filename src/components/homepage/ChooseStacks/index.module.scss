@@ -48,16 +48,15 @@
   opacity: 0.82;
   background-color: #fff;
   position: relative;
-  border-left: 3px solid #9a66f5;
+  box-shadow: 20px 15px 60px -40px #3b008f;
 }
 
 .decoratedIcon {
   width: 30px;
   height: 30px;
   position: absolute;
-  left: 27px;
-  top: 56px;
-  display: none;
+  left: 24px;
+  top: 62px;
 }
 
 .stackName {
@@ -184,6 +183,8 @@
     margin: 10px;
     max-width: 1000px;
     width: 46vw;
+    border-left: 3px solid #9a66f5;
+    box-shadow: none;
   }
 
   .link {
