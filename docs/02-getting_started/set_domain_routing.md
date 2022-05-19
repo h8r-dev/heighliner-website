@@ -1,6 +1,6 @@
 ---
 title: Set Domain Routing
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 To be enable to access all applications deployed in Kubernetes cluster by Heighliner,
