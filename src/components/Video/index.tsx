@@ -25,7 +25,7 @@ export function Video({
     <div id={styles.videoWrapper}>
       <Player
         playsInline
-        poster={poster}
+        poster={!play && poster} // fix the poster not hidden in wechat environment
         src={src}
         preload="metadata"
         onPlay={() => {setPlay(true)}}
@@ -42,7 +42,8 @@ export function Video({
         !play &&
         <div className={styles.startVideo}
              onClick={() => {
-               player.current.play()
+               player.current.play();
+               setPlay(true);
              }}
         />
       }

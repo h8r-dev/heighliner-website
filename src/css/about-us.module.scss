@@ -16,11 +16,10 @@
 }
 
 .pageDesc {
-  font-size: 18px;
+  font-size: $pc-general-font-size;
   line-height: 1.5;
   color: #000;
   margin: 20px 0 100px 20px;
-  max-width: 600px;
 }
 
 .flexWrapper {
@@ -39,10 +38,11 @@
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
+      display: inline-block;
     }
 
     .itemContent {
-      font-size: 14px;
+      font-size: 18px;
       line-height: 1.45;
       margin-top: 20px;
       color: #000;
@@ -131,10 +131,9 @@
   }
 
   .pageDesc {
-    font-size: 16px;
+    font-size: $mobile-general-font-size;
     margin-top: 10px;
     margin-left: 0px;
-    line-height: 1.5;
     margin-bottom: 36px;
   }
 

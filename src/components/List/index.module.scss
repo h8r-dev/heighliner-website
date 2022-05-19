@@ -1,3 +1,38 @@
+.listWrap {
+  display: flow-root;
+  color: #000;
+  margin-top: 18px;
+  font-size: 22px;
+}
+
+.title {
+  margin-bottom: 0px;
+}
+
+.title + .list{
+  li {
+    font-weight: normal;
+  }
+}
+@import "../../css/globalVar";
+
+.listWrap {
+  display: flow-root;
+  color: #000;
+  margin-top: 18px;
+  font-size: 22px;
+}
+
+.title {
+  margin-bottom: 0px;
+}
+
+.title + .list{
+  li {
+    font-weight: normal;
+  }
+}
+
 .list {
   list-style-type: none;
   color: #000;
@@ -15,7 +50,15 @@
   }
 
   li {
-    font-size: 18px;
+    font-size: $pc-general-font-size;
     font-weight: 300;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .list{
+    li{
+      font-size: $mobile-general-font-size;
+    }
   }
 }
