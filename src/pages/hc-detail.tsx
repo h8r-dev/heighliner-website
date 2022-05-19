@@ -7,7 +7,7 @@ import PageWrapper from "../components/PageWrapper/index";
 
 import siteConfig from "@generated/docusaurus.config";
 import styles from "../css/hc-detail.module.scss";
-import {list} from "@site/src/pages/join-us";
+import {hcList} from "@site/src/pages/join-us";
 
 export default function HcDetail(): JSX.Element {
   let [index, setIndex] = useState<string>('');
@@ -23,10 +23,10 @@ export default function HcDetail(): JSX.Element {
         {
           index &&
           <div className={styles.hc}>
-            <div className={styles.hcTitle}>{list[index].title}</div>
-            <div className={styles.hcDesc}>{list[index].desc}</div>
+            <div className={styles.hcTitle}>{hcList[index].title}</div>
+            <div className={styles.hcDesc}>{hcList[index].desc}</div>
             {
-              list[index].item.map((j, i) => {
+              hcList[index].item.map((j, i) => {
                 let {itemTitle, itemList} = j;
                 return (
                   <div key={i}>

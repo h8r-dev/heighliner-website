@@ -40,7 +40,7 @@ const imglist: Item[] = [
   {
     url: require("@site/static/img/about-us/image-left.webp").default,
     title: "What we do",
-    content: "We build Heighliner, a developer tool that let you build application stack as code."
+    content: "We build Heighliner, a developer tool that lets you build application stack as code."
   },
   {
     url: require("@site/static/img/about-us/image-right.webp").default,
@@ -57,10 +57,10 @@ export default function AboutUs(): JSX.Element {
         A Cloud For Developers
         </div>
         <div className={styles.pageDesc}>
-        Develoeprs have to face the complex large clouds that impose steep learning curves and massive operations.
-        This is because major cloud providers are focused on enterprises.
+        Developers have to face the complex, large clouds that impose steep learning curves and massive operations.
+        This is because major cloud providers focused on enterprises.
         We believe the cloud should be made for developers.
-        Therefore we build Heighliner, a cloud-native developer tool that let you build application stack as code.
+        Therefore, we build Heighliner, a cloud-native developer tool that lets you build application stack as code.
         We want to empower developers to build apps quickly in a similar way to what LAMP stack achieves.
         </div>
         <div className={styles.pageTitle}>
@@ -68,8 +68,8 @@ export default function AboutUs(): JSX.Element {
         </div>
         <div className={styles.pageDesc}>
           We are a group of software engineers who are passionate about cloud native app development.
-          We believe in the value that open source community brings.
-          In the past we have been working on open source projects like KubeVela and Nocalhost (both are CNCF projects).
+          We believe in the value that the open source community brings.
+          In the past, we have been working on open source projects like KubeVela and Nocalhost (both are CNCF projects).
           Now we want to take the cloud to the next step and make it a platform for developers.
         </div>
         <div className={styles.flexWrapper}>

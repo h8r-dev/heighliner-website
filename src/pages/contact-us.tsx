@@ -1,17 +1,12 @@
 import React from "react";
-import Entries from "../components/Entries";
+import Entries, { EntriesType } from "../components/Entries";
 
 import PageWrapper from "../components/PageWrapper";
 
 import siteConfig from "@generated/docusaurus.config";
 
-const entries: {
-  title?: string;
-  content?: string | React.ReactElement;
-  imgPath?: string;
-}[] = [
+const entries: EntriesType = [
   {
-    // title: "Contact us",
     content:
       "Got questions? Have feedback? " +
       "Here are a couple of official channels to get in touch with us.",
@@ -45,7 +40,7 @@ const entries: {
     content:
       (
         <>
-          If you have any questions, don't hesitate to contact us at contact <a href={"mailto:" + siteConfig.customFields.email}>{siteConfig.customFields.email}</a>
+          If you have any questions, don't hesitate to contact us at contact <a href={"mailto:" + siteConfig.customFields.contactEmail}>{siteConfig.customFields.contactEmail}</a>
         </>
       )
   },

@@ -19,7 +19,7 @@ export function WhyHeighliner(): React.ReactElement {
             Deliver Stack-as-Code
           </h1>
           <p className={styles.caption}>
-            Heighliner is a modern developer tool that deliver your application stack as code.
+            Heighliner is a modern developer tool that delivers your application stack as code.
             It codifies the best practices of developing and deploying cloud native applications.
             Based on convention over configuration, Heighliner stacks significantly reduce the overhead of building cloud-native applications.
             With Heighliner, you can version, reuse, and share your app stacks.

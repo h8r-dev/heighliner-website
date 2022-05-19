@@ -10,18 +10,18 @@ import PageWrapper from "../components/PageWrapper/index";
 import siteConfig from "@generated/docusaurus.config";
 import styles from "../css/join-us.module.scss";
 
-export const list = [
+export const hcList = [
   {
-    title: 'Sr. Manager, Developer Relations(Remote, United States)',
+    title: 'Sr. Manager, Developer Relations (Remote, United States)',
     desc: 'We are seeking a manager based in the Americas to build and lead the team of Developer Advocates.',
     icon: require("@site/static/img/join-us/icon1.webp").default,
     item: [
       {
-        itemTitle: "As the leader of Developer Relations team, you will:",
+        itemTitle: "As the leader of the Developer Relations team, you will:",
         itemList: [
           "Recruit, hire, develop and retain Developer Advocates based in the North America",
           "Collaborate to improve the relations between developers, industry partners and Heighliner",
-          "Share our approach to community and advocacy with others in the industry through content like blogs, videos and presentations at summits.",
+          "Share our approach to community and advocacy with others in the industry through content like blogs, videos and presentations at summits",
           "Identify and advance community collaboration opportunities"
         ]
       },
@@ -32,7 +32,7 @@ export const list = [
           "You have a passion for building talent via mentorship and/or through direct management",
           "You are a strong communicator and advocate for your people",
           "You know about DevOps and Cloud Native",
-          "You know any of these: Heighliner,Dagger,CUE,Terraform,Nocalhost,KubeVela,Kubernetes",
+          "You know any of these: Heighliner, Dagger, CUE, Terraform, Nocalhost, KubeVela, Kubernetes",
           "You have experience managing a team or working as a Developer Advocate or similar role",
           "5+ years of experience in technology"
         ]
@@ -40,7 +40,7 @@ export const list = [
     ]
   },
   {
-    title: 'Developer Advocate(Remote, United States)',
+    title: 'Developer Advocate (Remote, United States)',
     desc: 'Developer Advocates are responsible for the relationship between developers, communities, partners and Heighliner.',
     icon: require("@site/static/img/join-us/icon2.webp").default,
     item: [
@@ -48,9 +48,9 @@ export const list = [
         itemTitle: "As a Developer Advocate, you will:",
         itemList: [
           "Collaborate to improve the relations between developers, industry partners and Heighliner",
-          "Share our approach to community and advocacy with others in the industry through content like blogs, videos and presentations at summits.",
+          "Share our approach to community and advocacy with others in the industry through content like blogs, videos and presentations at summits",
           "Identify and advance community collaboration opportunities",
-          "Operate our Twitter,Discord,Youtube accounts",
+          "Operate our Twitter, Discord, YouTube accounts",
           "Organize community meetups",
           "Talk with our users,fans and partners to gather any useful information"
         ]
@@ -61,7 +61,7 @@ export const list = [
           "You love open source and Cloud Native",
           "You are a strong communicator and advocate for your people",
           "You know about DevOps and Cloud Native",
-          "You know any of these: Heighliner,Dagger,CUE,Terraform,Nocalhost,KubeVela,Kubernetes",
+          "You know any of these: Heighliner, Dagger, CUE, Terraform, Nocalhost, KubeVela, Kubernetes",
           "2+ years of experience in technology"
         ]
       },
@@ -69,12 +69,12 @@ export const list = [
     ]
   },
   {
-    title: 'Backend Engineer(Remote, United States)',
-    desc: 'Backend Enginneers are responsible for the building of our reliable high-performance Heighliner Engine and Platform',
+    title: 'Backend Engineer (Remote, United States)',
+    desc: 'Backend Engineers are responsible for the building of our reliable high-performance Heighliner Engine and Platform',
     icon: require("@site/static/img/join-us/icon3.webp").default,
     item: [
       {
-        itemTitle: "As a Backend Enginneer, you will:",
+        itemTitle: "As a Backend Engineer, you will:",
         itemList: [
           "Design and code the core features of Heighliner Engine and Platform",
           "Review peers' PR to improve the quality",
@@ -86,10 +86,10 @@ export const list = [
         itemTitle: "You are a great fit for this role if:",
         itemList: [
           "You love open source and Cloud Native.",
-          "You are familiar with golang,Java,Python,Node",
+          "You are familiar with golang, Java, Python, Node",
           "You know about DevOps and Cloud Native",
-          "You are familiar with : Heighliner,Dagger,CUE,Terraform,Nocalhost,KubeVela,Kubernetes",
-          "2+ years of experience in backend enginneering"
+          "You are familiar with : Heighliner, Dagger, CUE, Terraform, Nocalhost, KubeVela, Kubernetes",
+          "2+ years of experience in backend engineering"
         ]
       }
     ]
@@ -111,27 +111,27 @@ export default function AboutUs(): JSX.Element {
           and then can focus on writing the business code without worrying build and deploy.
         </div>
         <div className={styles.pageDesc}>
-          The core team of Heighliner comes from <a href="https://nocalhost.dev"
-                                                    target="_blank">https://nocalhost.dev</a>
-          &nbsp;<a href="https://kubevela.io" target="_blank">https://kubevela.io</a>.
+          The core team of Heighliner comes from <a href="https://nocalhost.dev" target="_blank">https://nocalhost.dev</a>
+          , <a href="https://kubevela.io" target="_blank">https://kubevela.io</a>.
         </div>
         <div className={styles.pageDesc}>
           We are a young team, advocating freedom and openness,
           and have gathered a group of small partners who are full of curiosity,
           love open source, and dream of using technology to change the world.
           We aim to use the most advanced cloud-native open source technology,
-          so that users don't need to care about infrastructure,
+          so that users don't need to care about the infrastructure,
           get a better development experience and the advantages of multi-cloud delivery,
           cost reduction and efficiency improvement.
         </div>
         <div className={clsx(styles.pageTitle, styles.pcTitle, styles.pcPositionTitle)}>Opening Position:</div>
         {
-          list.map(i => {
+          hcList.map((i, index) => {
             let {title, desc, item, icon} = i;
             return (
               <div className={styles.hc} key={title}>
                 <img src={icon} alt="" className={styles.hcIcon}/>
-                <div className={styles.hcTitle}>{title}</div>
+                {/*@ts-ignore*/}
+                <div className={styles.hcTitle} index={index}>{title}</div>
                 <div className={styles.hcDesc}>{desc}</div>
                 {
                   item.map(j => {
@@ -154,7 +154,7 @@ export default function AboutUs(): JSX.Element {
           })}
         <div className={clsx(styles.positionTitle, styles.mobileTitle)}>OUR OPENING POSITIONS</div>
         {
-          list.map((i, index) => {
+          hcList.map((i, index) => {
             let {title} = i;
             return (
               <div className={styles.hcBox} key={index}>

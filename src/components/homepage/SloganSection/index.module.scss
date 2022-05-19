@@ -110,7 +110,7 @@
   outline: none;
 
   margin-right: 79.8px;
-  line-height: 2;
+  line-height: 2.5;
 
   $buttonVerticalPadding: calc(
     var(--ifm-button-padding-vertical) * var(--ifm-button-size-multiplier)
@@ -129,7 +129,7 @@
   color: #080930 !important;
   width: 233px;
   height: 60px;
-  line-height: 2.3;
+  line-height: 2.5;
   border: none;
   outline: none;
   font-size: 18px;
@@ -196,6 +196,7 @@
     font-size: 15px;
     width: 173px;
     height: 45px;
+    line-height: 2;
   }
 
   .sloganTextWrap {
@@ -204,6 +205,10 @@
 
   .sloganTextWrap > h1 {
     font-size: 45px;
+  }
+
+  .video {
+    margin-left: 0;
   }
 
   .sloganTextWrap > h1:nth-child(1) {
@@ -224,10 +229,6 @@
 @media screen and(max-width: 750px) {
   .contentWrap {
     justify-content: center;
-  }
-
-  .video {
-    margin-left: 0;
   }
 }
 
