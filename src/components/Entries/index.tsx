@@ -11,8 +11,8 @@ interface Props {
 export default function Entries({ entries }: Props): React.ReactElement {
   return (
     <div>
-      {entries.map((entry) => (
-        <div key={entry.title}>
+      {entries.map((entry, index) => (
+        <div key={index}>
           <Entry entry={entry} />
         </div>
       ))}
