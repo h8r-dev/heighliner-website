@@ -7,7 +7,6 @@ import siteConfig from "@generated/docusaurus.config";
 
 const entries: EntriesType = [
   {
-    title: "Contact us",
     content:
       "Got questions? Have feedback? " +
       "Here are a couple of official channels to get in touch with us.",
