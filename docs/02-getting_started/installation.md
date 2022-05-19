@@ -7,12 +7,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-There are mainly three objects to be installed or created:
-
-1. Heighliner command line tool: `hln`, the main tool to handle all tasks for us.
-2. A Kubernetes cluster, which will be used to deploy all stack applications.
-3. An access token of your GitHub account, Heighliner will create all code repositories under your GitHub account.
-
 ## Step 1. Install hln CLI
 
 <Tabs>
@@ -53,9 +47,9 @@ Or download binaries: [GitHub Release](https://github.com/h8r-dev/heighliner/rel
 
 ## Step 2. Install Kubernetes
 
-**Preconditions: **
+Install the following Kubernetes tools:
 
-1. Install _kubectl_ firstly by following [the Kubernetes documentation](https://kubernetes.io/docs/tasks/tools/).
+1. Install _kubectl_ by following [the Kubernetes documentation](https://kubernetes.io/docs/tasks/tools/).
 2. Install _kind_ (v0.12.0+) command-line tool by following [the kind installation guide](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
 3. Install _Docker Desktop_ (v4.5.0+) or _Docker_ by following [the docker installation guide](https://docs.docker.com/desktop/#download-and-install)
 
@@ -108,66 +102,28 @@ nodes:
         protocol: TCP
 ```
 
-
-:::tip
-
-Linux users: 
-
-1. Ports 80 and 443 may not be exposed under Ubuntu. Please change ports 80 and 443,then specify the port number when accessing the application URL.
-2. It is recommended to use the `root` user
-:::
-
 Create a kind cluster from the config and install ingress controller:
+
+<Tabs>
+  <TabItem value="int" label="International" default>
 
 ```shell
 kind create cluster --image=kindest/node:v1.23.5 --config=kind.yaml
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
 ```
 
-(Optional) For Chinese users, create kind cluster and ingress-nginx using:
+  </TabItem>
+  <TabItem value="china" label="China">
 
 ```shell
 kind create cluster --image=kindest/node:v1.23.5 --config=kind.yaml
 kubectl apply -f https://raw.githubusercontent.com/h8r-dev/stacks/main/scripts/internal/ingress-nginx/deploy.yaml
 ```
 
+  </TabItem>
+</Tabs>
+
 </TabItem>
-
-<!-- <TabItem value="minikube">
-
-Install _minikube_ command-line tool by following [the minikube installation guide](https://minikube.sigs.k8s.io/docs/start/).
-
-(Optional) We recommend setting Docker Resources to 4 cores and 8Gb mem:
-<details>
-  <summary>Docker Desktop Settings</summary>
-  <div
-    style={{
-      maxWidth: 1000,
-      height: 'auto',
-      marginBottom: 30,
-      marginTop: 30,
-    }}
-  >
-    <img src={useBaseUrl('/img/docs/docker_resources.png')} />
-  </div>
-</details>
-
-Create a cluster and install ingress controller:
-
-```shell
-minikube start --cpus=4 --memory=8g --kubernetes-version=v1.23.5
-minikube addons enable ingress
-```
-
-> If command returns: The "docker" driver should not be used with root privileges. You can add `--force` flag.
-
-Expose ingress port using minikube tunnel:
-
-```shell
-sudo minikube tunnel
-```
-
-</TabItem> -->
 
 <TabItem value="cloud">
 
@@ -206,17 +162,9 @@ For more info about installing the ingress controller, see [the ingress-nginx in
 
 ## Step 3. Install Heighliner dependencies
 
-hln provides a command to install dependent tools and services:
-
 ```shell
 hln init
 ```
-
-This command will install the following tools and resources:
-
-- _dagger_, _nhctl_, _terraform_ CLI tools under ~/.hln/bin/
-- _heighliner_ namespace
-- _buildkit_ deployment and service on Kubernetes cluster
 
 If it is successful, it should output:
 
