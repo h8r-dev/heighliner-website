@@ -7,12 +7,18 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+There are mainly three objects to be installed or created:
+
+1. Heighliner command line tool: `hln`, the main tool to handle all tasks for us.
+2. A Kubernetes cluster, which will be used to deploy all stack applications.
+3. An access token of your GitHub account, Heighliner will create all code repositories under your GitHub account.
+
 ## Step 1. Install hln CLI
 
 <Tabs>
   <TabItem value="macos" label="MacOS" default>
 
-[HomeBrew](https://brew.sh):
+Install `hln` with [HomeBrew](https://brew.sh):
 
 ```bash
 brew install h8r-dev/tap/heighliner
@@ -49,7 +55,7 @@ Or download binaries: [GitHub Release](https://github.com/h8r-dev/heighliner/rel
 
 **Preconditions: **
 
-1. Install _kubectl_ first by following [the Kubernetes documentation](https://kubernetes.io/docs/tasks/tools/).
+1. Install _kubectl_ firstly by following [the Kubernetes documentation](https://kubernetes.io/docs/tasks/tools/).
 2. Install _kind_ (v0.12.0+) command-line tool by following [the kind installation guide](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
 3. Install _Docker Desktop_ (v4.5.0+) or _Docker_ by following [the docker installation guide](https://docs.docker.com/desktop/#download-and-install)
 
