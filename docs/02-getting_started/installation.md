@@ -7,6 +7,22 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+import { Video } from '@site/src/components/Video';
+
+<div
+  style={{
+    maxWidth: 800,
+    height: 'auto',
+    marginBottom: 50,
+    marginTop: 50
+  }}
+>
+  <Video
+    poster="/img/docs/getting-started/quickstart-poster.jpeg"
+    src="https://dl.h8r.io/heighliner-quickstart.mp4"
+  ></Video>
+</div>
+
 ## Step 1. Install hln CLI
 
 <Tabs>
