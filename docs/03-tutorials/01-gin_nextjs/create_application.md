@@ -17,7 +17,7 @@ Make sure you have followed [the installation guide](/docs/getting_started/insta
 Chinese users may have network access problems, please run first:
 
 ```shell
-export NETWORK_TYPE=internal
+export NETWORK_TYPE=china_network
 ```
 
 ## Step1. Create Gin+Nextjs application
