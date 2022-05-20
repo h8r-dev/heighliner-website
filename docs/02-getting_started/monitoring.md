@@ -39,28 +39,40 @@ This graph shows how many times your application has been visited. Now go to you
 
 ## Trigger an alert
 
-<!-- Go to [Requestbin](https://requestbin.com/) and create a Request Bin. It's a webhook which we can send our alerts to.
+Go to [Requestbin](https://requestbin.com/) and create a Request Bin. It's a webhook which we can send our alerts to.
 
 ![requebin](/img/docs/getting-started/requestbin-url.png)
 
-Copy it's url `https://eomgiarz3c3oyab.m.pipedream.net` and go back to the grafana dashboard, select the Alerting tab (Bell icon) at the left hand side. Click Contact points > New contact point in turn. Take a name like My Request Bin. Select Contact point type as Webhook, paste the url of the request bin we have copied.
+Make a file with the name amcfg.yaml, paste the following content into that file.
 
-![contact-point](/img/docs/getting-started/contact-point.png)
+```
+apiVersion: monitoring.coreos.com/v1alpha1
+kind: AlertmanagerConfig
+metadata:
+  name: hln-config
+  labels:
+    alertmanagerConfig: hln
+spec:
+  route:
+    receiver: 'hln-receiver'
+  receivers:
+  - name: 'hln-receiver'
+    webhookConfigs:
+    - url: <your_reuqestbin_url>
+```
 
-Then click Test button to send a predefined notification. Go to your request bin page and check that you have received the test message. Then you can Save the contact point. Go to Notification policies, create a new policy. Set matching labels as alertname = remix-app-alert select request bin as contact point.
+Switch the placeholder `<your_requestbin_url>` with the real url of your requestbin and run the following command:
 
-Now every thing is done. Your application's alert messages will be sent to the request bin. -->
+```
+kubectl apply -f amcfg.yaml
+```
 
-Go to the grafana dashboard, select the Alerting tab (Bell icon) at the left hand side. In alert rules, find the alert rule group called hln-alerts. It has one rule called remix-app-alert.
-
-![remix-app-alert](/img/docs/getting-started/remix-app-alert.png)
-
-You can visit your application's [error](http://hello-world.h8r.site/error) page to make a 500 error intentionally, which will trigger the alert rule created by hln stack.
+Now the requestbin is the notifications' receiver. We can trigger the alert and alertmanager will send notifications automatically. You can visit your application's [error](http://hello-world.h8r.site/error) page to make a 500 error intentionally, which will trigger the alert rule created by hln stack.
 
 ![remix-error](/img/docs/getting-started/remix-app-error.png)
 
-Wait a minute and go back to the alert rules page. Refresh it and you will find the remix-app-alert rule is firing now.
+Wait a minute and go back to your requestbin dashboard. You will receive a notification that the alert rule has been triggered.
 
-![remix-error](/img/docs/getting-started/remix-app-alert-firing.png)
+![alert-notifications](/img/docs/getting-started/alert-notifications.png)
 
 Congrats. You have finished exploring the monitoring section.
