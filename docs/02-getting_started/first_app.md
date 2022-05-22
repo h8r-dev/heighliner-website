@@ -14,7 +14,7 @@ Make sure you have followed [the installation guide](/docs/getting_started/insta
 Ever want to enjoy the simple experience of hosted app platform like [Vercel](https://vercel.com/)?
 But without the limitation to specific vendors?
 
-In this tutorial you will to create a [Remix](https://remix.run/) app in Vercel style in 2 minutes using Heighliner.
+In this tutorial you will create a [Remix](https://remix.run/) app in Vercel style in 2 minutes using Heighliner.
 
 ## Create Your App
 
