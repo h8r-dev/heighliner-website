@@ -1,6 +1,6 @@
 ---
 title: "Heighliner: Bring Stack-as-Code Experience To Developers"
-authors: [hongchaodeng]
+authors: [h8rdev]
 tags: [Cloud Native, Stack as Code, Dagger, DevSecOps, GitOps, Cloud IDE, CICD]
 ---
 
@@ -10,8 +10,8 @@ tags: [Cloud Native, Stack as Code, Dagger, DevSecOps, GitOps, Cloud IDE, CICD]
 
 Today the cloud brings us to a new era:
 With an increasing number of cloud infrastructure services, a dedicated team of developers can ship a compelling product in almost any industry within weeks.
-The cloud has become the infrastructure for the society like water and electricity.
-We have witnessed the growth and potential of the cloud industry when COVID hit the global economy.
+The cloud has become something like water and electricity for the entire human society.
+We have witnessed the rapid growth of the cloud when COVID hit the world.
 
 Along with it comes the fast-growing cloud native community.
 Cloud native technologies are changing the way developers use cloud services via open source standards.
