@@ -47,39 +47,40 @@ Here we are listing some of the latest trends:
 
 Even though having so many choices from the cloud native community, developers still have complex feelings:
 
-- On the one hand, they are happy and want to use all these projects as soon as possible.
-  In this way they can build best practices in their applications based on open standards, and have a future-proof application architecture.
-- On the other hand, they are scared and overwhelmed by the complexities of these projects.
-  It is very complicated and difficult to setup these open source projects from end to end.
+- On the one hand, they like these choices and to use them in production.
+  In this way they can build best practices based on open standards, and have a future-proof application architecture.
+- On the other hand, they are scared and overwhelmed by the complexities of open source projects.
+  It is very complicated and difficult to setup these projects from end to end.
   Moreover, the iteration speed of these projects is very high. Developers don't have enough time and energe to keep up with.
 
 ## Heighliner Born For Developers
 
-Developers' time is precious.
-If they can't focus themselves fully on developing applications per se while wasting too much time to get these infrastructure tools to work, it will eventually create huge cost to developers and enterprises.
+Developers' time are precious.
+If they can't focus themselves on developing applications but waste too much time on getting infrastructure tools to work,
+it will eventually incur huge cost to both developers and enterprises.
 
-Today we are trying to solve this problem by providing a solution called **Heighliner**.
-It is a modern developer tool that deliver your application **stack as code**.
+Today we build a developer tool called **Heighliner** to solve the above problem.
+It is a modern developer tool that can deliver your **application stack as code**.
 You can codify low level details into human-readable configuration files that you can version, reuse, and share.
-We try to tell developers via Heighliner that "Your cloud native stack can be managed just like your application code. You deserve a better user experience."
+We try to tell developers via Heighliner that "Your application stack can be managed just like your application code. You deserve a better user experience."
 We say that because Heighliner is:
 
 - **Developer-centric**:
-    Heighliner tries to define the entire application stack from a developer-centric perspective.
-    This includes code repositories, app frameworks, CI/CD pipelines, Helm Charts, monitoring dashboards, alerting rules, Cloud IDE configurations, and so on.
-- **Supporting Languages and frameworks**:
+    Heighliner defines the entire application stack from a developer-centric perspective, including
+    code repositories, app frameworks, CI/CD pipelines, Helm Charts, monitoring dashboards, alerting rules, remote development config, and so on.
+- **Versatile**:
     We provide official stacks for popular languages and frameworks. Users can choose one of these stacks to spin up cloud native development environments in one click.
-    Currently the languages and frameworks we supports include Go, Spring, Next.js, Vue.js, Remix, etc.
+    The languages and frameworks include Go, Spring, Next.js, Vue.js, Remix, etc.
 - **Customizable**:
     Users can customize every single step of any stack.
     We are glad that Docker creator Solomon has created [Dagger](https://dagger.io/).
-    We have used Dagger to significantly simplify our user experience to develop Heighliner stacks.
+    Dagger significantly simplify our user experience to develop Heighliner stacks.
     We support using Dagger to customize any stack.
-    Besides Dagger libraries, we provide an additional set of libraries targeted for cloud native technolgoies.
+    Besides Dagger libraries, we provide additional libraries targeted for cloud native technolgoies.
 
-With all these benefits of Heighliner, developers can continuously take advantage of the evolution of cloud native technologies.
-The latest technology updates will be consumed in a way that developers are familiar with -- using code.
-In this way it helps developers continuously evolve the entire application architecture.
+With above benefits from Heighliner, developers can take advantage of the evolution of cloud native technologies.
+The latest technological updates will be consumed in a way that developers are familiar with -- using code.
+In this way developers can continuously evolve their application architecture.
 
 ## Getting Hands-on
 
@@ -100,7 +101,7 @@ Kustomize Version: v4.5.4
 Server Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.5", GitCommit:"c285e781331a3785a7f436042c65c5641ce8a9e9", GitTreeState:"clean", BuildDate:"2022-03-24T22:10:16Z", GoVersion:"go1.17.8", Compiler:"gc", Platform:"linux/arm64"}
 ```
 
-**Step 3**: Create your app development environment in one command
+**Step 3**: Create your development environment in one command
 
 ```shell
 $ hln up hello-world -s sample -i
@@ -123,11 +124,14 @@ Heighliner will create automatically for you the Github repositories, Helm Chart
 By now, Heighliner has provided many out-of-box features that you can play with. You can learn more at [heighliner.dev](https://heighliner.dev).
 
 In the mean time, we believe in the long term value that open source community will bring us.
-ALl projects of Heighliner including official stacks are Apache-licensed.
-We are also contributing to open source projects such as Dagger, Nocalhost.
-Our goal is to build an open community that benefits every developer in the future.
+ALl projects of Heighliner including official stacks are open source Apache-licensed.
+Moreover, we are contributing to open source projects like Dagger, Nocalhost, etc.
+It is our ambition to build an open community that benefits every developer in the future.
 
-Heighliner is still in the early stages of development. To grow and prosper it needs badly one important factor -- you as a developer.
-We welcome you to join us and contribute to the development of Heighliner.
+Heighliner is still in the early stages of development. To grow and prosper it needs badly one important factor -- you as the passionate developer.
+If you are interested in Heighliner, Dagger, Nocalhost, or any other cloud native projects,
+you are welcome to:
 
-If you are interested in Heighliner, Dagger, Nocalhost, or any other cloud native projects, you can join our [Discord channel](https://discord.gg/WphTbdVHFA) or other [community channels](https://heighliner.dev/contact-us).
+- join our [Discord channel](https://discord.gg/WphTbdVHFA)
+- contact us via [community channels](https://heighliner.dev/contact-us).
+- provide us feedback at [heighliner github issues](https://github.com/h8r-dev/heighliner/issues)
