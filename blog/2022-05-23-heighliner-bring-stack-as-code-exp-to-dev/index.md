@@ -24,24 +24,24 @@ Here we are listing some of the latest trends:
 - **DevSecOps**:
     It continues to be the primary focus of IT management and software engineering teams to secure the cloud infrastructure.
     As software supply chain grows and privacy policies improves, there will be security and conformance validation in every step of software delivery and maintenance.
-- **Cloud IDE**:
-    Developers are often limited by hardware resources of local laptops, inconsistency between development and production environments, and complication of microservice dependencies.
-    Nonetheless, projects like [Nocalhost](https://nocalhost.dev) are trying to make it easier for developers to put their development environments on the cloud.
-    It reduces the learning curse a lot since setup is easy -- all they need is an IDE.
-    This also makes it easier to reproduce and share production environment (e.g. collabration on the same environment).
+- **Remote Development**:
+    Developers are often limited by the hardware resources of local laptops, inconsistency between development and production environments, and complication of microservice dependencies.
+    Nonetheless, projects like [Nocalhost](https://nocalhost.dev) are trying to move development activities onto the cloud.
+    All developers need is an IDE and they can even collaborate on the same environment.
 - **Observability**:
-    It is becoming more and more standardized to collect logs and metrics as the adoption of [OpenTelemetry](https://opentelemetry.io) increases.
+    As [OpenTelemetry](https://opentelemetry.io) becomes more and more popular, the format to collect logs and metrics becomes more standardized.
     This has improved the development of digital transparency of cloud apps.
-    Meanwhile, new trending [continuous profiling](https://www.parca.dev) projects are helping improve problem debugging and performance analysis.
-    It has made them to a new level that you can see what just happened.
-    Moreover, the rise of [ePBF adoption in observability](https://pixielabs.ai) will make it possible to observe with no instrumentation, which frees
+    Meanwhile, uprising [continuous profiling](https://www.parca.dev) projects are making it easier to do problem debugging and performance analysis.
+    It takes them to a new level that you can see what happened simultaneously.
+    Moreover, the rise of [ePBF adoption in observability](https://pixielabs.ai) makes it possible to observe with no instrumentation, which frees
     developers and improve their efficiency.
 - **GitOps**:
-    As the topics of cloud native gets more and more popular, CI/CD has become the primary focus among all discussions.
-    GitOps, as a new pattern to do continuous delivery for cloud native community, is trying to write down to the Git repository all the infrastructure dependencies in a declarative format.
-    In doing so, developers will get better version control and access management for their application infrastructure.
+    CI/CD gradually becomes the primary topic as the concepts of cloud native gets widespread.
+    GitOps, as a new pattern for continuous delivery from the cloud native community, is trying to codify into Git
+    all the infrastructure dependencies of your app in a declarative format.
+    By doing so developers will get better version control and access management for their application infrastructure.
     Recently, the founders of ArgoCD project has created a startup ([akuity.io](https://akuity.io)) for commercializing ArgoCD.
-    This reflects the growing demand for such GitOps project and endorsement from capital markets.
+    This reflects the growing demand for GitOps and confidence from the capital markets.
 
 ## Are Developers Satisfied?
 
