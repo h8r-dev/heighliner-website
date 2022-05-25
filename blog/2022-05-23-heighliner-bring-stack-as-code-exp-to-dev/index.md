@@ -124,7 +124,7 @@ Heighliner will create automatically for you the Github repositories, Helm Chart
 By now, Heighliner has provided many out-of-box features that you can play with. You can learn more at [heighliner.dev](https://heighliner.dev).
 
 In the mean time, we believe in the long term value that open source community will bring us.
-ALl projects of Heighliner including official stacks are open source Apache-licensed.
+All projects of Heighliner including official stacks are open source Apache-licensed.
 Moreover, we are contributing to open source projects like Dagger, Nocalhost, etc.
 It is our ambition to build an open community that benefits every developer in the future.
 
