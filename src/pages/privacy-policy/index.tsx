@@ -16,15 +16,7 @@ export default function (): React.ReactElement {
       <p>
         We use Your Personal data to provide and improve the Service. By using
         the Service, You agree to the collection and use of information in
-        accordance with this Privacy Policy. This Privacy Policy has been
-        created with the help of the{" "}
-        <a
-          href="https://www.privacypolicies.com/privacy-policy-generator/"
-          target="_blank"
-        >
-          Privacy Policy Generator
-        </a>
-        .
+        accordance with this Privacy Policy. 
       </p>
       <h1>Interpretation and Definitions</h1>
       <h2>Interpretation</h2>
@@ -209,14 +201,7 @@ export default function (): React.ReactElement {
         Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies.
         Persistent Cookies remain on Your personal computer or mobile device
         when You go offline, while Session Cookies are deleted as soon as You
-        close Your web browser. Learn more about cookies:{" "}
-        <a
-          href="https://www.privacypolicies.com/blog/privacy-policy-template/#Use_Of_Cookies_Log_Files_And_Tracking"
-          target="_blank"
-        >
-          Cookies by PrivacyPolicies Generator
-        </a>
-        .
+        close Your web browser.
       </p>
       <p>
         We use both Session and Persistent Cookies for the purposes set out
