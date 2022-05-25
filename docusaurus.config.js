@@ -145,9 +145,13 @@ const config = {
                 to: "/blog",
               },
               {
+                label: "YouTube",
+                to: "https://www.youtube.com/channel/UCoFdpCfdP6qFHKUrJ1HXidw"
+              },
+              {
                 label: "Privacy policy",
                 to: "/privacy-policy"
-              }
+              },
             ],
           },
         ],
