@@ -8,25 +8,27 @@ tags: [Cloud Native, Stack as Code, Dagger, DevSecOps, GitOps, Cloud IDE, CICD]
 
 ## The Cloud Trends
 
-Today the cloud brings us to a new era:
+Today the cloud takes us to a new era:
 With an increasing number of cloud infrastructure services, a dedicated team of developers can ship a compelling product in almost any industry within weeks.
 The cloud has become something like water and electricity for the entire human society.
-We have witnessed the rapid growth of the cloud when COVID hit the world.
+We have witnessed the rapid growth of the cloud especially when COVID hit the world.
 
 Along with it comes the fast-growing cloud native community.
-Cloud native technologies are changing the way developers use cloud services via open source standards.
-In this way, developers can build their apps across clouds without being locked into specific vendors.
-Since its inception, CNCF (Cloud Native Computing Foundation) has incubated hundreds of projects including Kubernetes.
-It is still evolving fast and providing developers with more projects and standard interfaces to use the cloud.
-By now, being cloud native not only means adopting Kubernetes, but also building the best practices for the entire software development lifecycle.
-Here we are listing some of the latest cloud native trends:
+Cloud native technologies are changing the way developers use cloud services via open standards.
+In this way, developers can build their apps across clouds without locking into specific vendors.
+Since Kubernetes donation as the first project, CNCF (Cloud Native Computing Foundation) has been cradling and growing hundreds of projects as a neutral foundation.
+It is still evolving fast and providing developers with more standard interfaces to use the cloud.
+By now, cloud native means not only adopting Kubernetes, but also building best practices for the entire software development lifecycle.
+Here we are listing some of the latest trends:
 
 - **DevSecOps**:
-    Securing your cloud infrastructure will continue to be the primary focus of IT management and software engineering teams.
-    As the software supply chain and privacy policies matures, security and conformance requirements will need to be validated in every step of software delivery and maintenance.
+    It continues to be the primary focus of IT management and software engineering teams to secure the cloud infrastructure.
+    As software supply chain grows and privacy policies improves, there will be security and conformance validation in every step of software delivery and maintenance.
 - **Cloud IDE**:
-    Developers are often trapped by not enough hardware resources of their laptops, inconsistency between development and production environments, and complexity of microservice dependencies.
-    Nonetheless, projects like [Nocalhost](https://nocalhost.dev) are trying to make it easier for developers to put their development environments on the cloud. It is closer to their production environments. It is also easier to setup since all they need is an IDE in local, and achieves convenient collaborative development.
+    Developers are often limited by hardware resources of local laptops, inconsistency between development and production environments, and complication of microservice dependencies.
+    Nonetheless, projects like [Nocalhost](https://nocalhost.dev) are trying to make it easier for developers to put their development environments on the cloud.
+    It reduces the learning curse a lot since setup is easy -- all they need is an IDE.
+    This also makes it easier to reproduce and share production environment (e.g. collabration on the same environment).
 - **Observability**:
     It is becoming more and more standardized to collect logs and metrics as the adoption of [OpenTelemetry](https://opentelemetry.io) increases.
     This has improved the development of digital transparency of cloud apps.
