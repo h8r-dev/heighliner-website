@@ -33,6 +33,7 @@ const config = {
     newsletterUrl: 'https://heighliner.substack.com/',
     email: "hr@h8r.io",
     contactEmail: "contact@h8r.io",
+    twitter: "https://twitter.com/heighliner_dev",
     wechat: "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzkzMTM1MDEyOA==&scene=124#wechat_redirect",
   },
 
