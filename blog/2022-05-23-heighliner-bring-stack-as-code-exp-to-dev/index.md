@@ -76,7 +76,7 @@ We say that because Heighliner is:
     We are glad that Docker creator Solomon has created [Dagger](https://dagger.io/).
     Dagger significantly simplify our user experience to develop Heighliner stacks.
     We support using Dagger to customize any stack.
-    Besides Dagger libraries, we provide additional libraries targeted for cloud native technolgoies.
+    Besides Dagger libraries, we provide additional libraries targeted for cloud native technologies.
 
 With above benefits from Heighliner, developers can take advantage of the evolution of cloud native technologies.
 The latest technological updates will be consumed in a way that developers are familiar with -- using code.
