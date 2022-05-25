@@ -51,7 +51,7 @@ Even though having so many choices from the cloud native community, developers s
   In this way they can build best practices based on open standards, and have a future-proof application architecture.
 - On the other hand, they are scared and overwhelmed by the complexities of open source projects.
   It is very complicated and difficult to setup these projects from end to end.
-  Moreover, the iteration speed of these projects is very high. Developers don't have enough time and energe to keep up with.
+  Moreover, the iteration speed of these projects is very high. Developers don't have enough time and energy to keep up with.
 
 ## Heighliner Born For Developers
 
