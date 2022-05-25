@@ -26,6 +26,7 @@ const config = {
     contactUs: "/contact-us",
     githubUrl: mainGithubUrl,
     discordUrl: 'https://discord.gg/WphTbdVHFA',
+    twitterUrl: 'https://twitter.com/heighliner_dev',
     ginNextStackUrl: '/docs/tutorials/gin_nextjs',
     ginVueStackUrl: '/docs/tutorials/gin_vue',
     remixStackUrl: '/docs/tutorials/remix',

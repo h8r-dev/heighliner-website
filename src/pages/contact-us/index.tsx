@@ -28,16 +28,16 @@ const entries: EntriesType = [
     ),
   },
   {
-    title: "Join Heighliner User Group on WeChat",
-    imgPath: require("/img/page/contact-us/HeightLinerWeChat.jpg").default,
-  },
-  {
     title: "Follow Heighliner's Twitter",
     content: (
       <>
-        Follow our <a href={siteConfig.customFields.twitterUrl as string} >Twitter</a>
+        Follow us on <a href={siteConfig.customFields.twitterUrl as string}>Twitter</a>
       </>
     )
+  },
+  {
+    title: "Join Heighliner User Group on WeChat",
+    imgPath: require("/img/page/contact-us/HeightLinerWeChat.jpg").default,
   },
   {
     title: "Follow Heighliner's WeChat Official Account",
