@@ -1,0 +1,38 @@
+/**
+* Search bar custom css.
+*/
+
+.DocSearch.DocSearch-Button {
+  border-radius: 0;
+  background: none;
+  color: #fff;
+
+  .DocSearch-Button-Keys {
+    display: none;
+  }
+
+  .DocSearch-Search-Icon {
+    color: #fff;
+  }
+
+  &:active, &:focus, &:hover{
+    background: none;
+    box-shadow: none;
+    color: #fff;
+    outline: none;
+    transform: scale(1.1)
+  }
+}
+
+
+[data-theme="light"] .DocSearch.DocSearch-Button {
+  /* Search box */
+  --docsearch-searchbox-background: var(--ifm-color-white);
+  --docsearch-searchbox-focus-background: var(--ifm-color-white);
+}
+
+[data-theme="dark"] .DocSearch.DocSearch-Button {
+  /* Search box */
+  --docsearch-searchbox-background: var(--ifm-background-color);
+  --docsearch-searchbox-focus-background: var(--ifm-color-black);
+}
