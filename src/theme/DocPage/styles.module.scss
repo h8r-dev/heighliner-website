@@ -11,7 +11,7 @@
   --doc-sidebar-bg-color: #f5f7f9;
 }
 
-:root[data-theme='dark'] {
+:root[data-theme="dark"] {
   --doc-sidebar-bg-color: #18191a;
 }
 
@@ -23,7 +23,7 @@
 .docMainContainer {
   display: flex;
   width: 100%;
-  font-family: 'Jost';
+  font-family: "Jost";
   line-height: normal;
 }
 
@@ -45,7 +45,7 @@
     display: block;
     width: var(--doc-sidebar-width);
     box-sizing: content-box;
-    padding-left: 2vw;;
+    padding-left: 2vw;
     margin-top: calc(-1 * var(--ifm-navbar-height));
     border-right: 1px solid var(--ifm-toc-border-color);
     will-change: width;
@@ -55,6 +55,20 @@
     background-color: var(--doc-sidebar-bg-color);
   }
 
+  :root[data-theme="light"] {
+    .docSidebarContainer > div > a {
+      background-image: url("/img/heighliner/logo/primary-logo-with-purple-name@3x.webp");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 32px;
+      width: 170px;
+
+      & > img {
+        display: none;
+      }
+    }
+  }
   .docSidebarContainerHidden {
     width: var(--doc-sidebar-hidden-width);
     cursor: pointer;
@@ -79,12 +93,12 @@
   .expandSidebarButtonIcon {
     transform: rotate(0);
   }
-  html[dir='rtl'] .expandSidebarButtonIcon {
+  html[dir="rtl"] .expandSidebarButtonIcon {
     transform: rotate(180deg);
   }
 
-  html[data-theme='dark'] .collapsedDocSidebar:hover,
-  html[data-theme='dark'] .collapsedDocSidebar:focus {
+  html[data-theme="dark"] .collapsedDocSidebar:hover,
+  html[data-theme="dark"] .collapsedDocSidebar:focus {
     background-color: var(--collapse-button-bg-color-dark);
   }
 
