@@ -27,7 +27,7 @@ import {
 } from '@docusaurus/theme-common';
 import Head from '@docusaurus/Head';
 
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 function DocPageContent({
   currentDocRoute,

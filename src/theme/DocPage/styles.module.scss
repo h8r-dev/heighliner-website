@@ -6,8 +6,13 @@
  */
 
 :root {
-  --doc-sidebar-width: 300px;
+  --doc-sidebar-width: 23.57vw;
   --doc-sidebar-hidden-width: 30px;
+  --doc-sidebar-bg-color: #f5f7f9;
+}
+
+:root[data-theme='dark'] {
+  --doc-sidebar-bg-color: #18191a;
 }
 
 :global(.docs-wrapper) {
@@ -18,6 +23,8 @@
 .docMainContainer {
   display: flex;
   width: 100%;
+  font-family: 'Jost';
+  line-height: normal;
 }
 
 .docSidebarContainer {
@@ -37,11 +44,15 @@
   .docSidebarContainer {
     display: block;
     width: var(--doc-sidebar-width);
+    box-sizing: content-box;
+    padding-left: 2vw;;
     margin-top: calc(-1 * var(--ifm-navbar-height));
     border-right: 1px solid var(--ifm-toc-border-color);
     will-change: width;
     transition: width var(--ifm-transition-fast) ease;
     clip-path: inset(0);
+    font-weight: normal;
+    background-color: var(--doc-sidebar-bg-color);
   }
 
   .docSidebarContainerHidden {
@@ -81,5 +92,17 @@
     max-width: calc(
       var(--ifm-container-width) + var(--doc-sidebar-width)
     ) !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .docSidebarContainer {
+    padding-left: 12vw;
+  }
+}
+
+@media (min-width: 1400px) {
+  :root {
+    --doc-sidebar-width: 15vw;
   }
 }
