@@ -46,7 +46,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/h8r-dev/heighliner-website/blob/main/",
-          docLayoutComponent: require.resolve('./src/themes/DocPage'),
+          docLayoutComponent: require.resolve('./src/theme/DocPage'),
         },
         blog: {
           showReadingTime: true,
@@ -66,7 +66,7 @@ const config = {
       navbar: {
         logo: {
           alt: "navbar-logo",
-          src: "/img/homepage/slogansection/purple-logo@3x.webp",
+          src: "/img/heighliner/logo/primary-logo@3x.webp",
         },
         items: [
           {
@@ -167,9 +167,6 @@ const config = {
         apiKey: '232ec1aa85b14f42f196b5dea41fbac8',
         indexName: 'heighliner-docs',
         contextualSearch: false,
-      },
-      colorMode: {
-        defaultMode: "dark",
       },
     }),
   plugins: [

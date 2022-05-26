@@ -4,6 +4,13 @@
  * work well for content-centric websites.
  */
 
+/**
+* Override default theme css.
+ */
+@use '../theme/css/docSearchBar';
+@use '../theme/css/navBar';
+@use '../theme/css/docSiderBar';
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #6006EE;
@@ -72,11 +79,6 @@ header h2 > a {
   line-height: var(--ifm-heading-line-height);
 }
 
-.menu__link {
-  font-family: var(--ifm-font-family-title);
-  font-weight: bold;
-}
-
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
   --ifm-color-primary: #A079DF;
@@ -135,9 +137,6 @@ h1[class^="h1Heading"] {
   margin-bottom: 3rem;
 }
 
-.navbar__toggle {
-  filter: brightness(19);
-}
 
 .header-github-link:hover {
   opacity: 0.6;
@@ -153,9 +152,4 @@ h1[class^="h1Heading"] {
 
 [data-theme='dark'] .header-github-link::before {
   background: url("/static/img/github-logo/white.svg") no-repeat;
-}
-
-[data-theme='light'] .navbar__toggle{
-  color: #8d949e;
-  filter: brightness(100%);
 }
