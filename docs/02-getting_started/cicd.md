@@ -29,7 +29,7 @@ Visit your ArgoCD dashboard at [argocd.h8r.site](http://argocd.h8r.site/):
 
 Now, you could make some changes to your remix source code, here, we update `app/routes/index.tsx` file with below code:
 
-```html
+```html title="app/routes/index.tsx"
 <h1 className="text-center text-6xl font-extrabold text-white">
   Powered by Heighliner!
 </h1>

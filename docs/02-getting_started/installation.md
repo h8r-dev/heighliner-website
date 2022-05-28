@@ -98,7 +98,7 @@ values={[
 
 Save the following configuration as `kind.yaml`:
 
-```yaml
+```yaml title="kind.yaml"
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 nodes:

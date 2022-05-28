@@ -43,9 +43,9 @@ Go to [Requestbin](https://requestbin.com/) and create a Request Bin. It's a web
 
 ![requebin](/img/docs/getting-started/requestbin-url.png)
 
-Make a file with the name amcfg.yaml, paste the following content into that file.
+Make a file with the name `amcfg.yaml`, paste the following content into that file.
 
-```
+```yaml title="amcfg.yaml"
 apiVersion: monitoring.coreos.com/v1alpha1
 kind: AlertmanagerConfig
 metadata:
