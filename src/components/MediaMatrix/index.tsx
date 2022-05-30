@@ -9,22 +9,6 @@ export default function (): React.ReactElement {
     <div className={styles.mediaMatrix}>
       <ul>
         <li>
-          <a href={siteConfig.customFields.twitterUrl as string}>
-            <img
-              src={require("/img/page/contact-us/Twitter@3x.png").default}
-              alt="without Heighliner"
-            />
-          </a>
-        </li>
-        <li>
-          <a href={siteConfig.customFields.githubUrl as string}>
-            <img
-              src={require("/img/page/contact-us/GitHub@3x.png").default}
-              alt="without Heighliner"
-            />
-          </a>
-        </li>
-        <li>
           <div className={styles.wechat}>
             <img
               src={require("/img/page/contact-us/WeChat@3x.png").default}
@@ -51,17 +35,9 @@ export default function (): React.ReactElement {
           </div>
         </li>
         <li>
-          <a href={siteConfig.customFields.discordUrl as string}>
+          <a href={siteConfig.customFields.twitterUrl as string}>
             <img
-              src={require("/img/page/contact-us/Discord@3x.png").default}
-              alt="without Heighliner"
-            />
-          </a>
-        </li>
-        <li>
-          <a href={siteConfig.customFields.youTubeUrl as string}>
-            <img
-              src={require("/img/page/contact-us/YouTube@3x.png").default}
+              src={require("/img/page/contact-us/Twitter@3x.png").default}
               alt="without Heighliner"
             />
           </a>
@@ -74,6 +50,31 @@ export default function (): React.ReactElement {
             />
           </a>
         </li>
+        <li>
+          <a href={siteConfig.customFields.discordUrl as string}>
+            <img
+              src={require("/img/page/contact-us/Discord@3x.png").default}
+              alt="without Heighliner"
+            />
+          </a>
+        </li>
+        <li>
+          <a href={siteConfig.customFields.githubUrl as string}>
+            <img
+              src={require("/img/page/contact-us/GitHub@3x.png").default}
+              alt="without Heighliner"
+            />
+          </a>
+        </li>
+        <li>
+          <a href={siteConfig.customFields.youTubeUrl as string}>
+            <img
+              src={require("/img/page/contact-us/YouTube@3x.png").default}
+              alt="without Heighliner"
+            />
+          </a>
+        </li>
+
         <li>
           <a href={siteConfig.customFields.bilibiliUrl as string}>
             <img
