@@ -74,7 +74,6 @@ export default function (): React.ReactElement {
             />
           </a>
         </li>
-
         <li>
           <a href={siteConfig.customFields.bilibiliUrl as string}>
             <img
