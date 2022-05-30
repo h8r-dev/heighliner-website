@@ -72,12 +72,13 @@ Install the following Kubernetes tools:
 Then choose one of the following methods to install a Kubernetes cluster:
 
 <Tabs
-className="unique-tabs"
-defaultValue="kind"
-values={[
-{label: 'Kind', value: 'kind'},
-{label: 'Cloud', value: 'cloud'},
-]}>
+  className="unique-tabs"
+  defaultValue="kind"
+  values={[
+    {label: 'Kind', value: 'kind'},
+    {label: 'Cloud', value: 'cloud'},
+  ]}
+>
 
 <TabItem value="kind">
 
@@ -143,12 +144,54 @@ kubectl apply -f https://raw.githubusercontent.com/h8r-dev/stacks/main/scripts/i
 
 <TabItem value="cloud">
 
-You can also choose one of the following cloud providers for hosted k8s services:
+#### Minimal requirements to your Kubernetes cluster.
+
+1. At least 2 CPUs.
+2. At least 4GB available memory.
+3. At least 60GB available disk space.
+4. Internet access must be enabled.
+
+#### Cloud Providers
+
+You can choose one of the following cloud providers for hosted k8s services:
 
 - [AWS EKS](https://aws.amazon.com/eks/)
+
+````mdx-code-block
+<details>
+  <summary>Notes for AWS EKS!</summary>
+
+  1. A custom kubeconfig file is required.
+
+  Default kubeconfig file generated from `aws eks update-kubeconfig --region region-code --name cluster-name` depends on `aws` command and can not be used by Heighliner Stack. Instead, you have to regenerate another kubeconfig with a service account, you could view [Create Kubernetes Service Accounts and Kubeconfigs](https://docs.armory.io/armory-enterprise/armory-admin/manual-service-account/) for instructions.
+
+  2. Retrive IP address from hostname of load balancer.
+
+  After nginx-ingress installed, AWS will assign a hostname to the Nginx load banlancer, that's not what wanted by Heighliner. You will have to retrive an IP address from the hostname with tools such as: `dig`, `nslookup`.
+
+</details>
+````
+
 - [Azure AKS](https://azure.microsoft.com/en-us/services/kubernetes-service/#overview)
 - [Google GKE](https://cloud.google.com/kubernetes-engine)
 - [Alibaba ACK](https://www.aliyun.com/product/kubernetes)
+
+````mdx-code-block
+<details>
+  <summary>Notes for Alibaba ACK</summary>
+
+  1. Specify default `StorageClass` is required.
+
+  ACK will not specify default StorageClass in cluster. so, we have to do it manually.
+  according to it's doc: [ACK Disk Volume Overview](https://partners-intl.aliyun.com/help/en/container-service-for-kubernetes/latest/disk-volume-overview-4), we could run below command to specify default `StorageClass`:
+
+  ```shell
+  kubectl patch storageclass alicloud-disk-ssd -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+  ```
+
+</details>
+````
+
 - [Tencent TKE](https://cloud.tencent.com/product/tke)
 - [DigitalOcean Kubernetes](https://www.digitalocean.com/products/kubernetes)
 
