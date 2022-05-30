@@ -2,3 +2,39 @@
   height: 600px;
   width: 50vw;
 }
+
+.secondaryBottom {
+  margin-bottom: -8px;
+}
+
+
+.mobileContactUsSection {
+  display: none;
+}
+
+.mobileContactUsSection {
+  margin-top: 80px;
+  margin-bottom: -8px;
+  position: relative;
+
+  .content {
+    position: absolute;
+    top: 15vw;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen  and (max-width: 996px){
+  .mobileContactUsSection {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mobileContactUsSection {
+    .content {
+      top: 17vw;
+    }
+  }
+}

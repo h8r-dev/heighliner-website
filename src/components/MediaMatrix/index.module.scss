@@ -1,0 +1,93 @@
+@import "/src/css/util.scss";
+
+.mediaMatrix {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+    justify-content: center;
+    max-width: 240px;
+
+    $iconSquare: 37px;
+    li {
+      @include setSquare($iconSquare);
+      display: inline-block;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+    }
+
+    li:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 15px rgba(66, 26, 86, 0.24);
+    }
+
+    li .wechat {
+      position: relative;
+    }
+
+    $qrWidth: 300px;
+    $qrHeight: 200px;
+    .qrCodes {
+      width: $qrWidth;
+      height: $qrHeight;
+      position: absolute;
+      top: -$qrHeight;
+      left: -$qrWidth / 2 + $iconSquare / 2;
+      visibility: hidden;
+    }
+
+    $triangleLength: 8px;
+    .pairs {
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: calc(100% - $triangleLength);
+      background-color: #fff;
+
+      .pair {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+
+        img {
+          @include setSquare(120px);
+        }
+
+        p {
+          font-size: 12px;
+          line-height: 1.24;
+          @include setHorizontalPadding(2px);
+          margin: 0;
+        }
+      }
+    }
+
+    .qrCodes::after {
+      content: "";
+      display: block;
+      background-color: #fff;
+      @include setSquare($triangleLength);
+      @include setHorizontalMargin(auto);
+      transform: translate(0, -50%) rotate(45deg);
+    }
+
+    li:hover .qrCodes {
+      visibility: visible;
+    }
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .mediaMatrix {
+    ul {
+      max-width: 100%;
+      flex-wrap: nowrap;
+    }
+  }
+}
