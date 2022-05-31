@@ -50,6 +50,11 @@ $formHeight: 760px;
     outline: none;
   }
 
+  input::placeholder,
+  textarea::placeholder {
+    opacity: 0.5;
+  }
+
   label {
     font-weight: 500;
     font-size: 16px;
