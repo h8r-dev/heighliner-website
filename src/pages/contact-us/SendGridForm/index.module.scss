@@ -1,6 +1,6 @@
 @import "/src/css/util.scss";
 
-$formHeight: 630px;
+$formHeight: 760px;
 
 .wrapper {
   display: flex;
@@ -38,6 +38,10 @@ $formHeight: 630px;
     width: 100%;
     border: solid 1px #dddfe1;
     border-radius: 0;
+    line-height: 20px;
+    font-size: 18px;
+    @include setHorizontalPadding(14px);
+    @include setVerticalPadding(10px);
   }
 
   input:focus,
@@ -57,8 +61,7 @@ $formHeight: 630px;
   }
 
   input {
-    height: 30px;
-    padding: 0;
+    height: 52px;
   }
 
   textarea {
