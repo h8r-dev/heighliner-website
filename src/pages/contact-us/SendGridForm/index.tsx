@@ -190,15 +190,15 @@ function fieldValidator({
   };
 
   if (fullname.val.length <= 0) {
-    checkedFields.fullname.errorMsg = "You full name can't be empty.";
+    checkedFields.fullname.errorMsg = "Your full name can't be empty.";
   }
 
   if (organization.val.length <= 0) {
-    checkedFields.organization.errorMsg = "You organization can't be empty.";
+    checkedFields.organization.errorMsg = "Your organization can't be empty.";
   }
 
   if (role.val.length <= 0) {
-    checkedFields.role.errorMsg = "You role can't be empty.";
+    checkedFields.role.errorMsg = "Your role can't be empty.";
   }
 
   if (message.val.length <= 0) {
@@ -208,9 +208,9 @@ function fieldValidator({
   const emailRule =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (email.val.length <= 0) {
-    checkedFields.email.errorMsg = "You email can't be empty.";
+    checkedFields.email.errorMsg = "Your email can't be empty.";
   } else if (!email.val.toLowerCase().match(emailRule)) {
-    checkedFields.email.errorMsg = "You enter email did't meet the require.";
+    checkedFields.email.errorMsg = "The email you input is invalid.";
   }
 
   return checkedFields;
