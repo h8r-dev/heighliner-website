@@ -1,0 +1,114 @@
+@import "/src/css/util.scss";
+
+$formHeight: 760px;
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  @include setVerticalMargin(73px);
+}
+
+.form {
+  width: 55vw;
+  height: $formHeight;
+  background-color: #fff;
+  box-shadow: 0 0 10px 5px rgba(102, 151, 245, 0.2);
+  padding: 2.63vw;
+
+  label,
+  input,
+  textarea,
+  button {
+    appearance: none;
+  }
+
+  h1 {
+    font-size: 26px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  label,
+  input {
+    display: block;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    border: solid 1px #dddfe1;
+    border-radius: 0;
+    line-height: 20px;
+    font-size: 18px;
+    @include setHorizontalPadding(14px);
+    @include setVerticalPadding(10px);
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: #6002ee;
+    outline: none;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    opacity: 0.5;
+  }
+
+  label {
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 5px;
+
+    span {
+      color: red;
+    }
+  }
+
+  input {
+    height: 52px;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .errorMsg {
+    height: 20px;
+    font-size: 13px;
+    color: red;
+    // visibility: hidden;
+    margin-bottom: 0;
+  }
+
+  .send {
+    width: 162px;
+    height: 43px;
+    background-color: #6002ee;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    margin-top: 25px;
+  }
+}
+
+.contactUs {
+  width: 27vw;
+  height: $formHeight;
+  background-image: linear-gradient(145deg, #7b67f2 35%, #8f40f6 78%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 996px) {
+  .form {
+    width: 100%;
+  }
+
+  .contactUs {
+    display: none;
+  }
+}
