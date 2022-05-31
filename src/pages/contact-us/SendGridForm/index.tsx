@@ -7,14 +7,12 @@ import Title from "../Title";
 
 interface Field {
   val?: string;
-  isError?: boolean;
   errorMsg?: string;
 }
 
 function getResetField(): Field {
   return {
     val: "",
-    isError: false,
     errorMsg: "",
   };
 }
@@ -40,27 +38,23 @@ export default function (): React.ReactElement {
     event.preventDefault();
 
     // Validate the field
-    const fields = fieldValidator({
+    const checkedFields = fieldValidator({
       fullname,
       organization,
       role,
       email,
       message,
     });
-    setFullname(fields.fullname);
-    setOrganization(fields.organization);
-    setRole(fields.role);
-    setEmail(fields.email);
-    setMessage(fields.message);
+    setFullname(checkedFields.fullname);
+    setOrganization(checkedFields.organization);
+    setRole(checkedFields.role);
+    setEmail(checkedFields.email);
+    setMessage(checkedFields.message);
 
-    let existError = false;
-    Object.values(fields).map(({ isError }) => {
-      if (isError) {
-        existError = true;
-        return;
-      }
-    });
-    if (existError) return;
+    const isExistError = Object.values(checkedFields).some(
+      ({ errorMsg }) => errorMsg.length > 0
+    );
+    if (isExistError) return;
 
     var formdata = new FormData();
     formdata.append("fullname", fullname.val);
@@ -100,7 +94,7 @@ export default function (): React.ReactElement {
           type="text"
           value={fullname.val}
           onChange={(e) => {
-            setFullname(Object.assign({}, fullname, { val: e.target.value }));
+            setFullname({ ...fullname, val: e.target.value });
           }}
           name="fullname"
           placeholder="Please enter your full name."
@@ -116,7 +110,7 @@ export default function (): React.ReactElement {
           name="email"
           value={email.val}
           onChange={(e) => {
-            setEmail(Object.assign({}, email, { val: e.target.value }));
+            setEmail({ ...email, val: e.target.value });
           }}
           placeholder="Please enter your email. (For instance, example@gmail.com) "
         />
@@ -130,9 +124,7 @@ export default function (): React.ReactElement {
           type="text"
           value={organization.val}
           onChange={(e) => {
-            setOrganization(
-              Object.assign({}, organization, { val: e.target.value })
-            );
+            setOrganization({ ...organization, val: e.target.value });
           }}
           name="organization"
           placeholder="Please enter your compony or school. (For instance, Heighliner, Inc.)"
@@ -147,7 +139,7 @@ export default function (): React.ReactElement {
           type="text"
           value={role.val}
           onChange={(e) => {
-            setRole(Object.assign({}, role, { val: e.target.value }));
+            setRole({ ...role, val: e.target.value });
           }}
           name="role"
           placeholder="Please enter your role. (For instance, Go developer)"
@@ -163,7 +155,7 @@ export default function (): React.ReactElement {
           name="message"
           value={message.val}
           onChange={(e) => {
-            setMessage(Object.assign({}, message, { val: e.target.value }));
+            setMessage({ ...message, val: e.target.value });
           }}
           placeholder="Please enter your message."
         ></textarea>
@@ -188,47 +180,38 @@ function fieldValidator({
   email,
   message,
 }: Fields): Fields {
-  const initialField: Field = {
-    isError: false,
-    errorMsg: "",
-  };
-  const fields: Fields = {
-    fullname: Object.assign({}, fullname, initialField),
-    organization: Object.assign({}, organization, initialField),
-    role: Object.assign({}, role, initialField),
-    email: Object.assign({}, email, initialField),
-    message: Object.assign({}, message, initialField),
+  // Reset the errorMsg to empty in each field
+  const checkedFields: Fields = {
+    fullname: { ...fullname, errorMsg: '' },
+    organization: { ...organization, errorMsg: '' },
+    role: { ...role, errorMsg: '' },
+    email: { ...email, errorMsg: '' },
+    message: { ...message, errorMsg: '' },
   };
 
   if (fullname.val.length <= 0) {
-    fields.fullname.isError = true;
-    fields.fullname.errorMsg = "You full name can't be empty.";
+    checkedFields.fullname.errorMsg = "You full name can't be empty.";
   }
 
   if (organization.val.length <= 0) {
-    fields.organization.isError = true;
-    fields.organization.errorMsg = "You organization can't be empty.";
+    checkedFields.organization.errorMsg = "You organization can't be empty.";
   }
 
   if (role.val.length <= 0) {
-    fields.role.isError = true;
-    fields.role.errorMsg = "You role can't be empty.";
+    checkedFields.role.errorMsg = "You role can't be empty.";
   }
 
   if (message.val.length <= 0) {
-    fields.message.isError = true;
-    fields.message.errorMsg = "The message can't be empty.";
+    checkedFields.message.errorMsg = "The message can't be empty.";
   }
 
   const emailRule =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (email.val.length <= 0) {
-    fields.email.isError = true;
-    fields.email.errorMsg = "You email can't be empty.";
+    checkedFields.email.errorMsg = "You email can't be empty.";
   } else if (!email.val.toLowerCase().match(emailRule)) {
-    fields.email.isError = true;
-    fields.email.errorMsg = "You enter email did't meet the require.";
+    checkedFields.email.errorMsg = "You enter email did't meet the require.";
   }
 
-  return fields;
+  return checkedFields;
 }
