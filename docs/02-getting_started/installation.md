@@ -254,3 +254,7 @@ Then set the token as _GITHUB_TOKEN_ environment variable:
 ```shell
 export GITHUB_TOKEN=<your-fresh-token>
 ```
+
+## What's Next?
+
+You could create [Your First App](/docs/getting_started/first_app) now.
