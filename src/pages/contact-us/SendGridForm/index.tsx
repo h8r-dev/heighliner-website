@@ -93,7 +93,8 @@ export default function (): React.ReactElement {
         <h1>Stay in touch</h1>
 
         <label htmlFor="fullname">
-          Full name<span>*</span>
+          Full name
+          {/* <span>*</span> */}
         </label>
         <input
           type="text"
@@ -107,7 +108,8 @@ export default function (): React.ReactElement {
         <p className={styles.errorMsg}>{fullname.errorMsg}</p>
 
         <label htmlFor="email">
-          Email<span>*</span>
+          Email
+          {/* <span>*</span> */}
         </label>
         <input
           type="email"
@@ -121,7 +123,8 @@ export default function (): React.ReactElement {
         <p className={styles.errorMsg}>{email.errorMsg}</p>
 
         <label htmlFor="organization">
-          Organization (company or school)<span>*</span>
+          Organization (company or school)
+          {/* <span>*</span> */}
         </label>
         <input
           type="text"
@@ -137,7 +140,8 @@ export default function (): React.ReactElement {
         <p className={styles.errorMsg}>{organization.errorMsg}</p>
 
         <label htmlFor="role">
-          Your role<span>*</span>
+          Your role
+          {/* <span>*</span> */}
         </label>
         <input
           type="text"
@@ -151,7 +155,8 @@ export default function (): React.ReactElement {
         <p className={styles.errorMsg}>{role.errorMsg}</p>
 
         <label htmlFor="message">
-          Message<span>*</span>
+          Message
+          {/* <span>*</span> */}
         </label>
         <textarea
           rows={4}
