@@ -212,6 +212,6 @@ function fieldValidator({
   } else if (!email.val.toLowerCase().match(emailRule)) {
     checkedFields.email.errorMsg = "The email you input is invalid.";
   }
-
+  
   return checkedFields;
 }
