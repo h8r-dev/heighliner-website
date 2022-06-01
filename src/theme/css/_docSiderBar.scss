@@ -7,13 +7,15 @@ $arrow-bg: var(--ifm-menu-link-sublist-icon) 50% / 1.25rem 2rem;
 .menu__link {
   font-family: var(--ifm-font-family-title);
   font-weight: normal;
+  border-radius: 0;
 
   &::after {
     background: $arrow-bg;
   }
-
 }
 
-.menu__caret:before {
-  background: $arrow-bg;
+.menu__caret {
+  &::before {
+    background: $arrow-bg;
+  }
 }
