@@ -1,0 +1,13 @@
+.title {
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 26px;
+  margin-bottom: 2vw;
+  text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    display: none;
+  }
+}
