@@ -26,6 +26,8 @@ interface Fields {
 }
 
 const LafyunFunction = "https://fsvikn.lafyun.com/SendGrid";
+const CloudflareWorker =
+  "https://invoke-sendgrid-worker.heighliner.workers.dev/";
 
 export default function (): React.ReactElement {
   const [fullname, setFullname] = useState<Field>({ val: "" });
@@ -33,6 +35,8 @@ export default function (): React.ReactElement {
   const [role, setRole] = useState<Field>({ val: "" });
   const [email, setEmail] = useState<Field>({ val: "" });
   const [message, setMessage] = useState<Field>({ val: "" });
+
+  const [submiting, setSubminting] = useState<boolean>(false);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -56,6 +60,8 @@ export default function (): React.ReactElement {
     );
     if (isExistError) return;
 
+    setSubminting(true);
+
     var formdata = new FormData();
     formdata.append("fullname", fullname.val);
     formdata.append("email", email.val);
@@ -63,22 +69,39 @@ export default function (): React.ReactElement {
     formdata.append("organization", organization.val);
     formdata.append("role", role.val);
 
-    const res = await fetch(LafyunFunction, {
+    const res = await fetch(CloudflareWorker, {
       body: formdata,
       method: "POST",
-    });
+    })
+      .then(() => {
+        alert("Email Has Successfully Sent!");
+        // setFullname(getResetField());
+        // setEmail(getResetField());
+        // setMessage(getResetField());
+        // setOrganization(getResetField());
+        // setRole(getResetField());
+      })
+      .catch((error) => {
+        console.error(error);
+        alert("Network Error.");
+      })
+      .finally(() => {
+        setSubminting(false);
+      });
 
-    const { error } = await res.json();
-    if (error) {
-      alert(error);
-    } else {
-      alert("Email has successfully sent!");
-      setFullname(getResetField());
-      setEmail(getResetField());
-      setMessage(getResetField());
-      setOrganization(getResetField());
-      setRole(getResetField());
-    }
+    // const { error } = await res.json();
+    // if (error) {
+    //   alert(error);
+    // } else {
+    //   alert("Email Has Successfully Sent!");
+    //   // setFullname(getResetField());
+    //   // setEmail(getResetField());
+    //   // setMessage(getResetField());
+    //   // setOrganization(getResetField());
+    //   // setRole(getResetField());
+    // }
+
+    // setSubminting(false);
   }
 
   return (
@@ -161,8 +184,8 @@ export default function (): React.ReactElement {
         ></textarea>
         <p className={styles.errorMsg}>{message.errorMsg}</p>
 
-        <button type="submit" className={styles.send}>
-          send
+        <button type="submit" className={styles.send} disabled={submiting}>
+          {submiting ? "Sending" : "Send"}
         </button>
       </form>
       <div className={styles.contactUs}>
@@ -182,11 +205,11 @@ function fieldValidator({
 }: Fields): Fields {
   // Reset the errorMsg to empty in each field
   const checkedFields: Fields = {
-    fullname: { ...fullname, errorMsg: '' },
-    organization: { ...organization, errorMsg: '' },
-    role: { ...role, errorMsg: '' },
-    email: { ...email, errorMsg: '' },
-    message: { ...message, errorMsg: '' },
+    fullname: { ...fullname, errorMsg: "" },
+    organization: { ...organization, errorMsg: "" },
+    role: { ...role, errorMsg: "" },
+    email: { ...email, errorMsg: "" },
+    message: { ...message, errorMsg: "" },
   };
 
   if (fullname.val.length <= 0) {
@@ -212,6 +235,6 @@ function fieldValidator({
   } else if (!email.val.toLowerCase().match(emailRule)) {
     checkedFields.email.errorMsg = "The email you input is invalid.";
   }
-  
+
   return checkedFields;
 }
