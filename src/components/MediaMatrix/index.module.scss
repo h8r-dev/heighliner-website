@@ -35,7 +35,7 @@
       height: $qrHeight;
       position: absolute;
       top: -$qrHeight;
-      left: -$qrWidth / 2 + $iconSquare / 2;
+      left: calc(0px - $qrWidth / 2 + $iconSquare / 2);
       visibility: hidden;
     }
 
