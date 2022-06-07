@@ -35,7 +35,11 @@
       height: $qrHeight;
       position: absolute;
       top: -$qrHeight;
+<<<<<<< HEAD
       left: -$qrWidth / 2 + $iconSquare / 2;
+=======
+      left: calc(0px - $qrWidth / 2 + $iconSquare / 2);
+>>>>>>> origin/main
       visibility: hidden;
     }
 

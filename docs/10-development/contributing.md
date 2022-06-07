@@ -7,12 +7,6 @@ This document guides you through the process of creating a [pull request](https:
 
 ## Your first pull request
 
-Before you submit a PR, run this command to ensure it is ready:
-
-```shell
-make reviewable
-```
-
 If this is your first time contributing to an open-source project on GitHub, make sure you read about [Creating a pull request](https://help.github.com/en/articles/creating-a-pull-request).
 
 To increase the chance of having your pull request accepted, make sure your pull request follows these guidelines:
@@ -27,6 +21,8 @@ If the pull request fixes a bug:
 
 - The pull request description must include `Closes #<issue number>` or `Fixes #<issue number>`.
 - To avoid regressions, the pull request should include tests that replicate the fixed bug.
+
+We prefer small incremental changes that can be reviewed and merged quickly. It's OK if it takes multiple pull requests to close an issue.
 
 ## Code review
 
@@ -43,7 +39,7 @@ We recommend that you read [How to do a code review](https://google.github.io/en
 A well-written pull request minimizes the time to get your change accepted.
 These guidelines help you write good commit messages and descriptions for your pull requests.
 
-### Commit message format
+### Commit messages
 
 Ths project follows the [conventional-commits](https://www.conventionalcommits.org/en/v1.0.0/) and [commit messages best practices](https://chris.beams.io/posts/git-commit/) to improve better history information.
 
@@ -88,15 +84,17 @@ Type is required to better capture the area of the commit, based on the [Angular
 
 We capitalize the `<type>` to make sure the subject line is capitalized. `<type>` can be one of the following:
 
-* **Feat**: A new feature
-* **Fix**: A bug fix
-* **Docs**: Documentation only changes
-* **Build**: Changes that affect the build system or external dependencies 
-* **Style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-* **Refactor**: A code change that neither fixes a bug nor adds a feature
-* **Perf**: A code change that improves performance
-* **Test**: Adding missing or correcting existing tests
-* **Chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
+- **Feat**: A new feature
+- **Fix**: A bug fix
+- **Docs**: Documentation only changes
+- **Build**: Changes that affect the build system or external dependencies
+- **Style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- **Refactor**: A code change that neither fixes a bug nor adds a feature
+- **Perf**: A code change that improves performance
+- **Test**: Adding missing or correcting existing tests
+- **Chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
+- **ci**: for internal CI specific changes
+- **Infra**: for infrastructure changes
 
 #### `<scope>` (optional)
 
@@ -112,25 +110,6 @@ The subject MUST immediately follow the colon and space after the type/scope pre
 #### `<body>` (optional)
 
 A longer commit body may be provided after the short subject, providing additional contextual information about the code changes. The body MUST begin one blank line after the description.
-
-#### Area
-
-The area should use upper camel case, e.g. UpperCamelCase.
-
-Prefer using one of the following areas:
-
-- **Application:** Changes to the application controller.
-- **Component:** Changes to the component related code or definition controller.
-- **Trait:** Changes to the trait related code or definition controller.
-- **CUE:** Changes to the CUE related logic.
-- **Docs:** Changes to documentation.
-- **AppConfig:** Changes to AppConfig related code.
-
-**Examples**
-
-- `Application: Support workflow in application controller`
-- `CUE: Fix patch parse issues`
-- `Docs: Changed url to URL in all documentation files`
 
 ### Pull request titles
 

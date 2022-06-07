@@ -36,8 +36,12 @@ You can get the Nocalhost dashboard url, default user account and passwords via 
 1. Select the workload that you want to develop.  
 1. Right-click the workload and and select `Remote Run`.  
 1. Nocalhost will automatically enter the `DevMode` and launch application on the remote cluster.  
-1. Use the url `http://dev.<app>.h8r.site/api` to access your application.
+1. Use the url `http://<namespace>.<app>.h8r.site/api` to access your application.
 
+Get namespace:
+![alt](/img/core-features/04-remote-dev/nocalhost-namespace.png)
+
+Remote Run:
 ![alt](/img/core-features/04-remote-dev/nocalhost-remote-run.gif)
 
 ### Remote Debug  
