@@ -98,6 +98,9 @@ $formHeight: 760px;
   .send[disabled] {
     opacity: 0.5;
 
+  }
+  
+  .sending{
     &::after {
       content: "";
       display: inline-block;
