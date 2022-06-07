@@ -25,9 +25,7 @@ interface Fields {
   message: Field;
 }
 
-const LafyunFunction = "https://fsvikn.lafyun.com/SendGrid";
-const CloudflareWorker =
-  "https://invoke-sendgrid-worker.heighliner.workers.dev/";
+const CloudflareWorker = "https://invoke-sendgrid-worker.heighliner.workers.dev/";
 
 export default function (): React.ReactElement {
   const [fullname, setFullname] = useState<Field>({ val: "" });
@@ -36,7 +34,7 @@ export default function (): React.ReactElement {
   const [email, setEmail] = useState<Field>({ val: "" });
   const [message, setMessage] = useState<Field>({ val: "" });
 
-  const [submiting, setSubminting] = useState<boolean>(false);
+  const [submitting, setSubmitting] = useState<boolean>(false);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -60,7 +58,7 @@ export default function (): React.ReactElement {
     );
     if (isExistError) return;
 
-    setSubminting(true);
+    setSubmitting(true);
 
     var formdata = new FormData();
     formdata.append("fullname", fullname.val);
@@ -86,22 +84,8 @@ export default function (): React.ReactElement {
         alert("Network Error.");
       })
       .finally(() => {
-        setSubminting(false);
+        setSubmitting(false);
       });
-
-    // const { error } = await res.json();
-    // if (error) {
-    //   alert(error);
-    // } else {
-    //   alert("Email Has Successfully Sent!");
-    //   // setFullname(getResetField());
-    //   // setEmail(getResetField());
-    //   // setMessage(getResetField());
-    //   // setOrganization(getResetField());
-    //   // setRole(getResetField());
-    // }
-
-    // setSubminting(false);
   }
 
   return (
@@ -184,8 +168,8 @@ export default function (): React.ReactElement {
         ></textarea>
         <p className={styles.errorMsg}>{message.errorMsg}</p>
 
-        <button type="submit" className={styles.send} disabled={submiting}>
-          {submiting ? "Sending" : "Send"}
+        <button type="submit" className={styles.send} disabled={submitting}>
+          {submitting ? "Sending" : "Send"}
         </button>
       </form>
       <div className={styles.contactUs}>
