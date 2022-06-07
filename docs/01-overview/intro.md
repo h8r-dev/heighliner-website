@@ -81,3 +81,7 @@ export const Highlight = ({children, color}) => (
 
 Heighliner is in <Highlight color="#eb34ba">Alpha</Highlight> stage and being actively developed.
 Our releases can be found [here](https://github.com/h8r-dev/heighliner/releases).
+## To engage  
+**Sign up your account**  
+- create your ID
+- password  
