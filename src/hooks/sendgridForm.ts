@@ -1,3 +1,6 @@
+/**
+ * SendGrid form business logic
+ */
 import { simplifyDeepClone } from "@site/src/utils/Clone";
 import { Reducer, useReducer } from "react";
 
