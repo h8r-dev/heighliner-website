@@ -1,6 +1,6 @@
 @import "/src/css/util.scss";
 
-$formHeight: 760px;
+$formHeight: 780px;
 
 .wrapper {
   display: flex;
@@ -33,7 +33,6 @@ $formHeight: 760px;
   label,
   input {
     display: block;
-    
   }
 
   input,
@@ -102,10 +101,19 @@ $formHeight: 760px;
 
   .send[disabled] {
     opacity: 0.5;
-
+    &:hover {
+      transform: none;
+      animation-name: shaking;
+      animation-duration: 100ms;
+      animation-timing-function: ease-in-out;
+    }
   }
-  
-  .sending{
+
+  .send:hover {
+    transform: scale(1.03);
+  }
+
+  .sending {
     &::after {
       content: "";
       display: inline-block;
@@ -116,6 +124,15 @@ $formHeight: 760px;
       border-radius: 50%;
       animation: load 1s linear infinite;
     }
+  }
+}
+
+@keyframes shaking {
+  0% {
+    transform: translateX(-1%);
+  }
+  100% {
+    transform: translateX(1%);
   }
 }
 
