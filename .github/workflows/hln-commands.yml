@@ -22,7 +22,7 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v4
         with:
-          token: {{ secrets.BOT_GITHUB_TOKEN }}
+          token: ${{ secrets.BOT_GITHUB_TOKEN }}
           commit-message: "docs: update hln commands documentations"
           branch: main
           base: hln-docs
