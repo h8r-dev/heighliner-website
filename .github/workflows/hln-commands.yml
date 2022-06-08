@@ -1,6 +1,9 @@
 name: Update hln commands documentations
 
 on:
+  push:
+    branches:
+      - '*'
   schedule:
     - cron: "20 20 * * *"
   workflow_dispatch:
@@ -34,6 +37,7 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.BOT_GITHUB_TOKEN }}
+          title: "docs: update hln commands documentations"
           commit-message: "docs: update hln commands documentations"
           base: main
           add-paths: |
