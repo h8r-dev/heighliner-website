@@ -6,7 +6,7 @@ Take down your application
 hln down [appName] [flags]
 ```
 
-### Options
+### Option
 
 ```
       --delete-packages   Delete packages
