@@ -12,3 +12,5 @@ cp $HEIGHLINER_DIR/$SOURCE_DIR/*.md $TARGET_DIR
 rm -rf $HEIGHLINER_DIR
 
 echo cli docs updated
+
+git status
