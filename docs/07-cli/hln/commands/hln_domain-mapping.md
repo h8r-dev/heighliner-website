@@ -1,16 +1,17 @@
-## hln logs
+## hln domain-mapping
 
-Print the logs for an app
+Set domain mapping
 
 ```
-hln logs [appName] [flags]
+hln domain-mapping [appName] [flags]
 ```
 
 ### Options
 
 ```
-  -f, --follow   Specify if the logs should be streamed.
-  -h, --help     help for logs
+      --domain string   Your domain name
+  -h, --help            help for domain-mapping
+      --ip string       IP address
 ```
 
 ### Options inherited from parent commands
