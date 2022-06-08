@@ -35,7 +35,6 @@ jobs:
         with:
           token: ${{ secrets.BOT_GITHUB_TOKEN }}
           commit-message: "docs: update hln commands documentations"
-          branch: main
-          base: hln-docs
+          base: main
           add-paths: |
             docs/07-cli
