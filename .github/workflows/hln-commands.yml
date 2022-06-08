@@ -1,9 +1,6 @@
 name: Update hln commands documentations
 
 on:
-  push:
-    branches:
-      - '*'
   schedule:
     - cron: "20 20 * * *"
   workflow_dispatch:
