@@ -4,7 +4,7 @@ import MediaMatrix from "@site/src/components/MediaMatrix";
 
 import styles from "./index.module.scss";
 import Title from "../Title";
-import { Field, FieldName, FormChangeType, useFormReducer } from "./form";
+import { Field, FieldName, FormChangeType, useFormReducer } from "../../../hooks/sendgridForm";
 
 const CloudflareWorker =
   "https://invoke-sendgrid-worker.heighliner.workers.dev/";

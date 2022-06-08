@@ -6,6 +6,7 @@ $formHeight: 760px;
   display: flex;
   justify-content: center;
   @include setVerticalMargin(73px);
+  color: black;
 }
 
 .form {
@@ -26,11 +27,13 @@ $formHeight: 760px;
     font-size: 26px;
     font-weight: 500;
     text-transform: uppercase;
+    color: #6002ee;
   }
 
   label,
   input {
     display: block;
+    
   }
 
   input,
@@ -42,6 +45,8 @@ $formHeight: 760px;
     font-size: 18px;
     @include setHorizontalPadding(14px);
     @include setVerticalPadding(10px);
+    background-color: transparent;
+    color: black;
   }
 
   input:focus,
