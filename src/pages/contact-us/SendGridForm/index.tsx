@@ -4,9 +4,15 @@ import MediaMatrix from "@site/src/components/MediaMatrix";
 
 import styles from "./index.module.scss";
 import Title from "../Title";
-import { Field, FieldName, FormChangeType, useFormReducer } from "../../../hooks/sendgridForm";
+import {
+  Field,
+  FieldName,
+  FormChangeType,
+  useFormReducer,
+} from "../../../hooks/sendgridForm";
 
-const TencentServerless = "https://service-5iz17g56-1259548724.usw.apigw.tencentcs.com/release/";
+const TencentServerless =
+  "https://service-5iz17g56-1259548724.usw.apigw.tencentcs.com/release/";
 
 export default function (): React.ReactElement {
   const [form, formDispatch] = useFormReducer();
@@ -16,7 +22,7 @@ export default function (): React.ReactElement {
   // Validate the field
   useEffect(() => {
     const isExistError = Object.values(form).some(
-      ({val, errMsg }: Field) => !val || errMsg.length > 0
+      ({ val, errMsg }: Field) => !val || errMsg.length > 0
     );
     if (isExistError) {
       setCanSubmit(false);
