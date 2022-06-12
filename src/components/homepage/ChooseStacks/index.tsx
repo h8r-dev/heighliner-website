@@ -5,6 +5,7 @@ import siteConfig from "@generated/docusaurus.config";
 
 import styles from "./index.module.scss";
 import Stack from "./stack";
+import FadeIn from "../../Animation/FadeIn";
 
 const stacks = [
   {
@@ -37,22 +38,27 @@ const stacks = [
 ];
 
 export function ChooseStack(): React.ReactElement {
+
   return (
     <div className={styles.wrapper}>
-      <h1 className={clsx("homepage-section-title", styles.title)}>
-        Start from a dedicated stack
-      </h1>
+      <FadeIn>
+        <h1 className={clsx("homepage-section-title", styles.title)}>
+          Start from a dedicated stack
+        </h1>
+      </FadeIn>
       <div className={styles.stacksWrap}>
         {stacks.map((stack, index) => (
-          <Stack
-            key={stack.name}
-            name={stack.name}
-            decoratedIcon={stack.decoratedIcon}
-            firstIcon={stack.firstIcon}
-            secondIcon={stack.secondIcon}
-            link={stack.link}
-            showMiddleCubes={index === 0}
-          />
+          <FadeIn>
+            <Stack
+              key={stack.name}
+              name={stack.name}
+              decoratedIcon={stack.decoratedIcon}
+              firstIcon={stack.firstIcon}
+              secondIcon={stack.secondIcon}
+              link={stack.link}
+              showMiddleCubes={index === 0}
+            />
+          </FadeIn>
         ))}
       </div>
     </div>

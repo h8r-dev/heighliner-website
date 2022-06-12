@@ -1,3 +1,5 @@
+@import '@site/src/css/effect';
+
 .wrapper {
   width: 100%;
   background-color: #000;
@@ -175,6 +177,8 @@
   opacity: 0.5;
 }
 
+
+
 @media screen and (max-width: 996px) {
   .verticallyFullOfScreen {
     width: 100vw;
@@ -303,3 +307,11 @@
     height: calc(670px + 50vw);
   }
 }
+
+@media screen and (min-width: 996px) {
+  .verticallyFullOfScreen, .contentWrap {
+      @include fadeIn;
+  }
+
+}
+
