@@ -1,8 +1,19 @@
-name: Pull hln commands documentations
+name: Update hln commands documentations
 
 on:
   schedule:
     - cron: "20 20 * * *"
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning' 
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
 
 jobs:
   build:
@@ -12,23 +23,19 @@ jobs:
       SOURCE_DIR: website-docs
       TARGET_DIR: docs/07-cli/hln/commands
     steps:
-      - uses: actions/checkout@v2
-        with:
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
-          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
-      - name: Create local changes
+      - uses: actions/checkout@v3
+
+      - name: Fetch hln commands documentations
         run: |
-          git clone -b $SOURCE_BRANCH https://username:${{ secrets.BOT_GITHUB_TOKEN }}@github.com/h8r-dev/heighliner.git ../hln
-          rm $TARGET_DIR/*.md
-          cp ../hln/$SOURCE_DIR/*.md $TARGET_DIR
-      - name: Commit files
-        run: |
-          git config --local user.email "heigliner-robot@h8r.io"
-          git config --local user.name "heigliner-robot"
-          git add $TARGET_DIR
-          git commit -m "Update hln docs" -a
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+          ./scripts/update-cli-docs.sh
+
+      - name: Create pull request
+        id: cpr
+        uses: peter-evans/create-pull-request@v4
         with:
-          github_token: ${{ secrets.BOT_GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          token: ${{ secrets.BOT_GITHUB_TOKEN }}
+          title: "docs: update hln commands documentations"
+          commit-message: "docs: update hln commands documentations"
+          base: main
+          add-paths: |
+            docs/07-cli
