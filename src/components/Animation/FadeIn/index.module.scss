@@ -1,0 +1,11 @@
+@import '@site/src/css/effect';
+
+@media screen and (min-width: 996px){
+  .wrap {
+    @include beforeFadeIn;
+  }
+
+  .fadeIn {
+    @include fadeIn;
+  }
+}
