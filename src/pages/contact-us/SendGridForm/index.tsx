@@ -6,8 +6,7 @@ import styles from "./index.module.scss";
 import Title from "../Title";
 import { Field, FieldName, FormChangeType, useFormReducer } from "../../../hooks/sendgridForm";
 
-const CloudflareWorker =
-  "https://invoke-sendgrid-worker.heighliner.workers.dev/";
+const TencentServerless = "https://service-5iz17g56-1259548724.usw.apigw.tencentcs.com/release/";
 
 export default function (): React.ReactElement {
   const [form, formDispatch] = useFormReducer();
@@ -48,7 +47,7 @@ export default function (): React.ReactElement {
     }
 
     // Send the email
-    const res = await fetch(CloudflareWorker, {
+    const res = await fetch(TencentServerless, {
       body: formData,
       method: "POST",
     });
