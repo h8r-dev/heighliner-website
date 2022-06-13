@@ -8,6 +8,7 @@ import siteConfig from "@generated/docusaurus.config";
 import styles from './index.module.css';
 
 import {isWeixin} from "@site/src/utils/Environment";
+import FadeIn from "../../Animation/FadeIn";
 
 enum JoinCommunityMethod {
   WECHAT = 'wechat',
@@ -51,28 +52,32 @@ export function JoinCommunity() {
 
   return (
     <div>
-      <div className={clsx("homepage-section-title", styles.title)}>
-        Join the community
-      </div>
-      <div className={styles.iconWrapper}>
-        {
-          iconList.map((item: IconType) => {
-            let {src, alt, link, qrCode} = item;
-            return (
-              <div className={styles.icon} key={alt}>
-                <img src={src} alt={alt} onClick={() => hendleClick(item)}/>
-                {
-                  qrCode && !isWeixin() && (
-                    <div className={styles.qrcodeWrapper}>
-                      <img src={qrCode}/>
-                    </div>
-                  )
-                }
-              </div>
-            )
-          })
-        }
-      </div>
+      <FadeIn>
+        <div className={clsx("homepage-section-title", styles.title)}>
+          Join the community
+        </div>
+      </FadeIn>
+      <FadeIn>
+        <div className={styles.iconWrapper}>
+          {
+            iconList.map((item: IconType) => {
+              let {src, alt, link, qrCode} = item;
+              return (
+                <div className={styles.icon} key={alt}>
+                  <img src={src} alt={alt} onClick={() => hendleClick(item)}/>
+                  {
+                    qrCode && !isWeixin() && (
+                      <div className={styles.qrcodeWrapper}>
+                        <img src={qrCode}/>
+                      </div>
+                    )
+                  }
+                </div>
+              )
+            })
+          }
+        </div>
+      </FadeIn>
     </div>
   )
 }
