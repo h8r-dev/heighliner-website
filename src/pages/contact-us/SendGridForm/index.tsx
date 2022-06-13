@@ -12,7 +12,7 @@ import {
 } from "../../../hooks/sendgridForm";
 
 const TencentServerless =
-  "https://service-5iz17g56-1259548724.usw.apigw.tencentcs.com/release/";
+  "https://service-ar4hvnr0-1309519128.usw.apigw.tencentcs.com/release/";
 
 export default function (): React.ReactElement {
   const [form, formDispatch] = useFormReducer();
