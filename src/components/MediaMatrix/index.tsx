@@ -28,7 +28,7 @@ export default function (): React.ReactElement {
                     src="/img/page/contact-us/wechatOfficialAccount@3x.png"
                     alt="Without Heighliner"
                   />
-                  <p>Fellow Heighliner's WeChat Official Account.</p>
+                  <p>Follow Heighliner's WeChat Official Account.</p>
                 </div>
               </div>
             </div>

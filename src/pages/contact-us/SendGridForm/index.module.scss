@@ -1,11 +1,12 @@
 @import "/src/css/util.scss";
 
-$formHeight: 760px;
+$formHeight: 780px;
 
 .wrapper {
   display: flex;
   justify-content: center;
   @include setVerticalMargin(73px);
+  color: black;
 }
 
 .form {
@@ -26,6 +27,7 @@ $formHeight: 760px;
     font-size: 26px;
     font-weight: 500;
     text-transform: uppercase;
+    color: #6002ee;
   }
 
   label,
@@ -42,6 +44,8 @@ $formHeight: 760px;
     font-size: 18px;
     @include setHorizontalPadding(14px);
     @include setVerticalPadding(10px);
+    background-color: transparent;
+    color: black;
   }
 
   input:focus,
@@ -90,6 +94,55 @@ $formHeight: 760px;
     text-transform: uppercase;
     font-size: 17px;
     margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .send[disabled] {
+    opacity: 0.5;
+    &:hover {
+      transform: none;
+      animation-name: shaking;
+      animation-duration: 100ms;
+      animation-timing-function: ease-in-out;
+    }
+  }
+
+  .send:hover {
+    transform: scale(1.03);
+  }
+
+  .sending {
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-left: 4px;
+      border-top: solid 2px white;
+      border-radius: 50%;
+      animation: load 1s linear infinite;
+    }
+  }
+}
+
+@keyframes shaking {
+  0% {
+    transform: translateX(-1%);
+  }
+  100% {
+    transform: translateX(1%);
+  }
+}
+
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
