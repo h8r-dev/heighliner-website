@@ -27,6 +27,7 @@
     "lightense-images": "^1.0.17",
     "lodash.debounce": "^4.0.8",
     "prism-react-renderer": "^1.2.1",
+    "qs": "^6.10.5",
     "react": "^17.0.1",
     "react-device-detect": "^2.2.2",
     "react-dom": "^17.0.1",
