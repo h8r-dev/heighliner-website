@@ -10,7 +10,7 @@ tags: [Heighliner, Cloud Native, Stack]
 
 ## Remote Dev Buzz on Social Media
 
-A recent tweet from Kelsey Hightower once again made a lot of buzz on social media. His tweet underlined that the limitation of local resources and the complexity of external dependencies have made remote development trending.
+A recent tweet from Kelsey Hightower once again made a lot of buzz on social media. His tweet underlined that the limitation of local resources and the complexity of external dependencies have made remote development trending. 
 
 ![Kelsey Hightower](kh.png)
 
