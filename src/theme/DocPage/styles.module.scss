@@ -7,6 +7,7 @@
 
 :root {
   --doc-sidebar-width: 23.57vw;
+  --doc-sidebar-left-move: 2vw;
   --doc-sidebar-hidden-width: 30px;
   --doc-sidebar-bg-color: #f5f7f9;
 }
@@ -23,7 +24,6 @@
 .docMainContainer {
   display: flex;
   width: 100%;
-  // overflow-x: hidden;
 }
 
 .docSidebarContainer {
@@ -33,25 +33,31 @@
 @media (min-width: 997px) {
   .docMainContainer {
     flex-grow: 1;
-    max-width: calc(100% - var(--doc-sidebar-width));
+    max-width: calc(100vw - var(--doc-sidebar-width) - var(--doc-sidebar-left-move));
   }
 
   .docMainContainerEnhanced {
     max-width: calc(100% - var(--doc-sidebar-hidden-width));
   }
 
+  .docSiderbarWrap {
+    padding-left: var(--doc-sidebar-left-move);
+    width: calc(var(--doc-sidebar-width) + var(--doc-sidebar-left-move));
+    background-color: var(--doc-sidebar-bg-color);
+  }
+
   .docSidebarContainer {
     display: block;
     width: var(--doc-sidebar-width);
-    box-sizing: content-box;
-    padding-left: 2vw;
+    // box-sizing: content-box;
+    // padding-left: 2vw;
+    // margin-right: 1px;
     margin-top: calc(-1 * var(--ifm-navbar-height));
     border-right: 1px solid var(--ifm-toc-border-color);
     will-change: width;
     transition: width var(--ifm-transition-fast) ease;
     clip-path: inset(0);
     font-weight: normal;
-    background-color: var(--doc-sidebar-bg-color);
   }
 
   :root[data-theme="light"] {
@@ -109,13 +115,15 @@
 }
 
 @media (min-width: 1200px) {
-  .docSidebarContainer {
-    padding-left: 12vw;
+  :root {
+    --doc-sidebar-width: 15.57vw;
+    --doc-sidebar-left-move: 10vw;
   }
 }
 
 @media (min-width: 1400px) {
   :root {
-    --doc-sidebar-width: 15vw;
+    --doc-sidebar-width: 13.57vw;
+    --doc-sidebar-left-move: 12vw;
   }
 }

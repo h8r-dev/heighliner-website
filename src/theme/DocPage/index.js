@@ -71,56 +71,58 @@ function DocPageContent({
         <BackToTopButton />
 
         {sidebar && (
-          <aside
-            className={clsx(styles.docSidebarContainer, {
-              [styles.docSidebarContainerHidden]: hiddenSidebarContainer,
-            })}
-            onTransitionEnd={(e) => {
-              if (
-                !e.currentTarget.classList.contains(styles.docSidebarContainer)
-              ) {
-                return;
-              }
+          <div className={styles.docSiderbarWrap}>
+            <aside
+              className={clsx(styles.docSidebarContainer, {
+                [styles.docSidebarContainerHidden]: hiddenSidebarContainer,
+              })}
+              onTransitionEnd={(e) => {
+                if (
+                  !e.currentTarget.classList.contains(styles.docSidebarContainer)
+                ) {
+                  return;
+                }
 
-              if (hiddenSidebarContainer) {
-                setHiddenSidebar(true);
-              }
-            }}>
-            <DocSidebar
-              key={
-                // Reset sidebar state on sidebar changes
-                // See https://github.com/facebook/docusaurus/issues/3414
-                sidebarName
-              }
-              sidebar={sidebar}
-              path={currentDocRoute.path}
-              onCollapse={toggleSidebar}
-              isHidden={hiddenSidebar}
-            />
+                if (hiddenSidebarContainer) {
+                  setHiddenSidebar(true);
+                }
+              }}>
+              <DocSidebar
+                key={
+                  // Reset sidebar state on sidebar changes
+                  // See https://github.com/facebook/docusaurus/issues/3414
+                  sidebarName
+                }
+                sidebar={sidebar}
+                path={currentDocRoute.path}
+                onCollapse={toggleSidebar}
+                isHidden={hiddenSidebar}
+              />
 
-            {hiddenSidebar && (
-              <div
-                className={styles.collapsedDocSidebar}
-                title={translate({
-                  id: 'theme.docs.sidebar.expandButtonTitle',
-                  message: 'Expand sidebar',
-                  description:
-                    'The ARIA label and title attribute for expand button of doc sidebar',
-                })}
-                aria-label={translate({
-                  id: 'theme.docs.sidebar.expandButtonAriaLabel',
-                  message: 'Expand sidebar',
-                  description:
-                    'The ARIA label and title attribute for expand button of doc sidebar',
-                })}
-                tabIndex={0}
-                role="button"
-                onKeyDown={toggleSidebar}
-                onClick={toggleSidebar}>
-                <IconArrow className={styles.expandSidebarButtonIcon} />
-              </div>
-            )}
-          </aside>
+              {hiddenSidebar && (
+                <div
+                  className={styles.collapsedDocSidebar}
+                  title={translate({
+                    id: 'theme.docs.sidebar.expandButtonTitle',
+                    message: 'Expand sidebar',
+                    description:
+                      'The ARIA label and title attribute for expand button of doc sidebar',
+                  })}
+                  aria-label={translate({
+                    id: 'theme.docs.sidebar.expandButtonAriaLabel',
+                    message: 'Expand sidebar',
+                    description:
+                      'The ARIA label and title attribute for expand button of doc sidebar',
+                  })}
+                  tabIndex={0}
+                  role="button"
+                  onKeyDown={toggleSidebar}
+                  onClick={toggleSidebar}>
+                  <IconArrow className={styles.expandSidebarButtonIcon} />
+                </div>
+              )}
+            </aside>
+          </div>
         )}
         <main
           className={clsx(styles.docMainContainer, {
