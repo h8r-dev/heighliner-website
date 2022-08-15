@@ -46,6 +46,32 @@ export default function (): React.ReactElement {
 
     setSubmitting(true);
 
+    // Send to FeiShu group.
+    let params = {};
+    for (const fieldName of Object.values(FieldName)) {
+      params[fieldName] = form[fieldName].val;
+    }
+
+    const feishuURL = `http://localhost:4000`;
+    const feishuRes = await fetch(feishuURL, {
+      body: JSON.stringify(params),
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    // Check whether have error.
+    if (feishuRes.status === undefined || feishuRes.status !== 204) {
+      const { err_msg: feishuError } = await feishuRes.json();
+      if (feishuError) {
+        console.error(feishuError);
+        alert(feishuError);
+        setSubmitting(false);
+        return;
+      }
+    }
+
     // Join into a form data.
     var formData = new FormData();
     for (const fieldName of Object.values(FieldName)) {
@@ -66,6 +92,7 @@ export default function (): React.ReactElement {
       alert("Email Has Successfully Sent!");
     }
 
+    alert("Email Has Successfully Sent!");
     setSubmitting(false);
   }
 
