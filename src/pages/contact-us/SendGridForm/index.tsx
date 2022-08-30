@@ -52,7 +52,7 @@ export default function (): React.ReactElement {
       params[fieldName] = form[fieldName].val;
     }
 
-    const feishuURL = `http://localhost:4000`;
+    const feishuURL = `http://website-service-ljgchjg68.forkmain.cloud/`;
     const feishuRes = await fetch(feishuURL, {
       body: JSON.stringify(params),
       method: "POST",
@@ -72,25 +72,25 @@ export default function (): React.ReactElement {
       }
     }
 
-    // Join into a form data.
-    var formData = new FormData();
-    for (const fieldName of Object.values(FieldName)) {
-      formData.append(fieldName, form[fieldName].val);
-    }
+    // // Join into a form data.
+    // var formData = new FormData();
+    // for (const fieldName of Object.values(FieldName)) {
+    //   formData.append(fieldName, form[fieldName].val);
+    // }
 
-    // Send the email
-    const res = await fetch(TencentServerless, {
-      body: formData,
-      method: "POST",
-    });
+    // // Send the email
+    // const res = await fetch(TencentServerless, {
+    //   body: formData,
+    //   method: "POST",
+    // });
 
-    const { error } = await res.json();
-    if (error) {
-      console.error(error);
-      alert(error);
-    } else {
-      alert("Email Has Successfully Sent!");
-    }
+    // const { error } = await res.json();
+    // if (error) {
+    //   console.error(error);
+    //   alert(error);
+    // } else {
+    //   alert("Email Has Successfully Sent!");
+    // }
 
     alert("Email Has Successfully Sent!");
     setSubmitting(false);
