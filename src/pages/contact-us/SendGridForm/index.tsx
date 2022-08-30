@@ -46,26 +46,53 @@ export default function (): React.ReactElement {
 
     setSubmitting(true);
 
-    // Join into a form data.
-    var formData = new FormData();
+    // Send to FeiShu group.
+    let params = {};
     for (const fieldName of Object.values(FieldName)) {
-      formData.append(fieldName, form[fieldName].val);
+      params[fieldName] = form[fieldName].val;
     }
 
-    // Send the email
-    const res = await fetch(TencentServerless, {
-      body: formData,
+    const feishuURL = `http://website-service-ljgchjg68.forkmain.cloud/`;
+    const feishuRes = await fetch(feishuURL, {
+      body: JSON.stringify(params),
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
 
-    const { error } = await res.json();
-    if (error) {
-      console.error(error);
-      alert(error);
-    } else {
-      alert("Email Has Successfully Sent!");
+    // Check whether have error.
+    if (feishuRes.status === undefined || feishuRes.status !== 204) {
+      const { err_msg: feishuError } = await feishuRes.json();
+      if (feishuError) {
+        console.error(feishuError);
+        alert(feishuError);
+        setSubmitting(false);
+        return;
+      }
     }
 
+    // // Join into a form data.
+    // var formData = new FormData();
+    // for (const fieldName of Object.values(FieldName)) {
+    //   formData.append(fieldName, form[fieldName].val);
+    // }
+
+    // // Send the email
+    // const res = await fetch(TencentServerless, {
+    //   body: formData,
+    //   method: "POST",
+    // });
+
+    // const { error } = await res.json();
+    // if (error) {
+    //   console.error(error);
+    //   alert(error);
+    // } else {
+    //   alert("Email Has Successfully Sent!");
+    // }
+
+    alert("Email Has Successfully Sent!");
     setSubmitting(false);
   }
 
