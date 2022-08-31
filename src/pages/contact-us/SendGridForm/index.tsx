@@ -11,8 +11,6 @@ import {
   useFormReducer,
 } from "../../../hooks/sendgridForm";
 
-const TencentServerless =
-  "https://service-ar4hvnr0-1309519128.usw.apigw.tencentcs.com/release/";
 
 export default function (): React.ReactElement {
   const [form, formDispatch] = useFormReducer();
@@ -52,8 +50,9 @@ export default function (): React.ReactElement {
       params[fieldName] = form[fieldName].val;
     }
 
-    const feishuURL = `http://website-service-ljgchjg68.forkmain.cloud/`;
-    const feishuRes = await fetch(feishuURL, {
+    const TencentServerless =
+      "https://service-fdu6lb8c-1309519128.usw.apigw.tencentcs.com/release/";
+    const feishuRes = await fetch(TencentServerless, {
       body: JSON.stringify(params),
       method: "POST",
       headers: {
