@@ -67,7 +67,7 @@ export function Footer() {
           marginLeft: 10,
           display: showBeianInfo ? 'inline-block' : 'none',
         }}>
-          <a style={{ color: '#fff' }} href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer">粤ICP备2022019117号</a>
+          <a style={{ color: '#fff' }} href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer">粤ICP备2022019117号-2</a>
         </span>
       </div>
     </div>
