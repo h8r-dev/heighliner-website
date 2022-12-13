@@ -48,16 +48,16 @@ const config = {
       "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/h8r-dev/heighliner-website/blob/main/",
-          docLayoutComponent: require.resolve("./src/theme/DocPage"),
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl: "https://github.com/h8r-dev/heighliner-website",
-        },
+        // docs: {
+        //   sidebarPath: require.resolve("./sidebars.js"),
+        //   editUrl: "https://github.com/h8r-dev/heighliner-website/blob/main/",
+        //   docLayoutComponent: require.resolve("./src/theme/DocPage"),
+        // },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   editUrl: "https://github.com/h8r-dev/heighliner-website",
+        // },
         theme: {
           customCss: require.resolve("./src/css/custom.scss"),
         },
@@ -68,36 +68,36 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      navbar: {
-        logo: {
-          alt: "navbar-logo",
-          src: "/img/heighliner/logo/primary-logo@3x.webp",
-        },
-        items: [
-          {
-            type: "doc",
-            docId: "overview/intro",
-            position: "left",
-            label: "Docs",
-          },
-          {
-            to: "/blog",
-            label: "Blog",
-            position: "left",
-          },
-          {
-            type: "search",
-            position: "right",
-          },
-          {
-            href: "https://github.com/h8r-dev/heighliner-website",
-            position: "right",
-            className: "header-github-link",
-            "aria-label": "GitHub repository",
-          },
-        ],
-        hideOnScroll: true,
-      },
+      // navbar: {
+      //   logo: {
+      //     alt: "navbar-logo",
+      //     src: "/img/heighliner/logo/primary-logo@3x.webp",
+      //   },
+      //   items: [
+      //     {
+      //       type: "doc",
+      //       docId: "overview/intro",
+      //       position: "left",
+      //       label: "Docs",
+      //     },
+      //     {
+      //       to: "/blog",
+      //       label: "Blog",
+      //       position: "left",
+      //     },
+      //     {
+      //       type: "search",
+      //       position: "right",
+      //     },
+      //     {
+      //       href: "https://github.com/h8r-dev/heighliner-website",
+      //       position: "right",
+      //       className: "header-github-link",
+      //       "aria-label": "GitHub repository",
+      //     },
+      //   ],
+      //   hideOnScroll: true,
+      // },
       footer: {
         style: "dark",
         links: [
@@ -106,11 +106,11 @@ const config = {
             items: [
               {
                 label: "Tutorial",
-                to: "/docs/getting_started/installation",
+                to: "/",
               },
               {
                 label: "Blog",
-                to: "/blog",
+                to: "/",
               },
             ],
           },
@@ -132,19 +132,19 @@ const config = {
             items: [
               {
                 label: "About us",
-                to: "/about-us",
+                to: "/",
               },
               {
                 label: "Join us",
-                href: "/join-us",
+                href: "/",
               },
               {
                 label: "Contact us",
-                href: "/contact-us",
+                href: "/",
               },
               {
                 label: "Download Center",
-                href: "/download-center",
+                href: "/",
               },
             ],
           },
@@ -153,7 +153,7 @@ const config = {
             items: [
               {
                 label: "Privacy policy",
-                to: "/privacy-policy",
+                to: "/",
               },
             ],
           },

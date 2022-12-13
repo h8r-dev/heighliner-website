@@ -29,7 +29,7 @@ export function StackWorkflow(): React.ReactElement {
             styles.title,
           )}
         >
-          Developer-First Experience
+          开发者优先体验
         </h1>
       </FadeIn>
       <FadeIn>

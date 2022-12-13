@@ -24,13 +24,9 @@ export function Community() {
             </div>
             <div className={styles.desc}>
               <div className={styles.quoteIcon}>
-                <QuoteSVG/>
+                <QuoteSVG />
               </div>
-              We have significantly increased our development speed by using
-              Dagger. It is modern, simple, and developer friendly! More
-              important, we believe in the long term value that open source
-              brings us: building interesting things together even across
-              continents and borders.
+              通过使用 Dagger，我们显着提高了开发速度。它现代、简单且对开发人员友好！更重要的是，我们相信开源给我们带来的长期价值：即使跨越大陆和国界，也能一起构建有趣的东西。
             </div>
             <div className={styles.introduce}>
               <div
@@ -43,9 +39,9 @@ export function Community() {
               </div>
 
               <div className={styles.personDesc}>
-                <div className={styles.personName}>Hongchao Deng</div>
+                <div className={styles.personName}>邓洪超</div>
                 <div className={styles.personTitle}>CTO, Heighliner</div>
-                <div className={styles.personTitle}>Co-Chair, CNCF App-Delivery TAG</div>
+                <div className={styles.personTitle}>联合主席, CNCF App-Delivery TAG</div>
               </div>
             </div>
           </div>
@@ -59,14 +55,9 @@ export function Community() {
             </div>
             <div className={styles.desc}>
               <div className={styles.quoteIcon}>
-                <QuoteSVG/>
+                <QuoteSVG />
               </div>
-                Heighliner is a very exciting project. 
-                It's still too hard for developers to setup a modern cloud stack, 
-                and Heighliner can make it easier. 
-                And because it uses Dagger under the hood, 
-                developers can customize every aspect of their stack. 
-                It's the best of both worlds.
+              Heighliner 是一个非常令人兴奋的项目。开发人员设置现代云堆栈仍然太难，而 Heighliner 可以让它变得更容易。由于它在底层使用 Dagger，开发人员可以自定义堆栈的各个方面。这是两全其美的。
             </div>
             <div className={styles.introduce}>
               <div
@@ -79,8 +70,8 @@ export function Community() {
               </div>
               <div className={styles.personDesc}>
                 <div className={styles.personName}>Solomon Hykes</div>
-                <div className={styles.personTitle}>Founder, Dagger</div>
-                <div className={styles.personTitle}>Also known for founding Docker</div>
+                <div className={styles.personTitle}>创始人, Dagger</div>
+                <div className={styles.personTitle}>Docker</div>
               </div>
             </div>
           </div>

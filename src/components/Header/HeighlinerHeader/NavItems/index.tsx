@@ -16,20 +16,20 @@ interface Props {
 
 const NavLinks: { readonly name: string; readonly link: string }[] = [
   {
-    name: "Docs",
-    link: siteConfig.customFields.docsUrl as string,
+    name: "文档",
+    link: "#",
   },
   {
-    name: "Blog",
-    link: siteConfig.customFields.blogUrl as string,
+    name: "博客",
+    link: "#",
   },
   {
-    name: "Contact Us",
-    link: siteConfig.customFields.contactUs as string,
+    name: "联系我们",
+    link: "#",
   },
   {
     name: "GitHub",
-    link: siteConfig.customFields.githubUrl as string,
+    link: "#",
   },
 ];
 

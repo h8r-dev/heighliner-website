@@ -13,9 +13,9 @@ export function ConnectAny() {
       <FadeIn>
         <div className={styles.titleWrapper}>
           <div
-              className={clsx("homepage-section-title", styles.titleConnectAny)}
+            className={clsx("homepage-section-title", styles.titleConnectAny)}
           >
-            Built to <span className={styles.power}>power</span> an open ecosystem
+            从开源 <span className={styles.power}>技术</span> 构建
           </div>
         </div>
       </FadeIn>
@@ -29,7 +29,7 @@ export function ConnectAny() {
         </div>
       </FadeIn>
       <FadeIn>
-        <div className={clsx("homepage-section-title", styles.titleCommunity)}>Community collaboration</div>
+        <div className={clsx("homepage-section-title", styles.titleCommunity)}>开源协作</div>
       </FadeIn>
     </div>
   )

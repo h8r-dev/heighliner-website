@@ -39,9 +39,9 @@ export default function AutoDownCounter({
       {/* {counter > endPoint ? (
         counter
       ) : ( */}
-        <div className={styles.zeroEffect}>
-          Automate
-        </div>
+      <div className={styles.zeroEffect}>
+        全自动
+      </div>
       {/* )} */}
     </span>
   );

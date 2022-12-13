@@ -22,7 +22,7 @@ export function WhyHeighliner(): React.ReactElement {
               styles.title,
             )}
           >
-            Deliver Stack-as-Code
+            交付堆栈即代码
           </h1>
         </FadeIn>
         <FadeIn>
@@ -31,13 +31,13 @@ export function WhyHeighliner(): React.ReactElement {
               styles.caption,
             )}
           >
-            Heighliner is a modern developer tool that delivers your application
-            stack as code. It codifies the best practices of developing and
-            deploying cloud native applications. Based on convention over
-            configuration, Heighliner stacks significantly reduce the overhead of
-            building cloud-native applications. With Heighliner, you can version,
-            reuse, and share your app stacks. You can even compose existing stacks
-            to build more advanced stacks.
+            Heighliner 是一种现代开发人员工具，可交付您的应用程序
+            堆叠为代码。它编纂了开发和管理的最佳实践
+            部署云原生应用程序。基于约定
+            配置， Heighliner 堆栈显着减少的开销
+            构建云原生应用程序。使用 Heighliner，您可以对版本、
+            重用并共享您的应用程序堆栈。您甚至可以组合现有的堆栈
+            构建更高级的堆栈。
           </p>
         </FadeIn>
         <main className={styles.main}>

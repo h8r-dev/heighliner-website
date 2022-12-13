@@ -7,7 +7,7 @@ import clsx from "clsx";
 import siteConfig from "@generated/docusaurus.config";
 import styles from './index.module.css';
 
-import {isWeixin} from "@site/src/utils/Environment";
+import { isWeixin } from "@site/src/utils/Environment";
 import FadeIn from "../../Animation/FadeIn";
 
 enum JoinCommunityMethod {
@@ -44,7 +44,7 @@ const iconList: IconType[] = [
 
 export function JoinCommunity() {
   function hendleClick(item: IconType) {
-    let {alt, link} = item;
+    let { alt, link } = item;
     if ((alt !== JoinCommunityMethod.WECHAT) || isWeixin()) {
       link && window.open(link)
     }
@@ -54,21 +54,21 @@ export function JoinCommunity() {
     <div>
       <FadeIn>
         <div className={clsx("homepage-section-title", styles.title)}>
-          Join the community
+          加入社区
         </div>
       </FadeIn>
       <FadeIn>
         <div className={styles.iconWrapper}>
           {
             iconList.map((item: IconType) => {
-              let {src, alt, link, qrCode} = item;
+              let { src, alt, link, qrCode } = item;
               return (
                 <div className={styles.icon} key={alt}>
-                  <img src={src} alt={alt} onClick={() => hendleClick(item)}/>
+                  <img src={src} alt={alt} onClick={() => hendleClick(item)} />
                   {
                     qrCode && !isWeixin() && (
                       <div className={styles.qrcodeWrapper}>
-                        <img src={qrCode}/>
+                        <img src={qrCode} />
                       </div>
                     )
                   }

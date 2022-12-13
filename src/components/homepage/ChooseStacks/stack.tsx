@@ -30,10 +30,10 @@ export default function Stack(props: Props): React.ReactElement {
           )}
         </div>
         <Link to={props.link} className={styles.link}>
-          <span>Read the document</span>
+          <span>查看文档</span>
         </Link>
         <Link to={props.link} className={styles.linkIcon}>
-          <img src={require('@site/static/img/homepage/choosestacks/goDocument.webp').default} alt=""/>
+          <img src={require('@site/static/img/homepage/choosestacks/goDocument.webp').default} alt="" />
         </Link>
       </div>
     </div>

@@ -6,27 +6,27 @@ import styles from "./index.module.scss";
 
 const features = [
   {
-    title: "neutral",
+    title: "中立地",
     img: require("/static/img/homepage/whyheighliner/neutral@3x.webp").default,
     description:
-      "No vendor lock-in. Heighliner is suitable for all Cloud Provider",
+      "没有厂商锁定。 Heighliner 适用于所有云提供商",
   },
   {
-    title: "flexible",
+    title: "灵活地",
     img: require("/static/img/homepage/whyheighliner/flexible@3x.webp").default,
     description:
-      "Cloud or on-premise, as you wish. No friction for developer and team",
+      "云端或本地，随您所愿。开发人员和团队没有摩擦",
   },
   {
-    title: "open",
+    title: "开源",
     img: require("/static/img/homepage/whyheighliner/open@3x.webp").default,
-    description: "The core engine and modules are all open source",
+    description: "核心引擎和模块全部开源",
   },
   {
-    title: "extensible",
+    title: "可扩展",
     img: require("/static/img/homepage/whyheighliner/extensible@3x.webp").default,
     description:
-      "Based on an open core, everyone can build custom stacks on Heighliner",
+      "基于开放核心，每个人都可以在 Heighliner 上构建自定义堆栈",
   },
 ];
 

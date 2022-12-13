@@ -43,7 +43,7 @@ export function ChooseStack(): React.ReactElement {
     <div className={styles.wrapper}>
       <FadeIn>
         <h1 className={clsx("homepage-section-title", styles.title)}>
-          Start from a dedicated stack
+          从专用堆栈开始
         </h1>
       </FadeIn>
       <div className={styles.stacksWrap}>

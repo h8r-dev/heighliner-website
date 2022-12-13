@@ -34,9 +34,9 @@ export function SloganSection(): React.ReactElement {
                   />{" "}
                 </h1>
                 <h1>
-                  Application Stack
+                  应用技术栈
                 </h1>
-                <h1>On Any Cloud</h1>
+                <h1>运行在任何的云上</h1>
               </div>
               <div className={styles.actionsGroup}>
                 <Link
@@ -49,7 +49,7 @@ export function SloganSection(): React.ReactElement {
                   className={clsx("button button--lg button--secondary", styles.quickstart)}
                   to={siteConfig.customFields.quickStartUrl as string}
                 >
-                  Quickstart
+                  快速开始
                 </Link>
               </div>
             </main>

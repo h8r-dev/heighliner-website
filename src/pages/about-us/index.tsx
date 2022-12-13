@@ -15,16 +15,16 @@ interface Item {
 
 const list: Item[] = [
   {
-    title: "Open Source",
-    content: "We build and use open source projects that help build the best practices and standards.",
+    title: "开源",
+    content: "我们构建和使用有助于构建最佳实践和标准的开源项目。",
   },
   {
-    title: "Engineer Culture",
-    content: "We think systematically, care about the quality of projects, keep polishing user experience."
+    title: "工程师文化",
+    content: "我们系统思考，关注项目质量，不断打磨用户体验。"
   },
   {
-    title: "Innovation",
-    content: "We are always looking for new ideas and break the rules to create better products.",
+    title: "创新",
+    content: "我们一直在寻找新的想法并打破规则来创造更好的产品。",
   },
   {
     title: "Embrace Community",
@@ -54,14 +54,14 @@ export default function Index(): JSX.Element {
     <PageWrapper title="About us">
       <div className={styles.contentWrapper}>
         <div className={styles.pageTitle}>
-        A Cloud For Developers
+          A Cloud For Developers
         </div>
         <div className={styles.pageDesc}>
-        Developers have to face the complex, large clouds that impose steep learning curves and massive operations.
-        This is because major cloud providers focused on enterprises.
-        We believe the cloud should be made for developers.
-        Therefore, we build Heighliner, a cloud-native developer tool that lets you build application stack as code.
-        We want to empower developers to build apps quickly in a similar way to what LAMP stack achieves.
+          Developers have to face the complex, large clouds that impose steep learning curves and massive operations.
+          This is because major cloud providers focused on enterprises.
+          We believe the cloud should be made for developers.
+          Therefore, we build Heighliner, a cloud-native developer tool that lets you build application stack as code.
+          We want to empower developers to build apps quickly in a similar way to what LAMP stack achieves.
         </div>
         <div className={styles.pageTitle}>
           Who are we?
@@ -75,7 +75,7 @@ export default function Index(): JSX.Element {
         <div className={styles.flexWrapper}>
           {
             list.map(item => {
-              let {title, content} = item;
+              let { title, content } = item;
               return (
                 <div className={styles.itemWrapper} key={title}>
                   <span className={styles.itemTitle}>{title}</span>
@@ -88,10 +88,10 @@ export default function Index(): JSX.Element {
         <div className={styles.imageAndDesc}>
           {
             imglist.map(item => {
-              let {url, title, content} = item;
+              let { url, title, content } = item;
               return (
                 <div className={styles.imgWrapper} key={title}>
-                  <img src={url} alt={styles.itemTitle}/>
+                  <img src={url} alt={styles.itemTitle} />
                   <div className={clsx(styles.imgTitle, styles.pageTitle)}>{title}</div>
                   <div className={clsx(styles.imgContent, styles.pageDesc)}>{content}</div>
                 </div>

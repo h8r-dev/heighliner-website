@@ -9,15 +9,15 @@ import Step, { StepProps } from "./Step";
 
 const terminals: StepProps[] = [
   {
-    title: "Select",
+    title: "选择",
     castFileUrl: hlnListStacksCast,
   },
   {
-    title: "Spin Up",
+    title: "启动",
     castFileUrl: hlnSpinUpCast,
   },
   {
-    title: "Enjoy",
+    title: "使用",
     castFileUrl: hlnStatusCast,
   },
 ];
