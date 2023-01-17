@@ -19,9 +19,6 @@ export function SloganSection(): React.ReactElement {
       <div className={styles.backgroundMask} />
       <div className={styles.container}>
         <div className="slogan-section container">
-          <div className={styles.verticallyFullOfScreen}>
-            <HeighlinerHeader />
-          </div>
           <div className={styles.contentWrap}>
             <main className={styles.wrap}>
               <div className={styles.sloganTextWrap}>

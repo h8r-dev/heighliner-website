@@ -37,28 +37,6 @@ export function Footer() {
           </div>
         </div>
         <div className={styles.linksWrap}>
-          <ul className={styles.links}>
-            {
-              footer.links.map((linkItem: any, index: number) => (
-                <li key={index}>
-                  <span className={styles.title}>{linkItem.title}</span>
-                  <ul>
-                    {
-                      linkItem.items.map((link: any, idx: number) => {
-                        const to: string = link.to || link.href
-                        return (
-                          <li key={idx} className={styles.linkItem}>
-                            <Link to={to}>{link.label}</Link>
-                            {/*{ to.startsWith('http') && <ExternalLinkIcon style={{ marginLeft: 5 }} /> }*/}
-                          </li>
-                        )
-                      })
-                    }
-                  </ul>
-                </li>
-              ))
-            }
-          </ul>
         </div>
       </div>
       <div className={styles.copyright}>
