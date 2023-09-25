@@ -22,7 +22,7 @@ export function WhyHeighliner(): React.ReactElement {
               styles.title,
             )}
           >
-            交付堆栈即代码
+            深圳氦三科技
           </h1>
         </FadeIn>
         <FadeIn>
@@ -31,13 +31,9 @@ export function WhyHeighliner(): React.ReactElement {
               styles.caption,
             )}
           >
-            Heighliner 是一种现代开发人员工具，可交付您的应用程序
-            堆叠为代码。它编纂了开发和管理的最佳实践
-            部署云原生应用程序。基于约定
-            配置， Heighliner 堆栈显着减少的开销
-            构建云原生应用程序。使用 Heighliner，您可以对版本、
-            重用并共享您的应用程序堆栈。您甚至可以组合现有的堆栈
-            构建更高级的堆栈。
+            He3（氦三科技）是一家专注于制作开发者喜爱的工具的创业公司。
+            我们希望通过好用的工具来提升开发者的工作效率，让每一个开发者快乐编程，高效工作。
+            创始人是由腾讯和阿里的高级专家组成的明星团队，深耕云原生和开发者工具领域多年，拥有丰富的技术积累和行业经验。
           </p>
         </FadeIn>
         <main className={styles.main}>

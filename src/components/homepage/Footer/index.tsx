@@ -26,14 +26,15 @@ export function Footer() {
       <div className={clsx('container', styles.wrapper)}>
         <div className={styles.logo}>
           <div className={styles.logoWrap}>
-            <img
-              src={
-                require("@site/static/img/homepage/slogansection/purple-logo@3x.webp")
-                  .default
-              }
-              alt="heighliner"
-            />
-            <WhiteHeighlinerSvg />
+            深圳氦三科技有限责任公司
+            {/*<img*/}
+            {/*  src={*/}
+            {/*    require("@site/static/img/homepage/slogansection/purple-logo@3x.webp")*/}
+            {/*      .default*/}
+            {/*  }*/}
+            {/*  alt="heighliner"*/}
+            {/*/>*/}
+            {/*<WhiteHeighlinerSvg />*/}
           </div>
         </div>
         <div className={styles.linksWrap}>

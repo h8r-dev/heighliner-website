@@ -30,18 +30,18 @@ export function SloganSection(): React.ReactElement {
                     minuend={5}
                   />{" "}
                 </h1>
-                <h1>
-                  应用技术栈
-                </h1>
-                <h1>运行在任何的云上</h1>
+                {/*<h1>*/}
+                {/*  应用技术栈*/}
+                {/*</h1>*/}
+                <h1>快速拉起Kubernetes集群</h1>
               </div>
               <div className={styles.actionsGroup}>
-                <Link
-                  className={clsx("button button--lg", styles.requestAccess)}
-                  to={siteConfig.customFields.newsletterUrl as string}
-                >
-                  Heighliner Newsletter
-                </Link>
+                {/*<Link*/}
+                {/*  className={clsx("button button--lg", styles.requestAccess)}*/}
+                {/*  to={siteConfig.customFields.newsletterUrl as string}*/}
+                {/*>*/}
+                {/*  Heighliner Newsletter*/}
+                {/*</Link>*/}
                 <Link
                   className={clsx("button button--lg button--secondary", styles.quickstart)}
                   to={siteConfig.customFields.quickStartUrl as string}
