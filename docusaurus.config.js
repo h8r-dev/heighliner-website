@@ -7,8 +7,8 @@ const mainGithubUrl = "https://github.com/h8r-dev/heighliner";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Heighliner",
-  tagline: "Heighliner-氦三科技",
+  title: "Heighliner-在线开发平台",
+  tagline: "",
   url: "https://heighliner.dev",
   baseUrl: "/",
   onBrokenLinks: "throw",

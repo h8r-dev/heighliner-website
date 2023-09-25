@@ -34,6 +34,7 @@ export function SloganSection(): React.ReactElement {
                 {/*  应用技术栈*/}
                 {/*</h1>*/}
                 <h1>快速拉起Kubernetes集群</h1>
+                <h1>Heighliner</h1>
               </div>
               <div className={styles.actionsGroup}>
                 {/*<Link*/}
@@ -42,12 +43,12 @@ export function SloganSection(): React.ReactElement {
                 {/*>*/}
                 {/*  Heighliner Newsletter*/}
                 {/*</Link>*/}
-                <Link
+                {/* <Link
                   className={clsx("button button--lg button--secondary", styles.quickstart)}
                   to={siteConfig.customFields.quickStartUrl as string}
                 >
                   快速开始
-                </Link>
+                </Link> */}
               </div>
             </main>
             <div className={styles.video}>
