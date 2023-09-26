@@ -92,6 +92,17 @@
   bottom: 0;
 }
 
+.aboutus{
+  margin-left: 20px;
+  //font-size: 12px;
+  cursor: pointer;
+  //line-height: 20px;margin-top: 4px;
+}
+.aboutus:hover{
+  text-decoration: underline;
+}
+
+
 @media screen and (max-width: 996px) {
   .title {
     width: 100%;

@@ -27,25 +27,25 @@ const list: Item[] = [
     content: "我们一直在寻找新的想法并打破规则来创造更好的产品。",
   },
   {
-    title: "Embrace Community",
-    content: "We embrace community collaboration and contribute to projects like Nocalhost, Dagger, and more.",
+    title: "拥抱社区",
+    content: "我们积极拥抱社区合作，并为像Nocalhost、Dagger等项目做出贡献。",
   },
   {
-    title: "Improve Experience",
-    content: "We care about developer experience and improve it by using best practices.",
+    title: "改善用户体验",
+    content: "我们非常关注开发者体验，并通过采用最佳实践来改进它。",
   },
 ]
 
 const imglist: Item[] = [
   {
     url: require("@site/static/img/about-us/image-left.webp").default,
-    title: "What we do",
-    content: "We build Heighliner, a developer tool that lets you build application stack as code."
+    title: "目标",
+    content: "我们开发了Heighliner，这是一款开发者工具，可以让您将应用程序堆栈作为代码进行构建。"
   },
   {
     url: require("@site/static/img/about-us/image-right.webp").default,
-    title: "Vision",
-    content: "The vision of Heighliner is to leverage the cloud and make it for every developer!"
+    title: "愿景",
+    content: "Heighliner的愿景是利用云计算，使之适用于每一位开发者！"
   }
 ]
 
@@ -54,23 +54,16 @@ export default function Index(): JSX.Element {
     <PageWrapper title="About us">
       <div className={styles.contentWrapper}>
         <div className={styles.pageTitle}>
-          A Cloud For Developers
+          开发者的云平台
         </div>
         <div className={styles.pageDesc}>
-          Developers have to face the complex, large clouds that impose steep learning curves and massive operations.
-          This is because major cloud providers focused on enterprises.
-          We believe the cloud should be made for developers.
-          Therefore, we build Heighliner, a cloud-native developer tool that lets you build application stack as code.
-          We want to empower developers to build apps quickly in a similar way to what LAMP stack achieves.
+          开发者必须面对复杂的大型云平台，这些平台对于学习曲线和大规模操作都有很高的要求。这是因为主要的云服务提供商专注于企业市场。我们相信云平台应该面向开发者。因此，我们开发了Heighliner，这是一个云原生开发工具，可以让您将应用程序堆栈作为代码构建。我们希望赋予开发者快速构建应用程序的能力，就像LAMP堆栈所实现的那样。
         </div>
         <div className={styles.pageTitle}>
-          Who are we?
+         我们是谁
         </div>
         <div className={styles.pageDesc}>
-          We are a group of software engineers who are passionate about cloud native app development.
-          We believe in the value that the open source community brings.
-          In the past, we have been working on open source projects like KubeVela and Nocalhost (both are CNCF projects).
-          Now we want to take the cloud to the next step and make it a platform for developers.
+          我们是一群对云原生应用开发充满热情的软件工程师组成的团队。我们坚信开源社区所带来的价值。过去，我们一直在开源项目中工作，如KubeVela和Nocalhost（它们都是CNCF项目）。现在我们希望将云平台推向下一个阶段，使其成为开发者的平台。
         </div>
         <div className={styles.flexWrapper}>
           {

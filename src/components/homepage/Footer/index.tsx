@@ -21,6 +21,11 @@ export function Footer() {
     }
   }, [])
 
+
+  function goAboutus(){
+    location.href = '/about-us'
+  }
+
   return (
     <div className={styles.outerWrap}>
       <div className={clsx('container', styles.wrapper)}>
@@ -36,6 +41,9 @@ export function Footer() {
             {/*/>*/}
             {/*<WhiteHeighlinerSvg />*/}
           </div>
+        </div>
+        <div className={styles.aboutus} onClick={goAboutus}>
+          关于我们
         </div>
         <div className={styles.linksWrap}>
         </div>
