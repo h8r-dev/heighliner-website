@@ -53,6 +53,12 @@ export default function Index(): JSX.Element {
   return (
     <PageWrapper title="About us">
       <div className={styles.contentWrapper}>
+      <div className={styles.pageTitle}>
+          深圳市氦三科技有限责任公司
+        </div>
+        <div className={styles.pageDesc}>
+        He3（深圳氦三科技）是一家专注于制作开发者喜爱的工具的创业公司。 我们希望通过好用的工具来提升开发者的工作效率，让每一个开发者快乐编程，高效工作。 创始人是由腾讯和阿里的高级专家组成的明星团队，深耕云原生和开发者工具领域多年，拥有丰富的技术积累和行业经验。
+        </div>
         <div className={styles.pageTitle}>
           开发者的云平台
         </div>
