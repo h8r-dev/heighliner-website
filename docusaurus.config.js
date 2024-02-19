@@ -158,7 +158,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Heighliner, Inc.`,
+        copyright: `Copyright © ${new Date().getFullYear()} 深圳市氦三科技有限责任公司版权所有`,
       },
       prism: {
         theme: require("prism-react-renderer/themes/dracula"),
